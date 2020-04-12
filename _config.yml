@@ -1,1 +1,4 @@
 theme: jekyll-theme-cayman
+title: "Ewen Quimerch - Blog"
+description: "Description"
+show_downloads: true # displays download button on the .io page
