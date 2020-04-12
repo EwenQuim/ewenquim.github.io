@@ -8,7 +8,6 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 [Clic here](now.md)
 [Clic here](now.html)
-[Clic here](ewen.quimerch.com/now.md)
 
 ### Markdown
 
