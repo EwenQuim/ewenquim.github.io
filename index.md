@@ -6,6 +6,10 @@ You can use the [editor on GitHub](https://github.com/EwenQuim/ewenquim.github.i
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
+[Clic here](now.md)
+[Clic here](now.html)
+[Clic here](ewen.quimerch.com/now.md)
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
