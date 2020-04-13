@@ -1,42 +1,26 @@
-# Testing
+# Ewen Quimerc'h Blog
 
-## Welcome to GitHub Pages
+## Articles
 
-You can use the [editor on GitHub](https://github.com/EwenQuim/ewenquim.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Ici mes articles
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+---
 
-[Clic here](now.md)
-[Clic here](now.html)
+[Article 1](www.google.com)
+A propos de ceci
 
-### Markdown
+[Article 1](www.google.com)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+A propos de cela
 
-```markdown
-Syntax highlighted code block
+---
 
-# Header 1
-## Header 2
-### Header 3
+[Article 1](www.google.com)
 
-- Bulleted
-- List
+A propos de cela
 
-1. Numbered
-2. List
+## Mes projets
 
-**Bold** and _Italic_ and `Code` text
+[Article 1](www.google.com)
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/EwenQuim/ewenquim.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+A propos de cela
