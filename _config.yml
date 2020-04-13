@@ -1,12 +1,4 @@
-remote_theme: thelehhman/plainwhite-jekyll
+remote_theme:  murraco/jekyll-theme-minimal-resume 
 title: "Dev Blog"
 description: "Ewen Quimerc'h"
-show_downloads: false # displays download button on the .io page
-plainwhite:
-  name: Ewen Quimerch
-  tagline: Developer
-  date_format: "%-d %b, %Y"
 
-  social_links:
-    github: ewenquil
-    linkedIn: in/ewen-quimerch/
