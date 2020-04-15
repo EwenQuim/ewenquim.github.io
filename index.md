@@ -1,11 +1,4 @@
-## Articles
-
-### [Tech] [Article 1](https://www.google.com)
-
- *Mars 2020* -
- A propos de **ceci**
-
----
+## Last Articles
 
 ### **[Tech]** [Efficient linux aliases setup](articles/efficient-linux-aliases-setup.md)
 
@@ -13,18 +6,11 @@
 Manage linux aliases efficiently - change your workflow once and for all!
 
 ---
-
-### **Tech** [Comment faire ceci ?](https://www.google.com)
-
-*Avril 2020* -
-A propos de cela
-
----
 ---
 
 ## Projects
 
-[Amethysts Studio](https://www.amethysts.studio), studio de création artistique (nouvelles et autres)
+[Amethysts Studio](https://international.amethysts.studio), artisical creations studio (short stories and others)
 
 [Coalescence](https://www.coalescence-universe.com), un mystérieux jeu vidéo d'aventure narrative
 
@@ -33,4 +19,4 @@ A propos de cela
 
 ## About
 
-Look at my [CV](CV%20Quimerch%20Ewen.pdf) ([french](CVQuimerchEwen.pdf))
+Look at my CV ([french](CVQuimerchEwen.pdf) | [english](CVQuimerchEwen.pdf))
