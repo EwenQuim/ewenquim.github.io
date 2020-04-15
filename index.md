@@ -19,4 +19,4 @@ Manage linux aliases efficiently - change your workflow once and for all!
 
 ## About
 
-Look at my CV ([french](CVQuimerchEwen.pdf) | [english](CVQuimerchEwen.pdf))
+Look at my CV ([french](CVQuimerchEwen.pdf) & [english](CVQuimerchEwen.pdf))
