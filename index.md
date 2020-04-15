@@ -10,9 +10,9 @@ Manage linux aliases efficiently - change your workflow once and for all!
 
 ## Projects
 
-[Amethysts Studio](https://international.amethysts.studio), artisical creations studio (short stories and others)
+[Amethysts Studio](https://international.amethysts.studio) : my artistic creations (short stories and others)
 
-[Coalescence](https://www.coalescence-universe.com), un mystérieux jeu vidéo d'aventure narrative
+[Coalescence](https://www.coalescence-universe.com) : a mysterious visual novel
 
 ---
 ---
