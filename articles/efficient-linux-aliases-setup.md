@@ -1,5 +1,7 @@
 # [Tech] **Efficient linux aliases setup**
 
+5 *min setup*
+
 Setting aliases for commands is a very good way to save time at work. But setting them up always takes time, and you lose them all if you have to ssh on a server or change device.
 
 We will see how to
@@ -35,11 +37,12 @@ As explained in this old but useful [article](https://rhodesmill.org/brandon/200
 
 ## 3. An alias to rule them all
 
-This is the ultimate command.
-By typing `,aliases`, you will download the latest aliases you set on other devices, edit your aliases as you like, applying it for immediate use, and then putting it back online -with a commit message!
+This is **the ultimate alias**.
 
 ```bash
 alias ,aliases="cd ~/folder/where/you/store/your/aliases/file/ && git pull && nano .aliases && git commit -a -S -v && git push origin master && source .aliases && cd -"
 ```
+
+By typing `,aliases`, you will download the latest aliases you set on other devices, edit your aliases as you like, applying it for immediate use, and then putting it back online -with a commit message!
 
 Don't hesitate to remove the `-S` option if you don't PGP sign your commits (I'll explain later why you should -and it's easy!)
