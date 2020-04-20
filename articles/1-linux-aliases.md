@@ -12,7 +12,7 @@ We will see how to
 
 First of all, we need to **create an independent file** to store aliases, for example `.aliases`
 
-In your `.bashrc` or `.zshrc`, add the execution of this file (`source .aliases`).
+In your `.bashrc` or `.zshrc`, add the automatic execution of this file (`source .aliases`) every time you will launch a terminal.
 
 ## 1. Using remote repository
 
