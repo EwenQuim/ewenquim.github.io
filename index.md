@@ -39,4 +39,4 @@ How this website is running ? A curious way to do it...
 
 ## About
 
-Look at my CV ([french](CVQuimerchEwen.pdf) & [english](CVQuimerchEwen.pdf))
+Look at my CV ([french](assets/CVQuimerchEwen.pdf))
