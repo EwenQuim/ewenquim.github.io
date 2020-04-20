@@ -1,6 +1,10 @@
-# [Tech] **Efficient linux aliases setup**
+# [Tips] **Efficient linux aliases setup** <!-- omit in toc -->
 
 5 *min setup*
+
+- [1. Use a remote repository](#1-use-a-remote-repository)
+- [2. Start your aliases with a comma](#2-start-your-aliases-with-a-comma)
+- [3. An alias to rule them all](#3-an-alias-to-rule-them-all)
 
 Setting aliases for commands is a very good way to save time at work. But setting them up always takes time, and you lose them all if you have to ssh on a server or change device.
 
@@ -10,16 +14,11 @@ We will see how to
 - create an **efficient** aliases system -with a *weird trick*
 - easily **manage** aliases for everyday use and update
 
-- [[Tech] **Efficient linux aliases setup**](#tech-efficient-linux-aliases-setup)
-  - [1. Using remote repository](#1-using-remote-repository)
-  - [2. Start your aliases with a comma](#2-start-your-aliases-with-a-comma)
-  - [3. An alias to rule them all](#3-an-alias-to-rule-them-all)
-
 First of all, we need to **create an independent file** to store aliases, for example `.aliases`
 
 In your `.bashrc` or `.zshrc`, add the automatic execution of this file (`source .aliases`) every time you will launch a terminal.
 
-## 1. Using remote repository
+## 1. Use a remote repository
 
 The main goal is to make your aliases available on every device you're connecting, so using a centralized system is recommended in this situation.
 

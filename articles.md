@@ -7,7 +7,7 @@ Encrypt emails and documents. Sign your commits. Be a hacker.
 
 ---
 
-## **[Productivity]** [Efficient linux aliases setup](articles/2-linux-aliases.md)
+## **[Tips]** [Efficient linux aliases setup](articles/2-linux-aliases.md)
 
 *April 2020* -
 Manage linux aliases efficiently - change your workflow once and for all!

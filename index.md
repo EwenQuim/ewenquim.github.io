@@ -9,7 +9,7 @@
 *May 2020* -
 Encrypt emails and documents. Sign your commits. Be a hacker.
 
-### **[Productivity]** [Efficient linux aliases setup](articles/2-linux-aliases.md)
+### **[Tips]** [Efficient linux aliases setup](articles/2-linux-aliases.md)
 
 *April 2020* -
 Manage linux aliases efficiently - change your workflow once and for all!
@@ -19,9 +19,7 @@ Manage linux aliases efficiently - change your workflow once and for all!
 *March 2020* -
 How this website is running ? A curious way to do it...
 
--
-
-[All articles](articles.md)
+→ [All articles](articles.md)
 
 ---
 ---
