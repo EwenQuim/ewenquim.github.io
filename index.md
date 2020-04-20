@@ -34,6 +34,8 @@ How this website is running ? A curious way to do it...
 
 [Coalescence](https://www.coalescence-universe.com) : a mysterious visual novel
 
+→ [Github Profile](https://github.com/EwenQuim/)
+
 ---
 ---
 
