@@ -1,6 +1,8 @@
 # *Explore this blog!*
 
-## Last Articles - [see all](articles.md)
+---
+
+## Last Articles
 
 ### **[Crypto][WIP]** [Sign your commits with PGP](articles/3-pgp.md)
 
@@ -16,6 +18,10 @@ Manage linux aliases efficiently - change your workflow once and for all!
 
 *March 2020* -
 How this website is running ? A curious way to do it...
+
+-
+
+[All articles](articles.md)
 
 ---
 ---
