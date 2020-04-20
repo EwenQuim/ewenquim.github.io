@@ -4,7 +4,7 @@
 
 ## Last Articles
 
-![](assets/articles.jpg)
+![-](assets/articles.jpg)
 
 ### **[Crypto][WIP]** [Sign your commits with PGP](articles/3-pgp.md)
 
@@ -28,7 +28,7 @@ How this website is running ? A curious way to do it...
 
 ## Projects
 
-![](assets/projects.jpg)
+![-](assets/projects.jpg)
 
 [Amethysts Studio](https://international.amethysts.studio) : my artistic creations (short stories and others)
 

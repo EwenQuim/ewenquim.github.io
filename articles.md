@@ -1,5 +1,7 @@
 # Articles
 
+![-](assets/articles.jpg)
+
 ## **[Crypto]** [Sign your commits with PGP](articles/3-pgp.md)
 
 *May 2020* -
