@@ -20,7 +20,6 @@ Markdown is the most easy to use WYSIWYG (What You See Is What You Get) editor. 
 
 ### Efficient
 
-
 ## How do I do that
 
 ### Original
@@ -30,4 +29,4 @@ This is a bit unique : I edit only markdown files. Of course, as browsers cannot
 
 ### Edit: now
 
-Now the webserver is hosted on Github Pages.
+Now the webserver is hosted on Github Pages. Math tests here $f: x\rarr x^{3}$
