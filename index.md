@@ -4,6 +4,8 @@
 
 ## Last Articles
 
+![](assets/articles.jpg)
+
 ### **[Crypto][WIP]** [Sign your commits with PGP](articles/3-pgp.md)
 
 *May 2020* -

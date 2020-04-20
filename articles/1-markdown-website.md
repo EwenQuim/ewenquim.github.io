@@ -4,8 +4,6 @@
 
 Explanations about the design of my website
 
-![Colombe](../android-icon_foreground.png)
-
 ## Why choosing an cheap interface
 
 Some like their website to be impressive, full of colors and animations.
