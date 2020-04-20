@@ -10,6 +10,11 @@ We will see how to
 - create an **efficient** aliases system -with a *weird trick*
 - easily **manage** aliases for everyday use and update
 
+- [[Tech] **Efficient linux aliases setup**](#tech-efficient-linux-aliases-setup)
+  - [1. Using remote repository](#1-using-remote-repository)
+  - [2. Start your aliases with a comma](#2-start-your-aliases-with-a-comma)
+  - [3. An alias to rule them all](#3-an-alias-to-rule-them-all)
+
 First of all, we need to **create an independent file** to store aliases, for example `.aliases`
 
 In your `.bashrc` or `.zshrc`, add the automatic execution of this file (`source .aliases`) every time you will launch a terminal.
