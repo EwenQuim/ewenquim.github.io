@@ -24,13 +24,32 @@ In your `.bashrc` or `.zshrc`, add the automatic execution of this file (`source
 
 The main goal is to make your aliases available on every device you're connecting, so using a centralized system is recommended in this situation.
 
+### Storing aliases online
+
 As we are using a single file, you can use [Github Gists](https://gist.github.com/).
 You can download my template with useful commands [here](https://gist.github.com/EwenQuim/b3ba203bdacb17bc1a15815cbc58792d) or create your own and clone it to your computer.
 I recommand you to fork my file, so you can create you own aliases without depending on mine.
 
 It will behave like a git repository, excepted it's for a single file.
 
-## 2. Start your aliases with a comma
+### Download it to a new device
+
+Everytime you create a new VM, set up a new raspberry pi or connect to a new server, just run this (don't forget to replace with *your* gist id and username if you have forke my gist!):
+
+```bash
+mkdir ~/.tools && cd $_
+git clone https://gist.github.com/EwenQuim/b3ba203bdacb17bc1a15815cbc58792d.git .
+source .aliases
+echo "source ~/.tools/.aliases" >> ~/.bashrc
+```
+
+Change .bashrc to .zshrc if you use zsh, of course.
+
+But there is a problem : if you make local changes, you want them to be effective everywhere!
+The system is not fully efficient here, so we'll se how to improve it in part 3.
+But before that, look at this old trick in part 2.
+
+## 2. Tip: Start your aliases with a comma
 
 *Why this monstrosity ? I've never seen a command beginning with a comma !*
 
@@ -48,29 +67,29 @@ Also, the comma is **easy to type** : it's a lowercase character, does not requi
 
 Trust me, that's not *that* odd ;) 
 
-## 3. An alias to rule them all
+## 3. One alias to rule them all
 
-### First setup on a new terminal
+### Usual use 
 
-Everytime you create a new VM, set up a new raspberry pi or connect to a new server, just run this (don't forget to change your gist id!):
+If you have forked my gist in [1](#1-use-a-remote-repository) :
+Just type `,aliases`. Easy, isn't it?
 
-```bash
-mkdir ~/.tools && cd $_
-git clone https://gist.github.com/EwenQuim/b3ba203bdacb17bc1a15815cbc58792d.git .
-source .aliases
-```
+### More details
 
-### Usual use
-
-Typing `,aliases`. Easy, isn't it?
-
-This is **the ultimate alias** (already included in my gist in case you download/fork it).
+The command `,aliases` is is **the ultimate alias** (already included in my gist in case you download/fork it).
 
 ```bash
 alias ,aliases="cd ~.tools/ && git pull && nano .aliases && source .aliases && git commit -a -v && git push origin master && cd -"
 ```
 
-Simply type `,aliases` to change an alias on every terminal, or to download the latest changes you made on another place!
+When you type `,aliases`, this happends:
+
+- download latest changes you've put online
+- see your aliases in nano
+- you can edit them
+- if it was edited, it will put everything online
+
+## Thank you !
 
 Don't hesitate to remove the `-S` option in the commit alias if you don't PGP sign your commits (I'll explain later why you should -and it's easy too!)
 
