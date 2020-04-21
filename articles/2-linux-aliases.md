@@ -2,20 +2,22 @@
 
 5 *min setup*
 
+![-](../assets/2-aliases.png)
+
 - [1. Use a remote repository](#1-use-a-remote-repository)
   - [Storing aliases online](#storing-aliases-online)
-  - [Download them to a new device](#download-them-to-a-new-device)
+  - [Download them to a new device - takes 3s every new device](#download-them-to-a-new-device---takes-3s-every-new-device)
 - [2. Tip: Start your aliases with a comma](#2-tip-start-your-aliases-with-a-comma)
 - [3. One alias to rule them all](#3-one-alias-to-rule-them-all)
-  - [Usual use : see, change, update your aliases in 2 seconds](#usual-use--see-change-update-your-aliases-in-2-seconds)
+  - [Usual use : see, change, update your aliases - takes 2 seconds every update](#usual-use--see-change-update-your-aliases---takes-2-seconds-every-update)
   - [More details](#more-details)
 - [Thank you !](#thank-you)
 
-Setting aliases for commands is a very good way to save time at work. But setting them up always takes time, and you lose them all if you have to ssh on a server or change device. **Time to change this by building a very easy setup!**
+Setting aliases for commands is a very good way to save time at work. But setting them up always takes time -far more than it should! Moreover, you lose them all if you have to ssh on a server or change device. **Time to change this by building a very easy setup!**
 
-We will see how to
+You will see how to
 
-- access our aliases **everywhere**
+- access your aliases **everywhere**
 - create an **efficient** aliases system -with a *weird trick*
 - easily **manage** aliases for everyday use and update
 
@@ -31,7 +33,7 @@ I suggest you to fork my file, so you can create you own aliases without dependi
 
 It will behave like a git repository, excepted it's for a single file.
 
-### Download them to a new device
+### Download them to a new device - takes 3s every new device
 
 Now that you have you aliases stored online, learn how to use them on your devices !
 Every time you create a new VM, set up a new raspberry pi or connect to a new server, just run this (don't forget to replace with *your* gist id and username if you have fork my gist!):
@@ -66,11 +68,11 @@ It looks like this:
 
 Also, the comma is **easy to type** : it's a lowercase character, does not require weird combination of keys, exists on all keyboards...
 
-Trust me, that's not *that* odd to do so ;) 
+Trust me, that's not *that* odd to do so ;)
 
 ## 3. One alias to rule them all
 
-### Usual use : see, change, update your aliases in 2 seconds
+### Usual use : see, change, update your aliases - takes 2 seconds every update
 
 If you have forked my gist in [1](#1-use-a-remote-repository) :
 Just type `,aliases`. Easy, isn't it?
@@ -89,6 +91,8 @@ When you type `,aliases`, this happens:
 - see your aliases in nano
 - you can edit them
 - if it was edited, it will put everything online
+
+This takes seconds, and is very handy to use.
 
 ## Thank you !
 
