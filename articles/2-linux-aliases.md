@@ -50,13 +50,7 @@ Trust me, that's not *that* odd ;)
 
 ## 3. An alias to rule them all
 
-This is **the ultimate alias**.
-
-```bash
-alias ,aliases="cd ~.tools/ && git pull && nano .aliases && source .aliases && git commit -a -v && git push origin master && cd -"
-```
-
-By typing `,aliases`, you will download the latest aliases you set on other devices, edit your aliases as you like, applying it for immediate use, and then putting it back online -with a commit message!
+### First setup on every terminal
 
 Everytime you create a new VM, set up a new raspberry pi or connect to a new server, just run this (don't forget to change your gist id!):
 
@@ -66,6 +60,18 @@ git clone https://gist.github.com/EwenQuim/b3ba203bdacb17bc1a15815cbc58792d.git 
 source .aliases
 ```
 
-After this, you'll just have to type `,aliases` everytime to change an alias on every terminal, or to download the latest changes you made on another place!
+### Usual use
+
+Typing `,aliases`. Easy, isn't it?
+
+This is **the ultimate alias** (already included in my gist in case you download/fork it).
+
+```bash
+alias ,aliases="cd ~.tools/ && git pull && nano .aliases && source .aliases && git commit -a -v && git push origin master && cd -"
+```
+
+Simply type `,aliases` to change an alias on every terminal, or to download the latest changes you made on another place!
 
 Don't hesitate to remove the `-S` option in the commit alias if you don't PGP sign your commits (I'll explain later why you should -and it's easy too!)
+
+I hope it will be useful for you !
