@@ -50,7 +50,7 @@ Trust me, that's not *that* odd ;)
 
 ## 3. An alias to rule them all
 
-### First setup on every terminal
+### First setup on a new terminal
 
 Everytime you create a new VM, set up a new raspberry pi or connect to a new server, just run this (don't forget to change your gist id!):
 
