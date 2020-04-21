@@ -5,12 +5,12 @@
 ![-](../assets/2-aliases.png)
 
 - [1. Use a remote repository](#1-use-a-remote-repository)
-  - [Storing aliases online](#storing-aliases-online)
-  - [Download them to a new device - takes 3s every new device](#download-them-to-a-new-device---takes-3s-every-new-device)
+  - [Storing aliases online - *1min*](#storing-aliases-online---1min)
+  - [Download them to a new device - *3s / device*](#download-them-to-a-new-device---3s--device)
 - [2. Tip: Start your aliases with a comma](#2-tip-start-your-aliases-with-a-comma)
 - [3. One alias to rule them all](#3-one-alias-to-rule-them-all)
-  - [Usual use : see, change, update your aliases - takes 2 seconds every update](#usual-use--see-change-update-your-aliases---takes-2-seconds-every-update)
-  - [More details](#more-details)
+  - [See, change, update your aliases - *2s/update*](#see-change-update-your-aliases---2supdate)
+  - [What's inside](#whats-inside)
 - [Thank you !](#thank-you)
 
 Setting aliases for commands is a very good way to save time at work. But setting them up always takes time -far more than it should! Moreover, you lose them all if you have to ssh on a server or change device. **Time to change this by building a very easy setup!**
@@ -25,7 +25,7 @@ You will see how to
 
 The main goal is to make your aliases available on every device you're connecting, so using a centralized system is recommended in this situation.
 
-### Storing aliases online
+### Storing aliases online - *1min*
 
 As we are using a single file, you can use [Github Gists](https://gist.github.com/).
 You can download my template with useful commands [here](https://gist.github.com/EwenQuim/b3ba203bdacb17bc1a15815cbc58792d) or create your own and clone it to your computer.
@@ -33,7 +33,7 @@ I suggest you to fork my file, so you can create you own aliases without dependi
 
 It will behave like a git repository, excepted it's for a single file.
 
-### Download them to a new device - takes 3s every new device
+### Download them to a new device - *3s / device*
 
 Now that you have you aliases stored online, learn how to use them on your devices !
 Every time you create a new VM, set up a new raspberry pi or connect to a new server, just run this (don't forget to replace with *your* gist id and username if you forked my gist!):
@@ -72,13 +72,15 @@ Trust me, that's not *that* odd to do so ;)
 
 ## 3. One alias to rule them all
 
-### Usual use : see, change, update your aliases - takes 2 seconds every update
+How to see, edit, and synchronise your aliases?
+
+### See, change, update your aliases - *2s/update*
 
 If you have forked my gist in [1](#1-use-a-remote-repository) :
 
 Just type `,aliases`. Easy, isn't it?
 
-### More details
+### What's inside
 
 The command `,aliases` looks like this (already included in my gist in case you download/fork it).
 
