@@ -36,7 +36,7 @@ It will behave like a git repository, excepted it's for a single file.
 ### Download them to a new device - takes 3s every new device
 
 Now that you have you aliases stored online, learn how to use them on your devices !
-Every time you create a new VM, set up a new raspberry pi or connect to a new server, just run this (don't forget to replace with *your* gist id and username if you have fork my gist!):
+Every time you create a new VM, set up a new raspberry pi or connect to a new server, just run this (don't forget to replace with *your* gist id and username if you forked my gist!):
 
 ```bash
 mkdir ~/.tools && cd $_
@@ -75,6 +75,7 @@ Trust me, that's not *that* odd to do so ;)
 ### Usual use : see, change, update your aliases - takes 2 seconds every update
 
 If you have forked my gist in [1](#1-use-a-remote-repository) :
+
 Just type `,aliases`. Easy, isn't it?
 
 ### More details
