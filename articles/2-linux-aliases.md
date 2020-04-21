@@ -14,6 +14,8 @@ We will see how to
 - create an **efficient** aliases system -with a *weird trick*
 - easily **manage** aliases for everyday use and update
 
+![-](../assets/2-aliases.png)
+
 First of all, we need to **create an independent file** to store aliases, for example `.aliases`
 
 In your `.bashrc` or `.zshrc`, add the automatic execution of this file (`source .aliases`) every time you will launch a terminal.
