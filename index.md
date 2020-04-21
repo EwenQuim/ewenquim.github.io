@@ -16,7 +16,7 @@ Encrypt emails and documents. Sign your commits. Be a hacker.
 *April 2020* -
 Manage linux aliases efficiently - change your workflow once and for all!
 
-### **[Useless][WIP]** [How is this website designed (spoiler: badly)](articles/1-markdown-website.md)
+### **[Useless]** [How is this website designed (spoiler: badly)](articles/1-markdown-website.md)
 
 *March 2020* -
 How this website is running ? A curious way to do it...
