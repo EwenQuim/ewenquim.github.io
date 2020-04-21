@@ -6,7 +6,7 @@
 - [2. Start your aliases with a comma](#2-start-your-aliases-with-a-comma)
 - [3. An alias to rule them all](#3-an-alias-to-rule-them-all)
 
-Setting aliases for commands is a very good way to save time at work. But setting them up always takes time, and you lose them all if you have to ssh on a server or change device.
+Setting aliases for commands is a very good way to save time at work. But setting them up always takes time, and you lose them all if you have to ssh on a server or change device. **Time to change this by building a very easy setup!**
 
 We will see how to
 
@@ -25,8 +25,8 @@ In your `.bashrc` or `.zshrc`, add the automatic execution of this file (`source
 The main goal is to make your aliases available on every device you're connecting, so using a centralized system is recommended in this situation.
 
 As we are using a single file, you can use [Github Gists](https://gist.github.com/).
-
 You can download my template with useful commands [here](https://gist.github.com/EwenQuim/b3ba203bdacb17bc1a15815cbc58792d) or create your own and clone it to your computer.
+I recommand you to fork my file, so you can create you own aliases without depending on mine.
 
 It will behave like a git repository, excepted it's for a single file.
 
@@ -40,15 +40,32 @@ Absolutely, and that's why we will do this. It allows two things:
 - Display your custom commands easily
 
 As explained in this old but useful [article](https://rhodesmill.org/brandon/2009/commands-with-comma/), this little known trick allows to display every custom command/alias by typing the comma then typing `tab`.
+It looks like this:
+
+![-](../assets/2-aliases.png)
+
+Also, the comma is **easy to type** : it's a lowercase character, does not require weird combination of keys, exists on all keyboards...
+
+Trust me, that's not *that* odd ;) 
 
 ## 3. An alias to rule them all
 
 This is **the ultimate alias**.
 
 ```bash
-alias ,aliases="cd ~/folder/where/you/store/your/aliases/file/ && git pull && nano .aliases && git commit -a -S -v && git push origin master && source .aliases && cd -"
+alias ,aliases="cd ~.tools/ && git pull && nano .aliases && source .aliases && git commit -a -v && git push origin master && cd -"
 ```
 
 By typing `,aliases`, you will download the latest aliases you set on other devices, edit your aliases as you like, applying it for immediate use, and then putting it back online -with a commit message!
 
-Don't hesitate to remove the `-S` option if you don't PGP sign your commits (I'll explain later why you should -and it's easy!)
+Everytime you create a new VM, set up a new raspberry pi or connect to a new server, just run this (don't forget to change your gist id!):
+
+```bash
+mkdir ~/.tools && cd $_
+git clone https://gist.github.com/EwenQuim/b3ba203bdacb17bc1a15815cbc58792d.git .
+source .aliases
+```
+
+After this, you'll just have to type `,aliases` everytime to change an alias on every terminal, or to download the latest changes you made on another place!
+
+Don't hesitate to remove the `-S` option in the commit alias if you don't PGP sign your commits (I'll explain later why you should -and it's easy too!)
