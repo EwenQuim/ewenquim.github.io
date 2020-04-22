@@ -1,3 +1,7 @@
+<!-- markdownlint-disable -->
+<link rel="shortcut icon" type="image/png" href="assets/favicon.ico">
+<!-- markdownlint-restore -->
+
 # *Explore this blog!*
 
 ---
