@@ -1,5 +1,5 @@
 <!-- markdownlint-disable -->
-<link rel="shortcut icon" type="image/png" href="assets/favicon.ico">
+<link rel="shortcut icon" type="image/png" href="assets/favicon.png">
 <!-- markdownlint-restore -->
 
 # *Explore this blog!*
