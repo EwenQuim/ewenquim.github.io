@@ -34,9 +34,9 @@ How this website is running ? A curious way to do it...
 
 ![-](assets/projects.jpg)
 
-[Amethysts Studio](https://international.amethysts.studio) : my artistic creations (short stories and others)
+[Amethysts Studio](https://amethysts.coalescence-universe.com) : my artistic creations (short stories and others)
 
-[Coalescence](https://www.coalescence-universe.com) : a mysterious visual novel
+[Coalescence](https://play.google.com/store/apps/details?id=com.coal) : a mysterious visual novel
 
 → [Github Profile](https://github.com/EwenQuim/)
 
