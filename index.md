@@ -2,7 +2,7 @@
 <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
 <!-- markdownlint-restore -->
 
-# *Learn everyday!*
+# *Learn every month!*
 
 ---
 
