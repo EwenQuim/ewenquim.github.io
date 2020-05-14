@@ -32,6 +32,7 @@ We won't save our aliases in the classic .bashrc (or .zshrc.)
 It's better to store them in a .aliases file and add `source .aliases` to the .bashrc/.zshrc.
 
 So for example type this:
+
 ```bash
 cd ~
 nano .aliases
@@ -54,7 +55,7 @@ alias h="history"
 As we are using a single file to store them, you can use [Github Gists](https://gist.github.com/).
 You can download my template with useful aliases [here](https://gist.github.com/EwenQuim/b3ba203bdacb17bc1a15815cbc58792d) or create your own and clone it to your computer.
 
-**I suggest you to fork my file** (copy it and add it to your personal gists), so you can create you own aliases without depending on mine, and still begin the setup easily.
+I suggest you to **fork my file** (copy it and add it to your personal gists), so you can create you own aliases without depending on mine, and still begin the setup easily.
 
 It will behave like a git repository, excepted it's for a single file.
 
@@ -74,7 +75,7 @@ Change .bashrc to .zshrc if you use zsh, of course.
 
 Now we can download our aliases to every device, yay!
 
-But there are some issues : we **can't update** (upload) easily the list of aliases ! And it's **not very handy**... Do you like typing `nano ~/.tools/.aliases` and then `source ~/.bashrc` every time you just want to change a simple alias ?
+But there are some issues : we *can't update* (upload) easily the list of aliases ! And it's *not very handy*... Do you like typing `nano ~/.tools/.aliases` and then `source ~/.bashrc` every time you just want to change a simple alias ?
 
 The system is not fully efficient here, so we'll se how to improve it in [part 3](#3-one-alias-to-rule-them-all).
 But before that, look at this **weird trick** in [part 2](#2-tip-start-your-aliases-with-a-comma) to boost your productivity.
