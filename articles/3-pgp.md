@@ -17,7 +17,7 @@ Don't panic:
 
 [PGP](https://www.youtube.com/watch?v=kf_J-QAdH24) (Pretty Good Privacy) is a encryption program, used for encrypting, decrypting and signing. It is often used in communication (signing or encrypting mails), and other useful features where security is required. The original program is a proprietary software, but there exists free version of it, [GnuPG](https://www.gnupg.org/) (referred as GPG), that still follow the [OpenPGP](https://www.openpgp.org/) standard.
 
-The name *'Pretty Good Privacy'* really is an euphemism, as the security ensured by this algorithm is **almost unbreakable**. It is easier for the police to make a suspect say their passphrase[^1] [^(2)] or directly infect his computer[^3] (and then inspecting keystrokes to get the passphrase) than attacking the algorithm itself...
+The name *'Pretty Good Privacy'* really is an euphemism, as the security ensured by this algorithm is **almost unbreakable**. It is easier for the police to make a suspect say their passphrase[^1] [^(2)] or directly infect his computer[^(3)] (and then inspecting keystrokes to get the passphrase) than attacking the algorithm itself...
 
 ### Setting up PGP
 
@@ -42,4 +42,4 @@ Not from a server (keyring)
 
 [^1]: <https://en.wikipedia.org/wiki/In_re_Boucher>
 [^2]: <http://volokh.com/files/BoucherDCT.1.pdf>
-[^3]: <https://www.cnet.com/news/feds-use-keylogger-to-thwart-pgp-hushmail/>
+[^(3)]: <https://www.cnet.com/news/feds-use-keylogger-to-thwart-pgp-hushmail/>
