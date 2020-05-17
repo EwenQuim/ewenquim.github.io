@@ -3,7 +3,7 @@
 10 *min setup*
 
 - [1. What is PGP](#1-what-is-pgp)
-  - [Definition (tl;dr version)](#definition-tldr-version)
+  - [Quick Definition](#quick-definition)
   - [More about PGP - History and Challenges](#more-about-pgp---history-and-challenges)
   - [Setting up PGP](#setting-up-pgp)
 - [2. Use PGP in Git](#2-use-pgp-in-git)
@@ -23,10 +23,10 @@ In this article, you will see:
 
 ## 1. What is PGP
 
-### Definition (tl;dr version)
+### Quick Definition
 
 **PGP** (Pretty Good Privacy) is a encryption program, used for encrypting, decrypting and signing emails and documents.
-It is as far as we know the *best encryption algorithm*.
+It is as far as we know one of the *best encryption algorithm*.
 
 ### More about PGP - History and Challenges
 
@@ -74,6 +74,9 @@ To sum up quickly in which situation you will use the **private key** and the **
   - your secret key
 
 It makes sense, doesn't it? Just try it with a friend!
+
+You can also try to send me a message (if you know to contact me of course!). You can find my public PGP key [here](../documents/pgp-public-key.md).
+
 
 ## 2. Use PGP in Git
 
