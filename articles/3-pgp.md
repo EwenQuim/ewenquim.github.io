@@ -75,8 +75,9 @@ To sum up quickly in which situation you will use the **private key** and the **
 
 It makes sense, doesn't it? Just try it with a friend!
 
-You can also try to send me a message (if you know to contact me of course!). You can find my public PGP key [here](../documents/pgp-public-key.md).
+[Go to the website](https://www.thechiefmeat.com/pgp/)
 
+You can also try to send me an encrypted message (if you know how to contact me of course!). You can find my public PGP key [here](../documents/pgp-public-key.md).
 
 ## 2. Use PGP in Git
 
