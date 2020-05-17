@@ -134,5 +134,5 @@ I hope it will be useful for you !
 
 ## References
 
-- [^gist]: <https://gist.github.com/>
-- [^comma]: <https://rhodesmill.org/brandon/2009/commands-with-comma/>
+[^gist]: <https://gist.github.com/>
+[^comma]: <https://rhodesmill.org/brandon/2009/commands-with-comma/>
