@@ -12,7 +12,7 @@
   - [Warnings](#warnings)
 - [References](#references)
 
-Git history can be modified. **Time to protect your project.**
+Git history can be modified. **Time to protect your project!**
 
 In this article, you will see:
 
@@ -30,7 +30,7 @@ It is as far as we know the *best encryption algorithm*.
 
 ### More about PGP - History and Challenges
 
-[PGP](https://www.youtube.com/watch?v=kf_J-QAdH24) (Pretty Good Privacy) is a encryption program, used for encrypting, decrypting and signing. It is often used in communication and especially mail exchange: [Mailvelope](https://www.mailvelope.com) and [Enigmail](https://enigmail.net) extensions allows you to integrate PGP encryption into your mails. PGP is also useful for a lot of other situations where security is required.
+**PGP** is often used in communication and especially mail exchange: [Mailvelope](https://www.mailvelope.com) and [Enigmail](https://enigmail.net) extensions allows you to integrate PGP encryption into your mails. PGP is also useful for a lot of other situations where security is required.
 
 The original program is a proprietary software, but there exists free version of it, [GnuPG](https://www.gnupg.org/)[^gnupg] (referred as GPG), that follows the [OpenPGP](https://www.openpgp.org/)[^openpgp] standard.
 
