@@ -58,18 +58,18 @@ Why isn't it better known to the general public? There are some reasons I imagin
 
 Linux enthusiasts often use GnuPG[^gnupg] (referred as GPG), but we will use [this website](https://www.thechiefmeat.com/pgp/#) for this tutorial, as the interface is really intuitive.
 
-Just fill in the blanks and the website will provide you 2 keys : a **public key** and a **private (or secret) key**. If you are afraid that someone watching the website steals your private key, you can ~use private browsing~ use Tor[^tor] to access it and/or cut your internet connexion during the key generation.
+Just fill in the blanks and the website will provide you 2 keys : a **public key** and a **private (or secret) key**. If you are afraid that someone watching the website steals your private key, you can use Tor[^tor] to access the website and/or cut your internet connexion during the key generation.
 
 To sum up quickly in which situation you will use the **private key** and the **secret key**:
 
-- if *you* sign thing A:
+- if *you* sign something:
   - your secret key *(you are the only one to know it)*
-- if *others* want to verify thing A signed by *you*:
+- if *others* want to verify something signed by *you*:
   - your public key *(public so anyone can verify that you really are the author)*
-- if *you* encrypt thing B to send to *someone*:
+- if *you* encrypt something to send to *someone*:
   - your secret key
   - the public key of the receiver *(so only the receiver can read it)*
-- if *you* want to decrypt thing B that *someone* sent to you
+- if *you* want to decrypt something that *someone* sent to you
   - the public key of the sender *(to decrypt his message)*
   - your secret key
 
