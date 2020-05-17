@@ -1,4 +1,4 @@
-# **[Crypto]** [Sign your commits with PGP](articles/2-pgp.md)
+# **[Crypto]** Sign your commits with PGP
 
 10 *min setup*
 
@@ -27,16 +27,63 @@ Just fill in the blanks and the website will provide you 2 keys : a public key a
 
 ## 2. Use PGP in Git
 
-### Why doing it
+### Why you must sign your work
 
-Exemple avec linux
-EZ
+Remember the first time yuo used git in your computer.
+You have entered there instructions :
 
-### 
+```bash
+git config --global user.name "Chuck Norris"
+git config --global user.email chuck.norris@example.com
+```
+
+Git remembers what you filled and indicates your name and email for every commit.
+
+![Picture of Git history here](../assets/3-Git-history.png)
+
+But the problem is that you can modify the older commits, even the date or the author!
+
+This can be funny : some guys even made a CLI to [blame someone else](https://github.com/jayphelps/git-blame-someone-else) for your bad code, or [claim some work you didn't do](https://github.com/SilasX/git-upstage). 
+
+But if you work seriously, for example on an open-source project, this can be quite scary, and you may want to protect your code.
+
+Luckily, git allows you to sign your work with PGP !
+
+### How can I do this
+
+Once you created your PGP key, add it to git (locally) with the following command:
+
+```bash
+git config --global user.signingkey your-PGP-key-fingerprint-here
+```
+
+Then, every time you commit, just add `-s` to `git commit`, and there it is! You just made your first PGP-signed commit.
+
+You can go further by creating [custom aliases](2-linux-aliases.html) to make this operation transparent, and not losing time.
+
+If you commit from a graphical interface, it is also possible to sign your commits!
+
+For example, if you use Visual Studio Code, just go to the settings, type `git sign` and activate the option.
+
+It is also important to add your public PGP key to your remote repository, so the git host can verify them (often represented with a nice green tick on your history).
+
+Example on Github:
+
+![Screenshot of Github PGP signing here](../assets/3-Github-GPG-key.png)
+
+![Signed commit on Github](../assets/3-Github-signed.png)
+
+Example on Gitlab:
+
+![Screenshot of Gitlab PGP signing here]()
 
 ### Warnings
 
-Not from a server (keyring)
+Beware of were you are committing something. Your signature depends on the PGP keys available on the device you use. Don't forget to copy your PGP key and link it to git when you use a new device.
+
+Especially, it is highly not recommended to sign a commit from a server. Because it would mean thet either it wouldn't be signed, or that you have your PGP key on the server...
+
+You shouldn't commit on a prod server anyway, whether you sign it or not.
 
 ## References
 
