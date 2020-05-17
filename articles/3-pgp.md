@@ -12,14 +12,14 @@
   - [Warnings](#warnings)
 - [References](#references)
 
-*Why do I need to sign my Github commits? I don't want to care about this while coding, and lose precious time!*
+Git history can be modified. **Time to protect your project.**
 
-Don't panic:
+In this article, you will see:
 
-- the setup is easy (10 min max.)
-- the signing procedure is transparent (0s more /commit)
-- always better to work safely
-- vscode integration !
+- an overview of PGP
+- **quick PGP setup**
+- git **signing procedure** with PGP
+- **vscode** integration
 
 ## 1. What is PGP
 
