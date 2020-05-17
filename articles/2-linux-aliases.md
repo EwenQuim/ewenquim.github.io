@@ -12,7 +12,8 @@
 - [3. One alias to rule them all](#3-one-alias-to-rule-them-all)
   - [See, change, update your aliases - *2s/update*](#see-change-update-your-aliases---2supdate)
   - [What's inside](#whats-inside)
-- [Thank you !](#thank-you)
+  - [Thank you!](#thank-you)
+- [References](#references)
 
 Setting aliases for commands is a very good way to save time at work. But setting them up always takes time -far more than it should! Moreover, you lose them all if you have to ssh on a server or change device. **Time to change this by building a very easy setup!**
 
@@ -52,7 +53,7 @@ alias h="history"
 
 ### Storing aliases online - *1min*
 
-As we are using a single file to store them, you can use [Github Gists](https://gist.github.com/).
+As we are using a single file to store them, you can use [Github Gists](https://gist.github.com/)[^gist].
 You can download my template with useful aliases [here](https://gist.github.com/EwenQuim/b3ba203bdacb17bc1a15815cbc58792d) or create your own and clone it to your computer.
 
 I suggest you to **fork my file** (copy it and add it to your personal gists), so you can create you own aliases without depending on mine, and still begin the setup easily.
@@ -82,14 +83,14 @@ But before that, look at this **weird trick** in [part 2](#2-tip-start-your-alia
 
 ## 2. Tip: Start your aliases with a comma
 
-*Why this monstrosity ? I've never seen a command beginning with a comma !*
+*'Why this monstrosity ? I've never seen a command beginning with a comma !'*
 
 Absolutely, and that's why we will do this. It allows two things:
 
 - Avoid collisions with existing commands
 - Display your custom commands easily
 
-As explained in this old but useful [article](https://rhodesmill.org/brandon/2009/commands-with-comma/), this little known trick allows to display every custom command/alias by typing the comma then typing `tab`.
+As explained in this old but useful [article](https://rhodesmill.org/brandon/2009/commands-with-comma/)[^comma], this little known trick allows to display every custom command/alias by typing the comma then typing `tab`.
 It looks like this:
 
 ![-](../assets/2-aliases.png)
@@ -125,8 +126,13 @@ When you type `,aliases`, this happens:
 
 This takes seconds, and is very handy to use.
 
-## Thank you !
+### Thank you!
 
 Don't hesitate to remove the `-S` option in the commit alias if you don't PGP sign your commits (I'll explain later why you should -and it's easy too!)
 
 I hope it will be useful for you !
+
+## References
+
+- [^gist]: <https://gist.github.com/>
+- [^comma]: <https://rhodesmill.org/brandon/2009/commands-with-comma/>
