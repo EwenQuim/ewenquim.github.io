@@ -117,19 +117,19 @@ For example, if you use Visual Studio Code, just go to the settings, type `git s
 
 It is also important to add your public PGP key to your remote repository, so the git host can verify them (often represented with a nice green tick on your history).
 
-Example on Github:
+Here the example on Github (it's similar on Gitlab):
 
-![Screenshot of Github PGP signing here](../assets/3-Github-GPG-key.png)
+Insert your PGP key here
 
-![Signed commit on Github](../assets/3-Github-signed.png)
+![(Screenshot of Github PGP signing here)](../assets/3-Github-GPG-key.png)
 
-Example on Gitlab:
+And here is the result : a 'verified' mention on your git history!
 
-![Screenshot of Gitlab PGP signing here]()
+![(Signed commit on Github)](../assets/3-Github-signed.png)
 
 ### Warnings
 
-Beware of were you are committing something. Your signature depends on the PGP keys available on the device you use. Don't forget to copy your PGP key and link it to git when you use a new device.
+Beware of where you are committing something. Your signature depends on the PGP keys available on the device you use. Don't forget to copy your PGP key and link it to git when you use a new device.
 
 Especially, it is highly not recommended to sign a commit from a server. Because it would mean that either it wouldn't be signed, or that you have your PGP key on the server...
 
