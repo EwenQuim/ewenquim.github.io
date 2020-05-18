@@ -58,7 +58,9 @@ Why isn't it better known to the general public? There are some reasons I imagin
 
 Linux enthusiasts often use GnuPG[^gnupg] (referred as GPG), but we will use [this website](https://www.thechiefmeat.com/pgp/#) for this tutorial, as the interface is really intuitive.
 
-Just fill in the blanks and the website will provide you 2 keys : a **public key** and a **private (or secret) key**. If you are afraid that someone watching the website steals your private key, you can use Tor[^tor] to access the website and/or cut your internet connexion during the key generation.
+Just fill in the blanks. If you are afraid that someone watching the website steals your private key, you can use Tor[^tor] to access the website and/or cut your internet connexion during the key generation. Also, it is important to ask for a RSA key with minimum 2048 bits!
+
+The website will provide you 2 keys : a **public key** and a **private (or secret) key**.
 
 To sum up quickly in which situation you will use the **private key** and the **secret key**:
 
