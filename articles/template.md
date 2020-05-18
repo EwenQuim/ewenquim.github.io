@@ -36,8 +36,10 @@ Things
 
 ### Part 2
 
+Things
+
+→ [All articles](../articles.md)
+
 ## References
 
 [^dev]: <https://dev.ewen.quimerch.com>
-
-→ [All articles](../articles.md)

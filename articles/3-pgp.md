@@ -139,6 +139,8 @@ Especially, it is highly not recommended to sign a commit from a server. Because
 
 You shouldn't commit on a prod server anyway, whether you sign it or not.
 
+→ [All articles](../articles.md)
+
 ## References
 
 [^gnupg]: <https://www.gnupg.org/>
@@ -150,5 +152,3 @@ You shouldn't commit on a prod server anyway, whether you sign it or not.
 [^tor]: <https://www.torproject.org/>
 [^openkeychain]: <https://www.openkeychain.org/>
 [^pgpeverywhere]: <https://www.pgpeverywhere.com/>
-
-→ [All articles](../articles.md)

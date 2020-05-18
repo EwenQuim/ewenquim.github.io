@@ -132,9 +132,9 @@ Don't hesitate to remove the `-S` option in the commit alias if you don't PGP si
 
 I hope it will be useful for you !
 
+→ [All articles](../articles.md)
+
 ## References
 
 [^gist]: <https://gist.github.com/>
 [^comma]: <https://rhodesmill.org/brandon/2009/commands-with-comma/>
-
-→ [All articles](../articles.md)
