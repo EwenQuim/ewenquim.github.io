@@ -7,7 +7,7 @@
   - [More about PGP - History and Challenges](#more-about-pgp---history-and-challenges)
   - [Setting up PGP](#setting-up-pgp)
 - [2. Use PGP in Git](#2-use-pgp-in-git)
-  - [Why you must sign your work](#why-you-must-sign-your-work)
+  - [Why you should sign your work](#why-you-should-sign-your-work)
   - [How can I do this](#how-can-i-do-this)
   - [Warnings](#warnings)
 - [References](#references)
@@ -85,7 +85,7 @@ You can use any message service, as the message is encrypted! Don't forget to se
 
 ## 2. Use PGP in Git
 
-### Why you must sign your work
+### Why you should sign your work
 
 Remember the first time you used git in your computer.
 You have typed these instruction :
