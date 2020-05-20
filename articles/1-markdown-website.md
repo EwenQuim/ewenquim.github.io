@@ -1,4 +1,4 @@
-# **[Useless]** How is this website designed (spoiler: badly)  <!-- omit in toc -->
+# **[Meta]** How is this website designed (spoiler: badly)  <!-- omit in toc -->
 
 5 *min setup*
 

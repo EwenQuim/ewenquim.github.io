@@ -16,7 +16,7 @@ Manage linux aliases efficiently - change your workflow once and for all!
 
 ---
 
-## **[Useless]** [How is this website designed (spoiler: badly)](articles/1-markdown-website.md)
+## **[Meta]** [How is this website designed (spoiler: badly)](articles/1-markdown-website.md)
 
 *March 2020* -
 How this website is running ? A curious way to do it...
