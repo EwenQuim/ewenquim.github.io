@@ -1,5 +1,7 @@
 # **[Meta]** About Blogging <!-- omit in toc -->
 
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
 [time] *min setup*
 
 - [1. Public or private](#1-public-or-private)
@@ -28,6 +30,17 @@ Today people want privacy. The European GDPR and recent laws in general tends to
 ### More about the subject
 
 Random text
+you can use an inline formula $$\forall x \in \R$$ like this one
+
+Hello
+
+$$
+M = \left( \begin{array}{ccc}
+x_{11} & x_{12} & \ldots \\
+x_{21} & x_{22} & \ldots \\
+\vdots & \vdots & \ldots \\
+\end{array} \right)
+$$
 
 ## 2. Part 2
 
