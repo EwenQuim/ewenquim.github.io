@@ -30,7 +30,7 @@ Today people want privacy. The European GDPR and recent laws in general tends to
 ### More about the subject
 
 Random text
-you can use an inline formula $$\forall x \in \R$$ like this one
+you can use an ~~inline~~ formula $$\forall x \in \R$$ like this one
 
 Hello
 
