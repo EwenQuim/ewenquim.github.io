@@ -35,23 +35,17 @@ It really is a tough question.
 
 These companies control almost your entire digital life and tend to invade your personal private life as well.
 
-Most of them do not seem so greedy, as they mostly provide free services. The only thing they have is your personal data! But here is their yearly revenue (in billions) :
+Most of them do not seem so greedy, as they mostly provide free services. The only thing they have is your personal data! But here is their yearly revenue  :
 
-|  Google | Amazon |  Facebook |         Apple         | Microsoft |
-|:-------:|:------:|:---------:|:---------------------:|:---------:|
-|    66   |   280  |     70    |          260          |    125    |
-| 13 & 14 |    1   |     7     | 39 |     2     |
-|   86%   |        |           |                       |           |
+|           | Revenue ($) | Founder/CEO wealth rank  | Ads |
+|----------:|:-----------:|:------------------------:|:---:|
+|   Google  |     66 B    |  13[^page] & 14[^brin]   | 86% |
+|   Amazon  |     280 B   |        1[^bezos]         |     |
+|  Facebook |     70 B    |        7[^zuckerberg]    |     |
+|   Apple   |     260 B   |      39[^jobs]           |     |
+| Microsoft |     125 B   | 2[^gates] / 11[^ballmer] |     |
 
-Surprising, isn't it? Almost 
-
-|           | Revenue (B$) | Founder's rank | Ads |
-|----------:|:------------:|:--------------:|:---:|
-|   Google  |      66      |     13 & 14    | 86% |
-|   Amazon  |      280     |        1       |     |
-|  Facebook |      70      |        7       |     |
-|   Apple   |      260     | 39[^gatesdead] |     |
-| Microsoft |      125     |      2 / 11[^gates-ballmer]    |     |
+Surprising, isn't it? Almost
 
 Controlling everything
 
@@ -104,6 +98,10 @@ Free alternative on FDroid
 
 ## References
 
-[^forbes]: From Forbes 2020 <https://www.forbes.com/billionaires/>
-[^gatesdead]: The rank was in 2011 (Steve Jobs is dead in 2011) <https://www.forbes.com/profile/steve-jobs/>
-[^gates-ballmer]: Gates (Founder and former CEO) is 2nd and Ballmer (CEO from 2000 to 2014) is 11th
+[^page]: Larry Page, 2020 <https://www.forbes.com/profile/larry-page/>
+[^brin]: Sergey Brin, 2020 <https://www.forbes.com/profile/sergey-brin/>
+[^bezos]: Jeff Bezos, 2020 <https://www.forbes.com/profile/jeff-bezos/>
+[^zuckerberg]: Mark Zuckerberg, 2020 <https://www.forbes.com/profile/mark-zuckerberg/>
+[^jobs]: Steve Jobs, 2011 (as he died in 2011) <https://www.forbes.com/profile/steve-jobs/>
+[^gates]: Bill Gates, 2020 (Founder and former CEO) <https://www.forbes.com/profile/bill-gates/>
+[^ballmer]: Steve Ballmer, 2020 (CEO from 2000 to 2014) <https://www.forbes.com/profile/steve-ballmer/>
