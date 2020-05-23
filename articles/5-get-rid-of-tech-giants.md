@@ -3,7 +3,8 @@
 [time] *min setup*
 
 - [1. Why should we step far from Tech Giants](#1-why-should-we-step-far-from-tech-giants)
-  - [Quick Definition](#quick-definition)
+  - [Who are they ?](#who-are-they)
+  - [Are they *that* bad ?](#are-they-that-bad)
   - [Is there any alternatives ?](#is-there-any-alternatives)
   - [Why you will always need](#why-you-will-always-need)
 - [2. Change computer apps](#2-change-computer-apps)
@@ -23,13 +24,36 @@ In this article, you will see:
 
 ## 1. Why should we step far from Tech Giants
 
-### Quick Definition
+### Who are they ?
+
+I call the "Tech Giants" all the companies valuated at more than a billion dollar.
+Google, Amazon, Facebook, Apple and Microsoft, often referred as GAFAM, are the companies 
+
+### Are they *that* bad ?
+
+It really is a tough question.
+
+These companies control almost your entire digital life and tend to invade your personal private life as well.
+
+Most of them do not seem so greedy, as they mostly provide free services. The only thing they have is your personal data! But here is their yearly revenue (in billions) :
+
+|                                      |  Google | Amazon |  Facebook |         Apple         | Microsoft |
+|-------------------------------------:|:-------:|:------:|:---------:|:---------------------:|:---------:|
+|                Revenue (in billions) |    66   |   280  |     70    |          260          |    125    |
+| Founder's rank on billionaire's list | 13 & 14 |    1   |     7     | 39 in 2011 (dead now) |     2     |
+|                                      |   86%   |        |           |                       |           |
+
+Surprising, isn't it? Almost 
 
 Controlling everything
 
-Not putting eggs in the same basket
+It is also a matter of not putting all your eggs in the same basket.
+
+To illustrate that, I have regrouped apps on my phone by company. I've counted : more than % of my apps are from Google, Microsoft or Samsung! Moreover, my phone is an Android, the *Google* OS for smartphones...
 
 ![Photos of 1/2 apps on my phone in only 3 company folder]
+
+You can do this expr
 
 ### Is there any alternatives ?
 
