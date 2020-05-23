@@ -98,10 +98,10 @@ Free alternative on FDroid
 
 ## References
 
-[^page]: Larry Page, 2020 <https://www.forbes.com/profile/larry-page/>
-[^brin]: Sergey Brin, 2020 <https://www.forbes.com/profile/sergey-brin/>
-[^bezos]: Jeff Bezos, 2020 <https://www.forbes.com/profile/jeff-bezos/>
-[^zuckerberg]: Mark Zuckerberg, 2020 <https://www.forbes.com/profile/mark-zuckerberg/>
-[^jobs]: Steve Jobs, 2011 (as he died in 2011) <https://www.forbes.com/profile/steve-jobs/>
-[^gates]: Bill Gates, 2020 (Founder and former CEO) <https://www.forbes.com/profile/bill-gates/>
+[^page]: Larry Page, 2020 (Co-founder) <https://www.forbes.com/profile/larry-page/>
+[^brin]: Sergey Brin, 2020 (Co-founder) <https://www.forbes.com/profile/sergey-brin/>
+[^bezos]: Jeff Bezos, 2020 (Founder) <https://www.forbes.com/profile/jeff-bezos/>
+[^zuckerberg]: Mark Zuckerberg, 2020 (Founder) <https://www.forbes.com/profile/mark-zuckerberg/>
+[^jobs]: Steve Jobs, rank in 2011 as he died that year (Founder) <https://www.forbes.com/profile/steve-jobs/>
+[^gates]: Bill Gates, 2020 (Founder) <https://www.forbes.com/profile/bill-gates/>
 [^ballmer]: Steve Ballmer, 2020 (CEO from 2000 to 2014) <https://www.forbes.com/profile/steve-ballmer/>
