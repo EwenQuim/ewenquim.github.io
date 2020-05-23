@@ -37,21 +37,21 @@ These companies control almost your entire digital life and tend to invade your 
 
 Most of them do not seem so greedy, as they mostly provide free services. The only thing they have is your personal data! But here is their yearly revenue (in billions) :
 
-|                         |  Google | Amazon |  Facebook |         Apple         | Microsoft |
-|------------------------:|:-------:|:------:|:---------:|:---------------------:|:---------:|
-|            Revenue (B$) |    66   |   280  |     70    |          260          |    125    |
-| Founder's rank[^forbes] | 13 & 14 |    1   |     7     | 39[^gatesdead] |     2     |
-|             Part of ads |   86%   |        |           |                       |           |
+|  Google | Amazon |  Facebook |         Apple         | Microsoft |
+|:-------:|:------:|:---------:|:---------------------:|:---------:|
+|    66   |   280  |     70    |          260          |    125    |
+| 13 & 14 |    1   |     7     | 39 |     2     |
+|   86%   |        |           |                       |           |
 
 Surprising, isn't it? Almost 
 
 |           | Revenue (B$) | Founder's rank | Ads |
-|----------:|-------------:|---------------:|----:|
+|----------:|:------------:|:--------------:|:---:|
 |   Google  |      66      |     13 & 14    | 86% |
 |   Amazon  |      280     |        1       |     |
 |  Facebook |      70      |        7       |     |
-|   Apple   |      260     |       39       |     |
-| Microsoft |      125     |        2       |     |
+|   Apple   |      260     | 39[^gatesdead] |     |
+| Microsoft |      125     |      2 / 11[^gates-ballmer]    |     |
 
 Controlling everything
 
@@ -106,3 +106,4 @@ Free alternative on FDroid
 
 [^forbes]: From Forbes 2020 <https://www.forbes.com/billionaires/>
 [^gatesdead]: The rank was in 2011 (Steve Jobs is dead in 2011) <https://www.forbes.com/profile/steve-jobs/>
+[^gates-ballmer]: Gates (Founder and former CEO) is 2nd and Ballmer (CEO from 2000 to 2014) is 11th
