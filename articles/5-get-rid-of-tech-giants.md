@@ -51,11 +51,11 @@ Controlling everything
 
 It is also a matter of not putting all your eggs in the same basket.
 
-To illustrate that, I have regrouped apps on my phone by company. I've counted : more than % of my apps are from Google, Microsoft or Samsung! Moreover, my phone is an Android, the *Google* OS for smartphones...
+To illustrate that, I have regrouped apps on my phone by company. I've counted : more than 38% of my apps are from Google, Microsoft or Samsung! Moreover, my phone is an Android, the *Google* OS for smartphones...
 
-![Photos of 1/2 apps on my phone in only 3 company folder]
+![Photos of 1/2 apps on my phone in only 3 company folder](../assets/3-smartphones-apps.jpg)
 
-You can do this expr
+You can do this yourself, it will be the same... If you use an iPhone/iPad, even more of the apps actually belongs to one and only company!
 
 ### Is there any alternatives ?
 
