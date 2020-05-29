@@ -17,15 +17,21 @@
     - [Pure strategies](#pure-strategies)
     - [Mixed strategies](#mixed-strategies)
   - [Let's fight!](#lets-fight)
-- [3. Appendix: Press & Dyson work](#3-appendix-press--dyson-work)
-  - [Only one](#only-one)
+    - [First method](#first-method)
+    - [Second method](#second-method)
+- [3. Optimized Strategies](#3-optimized-strategies)
+  - [](#)
+- [4. Appendix: Real maths. Proofs.](#4-appendix-real-maths-proofs)
+    - [Game in normal form](#game-in-normal-form)
+    - [Prisoner's dilemma generalized](#prisoners-dilemma-generalized)
+    - [Strategies general form](#strategies-general-form)
 - [References](#references)
 
 A quick article about how to **control opponent's score in some games**, with the help of a nice part of mathematics called *Game Theory*.
 
-This article is derived from [this paper](ref)[^original] from mathematicians Press & Dyson. The original work isn't very understandable for everyone, so I decided to work on it and publish it with very simple formulas and illustrations so **everybody can understand**!
+This article is derived from [this paper](https://www.pnas.org/content/109/26/10409)[^1] from mathematicians Press & Dyson. The original work isn't very understandable for everyone, so I decided to work on it and publish it with very simple formulas and illustrations so **everybody can understand**!
 
-After reading this article, you may want to **try your own strategies** with [these ressources](ref).
+After reading this article, you may want to **try your own strategies** with [these ressources](https://github.com/EwenQuim/iterated-prisoners-dilemma)[^try].
 
 In this article, you will see:
 
@@ -62,33 +68,27 @@ That is the prisoner's dilemma.
 
 The prisoner's dilemma is one of the fundamentals of Game Theory.
 
-As every game in "normal form", it's described by 3 things:
+As every game in "normal form", it's described by 3 things ([see more about this here](#game-in-normal-form)):
 
-- a set $$\mathcal{N}= \{P_{1}, P_{2}, P_{3}, ..., P_{N}\}$$ of players
-- a set $$S=\{S_{1}, S_{2}, S_{3},..., S_{N}\}$$ of strategies foreach player
-  - the set $$S_{i}$$ of strategies of player $$P_{i}$$ can be anything: {heads, tails} or {bet 1\$, bet 5\$, bet 10\$}
-- a utility function:
+- players
+- strategies for each player. It can be anything: {heads, tails} or {bet 1\$, bet 5\$, bet 10\$}
+- a utility function: it maps every situation (strategies of every player) to a gain (or a loss)
 
-$$\mu:(s_{1}, ..., s_{N}) \in \prod_{i=1}^{N} \mapsto (g_{1}, ..., g_{N}) \in \mathbb{R}^N $$
-
-It is often represented as a matrix, and especially a mere table for 2-player games. So it sums up like this for example:
+A 2-players game with finite strategies is often represented as a mere table. So it sums up like this for example:
 
 |  X \ Y |   Ace   |  Queen  |
 |:------:|:-------:|:-------:|
 |**King**| (-1, 1) | (1, -1) |
-|  **10**| (-3, 3) | (-1, 1) |
+| **10** | (-3, 3) | (-1, 1) |
+|  **9** | (-6, 4) | (-2, 5) |
 
-In this game, if X plays a 10 and Y plays the Ace, Y will get 3 points and X will lose 3 points. The mean value of utility for X is -0.5, his cards aren't good!
+In this game, if X plays a 10 and Y plays the Ace, Y will get 3 points and X will lose 3 points. The mean value of utility for X is -2, his cards aren't good!
 
 In Game Theory, the utility (the gain function) can be anything too. It can be expressed in euros, happiness, pastries, or a mix of all three!
 
 *What about the prisoner's dilemma?*
 
-It's a 2 players game with 2 strategies each: Cooperate (C) or Defect (D).
-
-- Players $$N = \{X, Y\}$$
-- Strategies $$S_{X} = \{Cooperate, Defect\} = S_{Y}$$
-- The utility is:
+It's a 2 players (X and Y) game with 2 strategies each: Cooperate (C) or Defect (D).
 
 |     X \ Y     | Cooperate | Defect |
 |:-------------:|:---------:|:------:|
@@ -97,17 +97,16 @@ It's a 2 players game with 2 strategies each: Cooperate (C) or Defect (D).
 
 Here we took the opposite situation described in the little story. It looks more like a loot sharing situation.
 
+The numbers (0, 1, 3, 5) [can change](#prisoners-dilemma-generalized), but it is a classical example.
+
 ### Equilibria
 
 The main goal of Game Theory in to find equilibria: these are special situations that allows one to guess what to do.
 
-One of the most well-known is the **Nash Equilibrium**: it is a point which no one would deviate from, as it would reduce the utility.
+One of the most well-known is the **Nash Equilibrium**: it is a situation where no player can strictly benefit from deviating to another strategy, knowing that the others play according to the given situation.
+For the prisoner's dilemma, it's the strategy {D, D} (that lead to a utility of 1 to everyone) : as exposed in the story, a player which is rational have no reason to change its strategy and cooperate, as it leads to a smaller utility!
 
-For the prisoner's dilemma, it's the strategy {D, D} that lead to a utility of 1 to everyone.
-
-As exposed in the story, a player which is rational have no reason to change its strategy!
-
-Another Equilibrium is the **Pareto Optimum**. It is a situation where you can't increase the utility of a player without reducing the utility of another player. The strategies {C, C}, {C, D} and {D, C} are Pareto Optimums. For example, from {C, C} to increase the utility of player X, he can only do that by reducing the utility of Y.
+Another Equilibrium is the **Pareto Optimum**. It is a situation where you can't increase the utility of a player (by changing its strategy) without reducing the utility of another player. The strategies {C, C}, {C, D} and {D, C} are Pareto Optimums. For example, from {C, C} to increase the utility of player X, he can only do that by reducing the utility of Y.
 
 ### The paradox
 
@@ -118,16 +117,7 @@ The 'paradox' can be summarized in one sentence:
 The only Nash Equilibrium is the situation {D, D}.
 And it isn't a Pareto Optimum: if both players cooperate, they can simultaneously increase their gain! But since it is a Nash equilibrium, neither player has any interest in doing that. Playing both Cooperate is sub-optimal as a player could easily betray to increase his winnings!
 
-The strategy Cooperate is said "dominated" by the strategy "Defect", because whatever the opponent do, it is better to betray.
-
-To be precise, the Prisoner's dilemma happen for every game like this:
-
-| X \ Y |    C    |    D   |
-|:-----:|:-------:|:------:|
-| **C** |  (b, b) | (d, a) |
-| **D** |  (a, d) | (c, c) |
-
-With a > b > c > d $\geq$ 0
+The strategy Cooperate is said "dominated" by the strategy "Defect", because whatever the opponent do, it is always better to betray.
 
 The situation {C, C} is called the "social optimum", as it is the highest total utility. But it will never be played.
 
@@ -191,16 +181,18 @@ We can have other strategies:
 | **C** | 0 | 0 |
 | **D** | 0 | 0 |
 
-*The copycat* (copies what the opponent played last turn)
+*The copycat a.k.a tit-for-tat* (copies what the opponent played last turn)
 
 | X \ Y | C | D |
 |:-----:|:-:|:-:|
 | **C** | 1 | 0 |
 | **D** | 1 | 0 |
 
+A lot of strategies exists[^2]!
+
 #### Mixed strategies
 
-You can even randomize the chances to cooperate.
+You can even [randomize] the chances to cooperate.
 
 *The undecided* (0.5 meaning 50% chance to cooperate)
 
@@ -221,6 +213,8 @@ You can invent your own!
 We just need one thing more before comparing strategies: the initial situation! It doesn't depend on the "last round" because it's the first...
 
 ### Let's fight!
+
+#### First method
 
 We will compare two strategies:
 
@@ -247,16 +241,60 @@ Here's what happened when playing 2,000 rounds (blue for the *cautious* and red 
 The mean gain was 3 while they both cooperate, and then it breaks down when the cautious betrays for the first time (he had 1% chance to betray in the {C, C} situation).
 Then, the resentful always betrayed, even when the cautious tried to cooperate. That's why the gain of the cautious went down to 1 (as the Nash Equilibrium {D, D} utility is 1). Sometimes the cautious attempt to cooperates and gets 0 while the resentful gets 5 by defecting.
 
-There are even more graphs than strategies, so try it out with my script [just here](todo)!
+There are even more graphs than strategies, so try it out with my script [just here](https://github.com/EwenQuim/iterated-prisoners-dilemma)!
 
-## 3. Appendix: Press & Dyson work
+#### Second method
 
-### Only one
+Comparing 2 strategies at a time isn't very efficient. I entered all strategies in a database so I can choose a strategy and it displays the result for a given number of rounds against all the strategies (including itself).
 
-Things
+Everything is [here](https://github.com/EwenQuim/iterated-prisoners-dilemma) again. Just create your own strategy and launch the script, everything will be computed automatically ;)
+
+For example, we can see the results for the strategy
+
+![todo]()
+
+I told you in the title that we can do better: **control the opponent's gain**.
+
+
+## 3. Optimized Strategies
+
+### 
+
+## 4. Appendix: Real maths. Proofs.
+
+#### Game in normal form
+
+- a set $$\mathcal{N}= \{P_{1}, P_{2}, P_{3}, ..., P_{N}\}$$ of players
+- a set $$S=\{S_{1}, S_{2}, S_{3},..., S_{N}\}$$ of strategies foreach player
+  - the set $$S_{i}$$ of strategies of player $$P_{i}$$ can be anything: {heads, tails} or {bet 1\$, bet 5\$, bet 10\$}
+- a utility function:
+
+$$\mu:(s_{1}, ..., s_{N}) \in \prod_{i=1}^{N} \mapsto (g_{1}, ..., g_{N}) \in \mathbb{R}^N $$
+
+#### Prisoner's dilemma generalized
+
+To be precise, the Prisoner's dilemma happen for every game like this:
+
+| X \ Y |    C    |    D   |
+|:-----:|:-------:|:------:|
+| **C** |  (b, b) | (d, a) |
+| **D** |  (a, d) | (c, c) |
+
+With a > b > c > d $$\geq$$ 0
+
+#### Strategies general form
+
+The general form for a 1-memory strategy is a vector $$p = (p_{1}, p_{2}, p_{3}, p_{4}) \in \[0, 1\]^4$$ such as
+
+| X \ Y |    C    |    D    |
+|:-----:|:-------:|:-------:|
+| **C** |$$p_{1}$$|$$p_{2}$$|
+| **D** |$$p_{3}$$|$$p_{4}$$|
 
 → [All articles](../articles.md)
 
 ## References
 
-[^original]: <https://dev.ewen.quimerch.com>
+[^1]: <https://www.pnas.org/content/109/26/10409>
+[^2]: <http://jasss.soc.surrey.ac.uk/20/4/12.html#sect3>
+[^try]: <https://github.com/EwenQuim/iterated-prisoners-dilemma>
