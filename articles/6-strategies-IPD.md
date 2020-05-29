@@ -1,18 +1,32 @@
 # **[Maths]** Strategies controlling the opponent in games <!-- omit in toc -->
 
+<<<<<<< HEAD
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
+=======
+>>>>>>> dd9da1a4c80755ebd3e2bb588cf2a1a59843ce2c
 20 *min read*
 
 10 *min testing (if you want to)*
 
-- [1. Prisoner's dilemma](#1-prisoners-dilemma)
-  - [The story](#the-story)
-  - [Mathematical formalism](#mathematical-formalism)
-  - [Equilibria](#equilibria)
-  - [The paradox](#the-paradox)
-- [2. Iterated Prisoner's dilemma](#2-iterated-prisoners-dilemma)
+- [- New behaviors](#ullinew-behaviorsliul)
+  - [1. Prisoner's dilemma](#1-prisoners-dilemma)
+    - [The story](#the-story)
+    - [Mathematical formalism](#mathematical-formalism)
+    - [Equilibria](#equilibria)
+    - [The paradox](#the-paradox)
+- [<<<<<<< HEAD](#-head)
+  - [2. Iterated Prisoner's dilemma](#2-iterated-prisoners-dilemma)
+    - [New behaviors](#new-behaviors)
+    - [Part 2](#part-2)
+  - [3. Appendix: Press & Dyson work](#3-appendix-press--dyson-work)
+    - [Only one](#only-one)
+  - [References](#references)
+<<<<<<< HEAD
   - [New behaviors](#new-behaviors)
+=======
+  - [Part 1](#part-1)
+>>>>>>> dd9da1a4c80755ebd3e2bb588cf2a1a59843ce2c
   - [Part 2](#part-2)
 - [3. Appendix: Press & Dyson work](#3-appendix-press--dyson-work)
   - [Only one](#only-one)
@@ -117,6 +131,11 @@ And it isn't a Pareto Optimum: if both players cooperate, they can simultaneousl
 
 The strategy Cooperate is said "dominated" by the strategy "Defect", because whatever the opponent do, it is better to betray.
 
+<<<<<<< HEAD
+=======
+The situation {C, C} is called the "social optimum", as it is the highest total utility. But it will never be played.
+
+>>>>>>> dd9da1a4c80755ebd3e2bb588cf2a1a59843ce2c
 To be precise, the Prisoner's dilemma happen for every game like this:
 
 | X \ Y |    C    |    D   |
