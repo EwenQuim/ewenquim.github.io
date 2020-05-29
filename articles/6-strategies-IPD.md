@@ -47,7 +47,7 @@ A clever policeman takes you aside and says
 The prisoner thinks a few minute.
 
 > If my friend betrays me, I better have to betray him too: I'll go to prison 5 years instead of 10.
-> If he lies and protect me, I should betray too, because I'll never go to prison, instead of wasting my life during onmathcale year...
+> If he lies and protect me, I should betray too, because I'll never go to prison, instead of wasting my life during 1 year...
 > In any case, it's better to betray.
 > If he thinks the same, I have no reason to cooperate.
 
