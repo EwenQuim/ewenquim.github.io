@@ -61,9 +61,9 @@ The prisoner's dilemma is one of the fundamentals of Game Theory.
 
 As every game in "normal form", it's described by 3 things:
 
-- a set of players $\mathcal{N}= \{P_{1}, P_{2}, P_{3}, ..., P_{N}\}$
-- a set of strategies $S=\{S_{1}, S_{2}, S_{3},..., S_{N}\}$
-  - the set of strategies of player $P_{i}$ is $S_{i}$ and this can be anything: {heads, tails} or {bet 1\$, bet 5\$, bet 10\$}
+- a set of players $$\mathcal{N}= \{P_{1}, P_{2}, P_{3}, ..., P_{N}\}$$
+- a set of strategies $$S=\{S_{1}, S_{2}, S_{3},..., S_{N}\}$$
+  - the set of strategies of player $$P_{i}$$ is $$S_{i}$$ and this can be anything: {heads, tails} or {bet 1\$, bet 5\$, bet 10\$}
 - a utility function:
 
 $$\mu:(s_{1}, ..., s_{N}) \in \prod_{i=1}^{N} \mapsto (g_{1}, ..., g_{N}) \in \R_{+}^N $$
@@ -83,8 +83,8 @@ In Game Theory, the utility (the gain function) can be anything too. It can be e
 
 It's a 2 players game with 2 strategies each: Cooperate (C) or Defect (D).
 
-- $N = \{X, Y\}$
-- $S_{X} = \{Cooperate, Defect\} = S_{Y}$
+- $$N = \{X, Y\}$$
+- $$S_{X} = \{Cooperate, Defect\} = S_{Y}$$
 - The utility is:
 
 |     X \ Y     | Cooperate | Defect |
