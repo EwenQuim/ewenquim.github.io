@@ -13,7 +13,10 @@
   - [The paradox](#the-paradox)
 - [2. Iterated Prisoner's dilemma](#2-iterated-prisoners-dilemma)
   - [New behaviors](#new-behaviors)
-  - [Part 2](#part-2)
+  - [New strategies](#new-strategies)
+    - [Pure strategies](#pure-strategies)
+    - [Mixed strategies](#mixed-strategies)
+  - [Let's fight!](#lets-fight)
 - [3. Appendix: Press & Dyson work](#3-appendix-press--dyson-work)
   - [Only one](#only-one)
 - [References](#references)
@@ -61,19 +64,19 @@ The prisoner's dilemma is one of the fundamentals of Game Theory.
 
 As every game in "normal form", it's described by 3 things:
 
-- a set of players $$\mathcal{N}= \{P_{1}, P_{2}, P_{3}, ..., P_{N}\}$$
-- a set of strategies $$S=\{S_{1}, S_{2}, S_{3},..., S_{N}\}$$
-  - the set of strategies of player $$P_{i}$$ is $$S_{i}$$ and this can be anything: {heads, tails} or {bet 1\$, bet 5\$, bet 10\$}
+- a set $$\mathcal{N}= \{P_{1}, P_{2}, P_{3}, ..., P_{N}\}$$ of players
+- a set $$S=\{S_{1}, S_{2}, S_{3},..., S_{N}\}$$ of strategies foreach player
+  - the set $$S_{i}$$ of strategies of player $$P_{i}$$ can be anything: {heads, tails} or {bet 1\$, bet 5\$, bet 10\$}
 - a utility function:
 
-$$\mu:(s_{1}, ..., s_{N}) \in \prod_{i=1}^{N} \mapsto (g_{1}, ..., g_{N}) \in \R_{+}^N $$
+$$\mu:(s_{1}, ..., s_{N}) \in \prod_{i=1}^{N} \mapsto (g_{1}, ..., g_{N}) \in \mathbb{R}^N $$
 
 It is often represented as a matrix, and especially a mere table for 2-player games. So it sums up like this for example:
 
-| X \ Y |   Ace   |  Queen  |
-|:-----:|:-------:|:-------:|
-|  King | (-1, 1) | (1, -1) |
-|    10 | (-3, 3) | (-1, 1) |
+|  X \ Y |   Ace   |  Queen  |
+|:------:|:-------:|:-------:|
+|**King**| (-1, 1) | (1, -1) |
+|  **10**| (-3, 3) | (-1, 1) |
 
 In this game, if X plays a 10 and Y plays the Ace, Y will get 3 points and X will lose 3 points. The mean value of utility for X is -0.5, his cards aren't good!
 
@@ -83,8 +86,8 @@ In Game Theory, the utility (the gain function) can be anything too. It can be e
 
 It's a 2 players game with 2 strategies each: Cooperate (C) or Defect (D).
 
-- $$N = \{X, Y\}$$
-- $$S_{X} = \{Cooperate, Defect\} = S_{Y}$$
+- Players $$N = \{X, Y\}$$
+- Strategies $$S_{X} = \{Cooperate, Defect\} = S_{Y}$$
 - The utility is:
 
 |     X \ Y     | Cooperate | Defect |
@@ -139,11 +142,112 @@ So what if they can't, but they can play repeatedly?
 
 ### New behaviors
 
-Things
+If one knows what the opponent have played during the last 50 rounds, it is more likely to know what to chose.
 
-### Part 2
+But it would induce very complicated algorithm to find the right strategy.
 
-Things
+In fact, the mathematicians Press and Dyson have found that for infinite rounds (and it will work for an enough big number of rounds in practice), it is enough to know the action of the previous round to make a good strategy.
+
+So we will adapt our strategies to the actions of the previous round!
+
+### New strategies
+
+#### Pure strategies
+
+If we both cooperated, let's cooperate again.
+If I cooperated but the opponent betrayed me, let's betray him next round.
+If we betrayed him and he attempted to cooperate, let's betray him again, it works!
+If we both betray, we'll try to both increase our gain by cooperating.
+
+We just build the following strategy:
+
+| X \ Y |     C     |     D     |
+|:-----:|:---------:|:---------:|
+| **C** | Cooperate |   Defect  |
+| **D** |   Defect  | Cooperate |
+
+We will simplify it as this:
+
+| X \ Y | C | D |
+|:-----:|:-:|:-:|
+| **C** | 1 | 0 |
+| **D** | 0 | 1 |
+
+With 1 meaning 100% chance for X to cooperate the next round and 0 meaning 0% for X chance to cooperate the next round (100% chance of betrayal).
+
+We can have other strategies:
+
+*The naive*
+
+| X \ Y | C | D |
+|:-----:|:-:|:-:|
+| **C** | 1 | 1 |
+| **D** | 1 | 1 |
+
+*The thief*
+
+| X \ Y | C | D |
+|:-----:|:-:|:-:|
+| **C** | 0 | 0 |
+| **D** | 0 | 0 |
+
+*The copycat* (copies what the opponent played last turn)
+
+| X \ Y | C | D |
+|:-----:|:-:|:-:|
+| **C** | 1 | 0 |
+| **D** | 1 | 0 |
+
+#### Mixed strategies
+
+You can even randomize the chances to cooperate.
+
+*The undecided* (0.5 meaning 50% chance to cooperate)
+
+| X \ Y |  C  |  D  |
+|:-----:|:---:|:---:|
+| **C** | 0.5 | 0.5 |
+| **D** | 0.5 | 0.5 |
+
+*The cautious*
+
+| X \ Y |  C   |  D  |
+|:-----:|:----:|:---:|
+| **C** | 0.99 | 0.5 |
+| **D** | 0.9  | 0.1 |
+
+You can invent your own!
+
+We just need one thing more before comparing strategies: the initial situation! It doesn't depend on the "last round" because it's the first...
+
+### Let's fight!
+
+We will compare two strategies:
+
+*The resentful*: betray him once, he will always betray!
+He cooperates first.
+
+| X \ Y | C | D |
+|:-----:|:-:|:-:|
+| **C** | 1 | 0 |
+| **D** | 0 | 0 |
+
+*The cautious*.
+He cooperates first.
+
+| X \ Y |  C   |  D  |
+|:-----:|:----:|:---:|
+| **C** | 0.99 | 0.5 |
+| **D** | 0.9  | 0.1 |
+
+Here's what happened when playing 2,000 rounds (blue for the *cautious* and red for the *resentful*)
+
+![Graph](../assets/4-resentful-vs-cautious.png)
+
+The mean gain was 3 while they both cooperate, and then it breaks down when the cautious betrays for the first time (he had 1% chance to betray in the {C, C} situation).
+Then, the resentful always betrayed, even when the cautious tried to cooperate. That's why the gain of the cautious went down to 1 (as the Nash Equilibrium {D, D} utility is 1). Sometimes the cautious attempt to cooperates and gets 0 while the resentful gets 5 by defecting.
+
+There are even more graphs than strategies, so try it out with my script [just here](todo)!
 
 ## 3. Appendix: Press & Dyson work
 
