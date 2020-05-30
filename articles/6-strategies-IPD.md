@@ -14,17 +14,14 @@
 - [2. Iterated Prisoner's dilemma](#2-iterated-prisoners-dilemma)
   - [New behaviors](#new-behaviors)
   - [New strategies](#new-strategies)
-    - [Pure strategies](#pure-strategies)
-    - [Mixed strategies](#mixed-strategies)
   - [Let's fight!](#lets-fight)
-    - [One vs one](#one-vs-one)
-    - [One vs all](#one-vs-all)
-    - [All vs. all](#all-vs-all)
-    - [Conclusion](#conclusion)
 - [3. Optimized Strategies](#3-optimized-strategies)
   - [Control](#control)
   - [Extorsion](#extorsion)
-- [4. Appendix: Real maths. Proofs.](#4-appendix-real-maths-proofs)
+  - [Extorsion vs. control](#extorsion-vs-control)
+  - [The winning strategy!](#the-winning-strategy)
+- [4. Real life application](#4-real-life-application)
+- [5. Appendix: Real maths. Proofs.](#5-appendix-real-maths-proofs)
   - [Game in normal form](#game-in-normal-form)
   - [Prisoner's dilemma generalized](#prisoners-dilemma-generalized)
   - [Strategies: general form](#strategies-general-form)
@@ -145,7 +142,7 @@ So we will adapt our strategies to the actions of the previous round!
 
 ### New strategies
 
-#### Pure strategies
+#### Pure strategies <!-- omit in toc -->
 
 If we both cooperated, let's cooperate again.
 If I cooperated but the opponent betrayed me, let's betray him next round.
@@ -193,9 +190,9 @@ We can have other strategies:
 
 A lot of strategies exists[^2]!
 
-#### Mixed strategies
+#### Mixed strategies <!-- omit in toc -->
 
-You can even [randomize] the chances to cooperate.
+You can even randomize the chances to cooperate.
 
 *The undecided* (0.5 meaning 50% chance to cooperate)
 
@@ -217,7 +214,7 @@ We just need one thing more before comparing strategies: the initial situation! 
 
 ### Let's fight!
 
-#### One vs one
+#### One vs one <!-- omit in toc -->
 
 We will compare two strategies:
 
@@ -246,7 +243,7 @@ Then, the resentful always betrayed, even when the cautious tried to cooperate. 
 
 There are even more graphs than strategies, so try it out with my script [just here](https://github.com/EwenQuim/iterated-prisoners-dilemma)!
 
-#### One vs all
+#### One vs all <!-- omit in toc -->
 
 Comparing 2 strategies at a time isn't very efficient. I entered all strategies in a database so I can choose a strategy and it displays the result for a given number of rounds against all the strategies (including itself).
 
@@ -267,7 +264,7 @@ against some other strategies, for 10,000 rounds.
 
 It wins against some but loses against some...
 
-#### All vs. all
+#### All vs. all <!-- omit in toc -->
 
 The mean score for a given strategies against all the other strategies doesn't mean anything because it relies on the other strategies (and it shouldn't matter).
 
@@ -283,9 +280,9 @@ But it isn't the strategy with the highest mean score: tit-for-tat have a much b
 
 It is interesting to see that following this strategy will cause you to have the same score than the opponent at the end of the 10,000 rounds.
 
-#### Conclusion
+#### Conclusion <!-- omit in toc -->
 
-There are no perfect strategies here. Maybe we have to find better ones, that allow to win with a high score while defeating the other!
+There are no perfect strategies here. Maybe we have to find better ones, that allow to win with a high score *while* defeating the other!
 
 I told you in the title that we can do better: **control the opponent's gain**.
 
@@ -295,18 +292,25 @@ I told you in the title that we can do better: **control the opponent's gain**.
 
 If you choose the right strategy, you can set the mean opponent's score to any value between 1 (the utility for the Nash equilibrium) and 5 (the maximal gain).
 
-For example with *Control 2*
+For example with *Control 2*, we set the opponent's score to 2!
 
 | X \ Y |  C  |  D  |
 |:-----:|:---:|:---:|
 | **C** | 0.9 | 0.7 |
 | **D** | 0.2 | 0.1 |
 
+Why 0.9, 0.7, 0.2 and 0.1? How do we chose the right coefficients? The answer is quite complicated but you can find in in [part 5](#5-appendix-real-maths-proofs).
+
 ![Graph](../assets/4/control2-vs-all.png)
 
-How do we chose the right coefficients? The answer is quite complicated but you can find in in [part 4](#4-appendix-real-maths-proofs).
-
 You can even set the opponent's score to 1, the minimum possible! (as it is the utility at the Nash equilibrium)
+
+*Control 1*
+
+| X \ Y |  C  |  D  |
+|:-----:|:---:|:---:|
+| **C** | 0.0 | 0.0 |
+| **D** | 0.5 | 0.0 |
 
 ![Graph](../assets/4/control1-vs-all.png)
 
@@ -320,7 +324,57 @@ We don't want to control the opponent's score, we want to have better than him *
 
 ### Extorsion
 
-## 4. Appendix: Real maths. Proofs.
+Even if we can't control our own gain, it still is possible to control the ratio of our score to the opponent's.
+
+*Extorsion 2* set our score two times higher than the opponent's!
+
+| X \ Y |  C  |  D  |
+|:-----:|:---:|:---:|
+| **C** | 8/9 | 0.5 |
+| **D** | 1/3 | 0.0 |
+
+![Graph](../assets/4/extorque2-vs-all.png)
+
+In fact, it is not really the score which is twice higher, but rather the part above 1 (the Nash Equilibrium)
+
+If we are greedy, we can try to set the ratio to 100. But here's what happen:
+
+![Graph](../assets/4/extorque100-vs-all.png)
+
+In fact, 100*0=0. By trying to reduce the opponent's score to 0 (in fact, 1 as we saw), we are reducing our own score.
+
+### Extorsion vs. control
+
+We can makes these two incredible strategies fight each other.
+
+![Graph](../assets/4/control2-vs-extorque2.png)
+
+They are compatible! *Control-2* set the *Extorsion*'s score to 2 and *Extorsion-2* makes sure that his score is twice the *Control*'s score.
+
+### The winning strategy!
+
+The **Extorsion** strategy will always have a better score than any of its opponents, or at least the same than them. To maximize the score, don't be too greedy at apply a factor 2 or 3 (remember that 100*0=0!)
+
+## 4. Real life application
+
+Wow. If you read  until here, you must wonder:
+
+> What is it useful for? These strategies were nice, but I'll never play 10,000 prisoner's dilemma?
+
+There are many games that can look as Prisoner's dilemma. Here's a short list:
+
+- economic competition
+- patent owning
+- animal cooperation (bats for example must learn to cooperate sometimes and betray other times)
+- couple life (each decision can be a dilemma according to your preferences, even if it is not always a big deal)
+
+Remember that if you want to maximize you happiness, do not betray every time. But do not cooperate each time: think about yourself!
+
+Randomizing you gives you a better mean utility.
+
+Think about his!
+
+## 5. Appendix: Real maths. Proofs.
 
 ### Game in normal form
 
