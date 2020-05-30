@@ -1,4 +1,4 @@
-# **[Maths]** Strategies controlling the opponent in games <!-- omit in toc -->
+# **[Maths]** Control the opponent in some games <!-- omit in toc -->
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 

@@ -2,6 +2,13 @@
 
 ![-](assets/articles.jpg)
 
+## **[Maths]** [Control the opponent in some games](articles/4-strategies-IPD.md)
+
+*June 2020* -
+Learn to control your opponent's score in some games.
+
+---
+
 ## **[Crypto]** [Sign your commits with PGP](articles/3-pgp.md)
 
 *May 2020* -
