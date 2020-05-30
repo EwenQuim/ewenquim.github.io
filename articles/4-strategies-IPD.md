@@ -8,7 +8,7 @@
 
 - [1. Prisoner's dilemma](#1-prisoners-dilemma)
   - [The story](#the-story)
-  - [Represent games](#represent-games)
+  - [Representing games](#representing-games)
   - [Equilibria](#equilibria)
   - [The paradox](#the-paradox)
 - [2. Iterated Prisoner's dilemma](#2-iterated-prisoners-dilemma)
@@ -25,6 +25,7 @@
   - [Game in normal form](#game-in-normal-form)
   - [Prisoner's dilemma generalized](#prisoners-dilemma-generalized)
   - [Strategies: general form](#strategies-general-form)
+  - [Press and Dyson's work](#press-and-dysons-work)
 - [References](#references)
 
 A quick article about how to **control opponent's score in some games**, with the help of a nice part of mathematics called *Game Theory*.
@@ -43,20 +44,25 @@ In this article, you will see:
 
 ### The story
 
-You stole the bank with your partner in crime. You just had the time to hide the money when the sirens sound. You see the police coming and you run. Too late: the police is coming for you! You fight with a policeman while trying to escape, but they manage to arrest you anyway. You are now at the police station. But they do not have any evidence that *you two* are the thieves!
+You stole the bank with your partner in crime. You just had the time to hide the money when the sirens sound. You see the police coming and you run. Too late: the police is here! You fight with a policeman while trying to escape, but they manage to arrest you anyway. You are now at the police station. But they do not have any evidence that *you two* are the thieves!
 
 A clever policeman takes you aside and says
 
 > Here's the deal: you will decide the fate of your friend. You have two choices.
-> If you lie and protect him, we will sue you for fighting with the police? You'll get 1 year in prison.
-> But if you betray him, you're immediately free and he gets the maximal sentence: in jail for 10 years!
+> 
+> - If you lie and protect him, we will sue you for fighting with the police? You'll get 1 year in prison.
+> 
+> - But if you betray him, you're immediately free and he gets the maximal sentence: in jail for 10 years!
+> 
 > Of course, it's the same deal for your partner...
 > If you betray each other, you'll have 5 years each.
 
 The prisoner thinks a few minute.
 
 > If my friend betrays me, I better have to betray him too: I'll go to prison 5 years instead of 10.
+> 
 > If he lies and protect me, I should betray too, because I'll never go to prison, instead of wasting my life during 1 year...
+> 
 > In any case, it's better to betray.
 > If he thinks the same, I have no reason to cooperate.
 
@@ -66,7 +72,7 @@ That is the prisoner's dilemma.
 
 ![Photo Betrayal](../assets/4/betrayal.png)
 
-### Represent games
+### Representing games
 
 The prisoner's dilemma is one of the fundamentals of Game Theory.
 
@@ -140,7 +146,7 @@ If one knows what the opponent have played during the last 50 rounds, it is more
 
 But it would induce very complicated algorithm to find the right strategy.
 
-In fact, the mathematicians Press and Dyson have found that for infinite rounds (and it will work for an enough big number of rounds in practice), it is enough to know the action of the previous round to make a good strategy.
+In fact, the mathematicians Press and Dyson have found that for infinite rounds (and it will work for an enough big number of rounds in practice) of the same game, it is enough to know the action of the previous round to make a good strategy.
 
 So we will adapt our strategies to the actions of the previous round!
 
@@ -408,6 +414,18 @@ The general form for a 1-memory strategy is a vector $$p = (p_{1}, p_{2}, p_{3},
 |:-----:|:-------:|:-------:|
 | **C** |$$p_{1}$$|$$p_{2}$$|
 | **D** |$$p_{3}$$|$$p_{4}$$|
+
+### Press and Dyson's work
+
+A step from a round ($$n$$) to another ($$n+1$$) might be represented with a Markov transition matrix.
+
+$$
+M(\vec{p}, \vec{q}) = \begin{pmatrix}
+p_1 q_1 & p_1 (1-q_1) & (1-p_1) q_1 & (1-p_1) (1-q_1)\\
+p_2 q_3 & p_2 (1-q_3) & (1-p_2) q_3 & (1-p_2) (1-q_3)\\
+p_3 q_2 & p_3 (1-q_2) & (1-p_3) q_2 & (1-p_3) (1-q_2)\\
+p_4 q_4 & p_4 (4-q_4) & (4-p_4) q_4 & (4-p_4) (4-q_4)\\
+\end{pmatrix}$$
 
 → [All articles](../articles.md)
 
