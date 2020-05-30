@@ -239,7 +239,7 @@ He cooperates first.
 
 Here's what happened when playing 2,000 rounds (blue for the *cautious* and red for the *resentful*)
 
-![Graph](../assets/4-resentful-vs-cautious.png)
+![Graph](../assets/4/resentful-vs-cautious.png)
 
 The mean gain was 3 while they both cooperate, and then it breaks down when the cautious betrays for the first time (he had 1% chance to betray in the {C, C} situation).
 Then, the resentful always betrayed, even when the cautious tried to cooperate. That's why the gain of the cautious went down to 1 (as the Nash Equilibrium {D, D} utility is 1). Sometimes the cautious attempt to cooperates and gets 0 while the resentful gets 5 by defecting.
@@ -263,7 +263,7 @@ For example, we can see the results for the strategy
 
 against some other strategies, for 10,000 rounds.
 
-![Graph](../assets/4-irresolute-vs-all.png)
+![Graph](../assets/4/irresolute-vs-all.png)
 
 It wins against some but loses against some...
 
@@ -275,11 +275,11 @@ A good thing that can be done is just counting the beaten strategies.
 
 We can easily see that the thief wins every time, as it always play the dominent strategy.
 
-![Graph](../assets/4-thief-vs-all.png)
+![Graph](../assets/4/thief-vs-all.png)
 
 But it isn't the strategy with the highest mean score: tit-for-tat have a much better score for example.
 
-![Graph](../assets/4-tit4tat-vs-all.png)
+![Graph](../assets/4/tit4tat-vs-all.png)
 
 It is interesting to see that following this strategy will cause you to have the same score than the opponent at the end of the 10,000 rounds.
 
@@ -295,9 +295,28 @@ I told you in the title that we can do better: **control the opponent's gain**.
 
 If you choose the right strategy, you can set the mean opponent's score to any value between 1 (the utility for the Nash equilibrium) and 5 (the maximal gain).
 
+For example with *Control 2*
+
+| X \ Y |  C  |  D  |
+|:-----:|:---:|:---:|
+| **C** | 0.9 | 0.7 |
+| **D** | 0.2 | 0.1 |
+
+![Graph](../assets/4/control2-vs-all.png)
+
+How do we chose the right coefficients? The answer is quite complicated but you can find in in [part 4](#4-appendix-real-maths-proofs).
+
+You can even set the opponent's score to 1, the minimum possible! (as it is the utility at the Nash equilibrium)
+
+![Graph](../assets/4/control1-vs-all.png)
+
+We can see some defects... in fact, the more you tend to 1, the more time it takes, and it seems 10,000 rounds isn't enough for some strategies to go to its limit.
+
 What's incredible is that you can't control your own score by doing this. You will never be able to do that in Game Theory, because it is not interesting. It in not a strategy, but full control, and thus uninteresting.
 
-But you can reduce the opponent's score to the minimum available, 1!
+However, it's **not satisfying enough**.
+
+We don't want to control the opponent's score, we want to have better than him **every time**.
 
 ### Extorsion
 
