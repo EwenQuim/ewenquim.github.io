@@ -8,7 +8,7 @@
 
 - [1. Prisoner's dilemma](#1-prisoners-dilemma)
   - [The story](#the-story)
-  - [Mathematical formalism](#mathematical-formalism)
+  - [Represent games](#represent-games)
   - [Equilibria](#equilibria)
   - [The paradox](#the-paradox)
 - [2. Iterated Prisoner's dilemma](#2-iterated-prisoners-dilemma)
@@ -64,15 +64,17 @@ At the end, they both betray each other and go to prison 5 years, whereas they c
 
 That is the prisoner's dilemma.
 
-### Mathematical formalism
+![Photo Betrayal](../assets/4/betrayal.png)
+
+### Represent games
 
 The prisoner's dilemma is one of the fundamentals of Game Theory.
 
 As every game in "normal form", it's described by 3 things ([see more about this here](#game-in-normal-form)):
 
-- players
-- strategies for each player. It can be anything: {heads, tails} or {bet 1\$, bet 5\$, bet 10\$}
-- a utility function: it maps every situation (strategies of every player) to a gain (or a loss)
+- Players
+- Strategies for each player. It can be anything: {heads, tails} or {bet 1\$, bet 5\$, bet 10\$}
+- Utility function: it maps every situation (strategies of every player) to a gain (or a loss)
 
 A 2-players game with finite strategies is often represented as a mere table. So it sums up like this for example:
 
@@ -113,6 +115,8 @@ Another Equilibrium is the **Pareto Optimum**. It is a situation where you can't
 The 'paradox' can be summarized in one sentence:
 
 > In the Prisoner's Dilemma game, none of Nash Equilibria are Pareto Optimums.
+
+![Paradox](../assets/4/paradox.jpg)
 
 The only Nash Equilibrium is the situation {D, D}.
 And it isn't a Pareto Optimum: if both players cooperate, they can simultaneously increase their gain! But since it is a Nash equilibrium, neither player has any interest in doing that. Playing both Cooperate is sub-optimal as a player could easily betray to increase his winnings!
