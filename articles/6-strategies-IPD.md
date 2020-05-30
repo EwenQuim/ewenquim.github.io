@@ -17,14 +17,17 @@
     - [Pure strategies](#pure-strategies)
     - [Mixed strategies](#mixed-strategies)
   - [Let's fight!](#lets-fight)
-    - [First method](#first-method)
-    - [Second method](#second-method)
+    - [One vs one](#one-vs-one)
+    - [One vs all](#one-vs-all)
+    - [All vs. all](#all-vs-all)
+    - [Conclusion](#conclusion)
 - [3. Optimized Strategies](#3-optimized-strategies)
-  - [](#)
+  - [Control](#control)
+  - [Extorsion](#extorsion)
 - [4. Appendix: Real maths. Proofs.](#4-appendix-real-maths-proofs)
-    - [Game in normal form](#game-in-normal-form)
-    - [Prisoner's dilemma generalized](#prisoners-dilemma-generalized)
-    - [Strategies general form](#strategies-general-form)
+  - [Game in normal form](#game-in-normal-form)
+  - [Prisoner's dilemma generalized](#prisoners-dilemma-generalized)
+  - [Strategies: general form](#strategies-general-form)
 - [References](#references)
 
 A quick article about how to **control opponent's score in some games**, with the help of a nice part of mathematics called *Game Theory*.
@@ -214,7 +217,7 @@ We just need one thing more before comparing strategies: the initial situation! 
 
 ### Let's fight!
 
-#### First method
+#### One vs one
 
 We will compare two strategies:
 
@@ -243,7 +246,7 @@ Then, the resentful always betrayed, even when the cautious tried to cooperate. 
 
 There are even more graphs than strategies, so try it out with my script [just here](https://github.com/EwenQuim/iterated-prisoners-dilemma)!
 
-#### Second method
+#### One vs all
 
 Comparing 2 strategies at a time isn't very efficient. I entered all strategies in a database so I can choose a strategy and it displays the result for a given number of rounds against all the strategies (including itself).
 
@@ -251,18 +254,56 @@ Everything is [here](https://github.com/EwenQuim/iterated-prisoners-dilemma) aga
 
 For example, we can see the results for the strategy
 
-![todo]()
+*The irresolute*
+
+| X \ Y | C | D |
+|:-----:|:-:|:-:|
+| **C** | 1 | 0 |
+| **D** | 0 | 0 |
+
+against some other strategies, for 10,000 rounds.
+
+![Graph](../assets/4-irresolute-vs-all.png)
+
+It wins against some but loses against some...
+
+#### All vs. all
+
+The mean score for a given strategies against all the other strategies doesn't mean anything because it relies on the other strategies (and it shouldn't matter).
+
+A good thing that can be done is just counting the beaten strategies.
+
+We can easily see that the thief wins every time, as it always play the dominent strategy.
+
+![Graph](../assets/4-thief-vs-all.png)
+
+But it isn't the strategy with the highest mean score: tit-for-tat have a much better score for example.
+
+![Graph](../assets/4-tit4tat-vs-all.png)
+
+It is interesting to see that following this strategy will cause you to have the same score than the opponent at the end of the 10,000 rounds.
+
+#### Conclusion
+
+There are no perfect strategies here. Maybe we have to find better ones, that allow to win with a high score while defeating the other!
 
 I told you in the title that we can do better: **control the opponent's gain**.
 
-
 ## 3. Optimized Strategies
 
-### 
+### Control
+
+If you choose the right strategy, you can set the mean opponent's score to any value between 1 (the utility for the Nash equilibrium) and 5 (the maximal gain).
+
+What's incredible is that you can't control your own score by doing this. You will never be able to do that in Game Theory, because it is not interesting. It in not a strategy, but full control, and thus uninteresting.
+
+But you can reduce the opponent's score to the minimum available, 1!
+
+### Extorsion
 
 ## 4. Appendix: Real maths. Proofs.
 
-#### Game in normal form
+### Game in normal form
 
 - a set $$\mathcal{N}= \{P_{1}, P_{2}, P_{3}, ..., P_{N}\}$$ of players
 - a set $$S=\{S_{1}, S_{2}, S_{3},..., S_{N}\}$$ of strategies foreach player
@@ -271,7 +312,7 @@ I told you in the title that we can do better: **control the opponent's gain**.
 
 $$\mu:(s_{1}, ..., s_{N}) \in \prod_{i=1}^{N} \mapsto (g_{1}, ..., g_{N}) \in \mathbb{R}^N $$
 
-#### Prisoner's dilemma generalized
+### Prisoner's dilemma generalized
 
 To be precise, the Prisoner's dilemma happen for every game like this:
 
@@ -282,9 +323,9 @@ To be precise, the Prisoner's dilemma happen for every game like this:
 
 With a > b > c > d $$\geq$$ 0
 
-#### Strategies general form
+### Strategies: general form
 
-The general form for a 1-memory strategy is a vector $$p = (p_{1}, p_{2}, p_{3}, p_{4}) \in \[0, 1\]^4$$ such as
+The general form for a 1-memory strategy is a vector $$p = (p_{1}, p_{2}, p_{3}, p_{4}) \in [0, 1]^4$$ such as
 
 | X \ Y |    C    |    D    |
 |:-----:|:-------:|:-------:|
