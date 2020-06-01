@@ -49,20 +49,20 @@ You stole the bank with your partner in crime. You just had the time to hide the
 A clever policeman takes you aside and says
 
 > Here's the deal: you will decide the fate of your friend. You have two choices.
-> 
+>
 > - If you lie and protect him, we will sue you for fighting with the police? You'll get 1 year in prison.
-> 
+>
 > - But if you betray him, you're immediately free and he gets the maximal sentence: in jail for 10 years!
-> 
+>
 > Of course, it's the same deal for your partner...
 > If you betray each other, you'll have 5 years each.
 
 The prisoner thinks a few minute.
 
 > If my friend betrays me, I better have to betray him too: I'll go to prison 5 years instead of 10.
-> 
+>
 > If he lies and protect me, I should betray too, because I'll never go to prison, instead of wasting my life during 1 year...
-> 
+>
 > In any case, it's better to betray.
 > If he thinks the same, I have no reason to cooperate.
 
@@ -390,19 +390,23 @@ Think about his!
 
 A game is represented as follows:
 
-$$\mathfrak{G}=\{\mathcal{N}, S, \mu\}$$
+$$\mathcal{G}=\{\mathcal{N}, S, \mu\}$$
 
 - a set $$\mathcal{N}= \{P_{1}, P_{2}, P_{3}, ..., P_{N}\}$$ of players
 - a set $$S=\{S_{1}, S_{2}, S_{3},..., S_{N}\}$$ of sets of strategies for each player
   - the set $$S_{i}$$ of strategies of player $$P_{i}$$ can be anything: {heads, tails} or {bet 1\$, bet 5\$, bet 10\$}
-  - We call $$\mathcal{S} = \times_{i=1}^{N}S_{i}$$ the set of every situation possible
+  - We call $$\mathfrak{S} = \times_{i=1}^{N}S_{i}$$ the set of every situation possible
 - a utility function:
 
-$$\mu:(s) \in \mathcal{S} \mapsto (g_{1}, ..., g_{N}) \in \mathbb{R}^N $$
+$$\mu:(s) \in \mathfrak{S} \mapsto (g_{1}, ..., g_{N}) \in \mathbb{R}^N $$
 
 A zero-sum game is such that
 
 $$\forall s \in \mathcal{S}, \sum_{i=1}^{N} \mu_{i}(s) = 0$$
+
+A symmetrical two-players game is such that
+
+$$\forall (s_{1}, s_{2}) \in S_{1} \times S_{2}, \mu(s_{1}, s_{2})=\mu(s_{2}, s_{1})$$
 
 ### Prisoner's dilemma generalized
 
@@ -413,7 +417,7 @@ To be precise, the Prisoner's dilemma happen for every game like this:
 | **C** |  (b, b) | (d, a) |
 | **D** |  (a, d) | (c, c) |
 
-With a > b > c > d $$\geq$$ 0
+It is a symmetrical two-players game determined by a > b > c > d $$\geq$$ 0
 
 ### Strategies: general form
 
