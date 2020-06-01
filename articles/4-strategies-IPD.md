@@ -388,12 +388,21 @@ Think about his!
 
 ### Game in normal form
 
+A game is represented as follows:
+
+$$\mathfrak{G}=\{\mathcal{N}, S, \mu\}$$
+
 - a set $$\mathcal{N}= \{P_{1}, P_{2}, P_{3}, ..., P_{N}\}$$ of players
-- a set $$S=\{S_{1}, S_{2}, S_{3},..., S_{N}\}$$ of strategies foreach player
+- a set $$S=\{S_{1}, S_{2}, S_{3},..., S_{N}\}$$ of sets of strategies for each player
   - the set $$S_{i}$$ of strategies of player $$P_{i}$$ can be anything: {heads, tails} or {bet 1\$, bet 5\$, bet 10\$}
+  - We call $$\mathcal{S} = \times_{i=1}^{N}S_{i}$$ the set of every situation possible
 - a utility function:
 
-$$\mu:(s_{1}, ..., s_{N}) \in \prod_{i=1}^{N} \mapsto (g_{1}, ..., g_{N}) \in \mathbb{R}^N $$
+$$\mu:(s) \in \mathcal{S} \mapsto (g_{1}, ..., g_{N}) \in \mathbb{R}^N $$
+
+A zero-sum game is such that
+
+$$\forall s \in \mathcal{S}, \sum_{i=1}^{N} \mu_{i}(s) = 0$$
 
 ### Prisoner's dilemma generalized
 
