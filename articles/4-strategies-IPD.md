@@ -441,11 +441,11 @@ p_4 q_4 & p_4 (1-q_4) & (1-p_4) q_4 & (1-p_4) (1-q_4)\\
 
 We can easily verify it is a Matrix matrix $$\forall (i,j), 0\le a_{ij} \le 1$$ and $$\forall i, \sum_{j}M_{ij}=1 $$)so it has 1 as eigenvalue as every Markov matrix[^markov_eigenvalue].
 
-For $$M'=M-I$$, we know that $$adj(M')M'=det(M')I=0$$ because $$M'$$ have 0 as eigenvalue.
+Let $$M'=M-I$$. $$M'$$ have 0 as eigenvalue so $$adj(M')M'=det(M')I=0$$.
 
-Let's call $$u$$ one of the eigenvectors : $$u^{T}M=u^{T}$$ so $$u^{T}M'=0$$
+Let's call $$u$$ one of the eigenvectors : $$Mu=u$$ so $$M'u=0$$
 
-So every row of $$adj(M')$$ is proportional to $$u$$!
+$$u^{T}M'=adj(M')M'$$ so every row of $$adj(M')$$ is proportional to $$u$$!
 
 Let's focus on the last row. Every term is +/- the determinant of a sub-matrix composed of the first three columns of M'.[^adjoint]
 
