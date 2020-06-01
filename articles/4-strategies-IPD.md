@@ -429,22 +429,17 @@ The general form for a 1-memory strategy is a vector $$p = (p_{1}, p_{2}, p_{3},
 
 ### Press and Dyson's work
 
-A step from a round $$n$$ to another ($$n+1$$) might be represented with a Markov transition matrix.
+A step from a round $$n$$ to another ($$n+1$$) might be represented with a (Markov) transition matrix.
 
 $$
-M(\vec{p}, \vec{q}) = \begin{pmatrix}
+M(p, q) = \begin{pmatrix}
 p_1 q_1 & p_1 (1-q_1) & (1-p_1) q_1 & (1-p_1) (1-q_1)\\
 p_2 q_3 & p_2 (1-q_3) & (1-p_2) q_3 & (1-p_2) (1-q_3)\\
 p_3 q_2 & p_3 (1-q_2) & (1-p_3) q_2 & (1-p_3) (1-q_2)\\
 p_4 q_4 & p_4 (1-q_4) & (1-p_4) q_4 & (1-p_4) (1-q_4)\\
 \end{pmatrix}$$
 
-(We have :
-
-- $$0\le a_{ij} \le 1 \forall i,j$$
-- $$\sum_{j}M_{ij}=1 \forall i$$)
-
-It has 1 as eigenvalue as every Markov matrix[^markov_eigenvalue].
+We can easily verify it is a Matrix matrix $$\forall (i,j), 0\le a_{ij} \le 1$$ and $$\forall i, \sum_{j}M_{ij}=1 $$)so it has 1 as eigenvalue as every Markov matrix[^markov_eigenvalue].
 
 For $$M'=M-I$$, we know that $$adj(M')M'=det(M')I=0$$ because $$M'$$ have 0 as eigenvalue.
 
@@ -478,7 +473,7 @@ Let's simplify the matrices above. The cofactors are not changed by a linear ope
 
 $$
 u_{1} = -\alpha\begin{vmatrix}
-\sout{p_1 q_1-1} & \sout{p_1 -1} & \sout{q_1-1} \\
+\sout{p_1 q_1-1} & \st{p_1 -1} & \xout{q_1-1} \\
 p_2 q_3 & p_2-1 & q_3 \\
 p_3 q_2 & p_3 & q_2-1 \\
 p_4 q_4 & p_4 & q_4 \\
@@ -486,21 +481,30 @@ p_4 q_4 & p_4 & q_4 \\
 
 And so on.
 
-So any multiplication by a vector $$f \in \matbb{R}^4$$ results in the following
+So any multiplication by a vector $$f \in \mathbb{R}^4$$ results in the following
 
 $$u \cdot f = \begin{vmatrix}
 p_1 q_1-1 & p_1 -1 & q_1-1 & f_{1} \\
 p_2 q_3 & p_2-1 & q_3 & f_{2} \\
 p_3 q_2 & p_3 & q_2-1 & f_{3} \\
 p_4 q_4 & p_4 & q_4 & f_{4} \\
-\end{vmatrix}$$\vec{p}, \vec{q}$$
+\end{vmatrix}$$p, q$$
 
-What we notice is that the 2nd columns is entirely controlled by $$\vec{p}$$ and the 3rd by $$\vec{q}$$
+What we notice is that the 2nd columns is entirely controlled by $$p$$ and the 3rd by $$q$$
 
-$$u \cdot f = D(\vec{p}, \vec{q}, \vec{f})$$
+$$u \cdot f = D(p, q, f)$$
 
-bdac
-badc
+Now let $$g_{X}=(b, d, a, c)$$ and $$g_{Y}=(b, a, d, c)$$ the score vectors, and $$s_{X}$$ and $$s_{Y}$$ the mean scores at equilibrium.
+
+The formula becomes :
+
+$$s_{X} = \frac{u \cdot g_{X}}{u \cdot 1} = \frac{D(p, q, g_{X})}{D(p, q, 1)}$$
+
+Let's apply a linear combination and here is the golden formula!
+
+$$\alpha s_{X}+ \beta s_{Y} + \gamma = \frac{D(p, q, \alpha g_{X}+ \beta g_{Y} + \gamma)}{D(p, q, 1)}$$
+
+All what we have to do now is to find the right p to set the determinant to zero. That's why we call these strategies Zero-Determinant (ZD) Strategies.
 
 → [All articles](../articles.md)
 
