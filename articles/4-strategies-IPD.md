@@ -397,9 +397,7 @@ $$\mathcal{G}=\{\mathcal{N}, S, \mu\}$$
   - the set $$S_{i}$$ is the set of strategies for player $$P_{i}$$ 
   - $$S_{i}$$ can be anything: {heads, tails} or {bet 1\$, bet 5\$, bet 10\$}
   - we call $$\mathfrak{S} = \times_{i=1}^{N}S_{i}$$ the set of every situation possible
-- a utility function:
-
-$$\mu:s \in \mathfrak{S} \mapsto (g_{1}, ..., g_{N}) \in \mathbb{R}^N $$
+- a utility function: $$\mu:s \in \mathfrak{S} \mapsto (g_{1}, ..., g_{N}) \in \mathbb{R}^N $$
 
 A *zero-sum game* is such that
 
@@ -407,7 +405,7 @@ $$\forall s \in \mathfrak{S}, \sum_{i=1}^{N} \mu_{i}(s) = 0$$
 
 A *symmetrical two-players game* is such that
 
-$$\forall (s_{1}, s_{2}) \in S_{1} \times S_{2}, \mu(s_{1}, s_{2})=\mu(s_{2}, s_{1})$$
+$$\forall (s_{1}, s_{2}) \in \mathfrak{S}, \mu(s_{1}, s_{2})=\mu(s_{2}, s_{1})$$
 
 ### Prisoner's dilemma generalized
 
@@ -438,7 +436,7 @@ M(\vec{p}, \vec{q}) = \begin{pmatrix}
 p_1 q_1 & p_1 (1-q_1) & (1-p_1) q_1 & (1-p_1) (1-q_1)\\
 p_2 q_3 & p_2 (1-q_3) & (1-p_2) q_3 & (1-p_2) (1-q_3)\\
 p_3 q_2 & p_3 (1-q_2) & (1-p_3) q_2 & (1-p_3) (1-q_2)\\
-p_4 q_4 & p_4 (4-q_4) & (4-p_4) q_4 & (4-p_4) (4-q_4)\\
+p_4 q_4 & p_4 (1-q_4) & (1-p_4) q_4 & (1-p_4) (1-q_4)\\
 \end{pmatrix}$$
 
 (We have :
@@ -448,12 +446,61 @@ p_4 q_4 & p_4 (4-q_4) & (4-p_4) q_4 & (4-p_4) (4-q_4)\\
 
 It has 1 as eigenvalue as every Markov matrix[^markov_eigenvalue].
 
-For $$M'=M-I$$, we know that adj(M')M'=det(M')I=0 because M' have 0 as eigenvalue.
+For $$M'=M-I$$, we know that $$adj(M')M'=det(M')I=0$$ because $$M'$$ have 0 as eigenvalue.
 
-Let's call $$u$$ one of the eigenvectors : $$u^{T}M=u^{T} so u^{T}M'=0$$
+Let's call $$u$$ one of the eigenvectors : $$u^{T}M=u^{T}$$ so $$u^{T}M'=0$$
 
-So every line of adj(M') is proportional to u!
+So every row of $$adj(M')$$ is proportional to $$u$$!
 
+Let's focus on the last row. Every term is +/- the determinant of a sub-matrix composed of the first three columns of M'.[^adjoint]
+
+For example
+
+$$
+adj(M')_{4,1} = -\begin{vmatrix}
+\sout{p_1 q_1-1} & \sout{p_1 (1-q_1)} & \sout{(1-p_1) q_1} \\
+p_2 q_3 & p_2 (1-q_3)-1 & (1-p_2) q_3 \\
+p_3 q_2 & p_3 (1-q_2) & (1-p_3) q_2-1 \\
+p_4 q_4 & p_4 (1-q_4) & (1-p_4) q_4 \\
+\end{vmatrix}$$
+
+$$
+adj(M')_{4,2} = -\begin{vmatrix}
+p_1 q_1-1 & p_1 (1-q_1) & (1-p_1) q_1 \\
+\sout{p_2 q_3} & \sout{p_2 (1-q_3)-1} & \sout{(1-p_2) q_3} \\
+p_3 q_2 & p_3 (1-q_2) & (1-p_3) q_2-1 \\
+p_4 q_4 & p_4 (1-q_4) & (1-p_4) q_4 \\
+\end{vmatrix}$$
+
+And so on.
+
+Let's simplify the matrices above. The cofactors are not changed by a linear operation on the columns. So let's do $$\mathcal{C1}+\mathcal{C2}\rarr \mathcal{C2}$$ and $$\mathcal{C1}+\mathcal{C2}\rarr \mathcal{C2}$$. We get:
+
+$$
+u_{1} = -\alpha\begin{vmatrix}
+\sout{p_1 q_1-1} & \sout{p_1 -1} & \sout{q_1-1} \\
+p_2 q_3 & p_2-1 & q_3 \\
+p_3 q_2 & p_3 & q_2-1 \\
+p_4 q_4 & p_4 & q_4 \\
+\end{vmatrix}$$
+
+And so on.
+
+So any multiplication by a vector $$f \in \matbb{R}^4$$ results in the following
+
+$$u \cdot f = \begin{vmatrix}
+p_1 q_1-1 & p_1 -1 & q_1-1 & f_{1} \\
+p_2 q_3 & p_2-1 & q_3 & f_{2} \\
+p_3 q_2 & p_3 & q_2-1 & f_{3} \\
+p_4 q_4 & p_4 & q_4 & f_{4} \\
+\end{vmatrix}$$\vec{p}, \vec{q}$$
+
+What we notice is that the 2nd columns is entirely controlled by $$\vec{p}$$ and the 3rd by $$\vec{q}$$
+
+$$u \cdot f = D(\vec{p}, \vec{q}, \vec{f})$$
+
+bdac
+badc
 
 → [All articles](../articles.md)
 
@@ -463,3 +510,4 @@ So every line of adj(M') is proportional to u!
 [^2]: <http://jasss.soc.surrey.ac.uk/20/4/12.html#sect3>
 [^try]: <https://github.com/EwenQuim/iterated-prisoners-dilemma>
 [^markov_eigenvalue]: <https://math.stackexchange.com/questions/351142/why-markov-matrices-always-have-1-as-an-eigenvalue>
+[^adjoint]: <https://www.mathsisfun.com/algebra/matrix-inverse-minors-cofactors-adjugate.html>
