@@ -457,7 +457,7 @@ For example
 
 $$
 adj(M')_{4,1} = -\begin{vmatrix}
-\sout{p_1 q_1-1} & \sout{p_1 (1-q_1)} & \enclose{updiagonalstrike}{(1-p_1) q_1} \\
+ & \mathcal{L}_{1} ignored & \\
 p_2 q_3 & p_2 (1-q_3)-1 & (1-p_2) q_3 \\
 p_3 q_2 & p_3 (1-q_2) & (1-p_3) q_2-1 \\
 p_4 q_4 & p_4 (1-q_4) & (1-p_4) q_4 \\
@@ -466,7 +466,7 @@ p_4 q_4 & p_4 (1-q_4) & (1-p_4) q_4 \\
 $$
 adj(M')_{4,2} = \begin{vmatrix}
 p_1 q_1-1 & p_1 (1-q_1) & (1-p_1) q_1 \\
-\sout{p_2 q_3} & \sout{p_2 (1-q_3)-1} & \sout{(1-p_2) q_3} \\
+ & \mathcal{L}_{2} ignored & \\
 p_3 q_2 & p_3 (1-q_2) & (1-p_3) q_2-1 \\
 p_4 q_4 & p_4 (1-q_4) & (1-p_4) q_4 \\
 \end{vmatrix}$$
@@ -477,8 +477,16 @@ Let's simplify the matrices above. The determinants are not changed by a linear 
 
 $$
 u_{1} = -\alpha\begin{vmatrix}
-\sout{p_1 q_1-1} & \st{p_1 -1} & \cancel{q_1-1} \\
-p_2 q_3 & p_2-1 & q_3 \\
+ & \mathcal{L}_{1} ignored & \\
+ p_2 q_3 & p_2-1 & q_3 \\
+p_3 q_2 & p_3 & q_2-1 \\
+p_4 q_4 & p_4 & q_4 \\
+\end{vmatrix}$$
+
+$$
+u_{1} = -\alpha\begin{vmatrix}
+p_1 q_1-1} & p_1 -1 & q_1-1 \\
+ & \mathcal{L}_{2} ignored & \\
 p_3 q_2 & p_3 & q_2-1 \\
 p_4 q_4 & p_4 & q_4 \\
 \end{vmatrix}$$
