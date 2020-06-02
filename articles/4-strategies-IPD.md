@@ -28,17 +28,13 @@
   - [Press and Dyson's work](#press-and-dysons-work)
 - [References](#references)
 
-A quick article about how to **control opponent's score in some games**, with the help of a nice part of mathematics called *Game Theory*.
+A quite complete article about how to **control opponent's score in some games**, using a nice part of mathematics called *Game Theory*.
 
-This article is derived from [this paper](https://www.pnas.org/content/109/26/10409)[^1] from mathematicians Press & Dyson. The original work isn't very understandable for everyone, so I decided to work on it and publish it with very simple formulas and illustrations so **everybody can understand**!
+This article is derived from [this paper](https://www.pnas.org/content/109/26/10409)[^1] from mathematicians Press & Dyson. The original work isn't very understandable for everyone, so I decided to work on it and publish it with illustrations and graphs so **everybody can understand**!
 
-After reading this article, you may want to **try your own strategies** with [these ressources](https://github.com/EwenQuim/iterated-prisoners-dilemma)[^try].
+For maths lovers: see you in [part 5](#5-appendix-real-maths-proofs).
 
-In this article, you will see:
-
-- Basics of Game Theory
-- The Prisoner's Dilemma and its Iterated version
-- Winning strategies
+After reading this article, you may want to **try your own strategies** with [these ressources](https://github.com/EwenQuim/iterated-prisoners-dilemma)[^try] I made just for you!
 
 ## 1. Prisoner's dilemma
 
@@ -50,18 +46,20 @@ A clever policeman takes you aside and says
 
 > Here's the deal: you will decide the fate of your friend. You have two choices.
 >
-> - If you lie and protect him, we will sue you for fighting with the police? You'll get 1 year in prison.
+> - If you lie and say he is innocent, we will sue you for fighting with the police. You'll get 1 year in prison.
 >
-> - But if you betray him, you're immediately free and he gets the maximal sentence: in jail for 10 years!
+> - If you betray him, you're immediately free! However he'll get the maximal sentence: in jail for 10 years.
 >
 > Of course, it's the same deal for your partner...
-> If you betray each other, you'll have 5 years each.
+> If you betray each other, you'll share your sentence and go 5 years each in prison.
 
 The prisoner thinks a few minute.
 
-> If my friend betrays me, I better have to betray him too: I'll go to prison 5 years instead of 10.
+> My fate will depend on his choice, so :
 >
-> If he lies and protect me, I should betray too, because I'll never go to prison, instead of wasting my life during 1 year...
+> - If my friend betrays me, I better have to betray him too: I'll go to prison 5 years instead of 10.
+>
+> - If he lies and protect me, I should betray too : I'll never go to prison, instead of wasting my life during 1 year...
 >
 > In any case, it's better to betray.
 > If he thinks the same, I have no reason to cooperate.
@@ -76,7 +74,7 @@ That is the prisoner's dilemma.
 
 The prisoner's dilemma is one of the fundamentals of Game Theory.
 
-As every game in "normal form", it's described by 3 things ([see more about this here](#game-in-normal-form)):
+As every game in "normal form", it's described by 3 things ([see more](#game-in-normal-form)):
 
 - Players
 - Strategies for each player. It can be anything: {heads, tails} or {bet 1\$, bet 5\$, bet 10\$}
@@ -198,7 +196,7 @@ We can have other strategies:
 | **C** | 1 | 0 |
 | **D** | 1 | 0 |
 
-A lot of strategies exists[^2]!
+A lot of strategies exist[^2]!
 
 #### Mixed strategies <!-- omit in toc -->
 
@@ -533,10 +531,6 @@ $$\begin{equation}\label{eqn:einstein}
 We can compute $$p_{2}, p_{3}$$ in terms of $$p_{1}, p_{4}$$, eliminating $$\beta$$ and $$\gamma$$.
 
 We then have:
-t = a
-p = c
-r = b
-s = d
 
 $$p_{2} = \frac{p_{1}(a-c) - (1+p_{4}(a-b)}{b-c}$$
 
