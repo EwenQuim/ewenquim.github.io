@@ -26,7 +26,6 @@
   - [Prisoner's dilemma generalized](#prisoners-dilemma-generalized)
   - [Strategies: general form](#strategies-general-form)
   - [Press and Dyson's work](#press-and-dysons-work)
-    - [Relation between the scores](#relation-between-the-scores)
 - [References](#references)
 
 A quick article about how to **control opponent's score in some games**, with the help of a nice part of mathematics called *Game Theory*.
@@ -395,7 +394,7 @@ $$\mathcal{G}=\{\mathcal{N}, S, \mu\}$$
 
 - a set $$\mathcal{N}= \{P_{1}, P_{2}, P_{3}, ..., P_{N}\}$$ of players
 - a set $$S=\{S_{1}, S_{2}, S_{3},..., S_{N}\}$$
-  - the set $$S_{i}$$ is the set of strategies for player $$P_{i}$$ 
+  - the set $$S_{i}$$ is the set of strategies for player $$P_{i}$$
   - $$S_{i}$$ can be anything: {heads, tails} or {bet 1\$, bet 5\$, bet 10\$}
   - we call $$\mathfrak{S} = \times_{i=1}^{N}S_{i}$$ the set of every situation possible
 - a utility function: $$\mu:s \in \mathfrak{S} \mapsto (g_{1}, ..., g_{N}) \in \mathbb{R}^N $$
@@ -432,7 +431,7 @@ The general form for a 1-memory strategy is a vector $$p = (p_{1}, p_{2}, p_{3},
 
 ### Press and Dyson's work
 
-#### Relation between the scores
+#### Relation between the scores <!-- omit in toc -->
 
 A step from a round $$n$$ to another ($$n+1$$) might be represented with a Markov transition matrix.
 
@@ -474,7 +473,7 @@ p_4 q_4 & p_4 (1-q_4) & (1-p_4) q_4 \\
 
 And so on.
 
-Let's simplify the matrices above. The determinants are not changed by a linear operation on the columns. So let's do $$\mathcal{C_{1}+\mathcal{C_{2}}\mapsto \mathcal{C_{2}}$$ and $$\mathcal{C1}+\mathcal{C_{3}}\mapsto \mathcal{C_{3}}$$. We get:
+Let's simplify the matrices above. The determinants are not changed by a linear operation on the columns. So let's do $$\mathcal{C_{1}}+\mathcal{C_{2}}\mapsto \mathcal{C_{2}}$$ and $$\mathcal{C_{1}}+\mathcal{C_{3}}\mapsto \mathcal{C_{3}}$$. We get:
 
 $$
 u_{1} = -\alpha\begin{vmatrix}
@@ -489,8 +488,8 @@ And so on.
 So any dot multiplication by a vector $$f \in \mathbb{R}^4$$ results in the following
 
 $$\begin{align*}
-u \cdot f &= f_{1}*u_{1} - f_{2}*u_{2} + f_{3}*u_{3} - f_{4}*u_{4}
-&= \begin{vmatrix}
+u \cdot f &= f_{1}u_{1} + f_{2}u_{2} + f_{3}u_{3} + f_{4}u_{4}
+t &= \begin{vmatrix}
 p_1 q_1-1 & p_1 -1 & q_1-1 & f_{1} \\
 p_2 q_3 & p_2-1 & q_3 & f_{2} \\
 p_3 q_2 & p_3 & q_2-1 & f_{3} \\
@@ -500,7 +499,7 @@ p_4 q_4 & p_4 & q_4 & f_{4} \\
 
 What we notice is that the 2nd column is entirely controlled by $$p$$ and the 3rd by $$q$$
 
-$$(u | f) = D(p, q, f)$$
+$$u \cdot f = D(p, q, f)$$
 
 Now let $$g_{X}=(b, d, a, c)$$ and $$g_{Y}=(b, a, d, c)$$ the score vectors, and $$s_{X}$$ and $$s_{Y}$$ the mean scores at equilibrium.
 
@@ -515,6 +514,10 @@ $$\alpha s_{X}+ \beta s_{Y} + \gamma = \frac{D(p, q, \alpha g_{X}+ \beta g_{Y} +
 All what we have to do now is to find the right p to set the determinant to zero. That's why we call these strategies Zero-Determinant (ZD) Strategies.
 
 Notice that we haven't used yet the fact that $$a > b > c > d \geq 0$$ ! It is valid for every 2-players symmetrical game.
+
+#### Cancel the determinant:   <!-- omit in toc -->
+
+
 
 → [All articles](../articles.md)
 
