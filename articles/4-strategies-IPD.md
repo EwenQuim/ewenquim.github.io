@@ -409,14 +409,16 @@ $$\forall (s_{1}, s_{2}) \in \mathfrak{S}, \mu(s_{1}, s_{2})=\mu(s_{2}, s_{1})$$
 
 ### Prisoner's dilemma generalized
 
-To be precise, the Prisoner's dilemma happen for every game like this:
+We often represent two-players game with a matrix. The prisoner's dilemma is a symmetrical game with the following coefficients and constraints:
 
 | X \ Y |    C    |    D   |
 |:-----:|:-------:|:------:|
 | **C** |  (b, b) | (d, a) |
 | **D** |  (a, d) | (c, c) |
 
-It is a symmetrical two-players game determined by a > b > c > d $$\geq$$ 0
+With $$a > b > c > d \geq 0$$.
+
+In fact $$\mu(C,D)=(d, a)$$ and so on.
 
 ### Strategies: general form
 
@@ -429,7 +431,7 @@ The general form for a 1-memory strategy is a vector $$p = (p_{1}, p_{2}, p_{3},
 
 ### Press and Dyson's work
 
-A step from a round $$n$$ to another ($$n+1$$) might be represented with a (Markov) transition matrix.
+A step from a round $$n$$ to another ($$n+1$$) might be represented with a Markov transition matrix.
 
 $$
 M(p, q) = \begin{pmatrix}
@@ -439,13 +441,13 @@ p_3 q_2 & p_3 (1-q_2) & (1-p_3) q_2 & (1-p_3) (1-q_2)\\
 p_4 q_4 & p_4 (1-q_4) & (1-p_4) q_4 & (1-p_4) (1-q_4)\\
 \end{pmatrix}$$
 
-We can easily verify it is a Matrix matrix $$\forall (i,j), 0\le a_{ij} \le 1$$ and $$\forall i, \sum_{j}M_{ij}=1 $$)so it has 1 as eigenvalue as every Markov matrix[^markov_eigenvalue].
+We can easily verify that $$\forall (i,j), 0\le a_{ij} \le 1$$ and $$\forall i, \sum_{j}M_{ij}=1 $$. The Markov matrix has 1 as eigenvalue as every Markov matrix[^markov_eigenvalue].
 
-Let $$M'=M-I$$. $$M'$$ have 0 as eigenvalue so $$adj(M')M'=det(M')I=0$$.
+1. Let $$M'=M-I$$. $$M'$$ have 0 as eigenvalue so $$det(M')I=0$$.
+2. According to the adjoint matrix formula, $$adj(M')M'=det(M')I=0$$.
+3. Let's call $$u$$ one of the eigenvectors : $$Mu=u$$ so $$M'u=0$$
 
-Let's call $$u$$ one of the eigenvectors : $$Mu=u$$ so $$M'u=0$$
-
-$$u^{T}M'=adj(M')M'$$ so every row of $$adj(M')$$ is proportional to $$u$$!
+We notice that $$u^{T}M'=adj(M')M'$$, so every row of $$adj(M')$$ is proportional to $$u$$!
 
 Let's focus on the last row. Every term is +/- the determinant of a sub-matrix composed of the first three columns of M'.[^adjoint]
 
@@ -469,9 +471,10 @@ p_4 q_4 & p_4 (1-q_4) & (1-p_4) q_4 \\
 
 And so on.
 
-Let's simplify the matrices above. The cofactors are not changed by a linear operation on the columns. So let's do $$\mathcal{C1}+\mathcal{C2}\rarr \mathcal{C2}$$ and $$\mathcal{C1}+\mathcal{C2}\rarr \mathcal{C2}$$. We get:
+Let's simplify the matrices above. The cofactors are not changed by a linear operation on the columns. So let's do $$\mathcal{C1}+\mathcal{C2}\mapsto \mathcal{C2}$$ and $$\mathcal{C1}+\mathcal{C2}\mapsto \mathcal{C2}$$. We get:
 
-$$
+$$[tex]/ulem
+\require{ulem}
 u_{1} = -\alpha\begin{vmatrix}
 \sout{p_1 q_1-1} & \st{p_1 -1} & \xout{q_1-1} \\
 p_2 q_3 & p_2-1 & q_3 \\
@@ -481,18 +484,18 @@ p_4 q_4 & p_4 & q_4 \\
 
 And so on.
 
-So any multiplication by a vector $$f \in \mathbb{R}^4$$ results in the following
+So any dot multiplication by a vector $$f \in \mathbb{R}^4$$ results in the following
 
 $$u \cdot f = \begin{vmatrix}
 p_1 q_1-1 & p_1 -1 & q_1-1 & f_{1} \\
 p_2 q_3 & p_2-1 & q_3 & f_{2} \\
 p_3 q_2 & p_3 & q_2-1 & f_{3} \\
 p_4 q_4 & p_4 & q_4 & f_{4} \\
-\end{vmatrix}$$p, q$$
+\end{vmatrix}$$
 
-What we notice is that the 2nd columns is entirely controlled by $$p$$ and the 3rd by $$q$$
+What we notice is that the 2nd column is entirely controlled by $$p$$ and the 3rd by $$q$$
 
-$$u \cdot f = D(p, q, f)$$
+$$(u | f) = D(p, q, f)$$
 
 Now let $$g_{X}=(b, d, a, c)$$ and $$g_{Y}=(b, a, d, c)$$ the score vectors, and $$s_{X}$$ and $$s_{Y}$$ the mean scores at equilibrium.
 
