@@ -457,7 +457,7 @@ For example
 
 $$
 adj(M')_{4,1} = -\begin{vmatrix}
-\sout{p_1 q_1-1} & \sout{p_1 (1-q_1)} & \sout{(1-p_1) q_1} \\
+\sout{p_1 q_1-1} & \sout{p_1 (1-q_1)} & \enclose{updiagonalstrike}{(1-p_1) q_1} \\
 p_2 q_3 & p_2 (1-q_3)-1 & (1-p_2) q_3 \\
 p_3 q_2 & p_3 (1-q_2) & (1-p_3) q_2-1 \\
 p_4 q_4 & p_4 (1-q_4) & (1-p_4) q_4 \\
@@ -488,8 +488,8 @@ And so on.
 So any dot multiplication by a vector $$f \in \mathbb{R}^4$$ results in the following
 
 $$\begin{align*}
-u \cdot f &= f_{1}u_{1} + f_{2}u_{2} + f_{3}u_{3} + f_{4}u_{4}
-t &= \begin{vmatrix}
+u \cdot f &= f_{1}u_{1} + f_{2}u_{2} + f_{3}u_{3} + f_{4}u_{4} \\
+&= \begin{vmatrix}
 p_1 q_1-1 & p_1 -1 & q_1-1 & f_{1} \\
 p_2 q_3 & p_2-1 & q_3 & f_{2} \\
 p_3 q_2 & p_3 & q_2-1 & f_{3} \\
@@ -511,13 +511,17 @@ Let's apply a linear combination and here is the **golden formula**!
 
 $$\alpha s_{X}+ \beta s_{Y} + \gamma = \frac{D(p, q, \alpha g_{X}+ \beta g_{Y} + \gamma)}{D(p, q, 1)}$$
 
-All what we have to do now is to find the right p to set the determinant to zero. That's why we call these strategies Zero-Determinant (ZD) Strategies.
+All what we have to do now is to find the right $$p$$ to set the determinant to zero and we have a linear relation between $$s_{X}$$ and $$s_{Y}$$. We call these strategies Zero-Determinant (ZD) Strategies.
 
 Notice that we haven't used yet the fact that $$a > b > c > d \geq 0$$ ! It is valid for every 2-players symmetrical game.
 
-#### Cancel the determinant:   <!-- omit in toc -->
+#### Cancel the determinant: choosing Y score <!-- omit in toc -->
 
+WIP
 
+#### Cancel the determinant: extortionate <!-- omit in toc -->
+
+WIP
 
 → [All articles](../articles.md)
 
