@@ -485,7 +485,7 @@ p_4 q_4 & p_4 & q_4 \\
 
 $$
 u_{1} = -\alpha\begin{vmatrix}
-p_1 q_1-1} & p_1 -1 & q_1-1 \\
+p_1 q_1-1 & p_1 -1 & q_1-1 \\
  & \mathcal{L}_{2} ignored & \\
 p_3 q_2 & p_3 & q_2-1 \\
 p_4 q_4 & p_4 & q_4 \\
@@ -505,7 +505,7 @@ p_4 q_4 & p_4 & q_4 & f_{4} \\
 \end{vmatrix}
 \end{align*}$$
 
-What we notice is that the 2nd column is entirely controlled by $$p$$ and the 3rd by $$q$$
+What we notice is that the 2nd column is **entirely controlled** by $$p$$ and the 3rd by $$q$$ !
 
 $$u \cdot f = D(p, q, f)$$
 
@@ -525,7 +525,28 @@ Notice that we haven't used yet the fact that $$a > b > c > d \geq 0$$ ! It is v
 
 #### Cancel the determinant: choosing Y score <!-- omit in toc -->
 
-WIP
+We focus on the case $$\alpha = 0$$ :
+
+$$\begin{equation}\label{eqn:einstein}
+\beta s_{Y} + \gamma = \frac{D(p, q, \alpha g_{X}+ \beta g_{Y} + \gamma)}{D(p, q, 1)}\end{equation}$$
+
+We can compute $$p_{2}, p_{3}$$ in terms of $$p_{1}, p_{4}$$, eliminating $$\beta$$ and $$\gamma$$.
+
+We then have:
+t = a
+p = c
+r = b
+s = d
+
+$$p_{2} = \frac{p_{1}(a-c) - (1+p_{4}(a-b)}{b-c}$$
+
+$$p_{2} = \frac{p_{1}(a-c) - (1+p_{4}(a-b)}{b-c}$$
+
+When injecting into the $$eq\eqref{eqn:einstein}$$ golden equation.
+
+We have unilaterally set Y's score to :
+
+$$s_{Y}= \frac{(1-p_{1})c+p_{4}b}{(1-p_{1})+p_{4}}$$
 
 #### Cancel the determinant: extortionate <!-- omit in toc -->
 
