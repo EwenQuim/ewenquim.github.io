@@ -26,6 +26,7 @@
   - [Prisoner's dilemma generalized](#prisoners-dilemma-generalized)
   - [Strategies: general form](#strategies-general-form)
   - [Press and Dyson's work](#press-and-dysons-work)
+    - [Relation between the scores](#relation-between-the-scores)
 - [References](#references)
 
 A quick article about how to **control opponent's score in some games**, with the help of a nice part of mathematics called *Game Theory*.
@@ -431,6 +432,8 @@ The general form for a 1-memory strategy is a vector $$p = (p_{1}, p_{2}, p_{3},
 
 ### Press and Dyson's work
 
+#### Relation between the scores
+
 A step from a round $$n$$ to another ($$n+1$$) might be represented with a Markov transition matrix.
 
 $$
@@ -462,7 +465,7 @@ p_4 q_4 & p_4 (1-q_4) & (1-p_4) q_4 \\
 \end{vmatrix}$$
 
 $$
-adj(M')_{4,2} = -\begin{vmatrix}
+adj(M')_{4,2} = \begin{vmatrix}
 p_1 q_1-1 & p_1 (1-q_1) & (1-p_1) q_1 \\
 \sout{p_2 q_3} & \sout{p_2 (1-q_3)-1} & \sout{(1-p_2) q_3} \\
 p_3 q_2 & p_3 (1-q_2) & (1-p_3) q_2-1 \\
@@ -471,12 +474,11 @@ p_4 q_4 & p_4 (1-q_4) & (1-p_4) q_4 \\
 
 And so on.
 
-Let's simplify the matrices above. The cofactors are not changed by a linear operation on the columns. So let's do $$\mathcal{C1}+\mathcal{C2}\mapsto \mathcal{C2}$$ and $$\mathcal{C1}+\mathcal{C2}\mapsto \mathcal{C2}$$. We get:
+Let's simplify the matrices above. The determinants are not changed by a linear operation on the columns. So let's do $$\mathcal{C_{1}+\mathcal{C_{2}}\mapsto \mathcal{C_{2}}$$ and $$\mathcal{C1}+\mathcal{C_{3}}\mapsto \mathcal{C_{3}}$$. We get:
 
-$$[tex]/ulem
-\require{ulem}
+$$
 u_{1} = -\alpha\begin{vmatrix}
-\sout{p_1 q_1-1} & \st{p_1 -1} & \xout{q_1-1} \\
+\sout{p_1 q_1-1} & \st{p_1 -1} & \cancel{q_1-1} \\
 p_2 q_3 & p_2-1 & q_3 \\
 p_3 q_2 & p_3 & q_2-1 \\
 p_4 q_4 & p_4 & q_4 \\
@@ -486,12 +488,15 @@ And so on.
 
 So any dot multiplication by a vector $$f \in \mathbb{R}^4$$ results in the following
 
-$$u \cdot f = \begin{vmatrix}
+$$\begin{align*}
+u \cdot f &= f_{1}*u_{1} - f_{2}*u_{2} + f_{3}*u_{3} - f_{4}*u_{4}
+&= \begin{vmatrix}
 p_1 q_1-1 & p_1 -1 & q_1-1 & f_{1} \\
 p_2 q_3 & p_2-1 & q_3 & f_{2} \\
 p_3 q_2 & p_3 & q_2-1 & f_{3} \\
 p_4 q_4 & p_4 & q_4 & f_{4} \\
-\end{vmatrix}$$
+\end{vmatrix}
+\end{align*}$$
 
 What we notice is that the 2nd column is entirely controlled by $$p$$ and the 3rd by $$q$$
 
@@ -503,11 +508,13 @@ The formula becomes :
 
 $$s_{X} = \frac{u \cdot g_{X}}{u \cdot 1} = \frac{D(p, q, g_{X})}{D(p, q, 1)}$$
 
-Let's apply a linear combination and here is the golden formula!
+Let's apply a linear combination and here is the **golden formula**!
 
 $$\alpha s_{X}+ \beta s_{Y} + \gamma = \frac{D(p, q, \alpha g_{X}+ \beta g_{Y} + \gamma)}{D(p, q, 1)}$$
 
 All what we have to do now is to find the right p to set the determinant to zero. That's why we call these strategies Zero-Determinant (ZD) Strategies.
+
+Notice that we haven't used yet the fact that $$a > b > c > d \geq 0$$ ! It is valid for every 2-players symmetrical game.
 
 → [All articles](../articles.md)
 
