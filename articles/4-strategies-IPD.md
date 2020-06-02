@@ -409,7 +409,7 @@ $$\forall s \in \mathfrak{S}, \sum_{i=1}^{N} \mu_{i}(s) = 0$$
 
 A *symmetrical two-players game* is such that
 
-$$\forall (s_{1}, s_{2}) \in \mathfrak{S}, \mu(s_{1}, s_{2})=\mu(s_{2}, s_{1})$$
+$$\forall (s_{1}, s_{2}) \in \mathfrak{S}, \mu_{1}(s_{1}, s_{2})=\mu_{2}(s_{2}, s_{1})$$
 
 ### Prisoner's dilemma generalized
 
