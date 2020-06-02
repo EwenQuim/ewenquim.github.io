@@ -525,8 +525,7 @@ Notice that we haven't used yet the fact that $$a > b > c > d \geq 0$$ ! It is v
 
 We focus on the case $$\alpha = 0$$ :
 
-$$\begin{equation}\label{eqn:einstein}
-\beta s_{Y} + \gamma = \frac{D(p, q, \alpha g_{X}+ \beta g_{Y} + \gamma)}{D(p, q, 1)}\end{equation}$$
+$$\beta s_{Y} + \gamma = \frac{D(p, q, \alpha g_{X}+ \beta g_{Y} + \gamma)}{D(p, q, 1)}$$
 
 We can compute $$p_{2}, p_{3}$$ in terms of $$p_{1}, p_{4}$$, eliminating $$\beta$$ and $$\gamma$$.
 
@@ -536,9 +535,7 @@ $$p_{2} = \frac{p_{1}(a-c) - (1+p_{4}(a-b)}{b-c}$$
 
 $$p_{2} = \frac{p_{1}(a-c) - (1+p_{4}(a-b)}{b-c}$$
 
-When injecting into the $$eq\eqref{eqn:einstein}$$ golden equation.
-
-We have unilaterally set Y's score to :
+When injecting into the *golden equation*, we have the unilaterally set Y's score value :
 
 $$s_{Y}= \frac{(1-p_{1})c+p_{4}b}{(1-p_{1})+p_{4}}$$
 
