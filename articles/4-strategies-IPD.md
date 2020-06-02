@@ -263,8 +263,8 @@ For example, we can see the results for the strategy
 
 | X \ Y | C | D |
 |:-----:|:-:|:-:|
-| **C** | 1 | 0 |
-| **D** | 0 | 0 |
+| **C** | 0 | 0 |
+| **D** | 1 | 1 |
 
 against some other strategies, for 10,000 rounds.
 
@@ -274,15 +274,15 @@ It wins against some but loses against some...
 
 #### All vs. all <!-- omit in toc -->
 
-The mean score for a given strategies against all the other strategies doesn't mean anything because it relies on the other strategies (and it shouldn't matter).
+The mean score for a given strategies against all the other strategies doesn't mean anything because it relies on the number of other strategies (and this shouldn't matter).
 
 A good thing that can be done is just counting the beaten strategies.
 
-We can easily see that the thief wins every time, as it always play the dominent strategy.
+We can easily see that the *thief* wins every time, as it always play the dominent strategy.
 
 ![Graph](../assets/4/thief-vs-all.png)
 
-But it isn't the strategy with the highest mean score: tit-for-tat have a much better score for example.
+But it isn't the strategy with the highest mean score: *tit-for-tat* have a much better score for example.
 
 ![Graph](../assets/4/tit4tat-vs-all.png)
 
@@ -311,6 +311,8 @@ Why 0.9, 0.7, 0.2 and 0.1? How do we chose the right coefficients? The answer is
 
 ![Graph](../assets/4/control2-vs-all.png)
 
+Notice that the opponent's score is always 2 in this graph. But we might have a score lower than 2, so this strategy is quite useless, even if it it interesting...
+
 You can even set the opponent's score to 1, the minimum possible! (as it is the utility at the Nash equilibrium)
 
 *Control 1*
@@ -324,15 +326,17 @@ You can even set the opponent's score to 1, the minimum possible! (as it is the 
 
 We can see some defects... in fact, the more you tend to 1, the more time it takes, and it seems 10,000 rounds isn't enough for some strategies to go to its limit.
 
+Moreover, our score in incredibly low, even lower than for *Control-2*.
+
 What's incredible is that you can't control your own score by doing this. You will never be able to do that in Game Theory, because it is not interesting. It in not a strategy, but full control, and thus uninteresting.
 
-However, it's **not satisfying enough**.
+This strategy is interesting, but **not satisfying enough**.
 
-We don't want to control the opponent's score, we want to have better than him **every time**.
+We don't want to control the opponent's score, we want to have better than him every time.
 
 ### Extorsion
 
-Even if we can't control our own gain, it still is possible to control the ratio of our score to the opponent's.
+Even if we can't control our own gain, it still is possible to control the **ratio** of our score to the opponent's.
 
 *Extorsion 2* set our score two times higher than the opponent's!
 
@@ -349,23 +353,25 @@ If we are greedy, we can try to set the ratio to 100. But here's what happen:
 
 ![Graph](../assets/4/extorque100-vs-all.png)
 
-In fact, 100*0=0. By trying to reduce the opponent's score to 0 (in fact, 1 as we saw), we are reducing our own score.
+In fact, 100x0 = 0. By trying to reduce the opponent's score to 0 (in fact, 1 as we saw), we are reducing our own score.
 
 ### Extorsion vs. control
 
-We can makes these two incredible strategies fight each other.
+We can make these two incredible strategies fight each other.
 
 ![Graph](../assets/4/control2-vs-extorque2.png)
 
-They are compatible! *Control-2* set the *Extorsion*'s score to 2 and *Extorsion-2* makes sure that his score is twice the *Control*'s score.
+They are compatible! *Control-2* set the *Extorsion*'s score to 2 and *Extorsion-2* makes sure that his score is twice the *Control*'s score (relatively to the utility at Nash Equilibrium of course).
 
 ### The winning strategy!
 
-The **Extorsion** strategy will always have a better score than any of its opponents, or at least the same than them. To maximize the score, don't be too greedy at apply a factor 2 or 3 (remember that 100*0=0!)
+The **Extorsion** strategy will always have a better score than any of its opponents, or at least the same than them. To maximize the score, don't be too greedy at apply a factor 2 or 3 (remember that 100x0 = 0).
+
+Learn how to compute it in [part 5](#press-and-dysons-work) or use [my algorithm](https://github.com/EwenQuim/iterated-prisoners-dilemma) to experiment it without maths.
 
 ## 4. Real life application
 
-Wow. If you read  until here, you must wonder:
+Wow. If you have read this far, you must wonder:
 
 > What is it useful for? These strategies were nice, but I'll never play 10,000 prisoner's dilemma?
 
@@ -376,11 +382,11 @@ There are many games that can look as Prisoner's dilemma. Here's a short list:
 - animal cooperation (bats for example must learn to cooperate sometimes and betray other times)
 - couple life (each decision can be a dilemma according to your preferences, even if it is not always a big deal)
 
-Remember that if you want to maximize you happiness, do not betray every time. But do not cooperate each time: think about yourself!
+Remember that if you want to maximize your happiness, do not betray every time. But do not cooperate each time: think about yourself!
 
 Randomizing you gives you a better mean utility.
 
-Think about his!
+Think about this!
 
 ## 5. Appendix: Real maths. Proofs.
 
