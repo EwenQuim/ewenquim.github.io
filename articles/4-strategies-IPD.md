@@ -531,7 +531,7 @@ Notice that we haven't used yet the fact that $$a > b > c > d \geq 0$$ ! It is v
 
 We focus on the case $$\alpha = 0$$ :
 
-$$\beta s_{Y} + \gamma = \frac{D(p, q, \alpha g_{X}+ \beta g_{Y} + \gamma)}{D(p, q, 1)}$$
+$$\beta s_{Y} + \gamma = \frac{D(p, q, \beta g_{Y} + \gamma)}{D(p, q, 1)}$$
 
 We can compute $$p_{2}, p_{3}$$ in terms of $$p_{1}, p_{4}$$, eliminating $$\beta$$ and $$\gamma$$.
 
