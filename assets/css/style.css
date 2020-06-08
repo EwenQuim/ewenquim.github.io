@@ -2,10 +2,4 @@
 ---
 
 @import "{{ site.theme }}";
-body {
-    color: #444;
-}
-
-h1 {
-    color: blueviolet;
-}
+@import "custom.css";
