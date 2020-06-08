@@ -2,7 +2,10 @@
 ---
 
 @import "{{ site.theme }}";
+body {
+    color: #444;
+}
 
-p {
-    color: rgb(32, 32, 32);
+h1 {
+    color: blueviolet;
 }
