@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 {% seo %}
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     {% if page.custom_css %}
       {% for stylesheet in page.custom_css %}
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ stylesheet }}.css">
       {% endfor %}
     {% endif %}
+    
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -27,7 +29,7 @@
 
         <p>{{ site.description | default: site.github.project_tagline }} &mdash; Read my <a href="https://ewenquim.github.io/articles">articles</a></p>
 
-        <p class="view">Download <a href="https://play.google.com/store/apps/details?id=com.coal">Coalescence</a> for Android</p>
+        <p class="view">Download <a style="color:red" href="https://play.google.com/store/apps/details?id=com.coal">Coalescence</a> for Android</p>
 
       </header>
       <section>
