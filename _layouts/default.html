@@ -4,20 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
 
 {% seo %}
-    {% if page.custom_css %}
-      {% for stylesheet in page.custom_css %}
-        <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ stylesheet }}.css">
-      {% endfor %}
-    {% endif %}
+    
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/custom.css">
     
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
+
   </head>
+
   <body>
     <div class="wrapper">
       <header>
@@ -38,8 +34,9 @@
 
       </section>
       <footer>
-        <p> Copyright Ewen Quimerc'h © 2020</p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a> & me</small></p>
+        <noscript>JavaScript is not required tu run entirely this website.</noscript>
+        <p><small>Ewen Quimerc'h © 2020<small></p>
+        <p><small><a href="about">About</a> the website</small></p>
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
