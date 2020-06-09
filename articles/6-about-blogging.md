@@ -1,19 +1,18 @@
-# **[Meta]** About Blogging <!-- omit in toc -->
-
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+# **[Meta]** Why you should start a blog now <!-- omit in toc -->
 
 [time] *min setup*
 
 - [1. Public or private](#1-public-or-private)
   - [The Privacy Paradox](#the-privacy-paradox)
-  - [More about the subject](#more-about-the-subject)
+  - [Is a blog really different?](#is-a-blog-really-different)
 - [2. Part 2](#2-part-2)
-  - [Part 1](#part-1)
-  - [Part 2](#part-2)
+  - [Slow down](#slow-down)
+  - [Write more](#write-more)
 - [References](#references)
 
-This blog isn't very put forward.
-I'm not trying to reach a lot of people.
+Blogs now tend to disappear, as everyone moves to Twitter or Instagram.
+People prefer to share their **lives in a second** than their **thoughts in a week** (or a month like me).
+But here's why you should start a blog. or you, and your friends!
 
 In this article, you will see:
 
@@ -25,30 +24,38 @@ In this article, you will see:
 
 ### The Privacy Paradox
 
-Today people want privacy. The European GDPR and recent laws in general tends to .
+Today people want privacy online. The European GDPR and recent laws in general tends to increase the protection of internet users.
 
-### More about the subject
+However, at the same time they expose themselves on their Facebook timeline, on their Snapchat stories or Instagram photos.
+
+We want to share, to strengthen our social bonds even when our worlds tends to separate us physically. Want to start a job in China? No problem, you can keep up with your friends everyday.
+
+But here is the problem. Online messaging is _enough_. You don't need Social Networks to share your lives. 
+
+> When you post a story, you are screaming in the void. Hoping someone will eventually get it -and like it.
+
+You'll say it is the same for blogs
+
+### Is a blog really different?
+
+The purpose of a blog really is different. Here I'm not talking about the old but popular [Skyblog](https://skyrock.com/) or [Blogger](https://www.blogger.com/) and are the ancestors social networks.
+
+In a blog, you don't share your lives, but your thoughts
+
+
 
 Random text
 you can use an ~~inline~~ formula $$\forall x \in \R$$ like this one
 
 Hello
 
-$$
-M = \left( \begin{array}{ccc}
-x_{11} & x_{12} & \ldots \\
-x_{21} & x_{22} & \ldots \\
-\vdots & \vdots & \ldots \\
-\end{array} \right)
-$$
-
 ## 2. Part 2
 
-### Part 1
+### Slow down
 
-Things
+Slow
 
-### Part 2
+### Write more
 
 Things
 

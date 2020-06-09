@@ -1,4 +1,4 @@
-# Links
+# Preview links for future articles
 
 [Tech giants](articles/5-get-rid-of-tech-giants.md)
 
