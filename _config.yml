@@ -2,7 +2,3 @@ theme: jekyll-theme-minimal
 logo: /assets/banner.png
 title: Random Thoughts
 description: by Ewen Quimerc'h
-custom-css:
-    - custom
-
-
