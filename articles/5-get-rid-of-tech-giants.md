@@ -1,12 +1,12 @@
 # **[FOSS]** Get rid of tech Giants <!-- omit in toc -->
 
-[time] *min setup*
+10 *min reading*
 
 - [1. Why should we step far from Tech Giants](#1-why-should-we-step-far-from-tech-giants)
-  - [Who are they ?](#who-are-they)
-  - [Are they *that* bad ?](#are-they-that-bad)
-  - [Is there any alternatives ?](#is-there-any-alternatives)
-  - [Why you will always need](#why-you-will-always-need)
+  - [Who are they ?](#who-are-they-)
+  - [Are they *that* bad ?](#are-they-that-bad-)
+  - [Is there any alternatives ?](#is-there-any-alternatives-)
+  - [Why do people keep using these tech](#why-do-people-keep-using-these-tech)
 - [2. Change computer apps](#2-change-computer-apps)
   - [Browser (computer & mobile)](#browser-computer--mobile)
   - [Mail client (computer & mobile)](#mail-client-computer--mobile)
@@ -67,12 +67,12 @@ It's easy for someone to change (even more if I explain to you how)
 
 Why do people develop FOSS?
 
-### Why you will always need
+### Why do people keep using these tech
 
-Popular because it's popular (Whatsapp < Telegram in ùy school)
+Popular because it's popular (Whatsapp is far more used than Telegram or Matrix in my school even if it's less )
 One can change it's habits but hard for everyone.
 
-Communication should not rely on software or company (.docx open on Google Docs / .md)
+> Communication should not rely on software or company (.docx open on Google Docs / .md)
 
 Softwares should be a tool for a common protocol : a good example is mail.
 
