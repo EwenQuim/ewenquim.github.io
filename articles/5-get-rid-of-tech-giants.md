@@ -120,17 +120,17 @@ You don't need a sophisticated mind or setup to code software. A simple text edi
 
 > Ideas are meant to be spread.
 
-I am not the only one to think that software can -and must- be shared. A whole movement was born from this : the FOSS (Free Open-Source Software) movement is the answer to proprietary (owned by private interests) software. The concept is simple. Everyone can contribute to an Open Source project. It is made by the community, for the community.
+I am not the only one to think that software can -and must- be shared. A whole movement was born from this : the FOSS (Free Open-Source Software) movement is the answer to proprietary (owned by private interests) software. The concept is simple. Everyone can contribute to an Open Source project. It is made **by the community, for the community**.
 
 Here's a list of FOSS, not owned by companies and that you can use for free.
 
 |        FOSS |        Role        | Equivalent     |
-|------------:|:------------------:|----------------|
-|     FireFox |       Browser      | Chrome, Safari |
-| LibreOffice | Productivity Suite | MS Office      |
-|       Linux |         OS         | Windows, Mac   |
-|     Blender | 3D modelling       | SketchUp       |
-|     F-Droid | App manager        | Play, App Store|
+|------------:|:-------------------|----------------|
+|     [FireFox](https://www.mozilla.org/fr/firefox/new/) |       Browser      | Chrome, Safari |
+| [LibreOffice](https://www.libreoffice.org/download/download) | Productivity Suite | MS Office      |
+|       [Linux](https://ubuntu.com/download/desktop) |         OS         | Windows, Mac   |
+|     [Blender](https://www.blender.org/download/) | 3D modelling       | SketchUp       |
+|     [F-Droid](https://f-droid.org/) | App manager        | Play, App Store|
 
 It really is easy to change to FOSS. But why nobody does that?
 
