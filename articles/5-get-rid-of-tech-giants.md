@@ -108,7 +108,7 @@ Some of my friends asked me
 
 > Why do you care so much about privacy? What are you afraid of? You have nothing to hide!
 
-I've already talked about that and I will continue to do so in another article. Stay in touch!
+I've already talked about [that](3-pgp.md#more-about-pgp---history-and-challenges) and I will continue to do so in another article. Stay in touch!
 
 ## 2. Alternatives
 
