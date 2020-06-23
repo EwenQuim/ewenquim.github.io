@@ -6,6 +6,7 @@
   - [Who are they ?](#who-are-they-)
   - [Are they *that* bad ?](#are-they-that-bad-)
   - [What’s the problem(s) ?](#whats-the-problems-)
+    - [Compatibility](#compatibility)
 - [2. Alternatives](#2-alternatives)
   - [Softwares are ideas](#softwares-are-ideas)
   - [Habit, laziness and advertising](#habit-laziness-and-advertising)
@@ -90,6 +91,16 @@ These companies are born from an idea, a concept that made them popular.
 
 Google isn't just a Search Engine anymore, it is a browser, an OS, a cloud services provider, an IA leader... Confusion grow in the minds of everyone.
 
+#### Compatibility
+
+Communication should not rely on software or company.
+
+Softwares should be a **tool** for a **common protocol** : a good example is mail. You can have very different mail clients (or mail reader and sender for dummies). A mail is always the same thing, even if it is sent with Outlook or GMail. The protocol is a common thing. To go further, just know that the inbox isn't correlated to the client. You can send GMail mails and read them with the Outlook, MailSpring or ThunderBird client!
+
+It's the same with formats: you can edit photos (.png, .jpg) with a lot of different readers.
+
+But it isn't always the case: there is no consensus with Word (.doc, .docx) and other readers (Page, LibreOffice, Google Docs), as it belongs to a company (Microsoft) and is widely used.
+
 #### Freedom <!-- omit in toc -->
 
 When you depend on only a small group of companies, the fact that they cooperate or not with the state is a real issue. Tim Cook said[^cookQuote] in 2016 that Apple won't allow the FBI to allow them the access to iPhones of users. But are all companies ready for the same fight? And how long will Apple resist? There is absolutely no guarantees about that. We've seen with the Snowden revelations that some states (the USA among them) already use technology in cooperation with some Tech Giants. For example, AT&T and Verizon helped the NSA spy on millions of people.
@@ -144,12 +155,9 @@ Worst, they are so used to Windows that they don't even know it is an OS. It _is
 
 FOSS isn't as popular as promised.
 
-Popular because it's popular (Whatsapp is far more used than Telegram or Matrix in my school even if it's less )
-One can change it's habits but hard for everyone.
+Mostly because the switch from proprietary to free is tough.
 
-> Communication should not rely on software or company (.docx open on Google Docs / .md)
-
-Softwares should be a tool for a common protocol : a good example is mail.
+You'll be pointed at, because you use different tools. But this is temporary. If the movement grow big enough, and it began to have impressive numbers now, it will become the norm.
 
 → [All articles](../articles.md)
 
