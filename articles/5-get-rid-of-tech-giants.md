@@ -6,14 +6,13 @@
   - [Who are they ?](#who-are-they-)
   - [Are they *that* bad ?](#are-they-that-bad-)
   - [What’s the problem(s) ?](#whats-the-problems-)
-    - [Compatibility](#compatibility)
 - [2. Alternatives](#2-alternatives)
   - [Softwares are ideas](#softwares-are-ideas)
   - [Habit, laziness and advertising](#habit-laziness-and-advertising)
   - [Switching](#switching)
 - [References](#references)
 
-Today is not a different day. Not a day goes by that you don't use the technologies offered by Silicon Valley's Big Technology Groups. But **how many years** has it been like this? And how **many more will happen**? After all, these innovations are working well. They make life easier. Why do without them?
+**Today is not a different day.** Not a day goes by that you don't use the technologies offered by Silicon Valley's Big Technology Groups. But **how many years** has it been like this? And how many more will happen? After all, these innovations are working well. They make life easier. What's the point in getting rid of them?
 
 A small number of companies enable the virtual activity of millions of people. What problems arise from this oligarchic situation?
 
@@ -38,7 +37,7 @@ The main goal of any company is to **seek profit**. But there are several ways t
 
 So here is their yearly revenue  :
 
-|           | Revenue ($) | Leader(s) world wealth rank | Comes from |
+|           | Revenue ($) | Leader world wealth rank | Comes from |
 |----------:|:-----------:|:------------------------:|:---:|
 |   Google  |     66 B    |  13[^page] & 14[^brin]   | 70% ads [^googleAds] |
 |   Amazon  |     280 B   |        1[^bezos]         | 11% Web Services (hosting…) |
@@ -61,7 +60,7 @@ Let's begin with the bright side. These companies:
 
 ### What’s the problem(s) ?
 
-#### Lack of choice (for the average person) <!-- omit in toc -->
+#### a - Lack of choice (for the average person) <!-- omit in toc -->
 
 These companies are controlling everything : I bet you are currently running an OS from Microsoft, Apple or Google, using a browser made by these companies… 
 
@@ -69,11 +68,11 @@ If not, congratulation, you’re probably a nerd! **And that’s the problem.**
 
 Don’t misunderstand me, the problem isn’t that you’re a nerd. The real issue is that you have to acquire technical knowledge to be free. It shouldn't be the case : not everyone is able to learn that! We can't know everything. You can't expect your grandma or your neighbor, who don't care about IT, to struggle against the system and set up weird nerdy things like Linux. But we'll talk about simple and easy alternative [later](#2-alternatives).
 
-#### Monopoly <!-- omit in toc -->
+#### b - Monopoly <!-- omit in toc -->
 
 It is a matter of not putting all your eggs in the same basket.
 
-To illustrate that, I have regrouped apps on my phone by company. I've counted : more than 38% of my apps are from Google, Microsoft or Samsung! Moreover, my phone is an Android, the *Google* OS for smartphones...
+To illustrate that, I have regrouped apps on my phone by company. I've counted : 39% of my apps are made by 3 companies: Google, Microsoft or Samsung! Moreover, my phone is an Android, the *Google* OS for smartphones...
 
 ![Photos of 1/2 apps on my phone in only 3 company folder](../assets/3-smartphones-apps.jpg)
 
@@ -81,7 +80,7 @@ You can do this yourself, it will be the same result... If you use an iPhone/iPa
 
 I remember, a few years back, being fascinated how a single Google account allows access to many services... Now I realise it isn't as good as it seems, and also [not necessary]().
 
-#### From a service to an empire <!-- omit in toc -->
+#### c - From a service to an empire <!-- omit in toc -->
 
 When Facebook gives free access to Internet in Africa[^fbFreeInternet], do you think it is pure philanthropy? Now, some people in Africa say FaceBook _is_ internet.
 
@@ -89,9 +88,9 @@ These companies are born from an idea, a concept that made them popular.
 
 **Now, they want an empire.**
 
-Google isn't just a Search Engine anymore, it is a browser, an OS, a cloud services provider, an IA leader... Confusion grow in the minds of everyone.
+Google isn't just a Search Engine anymore, it is a browser, an OS, a cloud services provider, an IA leader... Confusion grow in the minds of everyone, as our dependency to them.
 
-#### Compatibility
+#### d - Compatibility <!-- omit in toc -->
 
 Communication should not rely on software or company.
 
@@ -101,7 +100,7 @@ It's the same with formats: you can edit photos (.png, .jpg) with a lot of diffe
 
 But it isn't always the case: there is no consensus with Word (.doc, .docx) and other readers (Page, LibreOffice, Google Docs), as it belongs to a company (Microsoft) and is widely used.
 
-#### Freedom <!-- omit in toc -->
+#### e - Freedom <!-- omit in toc -->
 
 When you depend on only a small group of companies, the fact that they cooperate or not with the state is a real issue. Tim Cook said[^cookQuote] in 2016 that Apple won't allow the FBI to allow them the access to iPhones of users. But are all companies ready for the same fight? And how long will Apple resist? There is absolutely no guarantees about that. We've seen with the Snowden revelations that some states (the USA among them) already use technology in cooperation with some Tech Giants. For example, AT&T and Verizon helped the NSA spy on millions of people.
 
@@ -175,3 +174,4 @@ You'll be pointed at, because you use different tools. But this is temporary. If
 [^politicsVSfb]: <https://www.youtube.com/watch?v=ncbb5B85sd0>
 [^amazonMarketShare]: <https://www.srgresearch.com/articles/leading-cloud-providers-increase-their-market-share-again-third-quarter>
 [^cookQuote]: <https://www.theguardian.com/technology/2016/feb/22/tim-cook-apple-refusal-unlock-iphone-fbi-civil-liberties>
+[^fbFreeInternet]: <https://www.theguardian.com/world/2016/aug/01/facebook-free-basics-internet-africa-mark-zuckerberg>
