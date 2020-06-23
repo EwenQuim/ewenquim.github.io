@@ -8,7 +8,7 @@
 
 ### **[FOSS]** [Get rid of tech Giants](articles/5-get-rid-of-tech-giants.md)
 
-*Juy 2020* -
+*July 2020* -
 Give your digital life to Google -or not.
 
 ### **[Maths]** [Control the opponent in some games](articles/4-strategies-IPD.md)
