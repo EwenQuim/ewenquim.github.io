@@ -93,9 +93,9 @@ Why isn't it better known to the general public? There are some reasons I imagin
 
 ### Setting up PGP
 
-Linux enthusiasts often use GnuPG[^gnupg] (referred as GPG), but we will use [this website](https://www.thechiefmeat.com/pgp/#) for this tutorial, as the interface is really intuitive.
+Linux enthusiasts often use GnuPG[^gnupg] (referred as GPG), but we will use [this website](https://www.thechiefmeat.com/pgp/#) for this tutorial, as the interface is really intuitive. Just fill in the blanks!
 
-Just fill in the blanks. If you are afraid that someone watching the website steals your private key, you can use Tor[^tor] to access the website and/or cut your internet connexion during the key generation. Also, it is important to ask for a RSA key with minimum 2048 bits!
+Remember that creating keys online is never secure : you must protect your traffic, and you'll never be sure whether you can trust the website or not. We're just doing it for testing purposes here. Also, it is important to ask for a RSA key with minimum 2048 bits!
 
 The website will provide you 2 keys : a **public key** and a **private (or secret) key**.
 
