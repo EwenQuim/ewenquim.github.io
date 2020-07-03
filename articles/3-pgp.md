@@ -134,6 +134,12 @@ Then, every time you commit, just add `-s` to `git commit`, and there it is! You
 
 You can go further by creating [custom aliases](2-linux-aliases.html) to make this operation transparent, and not losing time.
 
+You can also enable PGP signing by default with this command:
+
+```bash
+git config --global commit.gpgSign true
+```
+
 If you commit from a graphical interface, it is also possible to sign your commits!
 
 For example, if you use Visual Studio Code, just go to the settings, search `git sign` and activate the corresponding option.
