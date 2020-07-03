@@ -1,13 +1,16 @@
 # **[Crypto]** Sign your commits with PGP <!-- omit in toc -->
 
-10 *min setup*
+15 *min setup*
 
-- [1. What is PGP](#1-what-is-pgp)
+- [1. The git history issue](#1-the-git-history-issue)
+  - [Git structure](#git-structure)
+  - [Having fun... messing up everything!](#having-fun-messing-up-everything)
+  - [A possible solution](#a-possible-solution)
+- [2. What is PGP](#2-what-is-pgp)
   - [Quick Definition](#quick-definition)
   - [More about PGP - History and Challenges](#more-about-pgp---history-and-challenges)
   - [Setting up PGP](#setting-up-pgp)
-- [2. Use PGP in Git](#2-use-pgp-in-git)
-  - [Why you should sign your work](#why-you-should-sign-your-work)
+- [3. Use PGP in Git](#3-use-pgp-in-git)
   - [How can I do this](#how-can-i-do-this)
   - [Warnings](#warnings)
 - [References](#references)
@@ -21,7 +24,41 @@ In this article, you will see:
 - git **signing procedure** with PGP
 - **vscode** integration
 
-## 1. What is PGP
+## 1. The git history issue
+
+### Git structure
+
+Remember the first time you used git in your computer.
+You typed these instructions :
+
+```bash
+git config --global user.name "Chuck Norris"
+git config --global user.email chuck.norris@example.com  
+```
+
+Git remembers what you filled and indicates your **name** and email for every commit.
+
+![Picture of Git history here](../assets/3-Git-history.png)
+
+You know that git allows you to navigate through the history and modify older commits.
+
+### Having fun... messing up everything!
+
+What you probably don't know is that you can even modify the metadata (eg. the date or the author)! Anyone can do that, just play with the .git folder at the root of your repository...
+
+As everything in IT ~~and especially things that shouldn't be done~~, some guys automated it.
+
+So, funny guys even made a CLI to [blame someone else (for your bad code)](https://github.com/jayphelps/git-blame-someone-else), or [claim some good work (you didn't do)](https://github.com/SilasX/git-upstage).
+
+But if you work seriously, for example on an open-source project or in a company, this can be quite scary, and you may want to protect your git history.
+
+### A possible solution
+
+If everyone sign their commit with a private key, it would be impossible to usurp one another.
+
+Luckily, git have a tool to sign with PGP!
+
+## 2. What is PGP
 
 ### Quick Definition
 
@@ -83,29 +120,7 @@ You can also try to send me an encrypted message (if you know how to contact me 
 
 You can use any message service, as the message is encrypted! Don't forget to send me your public PGP key if you want me to answer ;)
 
-## 2. Use PGP in Git
-
-### Why you should sign your work
-
-Remember the first time you used git in your computer.
-You have typed these instruction :
-
-```bash
-git config --global user.name "Chuck Norris"
-git config --global user.email chuck.norris@example.com  
-```
-
-Git remembers what you filled and indicates your name and email for every commit.
-
-![Picture of Git history here](../assets/3-Git-history.png)
-
-You know that git allows you to navigate through the history and modify older commits. What you probably don't know is that you can even modify the metadata (eg. the date or the author)!
-
-Some funny guys even made a CLI to [blame someone else](https://github.com/jayphelps/git-blame-someone-else) for your bad code, or [claim some work you didn't do](https://github.com/SilasX/git-upstage).
-
-If you work seriously, for example on an open-source project, this can be quite scary, and you may want to protect your git history.
-
-Luckily, git allows you to sign your work with PGP !
+## 3. Use PGP in Git
 
 ### How can I do this
 
@@ -121,7 +136,7 @@ You can go further by creating [custom aliases](2-linux-aliases.html) to make th
 
 If you commit from a graphical interface, it is also possible to sign your commits!
 
-For example, if you use Visual Studio Code, just go to the settings, type `git sign` and activate the option.
+For example, if you use Visual Studio Code, just go to the settings, search `git sign` and activate the corresponding option.
 
 It is also important to add your public PGP key to your remote repository, so the git host can verify them (often represented with a nice green tick on your history).
 
@@ -134,6 +149,8 @@ Insert your PGP key here
 And here is the result : a 'verified' mention on your git history!
 
 ![(Signed commit on Github)](../assets/3-Github-signed.png)
+
+When you work, try to remember to verify the little tick ✅ before accepting Merge/Pull Requests!
 
 ### Warnings
 
