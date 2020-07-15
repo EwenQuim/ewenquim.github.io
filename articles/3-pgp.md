@@ -137,7 +137,7 @@ You can go further by creating [custom aliases](2-linux-aliases.html) to make th
 You can also enable PGP signing by default with this command:
 
 ```bash
-git config --global commit.gpgSign true
+git config --global commit.gpgSign true 
 ```
 
 If you commit from a graphical interface, it is also possible to sign your commits!
