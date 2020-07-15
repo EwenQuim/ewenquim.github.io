@@ -6,6 +6,11 @@
   - [Definition](#definition)
   - [Advantages](#advantages)
 - [2. What’s the problem(s)?](#2-whats-the-problems)
+  - [a - The average user lack of knowledge](#a---the-average-user-lack-of-knowledge)
+  - [b - Concentration vs Diversity](#b---concentration-vs-diversity)
+  - [c - Providing a service to humanity... or building an empire?](#c---providing-a-service-to-humanity-or-building-an-empire)
+  - [d - Compatibility](#d---compatibility)
+  - [e - Freedom](#e---freedom)
 - [3. Alternatives](#3-alternatives)
   - [Softwares are ideas](#softwares-are-ideas)
   - [Habit, laziness and advertising](#habit-laziness-and-advertising)
@@ -64,13 +69,13 @@ Surprising, isn't it?
 - Microsoft and Apple actually make a lot of money selling their OS, devices, softwares or cloud services. There is no problem for this kind of business, apart from the **quasi-monopolistic** situation in which these two companies find themselves.
 - The case of Amazon is a bit particular. A lot of their revenue comes from online retail. But even if AWS represent only 11% of their revenue, it rises to almost 50% of their operating income. AWS is a *nebula* of services (more than a hundred!) that are mostly cloud services (hosting, computational power…). Amazon control more than 1/3 of the cloud market, more than twice its competitors.[^amazonMarketShare]
 
-### a - The average user lack of knowledge <!-- omit in toc -->
+### a - The average user lack of knowledge
 
 These companies are controlling everything : I bet you are currently running an OS from Microsoft, Apple or Google, using a browser made by these companies… 
 
 If not, congratulations, you’re probably a nerd! **And that’s the problem.**
 
-Don’t misunderstand me, the problem isn’t that you’re a nerd. The real issue is that you have to acquire technical knowledge to be free. It shouldn't be the case : not everyone is able to learn that! We can't know everything. You can't expect your grandma or your neighbor, who don't care about IT, to struggle against the system and set up weird nerdy things like Linux[^aboutLinux]. But we'll talk about simple and easy alternative [later](#2-alternatives).
+Don’t misunderstand me, the problem isn’t that you’re a nerd. The real issue is that you have to acquire technical knowledge to be free. It shouldn't be the case : not everyone is able to learn that! We can't know everything. You can't expect your grandma or your neighbor, who don't care about IT, to struggle against the system and set up weird nerdy things like Linux[^aboutLinux]. But we'll talk about simple and easy alternative [later](#3-alternatives).
 
 Also, nobody reads the Terms and Conditions of these companies.
 
@@ -84,7 +89,7 @@ Tech companies are now omnipresent online. They makes us fell like if the altern
 
 In a nutshell, the average user has no choice but to use their services.
 
-### b - Concentration vs Diversity <!-- omit in toc -->
+### b - Concentration vs Diversity
 
 It is a matter of not putting all your eggs in the same basket.
 
@@ -96,7 +101,7 @@ You can do this yourself, it will be the same result... If you use an iPhone/iPa
 
 I remember, a few years back, being fascinated how a single Google account allows access to many services... Now I realise it isn't as good as it seems, and also not necessary. Let's remember that data centralisation can cause tremendous damages[^matHack]..
 
-### c - Providing a service to humanity... or building an empire? <!-- omit in toc -->
+### c - Providing a service to humanity... or building an empire?
 
 When Facebook gives free access to Internet in Africa[^fbFreeInternet], do you think it is pure philanthropy? Now, some people in Africa say FaceBook _is_ internet.
 
@@ -108,7 +113,7 @@ Google isn't just a Search Engine anymore, it is a browser, an OS, a cloud servi
 
 Every tech giants wants to earn money and become the biggest possible. They don't want to help you benevolently. Remember that they are making billions thanks to "free services" (especially Google and Facebook).
 
-### d - Compatibility <!-- omit in toc -->
+### d - Compatibility
 
 Communication should not rely on software or company.
 
@@ -118,7 +123,7 @@ It's the same with formats: you can edit photos (.png, .jpg) with a lot of diffe
 
 But it isn't always the case: there is no consensus with Word format (.doc, .docx) and other readers (Page, LibreOffice, Google Docs), as it belongs to a company (Microsoft) and is widely used.
 
-### e - Freedom <!-- omit in toc -->
+### e - Freedom
 
 When you depend on only a small group of companies, the fact that they cooperate or not with the state is a real issue. Tim Cook said[^cookQuote] in 2016 that Apple won't allow the FBI to allow them the access to iPhones of users. But are all companies ready for the same fight? And how long will Apple resist? There is absolutely no guarantees about that. We've seen with the Snowden revelations that some states (the USA among them) already use technology in cooperation with some Tech Giants. For example, AT&T and Verizon helped the NSA spy on millions of people.
 
