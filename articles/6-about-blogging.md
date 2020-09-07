@@ -1,18 +1,19 @@
 # **[Meta]** Why you should start a blog now <!-- omit in toc -->
 
-[time] *min setup*
+5 *min read*
 
-- [1. Public or private](#1-public-or-private)
+- [1. Challenge yourself](#1-challenge-yourself)
+  - [Creation](#creation)
+  - [The Pace](#the-pace)
+  - [Audience](#audience)
+- [2. Public or private](#2-public-or-private)
   - [The Privacy Paradox](#the-privacy-paradox)
-  - [Is a blog really different?](#is-a-blog-really-different)
-- [2. Part 2](#2-part-2)
-  - [Slow down](#slow-down)
-  - [Write more](#write-more)
+  - [Is a blog really different from social media?](#is-a-blog-really-different-from-social-media)
 - [References](#references)
 
 Blogs now tend to disappear, as everyone moves to Twitter or Instagram.
 People prefer to share their **lives in a second** than their **thoughts in a week** (or a month like me).
-But here's why you should start a blog. or you, and your friends!
+But here's why you should start a blog. You, and your friends!
 
 In this article, you will see:
 
@@ -20,7 +21,27 @@ In this article, you will see:
 - things
 - things
 
-## 1. Public or private
+## 1. Challenge yourself
+
+Reading is easy. You read thousands of lines everyday. Even if you're not the greatest book amateur, you read things on social media. Our brain need to gather information and that's why we prefer scrolling on social media than to wait and focus on ourselves.
+
+### Creation
+
+But writing is a **whole different thing**. To create is far more difficult than to consume.
+
+Even if you read serious articles, you're not really diving into the subjects. Writing will make you actually think and gather information -far more than if you just read an article. You'll become skilled in **structuring your thoughts** and in research.
+
+### The Pace
+
+While [Hacker News](https://news.ycombinator.com/) and its Telegram channel spams you 10x a day with new technology news, writing an article cannot reasonably be done in an hour. For my most detailed articles, days of work are required and this is an amazing experience: I've learnt a lot of things doing this! 
+
+### Audience
+
+Don't care about your audience : you mostly **write for yourself**. Bonus points if it is useful for the community. If you don't write for money, do not expect your audience to grow exponentially. Only a few blogs on Earth gather +1k monthly views. Your audience will be more close to you, and thus care more about what you write.
+
+## 2. Public or private
+
+Posting online raises the issue of privacy.
 
 ### The Privacy Paradox
 
@@ -34,30 +55,14 @@ But here is the problem. Online messaging is _enough_. You don't need Social Net
 
 > When you post a story, you are screaming in the void. Hoping someone will eventually get it -and like it.
 
-You'll say it is the same for blogs
+You'll say it is the same for blogs: the audience is blurry, unclear.
 
-### Is a blog really different?
+### Is a blog really different from social media?
 
-The purpose of a blog really is different. Here I'm not talking about the old but popular [Skyblog](https://skyrock.com/) or [Blogger](https://www.blogger.com/) and are the ancestors social networks.
+The purpose of a blog really is different. Here I'm not talking about the old but popular [Skyblog](https://skyrock.com/) or [Blogger](https://www.blogger.com/) that are the ancestors social networks. 
 
-In a blog, you don't share your lives, but your thoughts
+In a blog, you don't share your lives, but your thoughts. You don't show your last dress or meal: you expose your ideas, your creations. And it encourages you to think, to 
 
-
-
-Random text
-you can use an ~~inline~~ formula $$\forall x \in \R$$ like this one
-
-Hello
-
-## 2. Part 2
-
-### Slow down
-
-Slow
-
-### Write more
-
-Things
 
 → [All articles](../articles.md)
 
