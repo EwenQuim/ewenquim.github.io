@@ -46,4 +46,4 @@ Encrypt emails and documents. Sign your git commits. Secure your work.
 
 ## About
 
-Look at my CV ([french](assets/CVQuimerchEwen.pdf))
+Look at my [CV](https://www.linkedin.com/in/ewen-quimerch/)
