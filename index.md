@@ -6,6 +6,11 @@
 
 ![-](assets/articles.jpg)
 
+### **[Meta]** [Why you should start a blog now](articles/6-about-blogging.md)
+
+*August 2020* -
+My motivations (and soon yours) to create a blog
+
 ### **[FOSS]** [Get rid of tech Giants](articles/5-get-rid-of-tech-giants.md)
 
 *July 2020* -

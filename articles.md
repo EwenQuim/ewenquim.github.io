@@ -2,6 +2,13 @@
 
 ![-](assets/articles.jpg)
 
+## **[Meta]** [Why you should start a blog now](articles/6-about-blogging.md)
+
+*August 2020* -
+My motivations (and soon yours) to create a blog
+
+---
+
 ## **[FOSS]** [Get rid of tech Giants](articles/5-get-rid-of-tech-giants.md)
 
 *Juy 2020* -
@@ -27,10 +34,3 @@ Encrypt emails and documents. Sign your git commits. Secure your work.
 
 *April 2020* -
 Manage linux aliases efficiently - change your workflow once and for all!
-
----
-
-## **[Meta]** [How is this website designed (spoiler: badly)](articles/1-markdown-website.md)
-
-*March 2020* -
-How this website is running ? A curious way to do it...

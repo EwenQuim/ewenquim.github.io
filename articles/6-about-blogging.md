@@ -23,7 +23,7 @@ In this article, you will see:
 
 ## 1. Challenge yourself
 
-Reading is easy. You read thousands of lines everyday. Even if you're not the greatest book amateur, you read things on social media. Our brain need to gather information and that's why we prefer scrolling on social media than to wait and focus on ourselves.
+Reading is easy. You read thousands of lines everyday. Even if you're not the greatest book amateur, you read things on social media. Our brain need to gather information and that's why we prefer compulsively scrolling on social media than to wait and focus on ourselves.
 
 ### Creation
 
@@ -59,9 +59,9 @@ You'll say it is the same for blogs: the audience is blurry, unclear.
 
 ### Is a blog really different from social media?
 
-The purpose of a blog really is different. Here I'm not talking about the old but popular [Skyblog](https://skyrock.com/) or [Blogger](https://www.blogger.com/) that are the ancestors social networks. 
+The purpose of a blog really is different. Here I'm not talking about the old but popular [Skyblog](https://skyrock.com/) or [Blogger](https://www.blogger.com/) that are the ancestors social networks: I'm talking about real personal blogs.
 
-In a blog, you don't share your lives, but your thoughts. You don't show your last dress or meal: you expose your ideas, your creations. And it encourages you to think, to 
+In a blog, **you don't share your lives, but your thoughts**. That's fundamentally different than sharing your last dress or meal: you expose your ideas, your creations. And it encourages you to think. There is no place left for superficial or casual stuff. If you read my blog, you doesn't know me, but you might be interested in my articles (I hope so). And *that* is interesting.
 
 
 → [All articles](../articles.md)
