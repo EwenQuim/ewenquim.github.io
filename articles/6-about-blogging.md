@@ -15,12 +15,6 @@ Blogs now tend to disappear, as everyone moves to Twitter or Instagram.
 People prefer to share their **lives in a second** than their **thoughts in a week** (or a month like me).
 But here's why you should start a blog. You, and your friends!
 
-In this article, you will see:
-
-- things
-- things
-- things
-
 ## 1. Challenge yourself
 
 Reading is easy. You read thousands of lines everyday. Even if you're not the greatest book amateur, you read things on social media. Our brain need to gather information and that's why we prefer compulsively scrolling on social media than to wait and focus on ourselves.
