@@ -11,11 +11,6 @@
 *August 2020* -
 My motivations (and soon yours) to create a blog
 
-### **[FOSS]** [Get rid of tech Giants](articles/5-get-rid-of-tech-giants.md)
-
-*July 2020* -
-Give your digital life to Google -or not.
-
 ### **[Maths]** [Control the opponent in some games](articles/4-strategies-IPD.md)
 
 *June 2020* -
