@@ -1,5 +1,0 @@
----
----
-
-@import "{{ site.theme }}";
-@import "{{ site.baseurl }}/assets/css/custom.css";
