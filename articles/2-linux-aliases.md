@@ -2,7 +2,7 @@
 
 5 _min setup_
 
-![-](../.gitbook/assets/2-aliases.png)
+![-](../.gitbook/assets/2-aliases%20%281%29.png)
 
 * [1. Use a remote repository](2-linux-aliases.md#1-use-a-remote-repository)
   * [Storing aliases - _2min_](2-linux-aliases.md#storing-aliases---2min)
@@ -88,7 +88,7 @@ Absolutely, and that's why we will do this. It allows two things:
 
 As explained in this old but useful [article](https://rhodesmill.org/brandon/2009/commands-with-comma/), this little known trick allows to display every custom command/alias by typing the comma then typing `tab`. It looks like this:
 
-![-](../.gitbook/assets/2-aliases%20%281%29.png)
+![-](../.gitbook/assets/2-aliases%20%281%29%20%281%29.png)
 
 Also, the comma is **easy to type** : it's a lowercase character, does not require weird combination of keys, exists on all keyboards...
 

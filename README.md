@@ -1,6 +1,25 @@
-# Ewen Quimerch
+# Hello, you !
 
-Blog personnel
+## Getting Super Powers
 
-[![Valid XHTML 1.0](http://www.w3.org/Icons/valid-xhtml10)](https://validator.w3.org/check?uri=blog.ewen.quimerch.com)
+Becoming a super hero is a fairly straight forward process:
+
+```
+$ give me super-powers
+```
+
+Once you're strong enough, save the world:
+
+{% hint style="info" %}
+ Super-powers are granted randomly so please submit an issue if you're not happy with yours.
+{% endhint %}
+
+{% code title="hello.sh" %}
+```bash
+# Ain't no code for that yet, sorry
+echo 'You got to trust me on this, I saved the world'
+```
+{% endcode %}
+
+
 
