@@ -1,54 +1,53 @@
-# **[Crypto]** Sign your commits with PGP <!-- omit in toc -->
+# \[Crypto\] Sign your commits with PGP
 
-15 *min setup*
+15 _min setup_
 
-- [1. The git history issue](#1-the-git-history-issue)
-  - [Git structure](#git-structure)
-  - [Having fun... messing up everything!](#having-fun-messing-up-everything)
-  - [A possible solution](#a-possible-solution)
-- [2. What is PGP](#2-what-is-pgp)
-  - [Quick Definition](#quick-definition)
-  - [More about PGP - History and Challenges](#more-about-pgp---history-and-challenges)
-  - [Setting up PGP](#setting-up-pgp)
-- [3. Use PGP in Git](#3-use-pgp-in-git)
-  - [How can I do this](#how-can-i-do-this)
-  - [Warnings](#warnings)
-- [References](#references)
+* [1. The git history issue](3-pgp.md#1-the-git-history-issue)
+  * [Git structure](3-pgp.md#git-structure)
+  * [Having fun... messing up everything!](3-pgp.md#having-fun-messing-up-everything)
+  * [A possible solution](3-pgp.md#a-possible-solution)
+* [2. What is PGP](3-pgp.md#2-what-is-pgp)
+  * [Quick Definition](3-pgp.md#quick-definition)
+  * [More about PGP - History and Challenges](3-pgp.md#more-about-pgp---history-and-challenges)
+  * [Setting up PGP](3-pgp.md#setting-up-pgp)
+* [3. Use PGP in Git](3-pgp.md#3-use-pgp-in-git)
+  * [How can I do this](3-pgp.md#how-can-i-do-this)
+  * [Warnings](3-pgp.md#warnings)
+* [References](3-pgp.md#references)
 
 Git history can be modified. **Time to protect your project!**
 
 In this article, you will see:
 
-- an overview of PGP
-- **quick PGP setup**
-- git **signing procedure** with PGP
-- **vscode** integration
+* an overview of PGP
+* **quick PGP setup**
+* git **signing procedure** with PGP
+* **vscode** integration
 
 ## 1. The git history issue
 
 ### Git structure
 
-Remember the first time you used git in your computer.
-You typed these instructions :
+Remember the first time you used git in your computer. You typed these instructions :
 
 ```bash
 git config --global user.name "Chuck Norris"
-git config --global user.email chuck.norris@example.com  
+git config --global user.email chuck.norris@example.com
 ```
 
 Git remembers what you filled and indicates your **name** and email for every commit.
 
-![Picture of Git history here](../assets/3-Git-history.png)
+![Picture of Git history here](../.gitbook/assets/3-Git-history.png)
 
 You know that git allows you to navigate through the history and modify older commits.
 
 ### Having fun... messing up everything!
 
-What you probably don't know is that you can even modify the metadata (eg. the date or the author)! Anyone can do that, just play with the .git folder at the root of your repository...
+What you probably don't know is that you can even modify the metadata \(eg. the date or the author\)! Anyone can do that, just play with the .git folder at the root of your repository...
 
 As everything in IT ~~and especially things that shouldn't be done~~, some guys automated it.
 
-So, funny guys even made a CLI to [blame someone else (for your bad code)](https://github.com/jayphelps/git-blame-someone-else), or [claim some good work (you didn't do)](https://github.com/SilasX/git-upstage).
+So, funny guys even made a CLI to [blame someone else \(for your bad code\)](https://github.com/jayphelps/git-blame-someone-else), or [claim some good work \(you didn't do\)](https://github.com/SilasX/git-upstage).
 
 But if you work seriously, for example on an open-source project or in a company, this can be quite scary, and you may want to protect your git history.
 
@@ -62,18 +61,17 @@ Luckily, git have a tool to sign with PGP!
 
 ### Quick Definition
 
-**PGP** (Pretty Good Privacy) is a encryption program, used for encrypting, decrypting and signing emails and documents.
-It is as far as we know one of the *best encryption algorithm*.
+**PGP** \(Pretty Good Privacy\) is a encryption program, used for encrypting, decrypting and signing emails and documents. It is as far as we know one of the _best encryption algorithm_.
 
 ### More about PGP - History and Challenges
 
 **PGP** is often used in communication and especially mail exchange: [Mailvelope](https://www.mailvelope.com) and [Enigmail](https://enigmail.net) extensions allows you to integrate PGP encryption into your mails. PGP is also useful for a lot of other situations where security is required.
 
-The original program is a proprietary software, but there exists free version of it, [GnuPG](https://www.gnupg.org/)[^gnupg] (referred as GPG), that follows the [OpenPGP](https://www.openpgp.org/)[^openpgp] standard.
+The original program is a proprietary software, but there exists free version of it, [GnuPG](https://www.gnupg.org/) \(referred as GPG\), that follows the [OpenPGP](https://www.openpgp.org/) standard.
 
-The name *Pretty Good Privacy* really is an euphemism, as the security ensured by this algorithm is **almost unbreakable**. Flaws were discovered not in PGP itself but in emails clients[^flaw] for example. Also, it is easier for the police to make a suspect say their passphrase[^1] [^2] or directly infect his computer[^3] (and then inspecting keystrokes to get the passphrase) than attacking the algorithm itself... The problems always revolved around PGP but not the strong algorithm.
+The name _Pretty Good Privacy_ really is an euphemism, as the security ensured by this algorithm is **almost unbreakable**. Flaws were discovered not in PGP itself but in emails clients for example. Also, it is easier for the police to make a suspect say their passphrase  or directly infect his computer \(and then inspecting keystrokes to get the passphrase\) than attacking the algorithm itself... The problems always revolved around PGP but not the strong algorithm.
 
-You may ask *'Why do I need PGP? I don't need this much privacy!'*
+You may ask _'Why do I need PGP? I don't need this much privacy!'_
 
 This is what Philip Zimmermann, creator of PGP, said:
 
@@ -81,50 +79,50 @@ This is what Philip Zimmermann, creator of PGP, said:
 >
 > PGP empowers people to take their privacy into their own hands. There's a growing social need for it. That's why I wrote it.
 
-The PGP was not made for outlaws. Like [Tor](https://www.torproject.org/)[^tor], it was conceived to protect everyone's privacy. Because outlaws will always find a way to protect themselves, whereas the general public is weak in dealing with these technically complex concerns.
+The PGP was not made for outlaws. Like [Tor](https://www.torproject.org/), it was conceived to protect everyone's privacy. Because outlaws will always find a way to protect themselves, whereas the general public is weak in dealing with these technically complex concerns.
 
 Why isn't it better known to the general public? There are some reasons I imagine:
 
-- Complicated use (even if we will see easy ways to approach PGP)
-- No promotion...
-- ...or even discourage by some governments
-- Rising use of mobile devices, not very PGP-friendly (even if there are some projects integrating PGP for Android[^openkeychain] and Apple[^pgpeverywhere])
-- No benefits for GAFAM (since it contradicts their business models)
+* Complicated use \(even if we will see easy ways to approach PGP\)
+* No promotion...
+* ...or even discourage by some governments
+* Rising use of mobile devices, not very PGP-friendly \(even if there are some projects integrating PGP for Android and Apple\)
+* No benefits for GAFAM \(since it contradicts their business models\)
 
 ### Setting up PGP
 
-Linux enthusiasts often use GnuPG[^gnupg] (referred as GPG), but we will use [this website](https://www.thechiefmeat.com/pgp/#) for this tutorial, as the interface is really intuitive. Just fill in the blanks!
+Linux enthusiasts often use GnuPG \(referred as GPG\), but we will use [this website](https://www.thechiefmeat.com/pgp/#) for this tutorial, as the interface is really intuitive. Just fill in the blanks!
 
 Remember that creating keys online is never secure : you must protect your traffic, and you'll never be sure whether you can trust the website or not. We're just doing it for testing purposes here. Also, it is important to ask for a RSA key with minimum 2048 bits!
 
-The website will provide you 2 keys : a **public key** and a **private (or secret) key**.
+The website will provide you 2 keys : a **public key** and a **private \(or secret\) key**.
 
 To sum up quickly in which situation you will use the **private key** and the **secret key**:
 
-- if *you* sign something:
-  - your secret key *(you are the only one to know it)*
-- if *others* want to verify something signed by *you*:
-  - your public key *(public so anyone can verify that you really are the author)*
-- if *you* encrypt something to send to *someone*:
-  - your secret key
-  - the public key of the receiver *(so only the receiver can read it)*
-- if *you* want to decrypt something that *someone* sent to you
-  - the public key of the sender *(to decrypt his message)*
-  - your secret key
+* if _you_ sign something:
+  * your secret key _\(you are the only one to know it\)_
+* if _others_ want to verify something signed by _you_:
+  * your public key _\(public so anyone can verify that you really are the author\)_
+* if _you_ encrypt something to send to _someone_:
+  * your secret key
+  * the public key of the receiver _\(so only the receiver can read it\)_
+* if _you_ want to decrypt something that _someone_ sent to you
+  * the public key of the sender _\(to decrypt his message\)_
+  * your secret key
 
 It makes sense, doesn't it? Just try it with a friend!
 
 [Go to the website](https://www.thechiefmeat.com/pgp/)
 
-You can also try to send me an encrypted message (if you know how to contact me of course!). You can find my public PGP key [here](../documents/pgp-public-key.md).
+You can also try to send me an encrypted message \(if you know how to contact me of course!\). You can find my public PGP key [here](../documents/pgp-public-key.md).
 
-You can use any message service, as the message is encrypted! Don't forget to send me your public PGP key if you want me to answer ;)
+You can use any message service, as the message is encrypted! Don't forget to send me your public PGP key if you want me to answer ;\)
 
 ## 3. Use PGP in Git
 
 ### How can I do this
 
-Once you created your PGP key, add it to git (locally) with the following command:
+Once you created your PGP key, add it to git \(locally\) with the following command:
 
 ```bash
 git config --global user.signingkey your-public-PGP-key-fingerprint-here
@@ -132,29 +130,29 @@ git config --global user.signingkey your-public-PGP-key-fingerprint-here
 
 Then, every time you commit, just add `-s` to `git commit`, and there it is! You just made your first PGP-signed commit.
 
-You can go further by creating [custom aliases](2-linux-aliases.html) to make this operation transparent, and not losing time.
+You can go further by creating [custom aliases](https://github.com/EwenQuim/ewenquim.github.io/tree/3681f5c59cfe5912907fc8f04ea7e1e37e5a8cb8/articles/2-linux-aliases.html) to make this operation transparent, and not losing time.
 
 You can also enable PGP signing by default with this command:
 
 ```bash
-git config --global commit.gpgSign true 
+git config --global commit.gpgSign true
 ```
 
 If you commit from a graphical interface, it is also possible to sign your commits!
 
 For example, if you use Visual Studio Code, just go to the settings, search `git sign` and activate the corresponding option.
 
-It is also important to add your public PGP key to your remote repository, so the git host can verify them (often represented with a nice green tick on your history).
+It is also important to add your public PGP key to your remote repository, so the git host can verify them \(often represented with a nice green tick on your history\).
 
-Here the example on Github (it's similar on Gitlab):
+Here the example on Github \(it's similar on Gitlab\):
 
 Insert your PGP key here
 
-![(Screenshot of Github PGP signing here)](../assets/3-Github-GPG-key.png)
+![\(Screenshot of Github PGP signing here\)](../.gitbook/assets/3-Github-GPG-key.png)
 
 And here is the result : a 'verified' mention on your git history!
 
-![(Signed commit on Github)](../assets/3-Github-signed.png)
+![\(Signed commit on Github\)](../.gitbook/assets/3-Github-signed.png)
 
 When you work, try to remember to verify the little tick ✅ before accepting Merge/Pull Requests!
 
@@ -166,16 +164,7 @@ Especially, it is highly not recommended to sign a commit from a server. Because
 
 You shouldn't commit on a prod server anyway, whether you sign it or not.
 
-→ [All articles](../articles.md)
+→ [All articles](../articles-1.md)
 
 ## References
 
-[^gnupg]: <https://www.gnupg.org/>
-[^openpgp]: <https://www.openpgp.org/>
-[^flaw]: <https://efail.de/#is-my>
-[^1]: <https://en.wikipedia.org/wiki/In_re_Boucher>
-[^2]: <http://volokh.com/files/BoucherDCT.1.pdf>
-[^3]: <https://www.cnet.com/news/feds-use-keylogger-to-thwart-pgp-hushmail/>
-[^tor]: <https://www.torproject.org/>
-[^openkeychain]: <https://www.openkeychain.org/>
-[^pgpeverywhere]: <https://www.pgpeverywhere.com/>

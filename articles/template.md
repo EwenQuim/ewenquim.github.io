@@ -1,22 +1,22 @@
-# **[Crypto]** Sign your commits with PGP <!-- omit in toc -->
+# \[Crypto\] Sign your commits with PGP
 
-[time] *min setup*
+\[time\] _min setup_
 
-- [1. Part 1](#1-part-1)
-  - [Quick Definition](#quick-definition)
-  - [More about the subject](#more-about-the-subject)
-- [2. Part 2](#2-part-2)
-  - [Part 1](#part-1)
-  - [Part 2](#part-2)
-- [References](#references)
+* [1. Part 1](template.md#1-part-1)
+  * [Quick Definition](template.md#quick-definition)
+  * [More about the subject](template.md#more-about-the-subject)
+* [2. Part 2](template.md#2-part-2)
+  * [Part 1](template.md#part-1)
+  * [Part 2](template.md#part-2)
+* [References](template.md#references)
 
 Catchphrase
 
 In this article, you will see:
 
-- things
-- things
-- things
+* things
+* things
+* things
 
 ## 1. Part 1
 
@@ -38,8 +38,7 @@ Things
 
 Things
 
-→ [All articles](../articles.md)
+→ [All articles](../articles-1.md)
 
 ## References
 
-[^dev]: <https://dev.ewen.quimerch.com>

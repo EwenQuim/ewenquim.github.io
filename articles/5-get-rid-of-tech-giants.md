@@ -1,21 +1,21 @@
-# **[FOSS]** Get rid of tech Giants <!-- omit in toc -->
+# \[FOSS\] Get rid of tech Giants
 
-10 *min reading*
+10 _min reading_
 
-- [1. Tech Giants: who are they?](#1-tech-giants-who-are-they)
-  - [Definition](#definition)
-  - [Advantages](#advantages)
-- [2. What’s the problem(s)?](#2-whats-the-problems)
-  - [a - The average user lack of knowledge](#a---the-average-user-lack-of-knowledge)
-  - [b - Concentration vs Diversity](#b---concentration-vs-diversity)
-  - [c - Providing a service to humanity... or building an empire?](#c---providing-a-service-to-humanity-or-building-an-empire)
-  - [d - Compatibility](#d---compatibility)
-  - [e - Freedom](#e---freedom)
-- [3. Alternatives](#3-alternatives)
-  - [Softwares are ideas](#softwares-are-ideas)
-  - [Habit, laziness and advertising](#habit-laziness-and-advertising)
-  - [Switching](#switching)
-- [References](#references)
+* [1. Tech Giants: who are they?](5-get-rid-of-tech-giants.md#1-tech-giants-who-are-they)
+  * [Definition](5-get-rid-of-tech-giants.md#definition)
+  * [Advantages](5-get-rid-of-tech-giants.md#advantages)
+* [2. What’s the problem\(s\)?](5-get-rid-of-tech-giants.md#2-whats-the-problems)
+  * [a - The average user lack of knowledge](5-get-rid-of-tech-giants.md#a---the-average-user-lack-of-knowledge)
+  * [b - Concentration vs Diversity](5-get-rid-of-tech-giants.md#b---concentration-vs-diversity)
+  * [c - Providing a service to humanity... or building an empire?](5-get-rid-of-tech-giants.md#c---providing-a-service-to-humanity-or-building-an-empire)
+  * [d - Compatibility](5-get-rid-of-tech-giants.md#d---compatibility)
+  * [e - Freedom](5-get-rid-of-tech-giants.md#e---freedom)
+* [3. Alternatives](5-get-rid-of-tech-giants.md#3-alternatives)
+  * [Softwares are ideas](5-get-rid-of-tech-giants.md#softwares-are-ideas)
+  * [Habit, laziness and advertising](5-get-rid-of-tech-giants.md#habit-laziness-and-advertising)
+  * [Switching](5-get-rid-of-tech-giants.md#switching)
+* [References](5-get-rid-of-tech-giants.md#references)
 
 **Today is not a different day.** Not a day goes by that you don't use the technologies offered by Silicon Valley's Big Technology Groups. But how many years has it been like this? And how many more will happen? We're getting **addicted**. After all, these innovations are working well. They make life easier. What's the point in getting rid of them?
 
@@ -23,59 +23,58 @@ A small number of companies enable the daily virtual activity of millions of peo
 
 In this article, you will see:
 
-- who these "tech giants" are and how they contribute to the upliftment of mankind
-- how tech giants are controlling our online lives
-- alternatives to break free from them
+* who these "tech giants" are and how they contribute to the upliftment of mankind
+* how tech giants are controlling our online lives
+* alternatives to break free from them
 
 ## 1. Tech Giants: who are they?
 
 ### Definition
 
-I call the "Tech Giants" all the companies valuated at more than a billion dollar.
-Google, Amazon, Facebook, Apple and Microsoft, often referred as GAFAM, are the companies that are omnipresent on Internet and in the IT domain nowadays. They are a bit more than that (Netflix, AirBnB, Uber...), but these 5 ones are the major ones.
+I call the "Tech Giants" all the companies valuated at more than a billion dollar. Google, Amazon, Facebook, Apple and Microsoft, often referred as GAFAM, are the companies that are omnipresent on Internet and in the IT domain nowadays. They are a bit more than that \(Netflix, AirBnB, Uber...\), but these 5 ones are the major ones.
 
 ### Advantages
 
 Let's begin with the bright side. These companies:
 
-- allow humanity to communicate and share information quickly and globally 
-- easily give access to knowledge
-- more generally, contribute to innovation and thus increasing the standard of living in most countries
-- are hiring hundreds of thousands of people each (a total of more than 1.2 million employees worldwide)
+* allow humanity to communicate and share information quickly and globally 
+* easily give access to knowledge
+* more generally, contribute to innovation and thus increasing the standard of living in most countries
+* are hiring hundreds of thousands of people each \(a total of more than 1.2 million employees worldwide\)
 
-This last remark is a real asset: it's a whole industry! But the search for profit also has its negative sides... 
+This last remark is a real asset: it's a whole industry! But the search for profit also has its negative sides...
 
-## 2. What’s the problem(s)?
+## 2. What’s the problem\(s\)?
 
-> Are they *that* bad ?
+> Are they _that_ bad ?
 
-It really is a tough question. 
+It really is a tough question.
 
 The main goal of any company is to **seek profit**. But there are several ways to do that : selling weed isn’t as ethical as to sell cars. What I’m trying to say is that a way to determine if a company is ethical or no is to look at **how they are making profit**.
 
-So here is their yearly revenue  :
+So here is their yearly revenue :
 
-|           | Revenue ($) | Leader world wealth rank | Comes from |
-|----------:|:-----------:|:------------------------:|:---:|
-|   Google  |     66 B    |  13[^page] & 14[^brin]   | 70% ads [^googleAds] |
-|   Amazon  |     280 B   |        1[^bezos]         | 11% Web Services (hosting…) |
-|  Facebook |     70 B    |        7[^zuckerberg]    | 98.5% ads[^facebookAds] |
-|   Apple   |     260 B   |      39[^jobs]           | Devices and associated OS |
-| Microsoft |     125 B   | 2[^gates] / 11[^ballmer] | OS, productivity suite, cloud |
+|  | Revenue \($\) | Leader world wealth rank | Comes from |
+| ---: | :---: | :---: | :---: |
+| Google | 66 B | 13 & 14 | 70% ads  |
+| Amazon | 280 B | 1 | 11% Web Services \(hosting…\) |
+| Facebook | 70 B | 7 | 98.5% ads |
+| Apple | 260 B | 39 | Devices and associated OS |
+| Microsoft | 125 B | 2 / 11 | OS, productivity suite, cloud |
 
-Surprising, isn't it? 
+Surprising, isn't it?
 
-- Google and Facebook (and it’s the same for Netflix, Twitter, Snapchat) almost exclusively make money from **running ads**[^politicsVSfb]. It might be harmless at the first glance, but [it is not](7-free-browsing.md).
-- Microsoft and Apple actually make a lot of money selling their OS, devices, softwares or cloud services. There is no problem for this kind of business, apart from the **quasi-monopolistic** situation in which these two companies find themselves.
-- The case of Amazon is a bit particular. A lot of their revenue comes from online retail. But even if AWS represent only 11% of their revenue, it rises to almost 50% of their operating income. AWS is a *nebula* of services (more than a hundred!) that are mostly cloud services (hosting, computational power…). Amazon control more than 1/3 of the cloud market, more than twice its competitors.[^amazonMarketShare]
+* Google and Facebook \(and it’s the same for Netflix, Twitter, Snapchat\) almost exclusively make money from **running ads**. It might be harmless at the first glance, but [it is not](7-free-browsing.md).
+* Microsoft and Apple actually make a lot of money selling their OS, devices, softwares or cloud services. There is no problem for this kind of business, apart from the **quasi-monopolistic** situation in which these two companies find themselves.
+* The case of Amazon is a bit particular. A lot of their revenue comes from online retail. But even if AWS represent only 11% of their revenue, it rises to almost 50% of their operating income. AWS is a _nebula_ of services \(more than a hundred!\) that are mostly cloud services \(hosting, computational power…\). Amazon control more than 1/3 of the cloud market, more than twice its competitors.
 
 ### a - The average user lack of knowledge
 
-These companies are controlling everything : I bet you are currently running an OS from Microsoft, Apple or Google, using a browser made by these companies… 
+These companies are controlling everything : I bet you are currently running an OS from Microsoft, Apple or Google, using a browser made by these companies…
 
 If not, congratulations, you’re probably a nerd! **And that’s the problem.**
 
-Don’t misunderstand me, the problem isn’t that you’re a nerd. The real issue is that you have to acquire technical knowledge to be free. It shouldn't be the case : not everyone is able to learn that! We can't know everything. You can't expect your grandma or your neighbor, who don't care about IT, to struggle against the system and set up weird nerdy things like Linux[^aboutLinux]. But we'll talk about simple and easy alternative [later](#3-alternatives).
+Don’t misunderstand me, the problem isn’t that you’re a nerd. The real issue is that you have to acquire technical knowledge to be free. It shouldn't be the case : not everyone is able to learn that! We can't know everything. You can't expect your grandma or your neighbor, who don't care about IT, to struggle against the system and set up weird nerdy things like Linux. But we'll talk about simple and easy alternative [later](5-get-rid-of-tech-giants.md#3-alternatives).
 
 Also, nobody reads the Terms and Conditions of these companies.
 
@@ -93,17 +92,17 @@ In a nutshell, the average user has no choice but to use their services.
 
 It is a matter of not putting all your eggs in the same basket.
 
-To illustrate that, I have regrouped apps on my phone by company. I've counted : 39% of my apps are made by 3 companies: Google, Microsoft or Samsung! Moreover, my phone is an Android, the *Google* OS for smartphones...
+To illustrate that, I have regrouped apps on my phone by company. I've counted : 39% of my apps are made by 3 companies: Google, Microsoft or Samsung! Moreover, my phone is an Android, the _Google_ OS for smartphones...
 
-![Photos of 1/2 apps on my phone in only 3 company folder](../assets/3-smartphones-apps.jpg)
+![Photos of 1/2 apps on my phone in only 3 company folder](../.gitbook/assets/3-smartphones-apps.jpg)
 
 You can do this yourself, it will be the same result... If you use an iPhone/iPad, even more of the apps actually belongs to one and only company!
 
-I remember, a few years back, being fascinated how a single Google account allows access to many services... Now I realise it isn't as good as it seems, and also not necessary. Let's remember that data centralisation can cause tremendous damages[^matHack]..
+I remember, a few years back, being fascinated how a single Google account allows access to many services... Now I realise it isn't as good as it seems, and also not necessary. Let's remember that data centralisation can cause tremendous damages..
 
 ### c - Providing a service to humanity... or building an empire?
 
-When Facebook gives free access to Internet in Africa[^fbFreeInternet], do you think it is pure philanthropy? Now, some people in Africa say FaceBook _is_ internet.
+When Facebook gives free access to Internet in Africa, do you think it is pure philanthropy? Now, some people in Africa say FaceBook _is_ internet.
 
 These companies are born from an idea, a concept that made them popular.
 
@@ -111,21 +110,21 @@ These companies are born from an idea, a concept that made them popular.
 
 Google isn't just a Search Engine anymore, it is a browser, an OS, a cloud services provider, an IA leader... Confusion grow in the minds of everyone, as our dependency to them.
 
-Every tech giants wants to earn money and become the biggest possible. They don't want to help you benevolently. Remember that they are making billions thanks to "free services" (especially Google and Facebook).
+Every tech giants wants to earn money and become the biggest possible. They don't want to help you benevolently. Remember that they are making billions thanks to "free services" \(especially Google and Facebook\).
 
 ### d - Compatibility
 
 Communication should not rely on software or company.
 
-Softwares should be a **tool** for a **common protocol** : a good example is mail. You can have very different mail clients (or mail reader and sender for dummies). A mail is always the same thing, even if it is sent with Outlook or GMail. The protocol is a common thing. To go further, just know that the inbox isn't correlated to the client. You can send GMail mails and read them with the Outlook, MailSpring or ThunderBird client!
+Softwares should be a **tool** for a **common protocol** : a good example is mail. You can have very different mail clients \(or mail reader and sender for dummies\). A mail is always the same thing, even if it is sent with Outlook or GMail. The protocol is a common thing. To go further, just know that the inbox isn't correlated to the client. You can send GMail mails and read them with the Outlook, MailSpring or ThunderBird client!
 
-It's the same with formats: you can edit photos (.png, .jpg) with a lot of different readers.
+It's the same with formats: you can edit photos \(.png, .jpg\) with a lot of different readers.
 
-But it isn't always the case: there is no consensus with Word format (.doc, .docx) and other readers (Page, LibreOffice, Google Docs), as it belongs to a company (Microsoft) and is widely used.
+But it isn't always the case: there is no consensus with Word format \(.doc, .docx\) and other readers \(Page, LibreOffice, Google Docs\), as it belongs to a company \(Microsoft\) and is widely used.
 
 ### e - Freedom
 
-When you depend on only a small group of companies, the fact that they cooperate or not with the state is a real issue. Tim Cook said[^cookQuote] in 2016 that Apple won't allow the FBI to allow them the access to iPhones of users. But are all companies ready for the same fight? And how long will Apple resist? There is absolutely no guarantees about that. We've seen with the Snowden revelations that some states (the USA among them) already use technology in cooperation with some Tech Giants. For example, AT&T and Verizon helped the NSA spy on millions of people.
+When you depend on only a small group of companies, the fact that they cooperate or not with the state is a real issue. Tim Cook said in 2016 that Apple won't allow the FBI to allow them the access to iPhones of users. But are all companies ready for the same fight? And how long will Apple resist? There is absolutely no guarantees about that. We've seen with the Snowden revelations that some states \(the USA among them\) already use technology in cooperation with some Tech Giants. For example, AT&T and Verizon helped the NSA spy on millions of people.
 
 Some of my friends asked me
 
@@ -143,17 +142,17 @@ You don't need a sophisticated mind or setup to code software. A simple text edi
 
 > Ideas are meant to be spread.
 
-I am not the only one to think that software can -and must- be shared. A whole movement was born from this : the FOSS (Free Open-Source Software) movement is the answer to proprietary (owned by private interests) software. The concept is simple. Everyone can contribute to an Open Source project. It is made **by the community, for the community**.
+I am not the only one to think that software can -and must- be shared. A whole movement was born from this : the FOSS \(Free Open-Source Software\) movement is the answer to proprietary \(owned by private interests\) software. The concept is simple. Everyone can contribute to an Open Source project. It is made **by the community, for the community**.
 
 Here's a list of FOSS, not owned by companies and that you can use for free.
 
-|        FOSS |        Role        | Equivalent     |
-|------------:|:-------------------|----------------|
-|     [FireFox](https://www.mozilla.org/fr/firefox/new/) |       Browser      | Chrome, Safari |
-| [LibreOffice](https://www.libreoffice.org/download/download) | Productivity Suite | MS Office      |
-|       [Linux](https://ubuntu.com/download/desktop) |         OS         | Windows, Mac   |
-|     [Blender](https://www.blender.org/download/) | 3D modelling       | SketchUp       |
-|     [F-Droid](https://f-droid.org/) | App manager        | Play, App Store|
+| FOSS | Role | Equivalent |
+| ---: | :--- | :--- |
+| [FireFox](https://www.mozilla.org/fr/firefox/new/) | Browser | Chrome, Safari |
+| [LibreOffice](https://www.libreoffice.org/download/download) | Productivity Suite | MS Office |
+| [Linux](https://ubuntu.com/download/desktop) | OS | Windows, Mac |
+| [Blender](https://www.blender.org/download/) | 3D modelling | SketchUp |
+| [F-Droid](https://f-droid.org/) | App manager | Play, App Store |
 
 Just click on the links and download. Switching is easy and quick.
 
@@ -163,9 +162,9 @@ It really is easy to change to FOSS. But why nobody does that?
 
 Because of habit and laziness, people are resisting against change.
 
-Because of advertising, companies will always stay one step ahead. 
+Because of advertising, companies will always stay one step ahead.
 
-These companies are now deeply rooted in the minds. 
+These companies are now deeply rooted in the minds.
 
 > "Google it!" is the new "Search it online"
 
@@ -183,22 +182,7 @@ Mostly because the switch from proprietary to free seems tough, both technically
 
 You'll be pointed at, because you use different tools. But this is temporary. If the movement grow big enough, and it began to have impressive numbers now, it will become the norm.
 
-→ [All articles](../articles.md)
+→ [All articles](../articles-1.md)
 
 ## References
 
-[^page]: Larry Page, 2020 (Co-founder) <https://www.forbes.com/profile/larry-page/>
-[^brin]: Sergey Brin, 2020 (Co-founder) <https://www.forbes.com/profile/sergey-brin/>
-[^bezos]: Jeff Bezos, 2020 (Founder) <https://www.forbes.com/profile/jeff-bezos/>
-[^zuckerberg]: Mark Zuckerberg, 2020 (Founder) <https://www.forbes.com/profile/mark-zuckerberg/>
-[^jobs]: Steve Jobs, rank in 2011 as he died that year (Founder) <https://www.forbes.com/profile/steve-jobs/>
-[^gates]: Bill Gates, 2020 (Founder) <https://www.forbes.com/profile/bill-gates/>
-[^ballmer]: Steve Ballmer, 2020 (CEO from 2000 to 2014) <https://www.forbes.com/profile/steve-ballmer/>
-[^facebookAds]: <https://www.investopedia.com/ask/answers/120114/how-does-facebook-fb-make-money.asp>
-[^googleAds]: <https://www.investopedia.com/stock-analysis/2012/what-does-google-actually-make-money-from-goog1121.aspx>
-[^politicsVSfb]: <https://www.youtube.com/watch?v=ncbb5B85sd0>
-[^amazonMarketShare]: <https://www.srgresearch.com/articles/leading-cloud-providers-increase-their-market-share-again-third-quarter>
-[^cookQuote]: <https://www.theguardian.com/technology/2016/feb/22/tim-cook-apple-refusal-unlock-iphone-fbi-civil-liberties>
-[^fbFreeInternet]: <https://www.theguardian.com/world/2016/aug/01/facebook-free-basics-internet-africa-mark-zuckerberg>
-[^aboutLinux]: Don't cry, I know Linux is easier to install nowadays, and Ubuntu feels like Mac/Windows for the average user, but you have to recognize the lack of knowledge of the users
-[^matHack]: <https://www.wired.com/2012/08/apple-amazon-mat-honan-hacking/>

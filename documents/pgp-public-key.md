@@ -1,6 +1,6 @@
 # Public PGP key
 
-```
+```text
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQENBF6LIWABCAC95HlESrJuPx2SdCrlHuR80XR45SBavTORELoMqTiryIp5NEAd
@@ -32,3 +32,4 @@ lo5YSAzJh6oCAD5tvk4LkcgTYP5OPNGjHxT+OAq8dUAjYyc=
 =uFXb
 -----END PGP PUBLIC KEY BLOCK-----
 ```
+
