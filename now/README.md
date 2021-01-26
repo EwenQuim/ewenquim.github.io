@@ -1,4 +1,8 @@
 # Projects
 
-[This](https://www.amethysts.studio) ! Look it's amazing
+{% page-ref page="./" %}
+
+{% page-ref page="../articles/" %}
+
+
 
