@@ -7,6 +7,7 @@ categories:
   - maths
 tags:
   - game theory
+  - maths
 toc: true
 mathjax: true
 ---

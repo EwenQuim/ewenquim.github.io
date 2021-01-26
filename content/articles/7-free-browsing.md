@@ -7,6 +7,7 @@ categories:
   - tech
 tags:
   - internet
+  - foss
 toc: true
 ---
 

@@ -8,6 +8,7 @@ categories:
 tags:
   - git
   - cli
+  - terminal
 toc: true
 ---
 

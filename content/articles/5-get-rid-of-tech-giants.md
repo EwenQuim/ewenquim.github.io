@@ -7,6 +7,7 @@ categories:
   - tech
 tags:
   - gafam
+  - foss
 toc: true
 ---
 
