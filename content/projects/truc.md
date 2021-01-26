@@ -10,23 +10,6 @@ tags:
 toc: true
 ---
 
-# Crypto Free Browsing
-
-5 _min setup_
-
-- [1. Ban spies in 30 sec](7-free-browsing.md#1-ban-spies-in-30-sec)
-  - [Change your default browser](7-free-browsing.md#change-your-default-browser)
-  - [Install some extensions](7-free-browsing.md#install-some-extensions)
-  - [Use a different search engine](7-free-browsing.md#use-a-different-search-engine)
-- [2. Part 2](7-free-browsing.md#2-part-2)
-  - [Part 1](7-free-browsing.md#part-1)
-  - [Part 2](7-free-browsing.md#part-2)
-- [3. For nerds: you can go further.](7-free-browsing.md#3-for-nerds-you-can-go-further)
-  - [Change the OS](7-free-browsing.md#change-the-os)
-  - [Use TOR](7-free-browsing.md#use-tor)
-  - [Deactivate JavaScript](7-free-browsing.md#deactivate-javascript)
-- [References](7-free-browsing.md#references)
-
 Ban spies forever.
 
 And ruin the annoying Digital Marketing evil part.

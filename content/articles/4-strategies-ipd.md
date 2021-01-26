@@ -11,34 +11,6 @@ toc: true
 mathjax: true
 ---
 
-# Control the opponent in some games
-
-20 _min read_
-
-10 _min testing (if you want to)_
-
-- [1. Prisoner's dilemma](4-strategies-ipd.md#1-prisoners-dilemma)
-  - [The story](4-strategies-ipd.md#the-story)
-  - [Representing games](4-strategies-ipd.md#representing-games)
-  - [Equilibria](4-strategies-ipd.md#equilibria)
-  - [The paradox](4-strategies-ipd.md#the-paradox)
-- [2. Iterated Prisoner's dilemma](4-strategies-ipd.md#2-iterated-prisoners-dilemma)
-  - [New behaviors](4-strategies-ipd.md#new-behaviors)
-  - [New strategies](4-strategies-ipd.md#new-strategies)
-  - [Let's fight!](4-strategies-ipd.md#lets-fight)
-- [3. Optimized Strategies](4-strategies-ipd.md#3-optimized-strategies)
-  - [Control](4-strategies-ipd.md#control)
-  - [Extorsion](4-strategies-ipd.md#extorsion)
-  - [Extorsion vs. control](4-strategies-ipd.md#extorsion-vs-control)
-  - [The winning strategy!](4-strategies-ipd.md#the-winning-strategy)
-- [4. Real life application](4-strategies-ipd.md#4-real-life-application)
-- [5. Appendix: Real maths. Proofs.](4-strategies-ipd.md#5-appendix-real-maths-proofs)
-  - [Game in normal form](4-strategies-ipd.md#game-in-normal-form)
-  - [Prisoner's dilemma generalized](4-strategies-ipd.md#prisoners-dilemma-generalized)
-  - [Strategies: general form](4-strategies-ipd.md#strategies-general-form)
-  - [Press and Dyson's work](4-strategies-ipd.md#press-and-dysons-work)
-- [References](4-strategies-ipd.md#references)
-
 A quite complete article about how to **control opponent's score in some games**, using a nice part of mathematics called _Game Theory_.
 
 This article is derived from [this paper](https://www.pnas.org/content/109/26/10409) from mathematicians Press & Dyson. The original work isn't very understandable for everyone, so I decided to work on it and publish it with illustrations and graphs so **everybody can understand**!
