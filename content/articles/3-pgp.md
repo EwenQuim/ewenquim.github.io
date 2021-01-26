@@ -11,23 +11,6 @@ tags:
 toc: true
 ---
 
-# Sign your commits with PGP
-
-15 _min setup_
-
-- [1. The git history issue](3-pgp.md#1-the-git-history-issue)
-  - [Git structure](3-pgp.md#git-structure)
-  - [Having fun... messing up everything!](3-pgp.md#having-fun-messing-up-everything)
-  - [A possible solution](3-pgp.md#a-possible-solution)
-- [2. What is PGP](3-pgp.md#2-what-is-pgp)
-  - [Quick Definition](3-pgp.md#quick-definition)
-  - [More about PGP - History and Challenges](3-pgp.md#more-about-pgp---history-and-challenges)
-  - [Setting up PGP](3-pgp.md#setting-up-pgp)
-- [3. Use PGP in Git](3-pgp.md#3-use-pgp-in-git)
-  - [How can I do this](3-pgp.md#how-can-i-do-this)
-  - [Warnings](3-pgp.md#warnings)
-- [References](3-pgp.md#references)
-
 Git history can be modified. **Time to protect your project!**
 
 In this article, you will see:

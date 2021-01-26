@@ -10,19 +10,6 @@ tags:
 toc: true
 ---
 
-# Why you should start a blog now
-
-5 _min read_
-
-- [1. Challenge yourself](6-about-blogging.md#1-challenge-yourself)
-  - [Creation](6-about-blogging.md#creation)
-  - [The Pace](6-about-blogging.md#the-pace)
-  - [Audience](6-about-blogging.md#audience)
-- [2. Public or private](6-about-blogging.md#2-public-or-private)
-  - [The Privacy Paradox](6-about-blogging.md#the-privacy-paradox)
-  - [Is a blog really different from social media?](6-about-blogging.md#is-a-blog-really-different-from-social-media)
-- [References](6-about-blogging.md#references)
-
 Blogs now tend to disappear, as everyone moves to Twitter or Instagram. People prefer to share their **lives in a second** than their **thoughts in a week** (or a month like me). But here's why you should start a blog. You, and your friends!
 
 ## 1. Challenge yourself

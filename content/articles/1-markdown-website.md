@@ -10,21 +10,6 @@ tags:
 toc: true
 ---
 
-# Meta How is this website designed (spoiler: badly)
-
-5 _min setup_
-
-- [Why choosing a cheap interface](1-markdown-website.md#why-choosing-a-cheap-interface)
-  - [Easy to edit](1-markdown-website.md#easy-to-edit)
-  - [Efficient](1-markdown-website.md#efficient)
-  - [Fast](1-markdown-website.md#fast)
-- [How to do that](1-markdown-website.md#how-to-do-that)
-  - [Hosting](1-markdown-website.md#hosting)
-  - [Markdown](1-markdown-website.md#markdown)
-  - [Automatization](1-markdown-website.md#automatization)
-  - [CSS](1-markdown-website.md#css)
-  - [Edit: now](1-markdown-website.md#edit-now)
-
 Explanations about the design of my website
 
 ## Why choosing a cheap interface

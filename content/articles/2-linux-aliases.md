@@ -12,22 +12,7 @@ tags:
 toc: true
 ---
 
-# Efficient linux aliases setup
-
-5 _min setup_
-
-![-](../.gitbook/assets/2-aliases%20%281%29.png)
-
-- [1. Use a remote repository](2-linux-aliases.md#1-use-a-remote-repository)
-  - [Storing aliases - _2min_](2-linux-aliases.md#storing-aliases---2min)
-  - [Storing aliases online - _1min_](2-linux-aliases.md#storing-aliases-online---1min)
-  - [Download them to a new device - _3s / device_](2-linux-aliases.md#download-them-to-a-new-device---3s--device)
-- [2. Tip: Start your aliases with a comma](2-linux-aliases.md#2-tip-start-your-aliases-with-a-comma)
-- [3. One alias to rule them all](2-linux-aliases.md#3-one-alias-to-rule-them-all)
-  - [See, change, update your aliases - _2s/update_](2-linux-aliases.md#see-change-update-your-aliases---2supdate)
-  - [What's inside](2-linux-aliases.md#whats-inside)
-  - [Thank you!](2-linux-aliases.md#thank-you)
-- [References](2-linux-aliases.md#references)
+![-](/images/2-aliases.png)
 
 Setting aliases for commands is a very good way to save time at work. But setting them up always takes time -far more than it should! Moreover, you lose them all if you have to ssh on a server or change device. **Time to change this by building a very easy setup!**
 

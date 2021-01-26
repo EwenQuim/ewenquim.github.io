@@ -11,26 +11,6 @@ tags:
 toc: true
 ---
 
-# FOSS Get rid of tech Giants
-
-10 _min reading_
-
-- [FOSS Get rid of tech Giants](#foss-get-rid-of-tech-giants)
-  - [1. Tech Giants: who are they?](#1-tech-giants-who-are-they)
-    - [Definition](#definition)
-    - [Advantages](#advantages)
-  - [2. What’s the problem(s)?](#2-whats-the-problems)
-    - [a - The average user lack of knowledge](#a---the-average-user-lack-of-knowledge)
-    - [b - Concentration vs Diversity](#b---concentration-vs-diversity)
-    - [c - Providing a service to humanity... or building an empire?](#c---providing-a-service-to-humanity-or-building-an-empire)
-    - [d - Compatibility](#d---compatibility)
-    - [e - Freedom](#e---freedom)
-  - [3. Alternatives](#3-alternatives)
-    - [Softwares are ideas](#softwares-are-ideas)
-    - [Habit, laziness and advertising](#habit-laziness-and-advertising)
-    - [Switching](#switching)
-  - [References](#references)
-
 **Today is not a different day.** Not a day goes by that you don't use the technologies offered by Silicon Valley's Big Technology Groups. But how many years has it been like this? And how many more will happen? We're getting **addicted**. After all, these innovations are working well. They make life easier. What's the point in getting rid of them?
 
 A small number of companies enable the daily virtual activity of millions of people. What problems arise from this oligarchic situation?
