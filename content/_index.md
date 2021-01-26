@@ -5,6 +5,8 @@ menu:
 weight: -1000
 ---
 
-[Articles](articles/_index.md)
+Welcome to my blog 🎉
 
-[Projects](projects/_index.md)
+I post opinion [articles](articles/_index.md) about everything but especially software & tech content.
+
+You can explore my [projects](projects/_index.md) if you want to see what I'm into.
