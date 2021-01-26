@@ -1,7 +1,7 @@
 ---
-date: 2020-03-29T09:00:00+06:00
-lastmod: 2020-08-10T22:00:00+06:00
-title: Free browsing
+date: 2021-03-29T09:00:00+06:00
+lastmod: 2021-08-10T22:00:00+06:00
+title: Truc
 authors: ["ewenquim"]
 categories:
   - tech

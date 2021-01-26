@@ -1,17 +1,29 @@
-# \[Meta\] Why you should start a blog now
+---
+date: 2020-03-29T09:00:00+06:00
+lastmod: 2020-08-10T22:00:00+06:00
+title: Why you should start a blog now
+authors: ["ewenquim"]
+categories:
+  - life
+tags:
+  - blog
+toc: true
+---
+
+# Why you should start a blog now
 
 5 _min read_
 
-* [1. Challenge yourself](6-about-blogging.md#1-challenge-yourself)
-  * [Creation](6-about-blogging.md#creation)
-  * [The Pace](6-about-blogging.md#the-pace)
-  * [Audience](6-about-blogging.md#audience)
-* [2. Public or private](6-about-blogging.md#2-public-or-private)
-  * [The Privacy Paradox](6-about-blogging.md#the-privacy-paradox)
-  * [Is a blog really different from social media?](6-about-blogging.md#is-a-blog-really-different-from-social-media)
-* [References](6-about-blogging.md#references)
+- [1. Challenge yourself](6-about-blogging.md#1-challenge-yourself)
+  - [Creation](6-about-blogging.md#creation)
+  - [The Pace](6-about-blogging.md#the-pace)
+  - [Audience](6-about-blogging.md#audience)
+- [2. Public or private](6-about-blogging.md#2-public-or-private)
+  - [The Privacy Paradox](6-about-blogging.md#the-privacy-paradox)
+  - [Is a blog really different from social media?](6-about-blogging.md#is-a-blog-really-different-from-social-media)
+- [References](6-about-blogging.md#references)
 
-Blogs now tend to disappear, as everyone moves to Twitter or Instagram. People prefer to share their **lives in a second** than their **thoughts in a week** \(or a month like me\). But here's why you should start a blog. You, and your friends!
+Blogs now tend to disappear, as everyone moves to Twitter or Instagram. People prefer to share their **lives in a second** than their **thoughts in a week** (or a month like me). But here's why you should start a blog. You, and your friends!
 
 ## 1. Challenge yourself
 
@@ -53,9 +65,8 @@ You'll say it is the same for blogs: the audience is blurry, unclear.
 
 The purpose of a blog really is different. Here I'm not talking about the old but popular [Skyblog](https://skyrock.com/) or [Blogger](https://www.blogger.com/) that are the ancestors social networks: I'm talking about real personal blogs.
 
-In a blog, **you don't share your lives, but your thoughts**. That's fundamentally different than sharing your last dress or meal: you expose your ideas, your creations. And it encourages you to think. There is no place left for superficial or casual stuff. If you read my blog, you doesn't know me, but you might be interested in my articles \(I hope so\). And _that_ is interesting.
+In a blog, **you don't share your lives, but your thoughts**. That's fundamentally different than sharing your last dress or meal: you expose your ideas, your creations. And it encourages you to think. There is no place left for superficial or casual stuff. If you read my blog, you doesn't know me, but you might be interested in my articles (I hope so). And _that_ is interesting.
 
 → [All articles]()
 
 ## References
-

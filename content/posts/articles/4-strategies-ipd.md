@@ -1,14 +1,20 @@
 ---
-title: "A post"
-date: 2021-01-26T14:58:31+01:00
-draft: true
+date: 2020-03-29T09:00:00+06:00
+lastmod: 2020-08-10T22:00:00+06:00
+title: Control the opponent in some games
+authors: ["ewenquim"]
+categories:
+  - maths
+tags:
+  - game theory
+toc: true
 ---
 
-# \[Maths\] Control the opponent in some games
+# Control the opponent in some games
 
 20 _min read_
 
-10 _min testing \(if you want to\)_
+10 _min testing (if you want to)_
 
 - [1. Prisoner's dilemma](4-strategies-ipd.md#1-prisoners-dilemma)
   - [The story](4-strategies-ipd.md#the-story)
@@ -68,50 +74,50 @@ At the end, they both betray each other and go to prison 5 years, whereas they c
 
 That is the prisoner's dilemma.
 
-![Photo Betrayal](../.gitbook/assets/betrayal.png)
+![Betrayal](../.gitbook/assets/betrayal.png)
 
 ### Representing games
 
 The prisoner's dilemma is one of the fundamentals of Game Theory.
 
-As every game in "normal form", it's described by 3 things \([see more](4-strategies-ipd.md#game-in-normal-form)\):
+As every game in "normal form", it's described by 3 things ([see more](4-strategies-ipd.md#game-in-normal-form)):
 
 - Players
 - Strategies for each player. It can be anything: {heads, tails} or {bet 1$, bet 5$, bet 10$}
-- Utility function: it maps every situation \(strategies of every player\) to a gain \(or a loss\)
+- Utility function: it maps every situation (strategies of every player) to a gain (or a loss)
 
 A 2-players game with finite strategies is often represented as a mere table. So it sums up like this for example:
 
-|   X Y    |    Ace    |   Queen   |
-| :------: | :-------: | :-------: |
-| **King** | \(-1, 1\) | \(1, -1\) |
-|  **10**  | \(-3, 3\) | \(-1, 1\) |
-|  **9**   | \(-6, 4\) | \(-2, 5\) |
+|   X Y    |   Ace   |  Queen  |
+| :------: | :-----: | :-----: |
+| **King** | (-1, 1) | (1, -1) |
+|  **10**  | (-3, 3) | (-1, 1) |
+|  **9**   | (-6, 4) | (-2, 5) |
 
 In this game, if X plays a 10 and Y plays the Ace, Y will get 3 points and X will lose 3 points. The mean value of utility for X is -2, his cards aren't good!
 
-In Game Theory, the utility \(the gain function\) can be anything too. It can be expressed in euros, happiness, pastries, or a mix of all three!
+In Game Theory, the utility (the gain function) can be anything too. It can be expressed in euros, happiness, pastries, or a mix of all three!
 
 _What about the prisoner's dilemma?_
 
-It's a 2 players \(X and Y\) game with 2 strategies each: Cooperate \(C\) or Defect \(D\).
+It's a 2 players (X and Y) game with 2 strategies each: Cooperate (C) or Defect (D).
 
-|      X Y      | Cooperate |  Defect  |
-| :-----------: | :-------: | :------: |
-| **Cooperate** | \(3, 3\)  | \(0, 5\) |
-|  **Defect**   | \(5, 0\)  | \(1, 1\) |
+|      X Y      | Cooperate | Defect |
+| :-----------: | :-------: | :----: |
+| **Cooperate** |  (3, 3)   | (0, 5) |
+|  **Defect**   |  (5, 0)   | (1, 1) |
 
 Here we took the opposite situation described in the little story. It looks more like a loot sharing situation.
 
-The numbers \(0, 1, 3, 5\) [can change](4-strategies-ipd.md#prisoners-dilemma-generalized), but it is a classical example.
+The numbers (0, 1, 3, 5) [can change](4-strategies-ipd.md#prisoners-dilemma-generalized), but it is a classical example.
 
 ### Equilibria
 
 The main goal of Game Theory in to find equilibria: these are special situations that allows one to guess what to do.
 
-One of the most well-known is the **Nash Equilibrium**: it is a situation where no player can strictly benefit from deviating to another strategy, knowing that the others play according to the given situation. For the prisoner's dilemma, it's the strategy {D, D} \(that lead to a utility of 1 to everyone\) : as exposed in the story, a player which is rational have no reason to change its strategy and cooperate, as it leads to a smaller utility!
+One of the most well-known is the **Nash Equilibrium**: it is a situation where no player can strictly benefit from deviating to another strategy, knowing that the others play according to the given situation. For the prisoner's dilemma, it's the strategy {D, D} (that lead to a utility of 1 to everyone) : as exposed in the story, a player which is rational have no reason to change its strategy and cooperate, as it leads to a smaller utility!
 
-Another Equilibrium is the **Pareto Optimum**. It is a situation where you can't increase the utility of a player \(by changing its strategy\) without reducing the utility of another player. The strategies {C, C}, {C, D} and {D, C} are Pareto Optimums. For example, from {C, C} to increase the utility of player X, he can only do that by reducing the utility of Y.
+Another Equilibrium is the **Pareto Optimum**. It is a situation where you can't increase the utility of a player (by changing its strategy) without reducing the utility of another player. The strategies {C, C}, {C, D} and {D, C} are Pareto Optimums. For example, from {C, C} to increase the utility of player X, he can only do that by reducing the utility of Y.
 
 ### The paradox
 
@@ -141,7 +147,7 @@ If one knows what the opponent have played during the last 50 rounds, it is more
 
 But it would induce very complicated algorithm to find the right strategy.
 
-In fact, the mathematicians Press and Dyson have found that for infinite rounds \(and it will work for an enough big number of rounds in practice\) of the same game, it is enough to know the action of the previous round to make a good strategy.
+In fact, the mathematicians Press and Dyson have found that for infinite rounds (and it will work for an enough big number of rounds in practice) of the same game, it is enough to know the action of the previous round to make a good strategy.
 
 So we will adapt our strategies to the actions of the previous round!
 
@@ -165,7 +171,7 @@ We will simplify it as this:
 | **C** |  1  |  0  |
 | **D** |  0  |  1  |
 
-With 1 meaning 100% chance for X to cooperate the next round and 0 meaning 0% for X chance to cooperate the next round \(100% chance of betrayal\).
+With 1 meaning 100% chance for X to cooperate the next round and 0 meaning 0% for X chance to cooperate the next round (100% chance of betrayal).
 
 We can have other strategies:
 
@@ -183,7 +189,7 @@ _The thief_
 | **C** |  0  |  0  |
 | **D** |  0  |  0  |
 
-_The copycat a.k.a tit-for-tat_ \(copies what the opponent played last turn\)
+_The copycat a.k.a tit-for-tat_ (copies what the opponent played last turn)
 
 |  X Y  |  C  |  D  |
 | :---: | :-: | :-: |
@@ -196,7 +202,7 @@ A lot of strategies exist!
 
 You can even randomize the chances to cooperate.
 
-_The undecided_ \(0.5 meaning 50% chance to cooperate\)
+_The undecided_ (0.5 meaning 50% chance to cooperate)
 
 |  X Y  |  C  |  D  |
 | :---: | :-: | :-: |
@@ -234,19 +240,19 @@ _The cautious_. He cooperates first.
 | **C** | 0.99 | 0.5 |
 | **D** | 0.9  | 0.1 |
 
-Here's what happened when playing 2,000 rounds \(blue for the _cautious_ and red for the _resentful_\)
+Here's what happened when playing 2,000 rounds (blue for the _cautious_ and red for the _resentful_)
 
 ![Graph](../.gitbook/assets/resentful-vs-cautious.png)
 
-The mean gain was 3 while they both cooperate, and then it breaks down when the cautious betrays for the first time \(he had 1% chance to betray in the {C, C} situation\). Then, the resentful always betrayed, even when the cautious tried to cooperate. That's why the gain of the cautious went down to 1 \(as the Nash Equilibrium {D, D} utility is 1\). Sometimes the cautious attempt to cooperates and gets 0 while the resentful gets 5 by defecting.
+The mean gain was 3 while they both cooperate, and then it breaks down when the cautious betrays for the first time (he had 1% chance to betray in the {C, C} situation). Then, the resentful always betrayed, even when the cautious tried to cooperate. That's why the gain of the cautious went down to 1 (as the Nash Equilibrium {D, D} utility is 1). Sometimes the cautious attempt to cooperates and gets 0 while the resentful gets 5 by defecting.
 
 There are even more graphs than strategies, so try it out with my script [just here](https://github.com/EwenQuim/iterated-prisoners-dilemma)!
 
 #### One vs all
 
-Comparing 2 strategies at a time isn't very efficient. I entered all strategies in a database so I can choose a strategy and it displays the result for a given number of rounds against all the strategies \(including itself\).
+Comparing 2 strategies at a time isn't very efficient. I entered all strategies in a database so I can choose a strategy and it displays the result for a given number of rounds against all the strategies (including itself).
 
-Everything is [here](https://github.com/EwenQuim/iterated-prisoners-dilemma) again. Just create your own strategy and launch the script, everything will be computed automatically ;\)
+Everything is [here](https://github.com/EwenQuim/iterated-prisoners-dilemma) again. Just create your own strategy and launch the script, everything will be computed automatically ;)
 
 For example, we can see the results for the strategy
 
@@ -265,7 +271,7 @@ It wins against some but loses against some...
 
 #### All vs. all
 
-The mean score for a given strategies against all the other strategies doesn't mean anything because it relies on the number of other strategies \(and this shouldn't matter\).
+The mean score for a given strategies against all the other strategies doesn't mean anything because it relies on the number of other strategies (and this shouldn't matter).
 
 A good thing that can be done is just counting the beaten strategies.
 
@@ -289,7 +295,7 @@ I told you in the title that we can do better: **control the opponent's gain**.
 
 ### Control
 
-If you choose the right strategy, you can set the mean opponent's score to any value between 1 \(the utility for the Nash equilibrium\) and 5 \(the maximal gain\).
+If you choose the right strategy, you can set the mean opponent's score to any value between 1 (the utility for the Nash equilibrium) and 5 (the maximal gain).
 
 For example with _Control 2_, we set the opponent's score to 2!
 
@@ -304,7 +310,7 @@ Why 0.9, 0.7, 0.2 and 0.1? How do we chose the right coefficients? The answer is
 
 Notice that the opponent's score is always 2 in this graph. But we might have a score lower than 2, so this strategy is quite useless, even if it it interesting...
 
-You can even set the opponent's score to 1, the minimum possible! \(as it is the utility at the Nash equilibrium\)
+You can even set the opponent's score to 1, the minimum possible! (as it is the utility at the Nash equilibrium)
 
 _Control 1_
 
@@ -338,13 +344,13 @@ _Extorsion 2_ set our score two times higher than the opponent's!
 
 ![Graph](../.gitbook/assets/extorque2-vs-all.png)
 
-In fact, it is not really the score which is twice higher, but rather the part above 1 \(the Nash Equilibrium\)
+In fact, it is not really the score which is twice higher, but rather the part above 1 (the Nash Equilibrium)
 
 If we are greedy, we can try to set the ratio to 100. But here's what happen:
 
 ![Graph](../.gitbook/assets/extorque100-vs-all.png)
 
-In fact, 100x0 = 0. By trying to reduce the opponent's score to 0 \(in fact, 1 as we saw\), we are reducing our own score.
+In fact, 100x0 = 0. By trying to reduce the opponent's score to 0 (in fact, 1 as we saw), we are reducing our own score.
 
 ### Extorsion vs. control
 
@@ -352,11 +358,11 @@ We can make these two incredible strategies fight each other.
 
 ![Graph](../.gitbook/assets/control2-vs-extorque2.png)
 
-They are compatible! _Control-2_ set the _Extorsion_'s score to 2 and _Extorsion-2_ makes sure that his score is twice the _Control_'s score \(relatively to the utility at Nash Equilibrium of course\).
+They are compatible! _Control-2_ set the _Extorsion_'s score to 2 and _Extorsion-2_ makes sure that his score is twice the _Control_'s score (relatively to the utility at Nash Equilibrium of course).
 
 ### The winning strategy!
 
-The **Extorsion** strategy will always have a better score than any of its opponents, or at least the same than them. To maximize the score, don't be too greedy at apply a factor 2 or 3 \(remember that 100x0 = 0\).
+The **Extorsion** strategy will always have a better score than any of its opponents, or at least the same than them. To maximize the score, don't be too greedy at apply a factor 2 or 3 (remember that 100x0 = 0).
 
 Learn how to compute it in [part 5](4-strategies-ipd.md#press-and-dysons-work) or use [my algorithm](https://github.com/EwenQuim/iterated-prisoners-dilemma) to experiment it without maths.
 
@@ -370,8 +376,8 @@ There are many games that can look as Prisoner's dilemma. Here's a short list:
 
 - economic competition
 - patent owning
-- animal cooperation \(bats for example must learn to cooperate sometimes and betray other times\)
-- couple life \(each decision can be a dilemma according to your preferences, even if it is not always a big deal\)
+- animal cooperation (bats for example must learn to cooperate sometimes and betray other times)
+- couple life (each decision can be a dilemma according to your preferences, even if it is not always a big deal)
 
 Remember that if you want to maximize your happiness, do not betray every time. But do not cooperate each time: think about yourself!
 
@@ -406,10 +412,10 @@ $$\forall (s_{1}, s_{2}) \in \mathfrak{S}, \mu_{1}(s_{1}, s_{2})=\mu_{2}(s_{2}, 
 
 We often represent two-players game with a matrix. The prisoner's dilemma is a symmetrical game with the following coefficients and constraints:
 
-|  X Y  |    C     |    D     |
-| :---: | :------: | :------: |
-| **C** | \(b, b\) | \(d, a\) |
-| **D** | \(a, d\) | \(c, c\) |
+|  X Y  |   C    |   D    |
+| :---: | :----: | :----: |
+| **C** | (b, b) | (d, a) |
+| **D** | (a, d) | (c, c) |
 
 With $$a > b > c > d \geq 0$$.
 
@@ -428,7 +434,7 @@ The general form for a 1-memory strategy is a vector $$p = (p_{1}, p_{2}, p_{3},
 
 #### Relation between the scores
 
-A step from a round $$n$$ to another \($$n+1$$\) might be represented with a Markov transition matrix.
+A step from a round $$n$$ to another ($$n+1$$) might be represented with a Markov transition matrix.
 
 $$
 M(p, q) = \begin{pmatrix}
@@ -511,7 +517,7 @@ Let's apply a linear combination and here is the **golden formula**!
 
 $$\alpha s_{X}+ \beta s_{Y} + \gamma = \frac{D(p, q, \alpha g_{X}+ \beta g_{Y} + \gamma)}{D(p, q, 1)}$$
 
-All what we have to do now is to find the right $$p$$ to set the determinant to zero and we have a linear relation between $$s_{X}$$ and $$s_{Y}$$. We call these strategies Zero-Determinant \(ZD\) Strategies.
+All what we have to do now is to find the right $$p$$ to set the determinant to zero and we have a linear relation between $$s_{X}$$ and $$s_{Y}$$. We call these strategies Zero-Determinant (ZD) Strategies.
 
 Notice that we haven't used yet the fact that $$a > b > c > d \geq 0$$ ! It is valid for every 2-players symmetrical game.
 
