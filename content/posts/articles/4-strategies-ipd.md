@@ -8,6 +8,7 @@ categories:
 tags:
   - game theory
 toc: true
+mathjax: true
 ---
 
 # Control the opponent in some games
@@ -451,7 +452,7 @@ We can easily verify that $$\forall (i,j), 0\le a_{ij} \le 1$$ and $$\forall i, 
 2. According to the adjoint matrix formula, $$adj(M')M'=det(M')I=0$$.
 3. Let's call $$u$$ one of the eigenvectors : $$Mu=u$$ so $$M'u=0$$
 
-We notice that $$u^{T}M'=adj(M')M'$$, so every row of $$adj(M')$$ is proportional to $$u$$!
+We notice that \\(u^{T}M'=adj(M')M'\\), so every row of \\(adj(M')\\) is proportional to \\(u\\)!
 
 Let's focus on the last row. Every term is +/- the determinant of a sub-matrix composed of the first three columns of M'.
 
