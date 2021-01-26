@@ -45,13 +45,13 @@ showReadingTime = true
 showLastmod = true
 taxonomyCloudShuffle = true
 accentColor = "#854FD3"
-hideMainMenu = true
+hideMainMenu = false
 
 [params.sidebar]
 enable = true
 
 [params.widgets]
-header = ["breadcrumbs"]
+header = []
 homepage = ["recent_posts"]
 sidebar = ["about","search","sidebar_menu","taxonomy_cloud"]
 footer = ["social_menu"]
@@ -63,6 +63,7 @@ titleSeparator = "•"
 [params.social]
 github = "ewenquim"
 gitlab = "ewenquim"
+
 [params.search]
 client = "fuse" # algolia / fuse / lunr
 
@@ -79,12 +80,6 @@ tag = "tags"
 
 [permalinks]
 page = "/:slug/"
-
-[[menu.main]]
-name = "Repo"
-weight = -10
-identifier = "repository"
-url = "https://github.com/EwenQuim"
 
 [blackfriday]
 hrefTargetBlank = true

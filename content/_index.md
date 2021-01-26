@@ -1,6 +1,8 @@
 ---
 title: Home
-weight: -270
+menu:
+  - main
+weight: -1000
 ---
 
 [Articles](articles/_index.md)

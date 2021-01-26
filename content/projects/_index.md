@@ -3,7 +3,7 @@ title: Projects
 menu:
   - main
   - sidebar
-weight: -270
+weight: -200
 ---
 
 Projects
