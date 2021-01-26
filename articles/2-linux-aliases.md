@@ -127,7 +127,7 @@ Don't hesitate to remove the `-S` option in the commit alias if you don't PGP si
 
 I hope it will be useful for you !
 
-→ [All articles](../articles-1.md)
+→ [All articles]()
 
 ## References
 

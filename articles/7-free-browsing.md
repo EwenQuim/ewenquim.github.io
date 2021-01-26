@@ -106,7 +106,7 @@ I've prepared a blacklist/whitelist that you can import in seconds.
 
 Enjoy!
 
-→ [All articles](../articles-1.md)
+→ [All articles]()
 
 ## References
 

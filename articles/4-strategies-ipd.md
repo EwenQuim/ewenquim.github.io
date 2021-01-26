@@ -531,7 +531,7 @@ $$s_{Y}= \frac{(1-p_{1})c+p_{4}b}{(1-p_{1})+p_{4}}$$
 
 WIP
 
-→ [All articles](../articles-1.md)
+→ [All articles]()
 
 ## References
 

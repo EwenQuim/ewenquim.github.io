@@ -38,7 +38,7 @@ Things
 
 Things
 
-→ [All articles](../articles-1.md)
+→ [All articles]()
 
 ## References
 

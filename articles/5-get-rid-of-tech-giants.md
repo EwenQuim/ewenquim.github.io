@@ -182,7 +182,7 @@ Mostly because the switch from proprietary to free seems tough, both technically
 
 You'll be pointed at, because you use different tools. But this is temporary. If the movement grow big enough, and it began to have impressive numbers now, it will become the norm.
 
-→ [All articles](../articles-1.md)
+→ [All articles]()
 
 ## References
 

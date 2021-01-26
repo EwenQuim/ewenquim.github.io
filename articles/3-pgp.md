@@ -164,7 +164,7 @@ Especially, it is highly not recommended to sign a commit from a server. Because
 
 You shouldn't commit on a prod server anyway, whether you sign it or not.
 
-→ [All articles](../articles-1.md)
+→ [All articles]()
 
 ## References
 
