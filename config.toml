@@ -53,8 +53,8 @@ enable = true
 [params.widgets]
 header = []
 homepage = ["recent_posts"]
-sidebar = ["about","search","sidebar_menu","taxonomy_cloud"]
-footer = ["social_menu"]
+sidebar = ["about", "search","sidebar_menu","taxonomy_cloud", "social_menu"]
+footer = ["taxonomy_cloud"]
 
 [params.seo]
 # Title Separator: - – — · • * ⋆ | ~ « » < >
