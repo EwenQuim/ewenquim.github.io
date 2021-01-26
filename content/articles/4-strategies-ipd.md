@@ -1,6 +1,6 @@
 ---
-date: 2020-03-29T09:00:00+06:00
-lastmod: 2020-08-10T22:00:00+06:00
+date: 2020-06-01
+lastmod: 2020-06-01
 title: Control the opponent in some games
 authors: ["ewenquim"]
 categories:

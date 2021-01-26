@@ -1,6 +1,6 @@
 ---
-date: 2020-03-29T09:00:00+06:00
-lastmod: 2020-08-10T22:00:00+06:00
+date: 2020-09-01
+lastmod: 2020-09-01
 title: Free browsing
 authors: ["ewenquim"]
 categories:
