@@ -2,6 +2,10 @@
 
 ---
 
+Runs on GitLab. If you see this on another git host, it's probably just a mirror.
+
+---
+
 Example [Hugo] website using GitLab Pages.
 
 Learn more about GitLab Pages at https://pages.gitlab.io and the official
@@ -11,10 +15,12 @@ documentation https://docs.gitlab.com/ce/user/project/pages/.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+**Table of Contents** _generated with [DocToc](https://github.com/thlorenz/doctoc)_
 
 - [GitLab CI](#gitlab-ci)
 - [Building locally](#building-locally)
+  - [Preview your site](#preview-your-site)
 - [GitLab User or Group Pages](#gitlab-user-or-group-pages)
 - [Did you fork this project?](#did-you-fork-this-project)
 - [Troubleshooting](#troubleshooting)
@@ -68,9 +74,9 @@ unless you want to contribute back to the upstream project.
 
 1. CSS is missing! That means two things:
 
-    Either that you have wrongly set up the CSS URL in your templates, or
-    your static generator has a configuration option that needs to be explicitly
-    set in order to serve static assets under a relative URL.
+   Either that you have wrongly set up the CSS URL in your templates, or
+   your static generator has a configuration option that needs to be explicitly
+   set in order to serve static assets under a relative URL.
 
 [ci]: https://about.gitlab.com/gitlab-ci/
 [hugo]: https://gohugo.io
