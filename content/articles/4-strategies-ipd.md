@@ -16,7 +16,7 @@ A quite complete article about how to **control opponent's score in some games**
 
 This article is derived from [this paper](https://www.pnas.org/content/109/26/10409) from mathematicians Press & Dyson. The original work isn't very understandable for everyone, so I decided to work on it and publish it with illustrations and graphs so **everybody can understand**!
 
-For maths lovers: see you in [part 5](4-strategies-ipd.md#5-appendix-real-maths-proofs).
+For maths lovers: see you in [part 5](#5-appendix-real-maths-proofs).
 
 After reading this article, you may want to **try your own strategies** with [these ressources](https://github.com/EwenQuim/iterated-prisoners-dilemma) I made just for you!
 
@@ -54,7 +54,7 @@ That is the prisoner's dilemma.
 
 The prisoner's dilemma is one of the fundamentals of Game Theory.
 
-As every game in "normal form", it's described by 3 things ([see more](4-strategies-ipd.md#game-in-normal-form)):
+As every game in "normal form", it's described by 3 things ([see more](#game-in-normal-form)):
 
 - Players
 - Strategies for each player. It can be anything: {heads, tails} or {bet 1$, bet 5$, bet 10$}
@@ -83,7 +83,7 @@ It's a 2 players (X and Y) game with 2 strategies each: Cooperate (C) or Defect 
 
 Here we took the opposite situation described in the little story. It looks more like a loot sharing situation.
 
-The numbers (0, 1, 3, 5) [can change](4-strategies-ipd.md#prisoners-dilemma-generalized), but it is a classical example.
+The numbers (0, 1, 3, 5) [can change](#prisoners-dilemma-generalized), but it is a classical example.
 
 ### Equilibria
 
@@ -278,7 +278,7 @@ For example with _Control 2_, we set the opponent's score to 2!
 | **C** | 0.9 | 0.7 |
 | **D** | 0.2 | 0.1 |
 
-Why 0.9, 0.7, 0.2 and 0.1? How do we chose the right coefficients? The answer is quite complicated but you can find in in [part 5](4-strategies-ipd.md#5-appendix-real-maths-proofs).
+Why 0.9, 0.7, 0.2 and 0.1? How do we chose the right coefficients? The answer is quite complicated but you can find in in [part 5](#5-appendix-real-maths-proofs).
 
 ![Graph](../.gitbook/assets/control2-vs-all.png)
 
@@ -338,7 +338,7 @@ They are compatible! _Control-2_ set the _Extorsion_'s score to 2 and _Extorsion
 
 The **Extorsion** strategy will always have a better score than any of its opponents, or at least the same than them. To maximize the score, don't be too greedy at apply a factor 2 or 3 (remember that 100x0 = 0).
 
-Learn how to compute it in [part 5](4-strategies-ipd.md#press-and-dysons-work) or use [my algorithm](https://github.com/EwenQuim/iterated-prisoners-dilemma) to experiment it without maths.
+Learn how to compute it in [part 5](#press-and-dysons-work) or use [my algorithm](https://github.com/EwenQuim/iterated-prisoners-dilemma) to experiment it without maths.
 
 ## 4. Real life application
 

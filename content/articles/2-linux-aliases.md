@@ -74,7 +74,7 @@ Now we can download our aliases to every device, yay!
 
 But there are some issues : we _can't update_ (upload) easily the list of aliases ! And it's _not very handy_... Do you like typing `nano ~/.tools/.aliases` and then `source ~/.bashrc` every time you just want to change a simple alias ?
 
-The system is not fully efficient here, so we'll se how to improve it in [part 3](2-linux-aliases.md#3-one-alias-to-rule-them-all). But before that, look at this **weird trick** in [part 2](2-linux-aliases.md#2-tip-start-your-aliases-with-a-comma) to boost your productivity.
+The system is not fully efficient here, so we'll se how to improve it in [part 3](#3-one-alias-to-rule-them-all). But before that, look at this **weird trick** in [part 2](#2-tip-start-your-aliases-with-a-comma) to boost your productivity.
 
 ## 2. Tip: Start your aliases with a comma
 
@@ -99,7 +99,7 @@ Want to see, edit, and synchronise your aliases in only one command?
 
 ### See, change, update your aliases - _2s/update_
 
-If you have forked my gist in [1](2-linux-aliases.md#1-use-a-remote-repository) :
+If you have forked my gist in [1](#1-use-a-remote-repository) :
 
 Just type `,aliases`. It displays the list of commands, allows you to change them and synchronize everything. Easy, isn't it?
 
