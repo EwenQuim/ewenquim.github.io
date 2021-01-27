@@ -1,13 +1,13 @@
 ---
-date: 2021-03-29T09:00:00+06:00
-lastmod: 2021-08-10T22:00:00+06:00
+date: 2017-09-01
+lastmod: 2021-01-01
 title: Coalescence
 authors: ["ewenquim"]
 categories:
   - project
 tags:
   - coalescence
-toc: true
+slug: cxvl
 ---
 
 ## Coalescence is an horror story in which **you** are the Hero!

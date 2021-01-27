@@ -1,7 +1,7 @@
 baseURL = "http://www.example.com"
-title = "Blog"
+title = "Ewen"
 # for smart copyright line, leave this blank and check [params.copyright]
-copyright = ""
+copyright = " "
 
 theme = "minimo"
 
@@ -54,7 +54,7 @@ enable = true
 header = []
 homepage = ["recent_posts"]
 sidebar = ["about", "sidebar_menu", "taxonomy_cloud", "search", "social_menu"]
-footer = ["search", "taxonomy_cloud"]
+footer = ["taxonomy_cloud"]
 
 [params.seo]
 # Title Separator: - – — · • * ⋆ | ~ « » < >
