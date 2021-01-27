@@ -159,7 +159,3 @@ Beware of where you are committing something. Your signature depends on the PGP 
 Especially, it is highly not recommended to sign a commit from a server. Because it would mean that either it wouldn't be signed, or that you have your PGP key on the server...
 
 You shouldn't commit on a prod server anyway, whether you sign it or not.
-
-→ [All articles]()
-
-## References

@@ -65,5 +65,3 @@ And added this to the cron.
 ### Edit: now
 
 Now the webserver is hosted on Github Pages. The deployment is done every time I push changes, as it should be. **It's much better now.**
-
-→ [All articles]()

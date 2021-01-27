@@ -53,7 +53,3 @@ You'll say it is the same for blogs: the audience is blurry, unclear.
 The purpose of a blog really is different. Here I'm not talking about the old but popular [Skyblog](https://skyrock.com/) or [Blogger](https://www.blogger.com/) that are the ancestors social networks: I'm talking about real personal blogs.
 
 In a blog, **you don't share your lives, but your thoughts**. That's fundamentally different than sharing your last dress or meal: you expose your ideas, your creations. And it encourages you to think. There is no place left for superficial or casual stuff. If you read my blog, you doesn't know me, but you might be interested in my articles (I hope so). And _that_ is interesting.
-
-→ [All articles]()
-
-## References

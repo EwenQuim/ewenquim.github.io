@@ -101,7 +101,3 @@ The [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript/) extension 
 I've prepared a blacklist/whitelist that you can import in seconds.
 
 Enjoy!
-
-→ [All articles]()
-
-## References

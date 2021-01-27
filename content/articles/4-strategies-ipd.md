@@ -516,7 +516,3 @@ $$s_{Y}= \frac{(1-p_{1})c+p_{4}b}{(1-p_{1})+p_{4}}$$
 #### Cancel the determinant: extortionate
 
 WIP
-
-→ [All articles]()
-
-## References

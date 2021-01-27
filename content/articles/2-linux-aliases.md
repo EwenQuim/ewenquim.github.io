@@ -125,7 +125,3 @@ This takes seconds, and is very handy to use.
 Don't hesitate to remove the `-S` option in the commit alias if you don't PGP sign your commits (I'll explain later why you should -and it's easy too!)
 
 I hope it will be useful for you !
-
-→ [All articles]()
-
-## References
