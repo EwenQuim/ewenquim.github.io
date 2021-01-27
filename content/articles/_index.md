@@ -6,4 +6,4 @@ menu:
 weight: -300
 ---
 
-I post opinion [articles](articles/_index.md) about everything but especially software & tech content.
+I post **opinion articles** about everything but especially software & tech content.
