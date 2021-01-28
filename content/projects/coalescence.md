@@ -26,5 +26,5 @@ More images on the [Play Store][].
 
 It's made with Ren'Py, a Python framework based on PyGame. RAPT compiles the python code to an Android package thanks to Gradle.
 
-[play store]: https://play.google.com/store/apps/details?id=com.coal)
+[play store]: https://play.google.com/store/apps/details?id=com.coal
 [desktop]: https://amethysts.itch.io/coalescence
