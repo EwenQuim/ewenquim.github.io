@@ -1,6 +1,5 @@
 ---
 date: 2020-03-01
-lastmod: 2021-01-26
 title: Markdown website
 authors: ["ewenquim"]
 categories:

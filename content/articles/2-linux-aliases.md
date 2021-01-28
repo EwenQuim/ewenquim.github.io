@@ -1,6 +1,5 @@
 ---
 date: 2020-04-01
-lastmod: 2020-04-01
 title: Efficient CLI aliases
 authors: ["ewenquim"]
 categories:

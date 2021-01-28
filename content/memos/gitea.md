@@ -1,6 +1,5 @@
 ---
-date: 2020-03-01
-lastmod: 2021-01-26
+date: 2021-01-28
 title: My own git server
 authors: ["ewenquim"]
 categories:
