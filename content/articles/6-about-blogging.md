@@ -1,7 +1,7 @@
 ---
 date: 2020-08-01
-lastmod: 2020-08-01
 title: Why you should start a blog now
+cover: https://unsplash.com/photos/GnvurwJsKaY
 authors: ["ewenquim"]
 categories:
   - life

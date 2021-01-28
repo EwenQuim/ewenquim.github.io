@@ -1,8 +1,8 @@
 ---
 date: 2020-06-01
-lastmod: 2020-06-01
 title: Control the opponent in some games
 authors: ["ewenquim"]
+cover: https://images.unsplash.com/photo-1602968407815-5963b28c66af?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80
 categories:
   - maths
 tags:
