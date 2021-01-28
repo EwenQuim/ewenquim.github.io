@@ -7,3 +7,5 @@ weight: -300
 ---
 
 I post **opinion articles** about everything but especially software & tech content.
+
+Enjoy reading!
