@@ -12,17 +12,17 @@ toc: true
 ---
 
 ```bash
-· · · | · · · | 1 · ·
-3 · 1 | 7 9 · | · · ·
-· 4 · | · · · | · · 7
+· · · | · · · | ¹ · ·
+³ · ¹ | ⁷ ⁹ · | · · ·
+· ⁴ · | · · · | · · ⁷
 
-· · 5 | · · 7 | 3 · ·
-7 · · | 5 · 2 | · · ·
-· · 8 | · 1 · | 2 · ·
+· · ⁵ | · · ⁷ | ³ · ·
+⁷ · · | ⁵ · ² | · · ·
+· · ⁸ | · ¹ · | ² · ·
 
-6 · 7 | · · 9 | · 3 ·
-· 1 · | 2 · · | · 5 ·
-· · 9 | · · · | · · 8
+⁶ · ⁷ | · · ⁹ | · ³ ·
+· ¹ · | ² · · | · ⁵ ·
+· · ⁹ | · · · | · · ⁸
 ```
 
 Ok so this basically is a sudoku. Try to solve it by hand if you want !
@@ -50,33 +50,33 @@ There are many ways to solve a sudoku.
 Simply trying every number from 1 to 9 in each cell, independently of other cells. And when every cell is filled, verify that the rules are respected.
 
 ```bash
-¹ ¹ ¹   ¹ ¹ ¹   1 ¹ ¹
-3 ¹ 1   7 9 ¹   ¹ ¹ ¹
-¹ 4 ¹   ¹ ¹ ¹   ¹ ¹ 7
+1 1 1   1 1 1   ¹ 1 1
+³ 1 ¹   ⁷ ⁹ 1   1 1 1
+1 ⁴ 1   1 1 1   1 1 ⁷
 
-¹ ¹ 5   ¹ ¹ 7   3 ¹ ¹
-7 ¹ ¹   5 ¹ 2   ¹ ¹ ¹
-¹ ¹ 8   ¹ 1 ¹   2 ¹ ¹
+1 1 ⁵   1 1 ⁷   ³ 1 1
+⁷ 1 1   ⁵ 1 ²   1 1 1
+1 1 ⁸   1 ¹ 1   ² 1 1
 
-6 ¹ 7   ¹ ¹ 9   ¹ 3 ¹
-¹ 1 ¹   2 ¹ ¹   ¹ 5 ¹
-¹ ¹ 9   ¹ ¹ ¹   ¹ ¹ 8
+⁶ 1 ⁷   1 1 ⁹   1 ³ 1
+1 ¹ 1   ² 1 1   1 ⁵ 1
+1 1 ⁹   1 1 1   1 1 ⁸
 ```
 
 First, try to fill every thing with ones. This isn't a valid sudoku, so let's change one number, the last "2".
 
 ```bash
-¹ ¹ ¹   ¹ ¹ ¹   1 ¹ ¹
-3 ¹ 1   7 9 ¹   ¹ ¹ ¹
-¹ 4 ¹   ¹ ¹ ¹   ¹ ¹ 7
+1 1 1   1 1 1   ¹ 1 1
+³ 1 ¹   ⁷ ⁹ 1   1 1 1
+1 ⁴ 1   1 1 1   1 1 ⁷
 
-¹ ¹ 5   ¹ ¹ 7   3 ¹ ¹
-7 ¹ ¹   5 ¹ 2   ¹ ¹ ¹
-¹ ¹ 8   ¹ 1 ¹   2 ¹ ¹
+1 1 ⁵   1 1 ⁷   ³ 1 1
+⁷ 1 1   ⁵ 1 ²   1 1 1
+1 1 ⁸   1 ¹ 1   ² 1 1
 
-6 ¹ 7   ¹ ¹ 9   ¹ 3 ¹
-¹ 1 ¹   2 ¹ ¹   ¹ 5 ¹
-¹ ¹ 9   ¹ ¹ ¹   ¹ ₂ 8
+⁶ 1 ⁷   1 1 ⁹   1 ³ 1
+1 ¹ 1   ² 1 1   1 ⁵ 1
+1 1 ⁹   1 1 1   1 2 ⁸
 ```
 
 And so on. For a game with 20 hints at the beginning, there is 9^(81-20) possibilities to explore, so... 16,173,092,699,229,880,893,718,618,465,586,445,357,583,280,647,840,659,957,609 combinations possible. Even with a 4GHz processor, it'll take like 10^39 centuries to compute everything. Quite a long time. Let's reduce this number.
@@ -90,72 +90,72 @@ Basically, this is the labyrinth algorithm.
 We start at the top left and with the smallest number possible.
 
 ```bash
-₂ · · | · · · | 1 · ·
-3 · 1 | 7 9 · | · · ·
-· 4 · | · · · | · · 7
+2 · · | · · · | ¹ · ·
+³ · ¹ | ⁷ ⁹ · | · · ·
+· ⁴ · | · · · | · · ⁷
 
-· · 5 | · · 7 | 3 · ·
-7 · · | 5 · 2 | · · ·
-· · 8 | · 1 · | 2 · ·
+· · ⁵ | · · ⁷ | ³ · ·
+⁷ · · | ⁵ · ² | · · ·
+· · ⁸ | · ¹ · | ² · ·
 
-6 · 7 | · · 9 | · 3 ·
-· 1 · | 2 · · | · 5 ·
-· · 9 | · · · | · · 8
+⁶ · ⁷ | · · ⁹ | · ³ ·
+· ¹ · | ² · · | · ⁵ ·
+· · ⁹ | · · · | · · ⁸
 ```
 
 The 1 doesn't fit, but the 2 is okay. We'll try the next cell.
 
 ```bash
-₂ ₅ · | · · · | 1 · ·
-3 · 1 | 7 9 · | · · ·
-· 4 · | · · · | · · 7
+2 5 · | · · · | ¹ · ·
+³ · ¹ | ⁷ ⁹ · | · · ·
+· ⁴ · | · · · | · · ⁷
 
-· · 5 | · · 7 | 3 · ·
-7 · · | 5 · 2 | · · ·
-· · 8 | · 1 · | 2 · ·
+· · ⁵ | · · ⁷ | ³ · ·
+⁷ · · | ⁵ · ² | · · ·
+· · ⁸ | · ¹ · | ² · ·
 
-6 · 7 | · · 9 | · 3 ·
-· 1 · | 2 · · | · 5 ·
-· · 9 | · · · | · · 8
+⁶ · ⁷ | · · ⁹ | · ³ ·
+· ¹ · | ² · · | · ⁵ ·
+· · ⁹ | · · · | · · ⁸
 ```
 
 The smallest number possible to write is 5. Let's continue, until we're stuck.
 
 ```bash
-₂ ₅ ₆ | ₃ ₄ ₈ | 1 ₉ ?
-3 · 1 | 7 9 · | · · ·
-· 4 · | · · · | · · 7
+2 5 6 | 3 4 8 | ¹ 9 ?
+³ · ¹ | ⁷ ⁹ · | · · ·
+· ⁴ · | · · · | · · ⁷
 
-· · 5 | · · 7 | 3 · ·
-7 · · | 5 · 2 | · · ·
-· · 8 | · 1 · | 2 · ·
+· · ⁵ | · · ⁷ | ³ · ·
+⁷ · · | ⁵ · ² | · · ·
+· · ⁸ | · ¹ · | ² · ·
 
-6 · 7 | · · 9 | · 3 ·
-· 1 · | 2 · · | · 5 ·
-· · 9 | · · · | · · 8
+⁶ · ⁷ | · · ⁹ | · ³ ·
+· ¹ · | ² · · | · ⁵ ·
+· · ⁹ | · · · | · · ⁸
 ```
 
 At the end of the line, it is impossible to place a number. So let's go back to the previous cell, with the 9. We will increase this number by one unit. Since this is not possible either, we go back to the 8 and erase the 9. For the 8, it is not possible to increase, so we delete the 8 and go back to the 4. Here it is possible to increase the 4. The next available number is 8, because 5, 6 and 7 are impossible to insert.
 
 ```bash
-₂ ₅ ₆ | ₃ ₈ · | 1 · ·
-3 · 1 | 7 9 · | · · ·
-· 4 · | · · · | · · 7
+2 ₅ ₆ | 3 8 · | ¹ · ·
+³ · ¹ | ⁷ ⁹ · | · · ·
+· ⁴ · | · · · | · · ⁷
 
-· · 5 | · · 7 | 3 · ·
-7 · · | 5 · 2 | · · ·
-· · 8 | · 1 · | 2 · ·
+· · ⁵ | · · ⁷ | ³ · ·
+⁷ · · | ⁵ · ² | · · ·
+· · ⁸ | · ¹ · | ² · ·
 
-6 · 7 | · · 9 | · 3 ·
-· 1 · | 2 · · | · 5 ·
-· · 9 | · · · | · · 8
+⁶ · ⁷ | · · ⁹ | · ³ ·
+· ¹ · | ² · · | · ⁵ ·
+· · ⁹ | · · · | · · ⁸
 ```
 
 This is called _backtracking_. Repeat the same algorithm until a solution is found.
 
 ### Let's do better
 
-The algorithm is quite fast, but is not optimized. Indeed, it is not a good idea to start at the top left and continue in the reading direction. We can **define a custom order**! A good idea could be to count the number of possible digits to fit in each cell at the beginning (when the grid is empty). For example, the top left cell has 4 possibilities: 2, 5, 8 and 9. We can see that some cells have only one number available!
+The algorithm is quite fast, but is not optimized. Indeed, it is not a good idea to start at the top left and continue in the reading direction. We can **define a custom order**! A good idea could be to count the number of possible digits to fit in each cell at the beginning (when the grid is empty). For example, the top left cell has 4 possibilities: 2, 5, ⁸ and 9. We can see that some cells have only one number available!
 
 ```bash
 4 6 2 | 4 6 5 | · 5 6
@@ -174,20 +174,22 @@ The algorithm is quite fast, but is not optimized. Indeed, it is not a good idea
 Then, we apply the previous algorithm, beginning by the cells where there are the fewer possibilities.
 
 ```bash
-· · · | · · · | 1 · ·
-3 · 1 | 7 9 · | · · ·
-· 4 · | · · · | · · 7
+· · · | · · · | ¹ · ·
+³ · ¹ | ⁷ ⁹ · | · · ·
+· ⁴ · | · · · | · · ⁷
 
-· · 5 | · · 7 | 3 · ·
-7 · · | 5 · 2 | · · ·
-· · 8 | · 1 · | 2 · ·
+· · ⁵ | · · ⁷ | ³ · ·
+⁷ · · | ⁵ · ² | · · ·
+· · ⁸ | · ¹ · | ² · ·
 
-6 · 7 | · · 9 | ₄ 3 ·
-· 1 · | 2 · · | · 5 ·
-· · 9 | · · · | · · 8
+⁶ · ⁷ | · · ⁹ | 4 ³ ·
+· ¹ · | ² · · | · ⁵ ·
+· · ⁹ | · · · | · · ⁸
 ```
 
 _There is only one digit available : this one won't have to change and won't block the other numbers !_
+
+Speed here is around a couple of milliseconds in Go.
 
 ### Time vs Space tradeoffs
 
@@ -195,7 +197,13 @@ This is a classical Computer Science thing.
 
 Remember when I said that it is a good idea to count the number of possible digits to fit in each cell ? In fact, we can not only keep this number but the numbers themselves. We do not need to do a useless +1 and check if it is correct : just jump from 2 to 5 directly !
 
-This will increase matrix complexity from 9x9 to 9x9x9 maximum, but honestly this is nothing compared to the time we'll gain.
+This will increase space complexity from 9x9 to 9x9x9 (maximum), but honestly this is nothing compared to the time we'll save.
+
+Here we are, under a millisecond.
+
+![-](/static/images/sudoku.png)
+
+You can see my algorithm for Python [here](https://github.com/EwenQuim/sudoku-solver/blob/master/solver.py) and Go [here](https://github.com/EwenQuim/sudoku-solver-go/blob/master/solver.go).
 
 ## Python vs. Go benchmark
 
@@ -203,4 +211,4 @@ Basically Go is 1000x faster than the original Python 3.9 (I haven't tested CPyt
 
 You can see my algorithm for Python [here](https://github.com/EwenQuim/sudoku-solver/blob/master/solver.py) and Go [here](https://github.com/EwenQuim/sudoku-solver-go/blob/master/solver.go).
 
-WIP graphs.
+WIP: graphs
