@@ -3,7 +3,7 @@ date: 2021-02-01
 title: Solving a sudoku in a millisecond
 authors: ["ewenquim"]
 categories:
-  - memo
+  - maths
 tags:
   - maths
   - go
