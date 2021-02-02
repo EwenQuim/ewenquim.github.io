@@ -1,6 +1,6 @@
 ---
 date: 2021-02-01
-title: Solving sudokus in a millisecond (Go ⚡️ vs Python 🐌 benchmark)
+title: Solving a sudoku in a millisecond
 authors: ["ewenquim"]
 categories:
   - memo
