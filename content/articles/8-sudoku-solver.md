@@ -27,7 +27,9 @@ toc: true
 
 Ok so this basically is a sudoku. Try to solve it by hand if you want !
 
-We will solve it **in a millisecond** thanks to the new programming language [Go](https://golang.org/).
+We will solve it **in half a millisecond** thanks to the new programming language [Go](https://golang.org/).
+
+![-](https://raw.githubusercontent.com/EwenQuim/ewen.gitlab.io/master/static/images/sudoku.png)
 
 ## The story
 
@@ -201,7 +203,7 @@ This will increase space complexity from 9x9 to 9x9x9 (maximum), but honestly th
 
 Here we are, under a millisecond.
 
-![-](/static/images/sudoku.png)
+![-](https://raw.githubusercontent.com/EwenQuim/ewen.gitlab.io/master/static/images/sudoku.png)
 
 You can see my algorithm for Python [here](https://github.com/EwenQuim/sudoku-solver/blob/master/solver.py) and Go [here](https://github.com/EwenQuim/sudoku-solver-go/blob/master/solver.go).
 
@@ -209,6 +211,6 @@ You can see my algorithm for Python [here](https://github.com/EwenQuim/sudoku-so
 
 Basically Go is 1000x faster than the original Python 3.9 (I haven't tested CPython yet but honestly, this is kinda cheating + ugly).
 
-You can see my algorithm for Python [here](https://github.com/EwenQuim/sudoku-solver/blob/master/solver.py) and Go [here](https://github.com/EwenQuim/sudoku-solver-go/blob/master/solver.go).
+This perfectly illustrates the differences in performance between an interpreted language and a compiled language. Although compiled, Go remains very simple (no arithmetic on pointers as in C) and benefits from all these advantages. However, just because Go is very fast does not mean that you should abandon Python. Python is very easy to use, has many useful libraries and a huge community. However, since learning machine algorithms are often resource-intensive, it might be interesting to **develop the performance potential of Go**.
 
 WIP: graphs
