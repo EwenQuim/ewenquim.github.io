@@ -57,7 +57,7 @@ The prisoner's dilemma is one of the fundamentals of Game Theory.
 As every game in "normal form", it's described by 3 things ([see more](#game-in-normal-form)):
 
 - Players
-- Strategies for each player. It can be anything: {heads, tails} or {bet 1$, bet 5$, bet 10$}
+- Strategies for each player. It can be anything: {heads, tails} or {bet 1€, bet 5€, bet 10€}
 - Utility function: it maps every situation (strategies of every player) to a gain (or a loss)
 
 A 2-players game with finite strategies is often represented as a mere table. So it sums up like this for example:
@@ -367,12 +367,12 @@ A game is represented by 3 elements:
 
 $$\mathcal{G}=\\{\mathcal{N}, S, \mu\\}$$
 
-- a set of players {{< katex inline >}}\mathcal{N}= \{P_{1}, P_{2}, P_{3}, ..., P_{N}\}{{< /katex >}}
-- a set {{< katex inline >}}S=\{S_{1}, S_{2}, S_{3},..., S_{N}\}{{< /katex >}}
-  - the set {{< katex inline >}}S_{i}{{< /katex >}} is the set of strategies for player {{< katex inline >}}P_{i}{{< /katex >}}
-  - {{< katex inline >}}S_{i}{{< /katex >}} can be anything: {heads, tails} or {bet 1$, bet 5$, bet 10$}
-  - we call {{< katex inline >}}\mathfrak{S} = \times_{i=1}^{N}S_{i}{{< /katex >}} the set of every situation possible
-- a utility function: {{< katex inline >}}\mu:s \in \mathfrak{S} \mapsto (g_{1}, ..., g_{N}) \in \mathbb{R}^N{{< /katex >}}
+- a set of players $\mathcal{N}= \{P_{1}, P_{2}, P_{3}, ..., P_{N}\}$
+- a set $S=\{S_{1}, S_{2}, S_{3},..., S_{N}\}$
+  - the set $S_{i}$ is the set of strategies for player $P_{i}$
+  - $S\_{i}$ can be anything: {heads, tails} or {bet 1$, bet 5$, bet 10$}
+  - we call $\mathfrak{S} = \times_{i=1}^{N}S_{i}$ the set of every situation possible
+- a utility function: $\mu:s \in \mathfrak{S} \mapsto (g_{1}, ..., g_{N}) \in \mathbb{R}^N$
 
 A _zero-sum game_ is such that
 
@@ -391,18 +391,18 @@ We often represent two-players game with a matrix. The prisoner's dilemma is a s
 | **C** | (b, b) | (d, a) |
 | **D** | (a, d) | (c, c) |
 
-With {{< katex inline >}}a > b > c > d \geq 0{{< /katex >}}
+With $a > b > c > d \geq 0$
 
-In fact {{< katex inline >}}\mu(C,D)=(d, a){{< /katex >}} and so on.
+In fact $\mu(C,D)=(d, a)$ and so on.
 
 ### Strategies: general form
 
-The general form for a 1-memory strategy is a vector {{< katex inline >}}p = (p_{1}, p_{2}, p_{3}, p_{4}) \in [0, 1]^4{{< /katex >}} such as
+The general form for a 1-memory strategy is a vector $p = (p_{1}, p_{2}, p_{3}, p_{4}) \in [0, 1]^4$ such as
 
-|  X Y  |     C     |     D     |
-| :---: | :-------: | :-------: |
-| **C** | $$p_{1}$$ | $$p_{2}$$ |
-| **D** | $$p_{3}$$ | $$p_{4}$$ |
+|  X Y  |    C    |    D    |
+| :---: | :-----: | :-----: |
+| **C** | $p_{1}$ | $p_{2}$ |
+| **D** | $p_{3}$ | $p_{4}$ |
 
 ### Press and Dyson's work
 
@@ -410,74 +410,97 @@ The general form for a 1-memory strategy is a vector {{< katex inline >}}p = (p_
 
 A step from a round _n_ to another _(n+1)_ might be represented with a Markov transition matrix.
 
-$$M(p, q) = \begin{pmatrix}
-p_1 q_1 & p_1 (1-q_1) & (1-p_1) q_1 & (1-p_1) (1-q_1) \\
-p_2 q_3 & p_2 (1-q_3) & (1-p_2) q_3 & (1-p_2) (1-q_3) \\
-p_3 q_2 & p_3 (1-q_2) & (1-p_3) q_2 & (1-p_3) (1-q_2) \\
-p_4 q_4 & p_4 (1-q_4) & (1-p_4) q_4 & (1-p_4) (1-q_4)
-\end{pmatrix}$$
+$$
+M(p, q) = \begin{pmatrix}
+p_1 q_1 & p_1 (1-q_1) & (1-p_1) q_1 & (1-p_1) (1-q_1) \\\\\\
+p_2 q_3 & p_2 (1-q_3) & (1-p_2) q_3 & (1-p_2) (1-q_3) \\\\\\
+p_3 q_2 & p_3 (1-q_2) & (1-p_3) q_2 & (1-p_3) (1-q_2) \\\\\\
+p_4 q_4 & p_4 (1-q_4) & (1-p_4) q_4 & (1-p_4) (1-q_4) \\\\\\
+\end{pmatrix}
+$$
 
-We can easily verify that $$\forall (i,j), 0\le a_{ij} \le 1$$ and $$\forall i, \sum_{j}M_{ij}=1$$. The Markov matrix has 1 as eigenvalue as every Markov matrix.
+We can easily verify
 
-1. Let _M'=M-I_. _M'_ have 0 as eigenvalue so $$det(M')I=0$$
-2. According to the adjoint matrix formula, $$adj(M')M'=det(M')I=0$$
-3. Let's call _u_ one of the eigenvectors : $$Mu=u ; M'u=0$$
+$$
+\forall (i,j), 0\le a_{ij} \le 1
+$$
 
-We notice that \\(u^{T}M'=adj(M')M'\\), so every row of \\(adj(M')\\) is proportional to \\(u\\)!
+$$
+\forall i, \sum_{j}M_{ij}=1
+$$
+
+The Markov matrix has 1 as eigenvalue as every Markov matrix.
+
+1. Let _M'=M-I_. _M'_ have 0 as eigenvalue so $det(M')I=0$
+2. According to the adjoint matrix formula, $adj(M')M'=det(M')I=0$
+3. Let's call _u_ one of the eigenvectors : $Mu=u$ ; $M'u=0$
+
+We notice that $u^{T}M'=adj(M')M'$, so every row of $adj(M')$ is proportional to $u$
 
 Let's focus on the last row. Every term is +/- the determinant of a sub-matrix composed of the first three columns of _M'_.
 
 For example
 
-$$adj(M')_{4,1} = -\begin{vmatrix}
- & \mathcal{L}_{1} ignored & \\
-p_2 q_3 & p_2 (1-q_3)-1 & (1-p_2) q_3 \\
-p_3 q_2 & p_3 (1-q_2) & (1-p_3) q_2-1 \\
-p_4 q_4 & p_4 (1-q_4) & (1-p_4) q_4 \\
-\end{vmatrix}$$
+$$
+adj(M')_{4,1} = -\begin{vmatrix}
+p_2 q_3 & p_2 (1-q_3)-1 & (1-p_2) q_3 \\\\\\
+p_3 q_2 & p_3 (1-q_2) & (1-p_3) q_2-1 \\\\\\
+p_4 q_4 & p_4 (1-q_4) & (1-p_4) q_4
+\end{vmatrix}
+$$
 
 $$
 adj(M')_{4,2} = \begin{vmatrix}
-p_1 q_1-1 & p_1 (1-q_1) & (1-p_1) q_1 \\
- & \mathcal{L}_{2} ignored & \\
-p_3 q_2 & p_3 (1-q_2) & (1-p_3) q_2-1 \\
-p_4 q_4 & p_4 (1-q_4) & (1-p_4) q_4 \\
+p_1 q_1-1 & p_1 (1-q_1) & (1-p_1) q_1 \\\\\\
+p_3 q_2 & p_3 (1-q_2) & (1-p_3) q_2-1 \\\\\\
+p_4 q_4 & p_4 (1-q_4) & (1-p_4) q_4
 \end{vmatrix}
 $$
 
 And so on.
 
-Let's simplify the matrices above. The determinants are not changed by a linear operation on the columns. So let's do \\(\mathcal{C*{1}}+\mathcal{C*{2}}\mapsto \mathcal{C*{2}}\\) and $$\mathcal{C*{1}}+\mathcal{C*{3}}\mapsto \mathcal{C*{3}}$$. We get:
+Let's simplify the matrices above. The determinants are not changed by a linear operation on the columns. So let's do $\mathcal{C_{1}}+\mathcal{C_{2}}\mapsto \mathcal{C_{2}}$ and $\mathcal{C_{1}}+\mathcal{C_{3}}\mapsto \mathcal{C_{3}}$. We get:
 
 $$
 u_{1} = -\alpha\begin{vmatrix}
- & \mathcal{L}_{1} ignored & \\
- p_2 q_3 & p_2-1 & q_3 \\
-p_3 q_2 & p_3 & q_2-1 \\
-p_4 q_4 & p_4 & q_4 \\
+ & \mathcal{L}_{1} ignored & \\\\\\
+ p_2 q_3 & p_2-1 & q_3 \\\\\\
+p_3 q_2 & p_3 & q_2-1 \\\\\\
+p_4 q_4 & p_4 & q_4 \\\\\\
 \end{vmatrix}
 $$
 
 $$
 u_{1} = -\alpha\begin{vmatrix}
-p_1 q_1-1 & p_1 -1 & q_1-1 \\
- & \mathcal{L}_{2} ignored & \\
-p_3 q_2 & p_3 & q_2-1 \\
-p_4 q_4 & p_4 & q_4 \\
+p_1 q_1-1 & p_1 -1 & q_1-1 \\\\\\
+ & \mathcal{L}_{2} ignored & \\\\\\
+p_3 q_2 & p_3 & q_2-1 \\\\\\
+p_4 q_4 & p_4 & q_4 \\\\\\
 \end{vmatrix}
 $$
 
 And so on.
 
-So any dot multiplication by a vector $$f \in \mathbb{R}^4$$ results in the following
+So any dot multiplication by a vector $f \in \mathbb{R}^4$ results in the following
 
-$$\begin{align*} u \cdot f &= f_{1}u_{1} + f_{2}u_{2} + f_{3}u_{3} + f_{4}u_{4} \\ &= \begin{vmatrix} p_1 q_1-1 & p_1 -1 & q_1-1 & f_{1} \\ p_2 q_3 & p_2-1 & q_3 & f_{2} \\ p_3 q_2 & p_3 & q_2-1 & f_{3} \\ p_4 q_4 & p_4 & q_4 & f_{4} \\ \end{vmatrix} \end{align*}$$
+$$
+u \cdot f = f_{1}u_{1} + f_{2}u_{2} + f_{3}u_{3} + f_{4}u_{4}
+$$
+
+$$
+= \begin{vmatrix}
+p_1 q_1-1 & p_1 -1 & q_1-1 & f_{1} \\\\\\
+p_2 q_3 & p_2-1 & q_3 & f_{2} \\\\\\
+p_3 q_2 & p_3 & q_2-1 & f_{3} \\\\\\
+p_4 q_4 & p_4 & q_4 & f_{4} \\\\\\
+\end{vmatrix}
+$$
 
 What we notice is that the 2nd column is **entirely controlled** by _p_ and the 3rd by _q_ !
 
 $$u \cdot f = D(p, q, f)$$
 
-Now let $$g_{X}=(b, d, a, c)$$ and $$g_{Y}=(b, a, d, c)$$ the score vectors, and $$s_{X}$$ and $$s_{Y}$$ the mean scores at equilibrium.
+Now let $g_{X}=(b, d, a, c)$ and $g_{Y}=(b, a, d, c)$ the score vectors, and $s_{X}$ and $s_{Y}$ the mean scores at equilibrium.
 
 The formula becomes :
 
@@ -487,17 +510,17 @@ Let's apply a linear combination and here is the **golden formula**!
 
 $$\alpha s_{X}+ \beta s_{Y} + \gamma = \frac{D(p, q, \alpha g_{X}+ \beta g_{Y} + \gamma)}{D(p, q, 1)}$$
 
-All what we have to do now is to find the right _p_ to set the determinant to zero and we have a linear relation between $$s_{X}$$ and $$s_{Y}$$. We call these strategies Zero-Determinant (ZD) Strategies.
+All what we have to do now is to find the right _p_ to set the determinant to zero and we have a linear relation between $s_{X}$ and $s_{Y}$. We call these strategies Zero-Determinant (ZD) Strategies.
 
-Notice that we haven't used yet the fact that $$a > b > c > d \geq 0$$ ! It is valid for every 2-players symmetrical game.
+Notice that we haven't used yet the fact that $a > b > c > d \geq 0$ ! It is valid for every 2-players symmetrical game.
 
 #### Cancel the determinant: choosing Y score
 
-We focus on the case $$\alpha = 0$$ :
+We focus on the case $\alpha = 0$ :
 
 $$\beta s_{Y} + \gamma = \frac{D(p, q, \beta g_{Y} + \gamma)}{D(p, q, 1)}$$
 
-We can compute $$p_{2}, p_{3}$$ in terms of $$p_{1}, p_{4}$$, eliminating $$\beta$$ and $$\gamma$$.
+We can compute $p_{2}, p_{3}$ in terms of $p_{1}, p_{4}$, eliminating $\beta$ and $\gamma$.
 
 We then have:
 
@@ -508,7 +531,3 @@ $$p_{2} = \frac{p_{1}(a-c) - (1+p_{4}(a-b)}{b-c}$$
 When injecting into the _golden equation_, we have the unilaterally set Y's score value :
 
 $$s_{Y}= \frac{(1-p_{1})c+p_{4}b}{(1-p_{1})+p_{4}}$$
-
-#### Cancel the determinant: extortionate
-
-WIP
