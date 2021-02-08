@@ -25,7 +25,7 @@ You will see how to
 
 The main goal is to make your aliases available on every device you're connecting, so using a centralized system is recommended in this situation.
 
-### Storing aliases - _2min_
+### Storing aliases
 
 We won't save our aliases in the classic .bashrc (or .zshrc.) It's better to store them in a .aliases file and add `source .aliases` to the .bashrc/.zshrc.
 
@@ -48,7 +48,7 @@ alias lt='ls --human-readable --size -1 -S --classify'
 alias h="history"
 ```
 
-### Storing aliases online - _1min_
+### Storing aliases online
 
 As we are using a single file to store them, you can use [Github Gists](https://gist.github.com/). You can download my template with useful aliases [here](https://gist.github.com/EwenQuim/b3ba203bdacb17bc1a15815cbc58792d) or create your own and clone it to your computer.
 
@@ -56,7 +56,7 @@ I suggest you to **fork my file** (copy it and add it to your personal gists), s
 
 It will behave like a git repository, excepted it's for a single file.
 
-### Download them to a new device - _3s / device_
+### Download them to a new device
 
 Now that you have you aliases stored online, learn how to use them on your devices ! Every time you create a new VM, set up a new raspberry pi or connect to a new server, just run this (don't forget to replace with _your_ gist id and username if you forked my gist or used your personal file!):
 
@@ -96,7 +96,7 @@ Trust me, that's not _that_ odd to do so ;)
 
 Want to see, edit, and synchronise your aliases in only one command?
 
-### See, change, update your aliases - _2s/update_
+### See, change, update your aliases
 
 If you have forked my gist in [1](#1-use-a-remote-repository) :
 

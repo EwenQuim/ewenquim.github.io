@@ -1,7 +1,7 @@
 ---
 date: 2020-08-01
 title: Why you should start a blog now
-cover: https://unsplash.com/photos/GnvurwJsKaY
+cover: https://images.unsplash.com/photo-1500989145603-8e7ef71d639e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1955&q=80
 authors: ["ewenquim"]
 categories:
   - life
@@ -22,7 +22,7 @@ But writing is a **whole different thing**. To create is far more difficult than
 
 Even if you read serious articles, you're not really diving into the subjects. Writing will make you actually think and gather information -far more than if you just read an article. You'll become skilled in **structuring your thoughts** and in research.
 
-### The Pace
+### The Pace & Learning
 
 While [Hacker News](https://news.ycombinator.com/) and its Telegram channel spams you 10x a day with new technology news, writing an article cannot reasonably be done in an hour. For my most detailed articles, days of work are required and this is an amazing experience: I've learnt a lot of things doing this!
 
@@ -52,4 +52,6 @@ You'll say it is the same for blogs: the audience is blurry, unclear.
 
 The purpose of a blog really is different. Here I'm not talking about the old but popular [Skyblog](https://skyrock.com/) or [Blogger](https://www.blogger.com/) that are the ancestors social networks: I'm talking about real personal blogs.
 
-In a blog, **you don't share your lives, but your thoughts**. That's fundamentally different than sharing your last dress or meal: you expose your ideas, your creations. And it encourages you to think. There is no place left for superficial or casual stuff. If you read my blog, you doesn't know me, but you might be interested in my articles (I hope so). And _that_ is interesting.
+In a blog, **you don't share your lives, but your thoughts**. That's fundamentally different than sharing your last dress or meal: you expose your ideas, your creations. And it encourages you to think. There is no place left for superficial or casual stuff. If you read my blog, you doesn't know me, but you might be interested in my articles (I hope so).
+
+And _that_ is interesting.

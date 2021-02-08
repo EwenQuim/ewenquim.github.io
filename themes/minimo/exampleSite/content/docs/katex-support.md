@@ -66,10 +66,10 @@ The default configuration options look like this:
 
 - `library` [`Object`]:
   - `js` [`Object`]:
-      - `main` [`String`]: URL for the main KaTeX library
-      - `autoRender` [`String`]: URL for the [auto-render extension](https://khan.github.io/KaTeX/docs/autorender.html)
+    - `main` [`String`]: URL for the main KaTeX library
+    - `autoRender` [`String`]: URL for the [auto-render extension](https://khan.github.io/KaTeX/docs/autorender.html)
   - `css` [`Object`]:
-      - `main` [`String`]: URL for the main KaTeX stylesheet
+    - `main` [`String`]: URL for the main KaTeX stylesheet
 - `options` [`Object`]:
   - _[KaTeX configuration options](https://khan.github.io/KaTeX/docs/options.html)_
 

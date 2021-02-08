@@ -1,6 +1,5 @@
 ---
-date: 2020-09-01
-lastmod: 2020-09-01
+date: 2021-03-01
 title: Free browsing
 authors: ["ewenquim"]
 cover: https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80
@@ -12,25 +11,14 @@ tags:
 toc: true
 ---
 
-Ban spies forever.
+Ban spies 👀 forever (and ruin digital marketers 😎)
 
-And ruin the annoying Digital Marketing evil part.
+## Ban spies the _easy_ way - 5 min setup
 
-In this article, you will see:
+### Change your car (?!)
 
-- how to easily achieve mostly free browsing
-- why you should do this
-- how to achieve perfect anonymity
-
-## 1. Ban spies in 30 sec
-
-### Change your default browser
-
-For some, internet is the browser. But it isn't.
-
-> Internet is the roads, your Browser is your car.
->
-> And the roads are full of cameras.
+> Internet is the road, your browser is your car.
+> And the roads are **full of cameras**.
 
 And with different cars come different ways to ride! Some want to drive a red Ferrari that everyone can see and track.
 
@@ -40,41 +28,37 @@ That's what we'll do.
 
 Install the **Firefox** browser ([desktop](https://www.mozilla.org/fr/firefox/new/)) ([iOS](https://apps.apple.com/fr/app/navigateur-web-firefox/id989804926)) ([Android](https://play.google.com/store/apps/details?id=org.mozilla.firefox)).
 
-This will help you in many ways _without_ changing your browsing experience. It is not different of Chrome, Edge or Safari even in terms of speed or RAM usage.
+This will help you in many ways _without even_ changing your browsing experience. It is not different of Chrome, Edge or Safari even in terms of speed or RAM usage. In fact, you can customize the themes and extensions way farther than for other browsers!
 
-Why it is not more installed then ?
+If it is so incredible, why it is not more popular? 🤔
 
 Easy answer. Of course, Google will install its Chrome into its Android products. And it's the same for Microsoft and Edge installed by default on Windows or Apple with Safari on their iOS.
 
+Many people don't even think about changing the default apps - which suits Google and Apple well. Play smart ! 😉
+
 ### Install some extensions
 
-Install Privacy Badger on your Firefox browser. Even for smartphones, Firefox handles extensions perfectly well!
+Install [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/) on your Firefox browser. Even for **smartphones**, Firefox handles extensions perfectly well!
 
 ### Use a different search engine
 
 > "Search it on Google!" "Just Google it!"
 
-Google IS internet search.
+Google is now the synonym for "Search Engine" But there are many more out there ! Try switching to [Qwant](https://www.qwant.com/), [DuckDuckGo](https://duckduckgo.com/)... Simply go to the preferences and type "search engine", then switch !
 
-## 2. Part 2
-
-### Part 1
-
-Things
-
-### Part 2
-
-Things
-
-## 3. For nerds: you can go further.
+## For nerds: you can go further.
 
 ### Change the OS
 
-But the internet is Use linux.
+Use linux. Windows is trash anyway and macOS, even if it's very productive and handy, tries to control the user. With Linux you're truly free. It comes with a drawback : you can control more your computer, so... you have to understand _how_ you should control it!
 
 ### Use TOR
 
-What is Tor ?
+Maximum privacy. Combine it with a VPN to get the best combo.
+
+### Use an Auto Cleaner for Cookie
+
+I use [CAD](https://addons.mozilla.org/fr/firefox/addon/cookie-autodelete/) to automatically delete my cookies every time I close my browser. These things don't need to stay forever. I only allow (thanks to a whitelist system) a few websites.
 
 ### Deactivate JavaScript
 

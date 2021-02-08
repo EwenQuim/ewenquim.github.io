@@ -40,11 +40,11 @@ You know that git allows you to navigate through the history and modify older co
 
 ### Having fun... messing up everything!
 
-What you probably don't know is that you can even modify the metadata (eg. the date or the author)! Anyone can do that, just play with the .git folder at the root of your repository...
+What you probably don't know is that you can even modify the metadata (eg. the date or the author)! Anyone can do that, just play with the `.git` folder at the root of your repository...
 
-As everything in IT ~~and especially things that shouldn't be done~~, some guys automated it.
+As everything in IT ~~and especially about things that shouldn't be done~~, some guys automated it.
 
-So, funny guys even made a CLI to [blame someone else (for your bad code)](https://github.com/jayphelps/git-blame-someone-else), or [claim some good work (you didn't do)](https://github.com/SilasX/git-upstage).
+So, here we are with a CLI to [blame someone else (for your bad code)](https://github.com/jayphelps/git-blame-someone-else), and another CLI to [claim some good work (you didn't do)](https://github.com/SilasX/git-upstage).
 
 But if you work seriously, for example on an open-source project or in a company, this can be quite scary, and you may want to protect your git history.
 
