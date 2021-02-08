@@ -1,6 +1,7 @@
 ---
-date: 2021-01-28
-title: My own git server
+date: 2021-02-07
+title: Microsoft Word is trash 🚮
+type: draft
 categories:
   - memo
 tags:

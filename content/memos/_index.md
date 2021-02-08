@@ -1,6 +1,5 @@
 ---
 title: Memos
-type: page
 menu:
   - main
   - sidebar

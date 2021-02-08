@@ -13,7 +13,7 @@ excludeParents = ["page"]            # default: ["page"]
 [recent_posts]
 title = ""                            # default: "Recent Posts"
 length = 5                            # default: 5
-excludeTypes = ["page"]               # default: ["page"]
+excludeTypes = ["page", "draft"]               # default: ["page"]
 
 # Search Widget config
 [search]

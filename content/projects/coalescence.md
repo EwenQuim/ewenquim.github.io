@@ -2,7 +2,6 @@
 date: 2017-09-01
 lastmod: 2021-01-01
 title: Coalescence
-authors: ["ewenquim"]
 cover: https://images.unsplash.com/photo-1594621663599-037203c826d7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1939&q=80
 categories:
   - project

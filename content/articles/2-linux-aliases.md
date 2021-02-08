@@ -1,7 +1,7 @@
 ---
 date: 2020-04-01
 title: Efficient CLI aliases
-authors: ["ewenquim"]
+cover: https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8YmxvZ3xlbnwwfDB8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60
 categories:
   - tech
 tags:

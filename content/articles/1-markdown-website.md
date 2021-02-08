@@ -1,7 +1,6 @@
 ---
 date: 2020-03-01
 title: A minimalist website, why ?
-authors: ["ewenquim"]
 cover: https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjF8fG1pbmltYWxpc3R8ZW58MHwwfDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60
 categories:
   - tech

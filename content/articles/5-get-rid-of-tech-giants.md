@@ -2,7 +2,7 @@
 date: 2020-07-01
 lastmod: 2020-07-01
 title: Get rid of tech giants
-authors: ["ewenquim"]
+cover: https://cdn.pixabay.com/photo/2015/09/03/20/34/handcuffs-921290_1280.jpg
 categories:
   - tech
 tags:

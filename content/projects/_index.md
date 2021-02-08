@@ -1,6 +1,5 @@
 ---
 title: Projects
-type: page
 menu:
   - main
   - sidebar
