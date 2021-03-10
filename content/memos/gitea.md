@@ -12,6 +12,8 @@ You can find it [here](https://git.amethysts.studio) if it is available.
 
 ![website status](https://img.shields.io/website?down_message=offline&label=git%20server&up_message=available&url=https%3A%2F%2Fgit.amethysts.studio)
 
+_Update : OVH is on fire, servers are down 🔥 https://readhacker.news/s/4GnHm_
+
 Made with [gitea](https://gitea.io/), docker version.
 
 I set up an nginx reverse proxy for pretty domain name (without port) + https with certbot.
