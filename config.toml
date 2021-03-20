@@ -90,3 +90,8 @@ hrefTargetBlank = true
 lang = "en"
 languageName = "English"
 weight = 1
+
+[languages.fr]
+lang = "fr"
+languageName = "French"
+weight = 1
