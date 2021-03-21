@@ -3,7 +3,7 @@ title: Memos
 menu:
   - main
   - sidebar
-weight: 0
+weight: -100
 ---
 
 Some personal stuff.

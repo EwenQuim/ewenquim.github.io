@@ -81,6 +81,18 @@ tag = "tags"
 [permalinks]
 page = "/:slug/"
 
+[[menu.main]]
+name = "FR 🇫🇷"
+weight = 0
+identifier = "french"
+url = "../fr"
+
+[[menu.main]]
+name = "EN 🇬🇧"
+weight = 0
+identifier = "english"
+url = "../en"
+
 [blackfriday]
 hrefTargetBlank = true
 

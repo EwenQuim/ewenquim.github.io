@@ -6,13 +6,13 @@ categories:
   - tech
 tags:
   - internet
-  - foss
+  - libre
 toc: true
 ---
 
-Bannissez les espions 👀 pour toujours (et ruinez les spécialistes du marketing numérique 😎).
+Virez les traqueurs 👀 pour toujours (et ruinez le "digital marketing", petit bonus 😎).
 
-## Ban spies the _easy_ way - 5 min setup
+## Supprimez les traqueurs _méthode facile_ - 5 min
 
 ### Changez votre voiture ( ?!)
 
@@ -41,7 +41,7 @@ Installez [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-
 
 ### Utilisez un autre moteur de recherche
 
-> "Cherchez-le sur Google !" "Cherchez-le sur Google !"
+> "Cherche sur Google !"
 
 Google est maintenant le synonyme de "moteur de recherche". Mais il en existe bien d'autres ! Essayez de passer à [Qwant](https://www.qwant.com/), [DuckDuckGo](https://duckduckgo.com/)... Allez simplement dans les préférences et tapez "moteur de recherche", puis changez !
 
