@@ -1,6 +1,6 @@
 ---
 date: 2021-02-07
-title: Microsoft Word is trash 🚮
+title: Sovereignty
 type: draft
 categories:
   - memo
@@ -9,4 +9,5 @@ tags:
 toc: true
 ---
 
-Microsoft Word is a 
+Souverainete
+
