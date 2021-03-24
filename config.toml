@@ -85,13 +85,13 @@ page = "/:slug/"
 name = "FR 🇫🇷"
 weight = 0
 identifier = "french"
-url = "../fr"
+url = "/fr"
 
 [[menu.main]]
 name = "EN 🇬🇧"
 weight = 0
 identifier = "english"
-url = "../en"
+url = "/en"
 
 [blackfriday]
 hrefTargetBlank = true
