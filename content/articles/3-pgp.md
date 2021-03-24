@@ -32,7 +32,7 @@ git config --global user.email chuck.norris@example.com
 
 Git remembers what you filled and indicates your **name** and email for every commit.
 
-![Picture of Git history here](../.gitbook/assets/3-Git-history.png)
+![Picture of Git history here](/images/3-Git-history.png)
 
 You know that git allows you to navigate through the history and modify older commits.
 
@@ -143,11 +143,11 @@ Here the example on Github (it's similar on Gitlab):
 
 Insert your PGP key here
 
-![(Screenshot of Github PGP signing here)](../.gitbook/assets/3-Github-GPG-key.png)
+![(Screenshot of Github PGP signing here)](/images/3-Github-GPG-key.png)
 
 And here is the result : a 'verified' mention on your git history!
 
-![(Signed commit on Github)](../.gitbook/assets/3-Github-signed.png)
+![(Signed commit on Github)](/images/3-Github-signed.png)
 
 When you work, try to remember to verify the little tick ✅ before accepting Merge/Pull Requests!
 

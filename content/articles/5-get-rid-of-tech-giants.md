@@ -88,7 +88,7 @@ It is a matter of not putting all your eggs in the same basket.
 
 To illustrate that, I have regrouped apps on my phone by company. I've counted : 39% of my apps are made by 3 companies: Google, Microsoft or Samsung! Moreover, my phone is an Android, the _Google_ OS for smartphones...
 
-![Photos of 1/2 apps on my phone in only 3 company folder](../.gitbook/assets/3-smartphones-apps.jpg)
+![Photos of 1/2 apps on my phone in only 3 company folder](/images/3-smartphones-apps.jpg)
 
 You can do this yourself, it will be the same result... If you use an iPhone/iPad, even more of the apps actually belongs to one and only company!
 

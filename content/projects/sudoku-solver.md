@@ -28,7 +28,7 @@ Ok so this basically is a sudoku. Try to solve it by hand if you want !
 
 We will solve it **in half a millisecond** thanks to the new programming language [Go](https://golang.org/).
 
-![-](https://raw.githubusercontent.com/EwenQuim/ewen.gitlab.io/master/static/images/sudoku.png)
+![-](/images/sudoku.png)
 
 ## The story
 

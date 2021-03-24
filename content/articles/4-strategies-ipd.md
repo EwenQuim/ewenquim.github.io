@@ -47,7 +47,7 @@ At the end, they both betray each other and go to prison 5 years, whereas they c
 
 That is the prisoner's dilemma.
 
-![Betrayal](../.gitbook/assets/betrayal.png)
+![Betrayal](/images/betrayal.png)
 
 ### Representing games
 
@@ -98,7 +98,7 @@ The 'paradox' can be summarized in one sentence:
 
 > In the Prisoner's Dilemma game, none of Nash Equilibria are Pareto Optimums.
 
-![Paradox](../.gitbook/assets/paradox.jpg)
+![Paradox](/images/paradox.jpg)
 
 The only Nash Equilibrium is the situation {D, D}. And it isn't a Pareto Optimum: if both players cooperate, they can simultaneously increase their gain! But since it is a Nash equilibrium, neither player has any interest in doing that. Playing both Cooperate is sub-optimal as a player could easily betray to increase his winnings!
 
@@ -215,7 +215,7 @@ _The cautious_. He cooperates first.
 
 Here's what happened when playing 2,000 rounds (blue for the _cautious_ and red for the _resentful_)
 
-![Graph](../.gitbook/assets/resentful-vs-cautious.png)
+![Graph](/images/resentful-vs-cautious.png)
 
 The mean gain was 3 while they both cooperate, and then it breaks down when the cautious betrays for the first time (he had 1% chance to betray in the {C, C} situation). Then, the resentful always betrayed, even when the cautious tried to cooperate. That's why the gain of the cautious went down to 1 (as the Nash Equilibrium {D, D} utility is 1). Sometimes the cautious attempt to cooperates and gets 0 while the resentful gets 5 by defecting.
 
@@ -238,7 +238,7 @@ _The irresolute_
 
 against some other strategies, for 10,000 rounds.
 
-![Graph](../.gitbook/assets/irresolute-vs-all.png)
+![Graph](/images/irresolute-vs-all.png)
 
 It wins against some but loses against some...
 
@@ -250,11 +250,11 @@ A good thing that can be done is just counting the beaten strategies.
 
 We can easily see that the _thief_ wins every time, as it always play the dominent strategy.
 
-![Graph](../.gitbook/assets/thief-vs-all.png)
+![Graph](/images/thief-vs-all.png)
 
 But it isn't the strategy with the highest mean score: _tit-for-tat_ have a much better score for example.
 
-![Graph](../.gitbook/assets/tit4tat-vs-all.png)
+![Graph](/images/tit4tat-vs-all.png)
 
 It is interesting to see that following this strategy will cause you to have the same score than the opponent at the end of the 10,000 rounds.
 
@@ -279,7 +279,7 @@ For example with _Control 2_, we set the opponent's score to 2!
 
 Why 0.9, 0.7, 0.2 and 0.1? How do we chose the right coefficients? The answer is quite complicated but you can find in in [part 5](#5-appendix-real-maths-proofs).
 
-![Graph](../.gitbook/assets/control2-vs-all.png)
+![Graph](/images/control2-vs-all.png)
 
 Notice that the opponent's score is always 2 in this graph. But we might have a score lower than 2, so this strategy is quite useless, even if it it interesting...
 
@@ -292,7 +292,7 @@ _Control 1_
 | **C** | 0.0 | 0.0 |
 | **D** | 0.5 | 0.0 |
 
-![Graph](../.gitbook/assets/control1-vs-all.png)
+![Graph](/images/control1-vs-all.png)
 
 We can see some defects... in fact, the more you tend to 1, the more time it takes, and it seems 10,000 rounds isn't enough for some strategies to go to its limit.
 
@@ -315,13 +315,13 @@ _Extorsion 2_ set our score two times higher than the opponent's!
 | **C** | 8/9 | 0.5 |
 | **D** | 1/3 | 0.0 |
 
-![Graph](../.gitbook/assets/extorque2-vs-all.png)
+![Graph](/images/extorque2-vs-all.png)
 
 In fact, it is not really the score which is twice higher, but rather the part above 1 (the Nash Equilibrium)
 
 If we are greedy, we can try to set the ratio to 100. But here's what happen:
 
-![Graph](../.gitbook/assets/extorque100-vs-all.png)
+![Graph](/images/extorque100-vs-all.png)
 
 In fact, 100x0 = 0. By trying to reduce the opponent's score to 0 (in fact, 1 as we saw), we are reducing our own score.
 
@@ -329,7 +329,7 @@ In fact, 100x0 = 0. By trying to reduce the opponent's score to 0 (in fact, 1 as
 
 We can make these two incredible strategies fight each other.
 
-![Graph](../.gitbook/assets/control2-vs-extorque2.png)
+![Graph](/images/control2-vs-extorque2.png)
 
 They are compatible! _Control-2_ set the _Extorsion_'s score to 2 and _Extorsion-2_ makes sure that his score is twice the _Control_'s score (relatively to the utility at Nash Equilibrium of course).
 
