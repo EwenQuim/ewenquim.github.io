@@ -1,0 +1,6 @@
+{{- $dateFormat := ( .Site.Params.settings.dateFormat | default "2006, Jan 02" ) -}}
+<span class='edit-article-link'>
+  {{- partial "svg/icons" "edit" -}}
+  <span class='screen-reader-text'>{{ i18n "postedOn" }} </span>
+  <a href="https://gitlab.com/EwenQuim/EwenQuim.gitlab.io/-/edit/master/content/{{ .Page.Path }}">Edit or suggest changes</a>
+</span>
