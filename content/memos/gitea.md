@@ -14,9 +14,15 @@ You can find it [here](https://git.amethysts.studio) if it is available.
 
 _Update : [OVH is on fire 🔥](https://readhacker.news/s/4GnHm), servers are down_
 
-Made with [gitea](https://gitea.io/), docker version.
+## How it is made
 
-I set up an nginx reverse proxy for pretty domain name (without port) + https with certbot.
+I used [gitea](https://gitea.io/), docker version. It runs on my own VM hosted by OVH.
+
+I set up an nginx reverse proxy + https with certbot.
+
+## Why I made that
+
+I think it is really cool to have my own git server. Plus, setup was interesting and I learnt some things!
 
 ## What I learnt
 
