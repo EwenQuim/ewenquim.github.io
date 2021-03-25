@@ -82,14 +82,14 @@ tag = "tags"
 page = "/:slug/"
 
 [[menu.main]]
-name = "FR 🇫🇷"
-weight = 0
+name = "Accueil 🇫🇷"
+weight = -1001
 identifier = "french"
 url = "/fr"
 
 [[menu.main]]
-name = "EN 🇬🇧"
-weight = 0
+name = "Home 🇬🇧"
+weight = -1000
 identifier = "english"
 url = "/en"
 

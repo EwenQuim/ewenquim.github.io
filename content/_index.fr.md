@@ -1,8 +1,5 @@
 ---
-title: Menu
-menu:
-  - main
-weight: -1000
+title: Accueil 🇫🇷
 ---
 
 Bienvenue sur mon blog 🎉
