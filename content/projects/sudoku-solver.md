@@ -10,6 +10,10 @@ tags:
 toc: true
 ---
 
+A few years ago I made a Python algorithm to solve sudokus in seconds.
+
+Seconds ? Bah, let's do better and solve it **in half a millisecond** thanks to the [Go](https://golang.org/) programming language.
+
 ```bash
 · · · | · · · | ¹ · ·
 ³ · ¹ | ⁷ ⁹ · | · · ·
@@ -24,9 +28,7 @@ toc: true
 · · ⁹ | · · · | · · ⁸
 ```
 
-Ok so this basically is a sudoku. Try to solve it by hand if you want !
-
-We will solve it **in half a millisecond** thanks to the new programming language [Go](https://golang.org/).
+We will use this sudoku as an example through this article.
 
 ![-](/images/sudoku.png)
 
@@ -34,9 +36,9 @@ We will solve it **in half a millisecond** thanks to the new programming languag
 
 My grandmother loves sudoku, so I wanted to make a tool to help her find the answer.
 
-The first step is to design an algorithm. Then, ideally one should try to create an application with computer vision to identify the numbers and then apply the algorithm.
+The first step is to design an algorithm. Then, ideally one should try to create an application with computer vision to identify the numbers and then apply the algorithm. But this article will mainly focus on the algorithm.
 
-So I wrote an algorithm for the first time 5 years ago, in Python. It was able to solve a sudoku in a few seconds. Now, I have improved and rewritten it in Go, in order to learn this language and explore its possibilities.
+So I wrote an algorithm for the first time 5 years ago, in Python. It was able to solve a sudoku in a few seconds. Now, I have improved it and rewritten it in Go, in order to learn this language and explore its possibilities.
 
 Here is how to solve a sudoku in a millisecond. ⚡️
 
