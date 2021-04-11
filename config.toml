@@ -53,7 +53,7 @@ enable = true
 [params.widgets]
 header = []
 homepage = ["recent_posts"]
-sidebar = ["about", "sidebar_menu", "taxonomy_cloud", "search", "social_menu", "darkmode_button"]
+sidebar = ["about", "darkmode_button", "sidebar_menu", "taxonomy_cloud", "search", "social_menu"]
 footer = ["taxonomy_cloud"]
 
 [params.seo]

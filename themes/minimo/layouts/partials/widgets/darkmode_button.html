@@ -1,6 +1,6 @@
-{{- $defaultConfig := .Site.Data.config.default.widgets.darkmode_button -}}
-{{- $configData := ( or .Site.Data.config.widgets.darkmode_button $defaultConfig ) -}}
-{{- $lang := .Site.Language.Lang -}}
+{{- $defaultConfig := .Site.Data.config.default.widgets.darkmode_button -}} {{-
+$configData := ( or .Site.Data.config.widgets.darkmode_button $defaultConfig )
+-}} {{- $lang := .Site.Language.Lang -}}
 
 <section class="widget widget-darkmode sep-after">
   <div class="js-toggle-wrapper">
@@ -47,6 +47,7 @@
   .js-toggle-wrapper {
     display: table;
     margin: 0 auto;
+    margin-right: 0;
   }
 
   .js-toggle {
