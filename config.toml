@@ -81,13 +81,13 @@ tag = "tags"
 [permalinks]
 page = "/:slug/"
 
-[[sidebar_menu.main]]
+[[menu.main]]
 name = "Accueil 🇫🇷"
 weight = -1001
 identifier = "french"
 url = "/fr"
 
-[[sidebar_menu.main]]
+[[menu.main]]
 name = "Home 🇬🇧"
 weight = -1000
 identifier = "english"
