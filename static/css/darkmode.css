@@ -1,7 +1,33 @@
 body.dark-mode,
+body.dark-mode > div.site > #sidebar {
+  background: rgb(45, 45, 45);
+}
 body.dark-mode main *,
+body.dark-mode > div.site .widget-title {
+  color: #f5f5f5;
+}
+
+body.dark-mode main p,
 body.dark-mode > div.site > #sidebar,
 body.dark-mode > div.site section.widget.widget-taxonomy_cloud li > a {
-  background: rgb(45, 45, 45);
+  color: #cccccc;
+}
+
+body.dark-mode div.site div#sidebar section.widget.widget-sidebar_menu a,
+body.dark-mode nav#main-menu,
+body.dark-mode nav#main-menu a {
+  color: #cccccc;
+}
+
+body.dark-mode div.site div#sidebar section.widget.widget-sidebar_menu a:hover,
+body.dark-mode nav#main-menu a:hover {
   color: #f5f5f5;
+}
+
+html body.dark-mode header h2.title.site-title a {
+  color: var(--color-accent);
+}
+
+html body.dark-mode header h2.title.site-title a:hover {
+  color: #593292;
 }
