@@ -24,9 +24,9 @@ title404 = "Nothing's here!"
 
 [params.assets]
 favicon = "favicon.ico"
-customCSS = ["css/custom.css"]
+customCSS = ["css/darkmode.css"]
 customJS = ["js/custom.js"]
-gopher = "" # used in 404 template ( Generator: https://gopherize.me )
+gopher = "0e5b46f74bc173b80c88d3f968d0c0cc92e57f0d" # used in 404 template ( Generator: https://gopherize.me )
 
 [params.copyright]
 prefix = ""
@@ -81,13 +81,13 @@ tag = "tags"
 [permalinks]
 page = "/:slug/"
 
-[[menu.main]]
+[[sidebar_menu.main]]
 name = "Accueil 🇫🇷"
 weight = -1001
 identifier = "french"
 url = "/fr"
 
-[[menu.main]]
+[[sidebar_menu.main]]
 name = "Home 🇬🇧"
 weight = -1000
 identifier = "english"
