@@ -130,7 +130,7 @@ $configData := ( or .Site.Data.config.widgets.darkmode_button $defaultConfig )
     border-radius: 50%;
     background-color: #fafafa;
     box-sizing: border-box;
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    /* transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0ms; */
     transform: translateX(0);
   }
 
@@ -164,15 +164,33 @@ $configData := ( or .Site.Data.config.widgets.darkmode_button $defaultConfig )
     } else {
       body.classList.remove("dark-mode");
       setTimeout(function () {
-        localStorage.removeItem("darkMode");
+        // localStorage.removeItem("darkMode");
+        localStorage.setItem("darkMode", "false");
       }, 100);
     }
   });
 
   //Check Storage. Keep user preference on page reload
-  if (localStorage.getItem("darkMode")) {
+  if (localStorage.getItem("darkMode") === "true") {
     //body.classList.add('dark-mode');
     switcher.classList.add("js-toggle--checked");
     body.classList.add("dark-mode");
+  }
+
+  if (localStorage.getItem("darkMode") === null) {
+    console.log("check");
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      // dark mode
+      switcher.classList.add("js-toggle--checked");
+      body.classList.add("dark-mode");
+      localStorage.setItem("darkMode", "true");
+    } else {
+      switcher.classList.remove("js-toggle--checked");
+      body.classList.remove("dark-mode");
+      localStorage.setItem("darkMode", "false");
+    }
   }
 </script>
