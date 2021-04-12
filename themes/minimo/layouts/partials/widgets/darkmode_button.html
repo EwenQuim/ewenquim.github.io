@@ -178,7 +178,6 @@ $configData := ( or .Site.Data.config.widgets.darkmode_button $defaultConfig )
   }
 
   if (localStorage.getItem("darkMode") === null) {
-    console.log("check");
     if (
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
