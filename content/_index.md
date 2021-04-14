@@ -12,6 +12,5 @@ I'm writing [memos](memos) for myself. They are public but might not be interest
 
 Version francaise [🇫🇷 ici](fr) (_seuls quelques Articles sont disponibles_)
 
-Links to RSS Feeds
-- [for everything](https://ewen.quimerch.com/index.xml)
-- [for articles](https://ewen.quimerch.com/articles/index.xml)
+- [RSS Feed for all posts](https://ewen.quimerch.com/index.xml)
+- [RSS Feed for articles](https://ewen.quimerch.com/articles/index.xml)
