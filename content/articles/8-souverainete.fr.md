@@ -1,6 +1,6 @@
 ---
 date: 2021-04-09
-title: Souveraineté des systèmes d'information: entreprises
+title: Souveraineté des systèmes d'information en entreprise
 cover: https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8c2VydmVyfGVufDB8MHwwfA%3D%3D&auto=format&fit=crop&w=900&q=60
 tags:
   - internet
