@@ -10,10 +10,9 @@ tags:
 toc: true
 ---
 
-La souveraineté économique est un sujet omniprésent dans la société actuelle, et était au centre de toutes les conversations en Europe lors du passage a la monnaie unique et centralisée, l'euro. 
+La souveraineté économique est un sujet omniprésent dans la société actuelle, et était au centre de toutes les conversations en Europe lors du passage a la monnaie unique et centralisée, l'euro.
 
 Aujourd'hui, nous observons également cette tendance à la centralisation dans le domaine de la donnée, que ce soit au niveau des particuliers, des entreprises ou même des États. Cette tendance a la centralisation crée une dépendance qui s’avère être directement une perte de contrôle, savoir et puissance : une perte de souveraineté. Nous allons voir que cette tendance est loin d’être une fatalité : il ne tient qu'a chacun de ne pas suivre cet élan global. Toutefois, cette lutte pour la souveraineté n'est pas sans obstacles.
-
 
 ## En entreprise
 
@@ -39,8 +38,6 @@ Pour etre un peu plus concret, disons que vous bâtissez votre business sur un t
 
 Ce n'est pas assez concret ? Rien ne vous choque ? Bon, on va être plus direct.
 
-Le jour ou Amazon a décidé que _Parler_ (un réseau social) ne lui plaisait pas, Amazon a simplement coupe les serveurs de _Parler_. Et _Parler_ s'est retrouve hors de service. 
+Le jour ou Amazon a décidé que _Parler_ (un réseau social) ne lui plaisait pas, Amazon a simplement coupe les serveurs de _Parler_. Et _Parler_ s'est retrouve hors de service.
 
 On pourrait s'indigner, trouver cela injuste de la part d'Amazon de tuer un business qui ne lui a a priori "rien fait", mais c'est entièrement de la faute de _Parler_. La délégation, c'est une question de confiance. Est-ce que vous donnerez la clef de votre bureau a quelqu'un d'autre ?
-
-
