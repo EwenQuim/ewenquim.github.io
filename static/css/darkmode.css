@@ -5,25 +5,25 @@ body.dark-mode > div.site > #sidebar {
 body.dark-mode main *,
 body.dark-mode header#header div.header-info h1.site-title.title,
 body.dark-mode > div.site .widget-title {
-  color: #f5f5f5;
+  color: #fff;
 }
 
 body.dark-mode main p, /*yo*/
 .header-info,
 body.dark-mode > div.site > #sidebar,
 body.dark-mode > div.site section.widget.widget-taxonomy_cloud li > a {
-  color: #cccccc;
+  color: #ddd;
 }
 
 body.dark-mode div.site div#sidebar section.widget.widget-sidebar_menu a,
 body.dark-mode nav#main-menu,
 body.dark-mode nav#main-menu a {
-  color: #cccccc;
+  color: #ddd;
 }
 
 body.dark-mode div.site div#sidebar section.widget.widget-sidebar_menu a:hover,
 body.dark-mode nav#main-menu a:hover {
-  color: #f5f5f5;
+  color: #fff;
 }
 
 html body.dark-mode header h2.title.site-title a {

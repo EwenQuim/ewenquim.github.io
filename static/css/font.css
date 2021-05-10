@@ -1,9 +1,15 @@
-p {
+p,
+#content ul,
+#content ol {
   font-family: "Spectral", Georgia;
 }
 
 @font-face {
   font-family: "Spectral";
-  src: url("../fonts/Spectral-Regular.woff") format("woff"),
-    url("../fonts/Spectral-Regular.ttf") format("truetype");
+  src: url("../fonts/Spectral-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Spectral";
+  src: url("../fonts/Spectral-Bold.woff2") format("woff2");
+  font-weight: bold;
 }
