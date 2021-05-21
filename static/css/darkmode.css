@@ -1,4 +1,4 @@
-body.dark-mode,
+/* body.dark-mode,
 body.dark-mode > div.site > #sidebar {
   background: rgb(45, 45, 45);
 }
@@ -8,7 +8,7 @@ body.dark-mode > div.site .widget-title {
   color: #fff;
 }
 
-body.dark-mode main p, /*yo*/
+body.dark-mode main p,
 .header-info,
 body.dark-mode > div.site > #sidebar,
 body.dark-mode > div.site section.widget.widget-taxonomy_cloud li > a {
@@ -32,4 +32,53 @@ html body.dark-mode header h2.title.site-title a {
 
 html body.dark-mode header h2.title.site-title a:hover {
   color: #593292;
+} */
+
+/* GENERAL */
+/* .body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.1s;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+  width: 70%;
+  transform: translateY(5%);
+}
+
+label {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 100px;
+  position: relative;
+  margin: 1.8rem 0 4rem 0;
+  cursor: pointer;
+}
+.toggle {
+  position: absolute;
+  width: 50%;
+  background-color: #fff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+} */
+
+/* -------- Switch Styles ------------*/
+[type="checkbox"] {
+  display: none;
+}
+/* Toggle */
+[type="checkbox"]:checked ~ .general-theme * {
+  background-color: #111;
+  color: #ddd;
+  transition: ease-in 100ms;
 }
