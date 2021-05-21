@@ -63,7 +63,7 @@ html body.dark-mode header h2.title.site-title a:hover {
 }
 /* Toggle */
 #dark-mode-switch:checked ~ .general-theme * {
-  background-color: #252222;
+  background-color: #222020;
   color: #ddd;
   /* transition: ease-in 100ms; */
 }
