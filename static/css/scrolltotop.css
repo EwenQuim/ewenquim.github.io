@@ -1,7 +1,18 @@
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 #scrolltotop {
   position: -webkit-sticky;
   position: fixed;
   bottom: 0;
   right: 0;
   margin: 1em;
+  transition: transform 100ms ease-in;
+  border: #888;
+  border-width: 2px;
+  border-style: solid;
+  padding: 3px 6px 3px 6px;
 }
