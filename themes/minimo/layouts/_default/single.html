@@ -1,4 +1,5 @@
 {{ partial "header" . }}
+{{ partial "custom/scrolltotop"}}
 
 <article lang='{{ .Params.lang | default .Lang }}' class='entry'>
   {{ partial "entry/header" . }}
@@ -9,5 +10,6 @@
 </article>
 {{ partial "nav/entry_nav" . }}
 {{ partial "entry/comments" . }}
+
 
 {{ partial "footer" . }}
