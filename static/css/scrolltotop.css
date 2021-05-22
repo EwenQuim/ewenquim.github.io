@@ -15,4 +15,9 @@
   border-width: 2px;
   border-style: solid;
   padding: 3px 6px 3px 6px;
+  background-color: #fff;
+}
+
+#dark-mode-switch:checked ~ .general-theme #scrolltotop {
+  background: #222020;
 }

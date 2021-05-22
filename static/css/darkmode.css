@@ -1,17 +1,10 @@
+/* Dark Background */
 #dark-mode-switch:checked ~ .general-theme,
 #dark-mode-switch:checked ~ .general-theme > div.site > #sidebar {
-  background: rgb(45, 45, 45);
-}
-#dark-mode-switch:checked ~ .general-theme main *,
-#dark-mode-switch:checked
-  ~ .general-theme
-  header#header
-  div.header-info
-  h1.site-title.title,
-#dark-mode-switch:checked ~ .general-theme > div.site .widget-title {
-  color: #fff;
+  background: #222020;
 }
 
+/* Text color */
 #dark-mode-switch:checked ~ .general-theme main p,
 .header-info,
 #dark-mode-switch:checked ~ .general-theme > div.site > #sidebar,
@@ -20,10 +13,7 @@
   > div.site
   section.widget.widget-taxonomy_cloud
   li
-  > a {
-  color: #ddd;
-}
-
+  > a,
 #dark-mode-switch:checked
   ~ .general-theme
   div.site
@@ -35,6 +25,14 @@
   color: #ddd;
 }
 
+/* Important text accent */
+#dark-mode-switch:checked ~ .general-theme main *,
+#dark-mode-switch:checked
+  ~ .general-theme
+  header#header
+  div.header-info
+  h1.site-title.title,
+#dark-mode-switch:checked ~ .general-theme > div.site .widget-title,
 #dark-mode-switch:checked
   ~ .general-theme
   div.site
