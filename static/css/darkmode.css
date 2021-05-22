@@ -1,69 +1,70 @@
-/* body.dark-mode,
-body.dark-mode > div.site > #sidebar {
+#dark-mode-switch:checked ~ .general-theme,
+#dark-mode-switch:checked ~ .general-theme > div.site > #sidebar {
   background: rgb(45, 45, 45);
 }
-body.dark-mode main *,
-body.dark-mode header#header div.header-info h1.site-title.title,
-body.dark-mode > div.site .widget-title {
+#dark-mode-switch:checked ~ .general-theme main *,
+#dark-mode-switch:checked
+  ~ .general-theme
+  header#header
+  div.header-info
+  h1.site-title.title,
+#dark-mode-switch:checked ~ .general-theme > div.site .widget-title {
   color: #fff;
 }
 
-body.dark-mode main p,
+#dark-mode-switch:checked ~ .general-theme main p,
 .header-info,
-body.dark-mode > div.site > #sidebar,
-body.dark-mode > div.site section.widget.widget-taxonomy_cloud li > a {
+#dark-mode-switch:checked ~ .general-theme > div.site > #sidebar,
+#dark-mode-switch:checked
+  ~ .general-theme
+  > div.site
+  section.widget.widget-taxonomy_cloud
+  li
+  > a {
   color: #ddd;
 }
 
-body.dark-mode div.site div#sidebar section.widget.widget-sidebar_menu a,
-body.dark-mode nav#main-menu,
-body.dark-mode nav#main-menu a {
+#dark-mode-switch:checked
+  ~ .general-theme
+  div.site
+  div#sidebar
+  section.widget.widget-sidebar_menu
+  a,
+#dark-mode-switch:checked ~ .general-theme nav#main-menu,
+#dark-mode-switch:checked ~ .general-theme nav#main-menu a {
   color: #ddd;
 }
 
-body.dark-mode div.site div#sidebar section.widget.widget-sidebar_menu a:hover,
-body.dark-mode nav#main-menu a:hover {
+#dark-mode-switch:checked
+  ~ .general-theme
+  div.site
+  div#sidebar
+  section.widget.widget-sidebar_menu
+  a:hover,
+#dark-mode-switch:checked ~ .general-theme nav#main-menu a:hover {
   color: #fff;
 }
 
-html body.dark-mode header h2.title.site-title a {
+html #dark-mode-switch:checked ~ .general-theme header h2.title.site-title a {
   color: var(--color-accent);
 }
 
-html body.dark-mode header h2.title.site-title a:hover {
+html
+  #dark-mode-switch:checked
+  ~ .general-theme
+  header
+  h2.title.site-title
+  a:hover {
   color: #593292;
-} */
-
-/* GENERAL */
-/* .body {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  background-color: #fff;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.1s;
 }
-
-.content {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  text-align: center;
-  width: 70%;
-  transform: translateY(5%);
-}
-
 
 /* -------- Switch Styles ------------*/
 #dark-mode-switch {
   display: none;
 }
 /* Toggle */
-#dark-mode-switch:checked ~ .general-theme * {
-  background-color: #222020;
+/* #dark-mode-switch:checked ~ .general-theme {
+  background-color: #521;
   color: #ddd;
-  /* transition: ease-in 100ms; */
-}
+  transition: ease-in 1000ms;
+} */
