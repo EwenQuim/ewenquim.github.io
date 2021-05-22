@@ -206,7 +206,7 @@ Here we are, under a millisecond.
 
 ![-](https://raw.githubusercontent.com/EwenQuim/ewen.gitlab.io/master/static/images/sudoku.png)
 
-You can see my algorithm for Python [here](https://github.com/EwenQuim/sudoku-solver/blob/master/solver.py) and Go [here](https://github.com/EwenQuim/sudoku-solver-go/blob/master/solver.go).
+You can see my algorithm for Python [here](https://github.com/EwenQuim/sudoku-solver/) and Go [here](https://github.com/EwenQuim/sudoku-solver-go/).
 
 ## Python vs. Go benchmark
 
