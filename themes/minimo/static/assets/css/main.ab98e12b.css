@@ -612,33 +612,10 @@ label {
 body {
   background: #fff;
 }
-/* html
-  body.page.type-projects.has-sidebar
-  div.general-theme
-  div.site
-  div.main
-  nav#main-menu.menu.main-menu,
-html
-  body.page.type-projects.has-sidebar
-  div.general-theme
-  div.site
-  div.main
-  main#content
-  article.entry
-  header.header.entry-header,
-html
-  body.page.type-projects.has-sidebar
-  div.general-theme
-  div.site
-  div.main
-  main#content
-  article.entry
-  div.container.entry-content {
-  overflow-x: hidden;
-} */
+
 .site {
   flex: 1;
-  overflow-x: hidden;
+  width: 100%;
 }
 .main {
   width: 100%;
