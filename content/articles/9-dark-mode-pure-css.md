@@ -1,8 +1,146 @@
-{{- $defaultConfig := .Site.Data.config.default.widgets.darkmode_button -}} {{-
-$configData := ( or .Site.Data.config.widgets.darkmode_button $defaultConfig )
--}}
+---
+date: 2021-05-24
+title: Dark mode in pure CSS
+cover: https://images.unsplash.com/photo-1536613105185-09ea1249a2cb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2265&q=80
+tags:
+  - tuto
+  - css
+toc: true
+---
 
-<section class="widget widget-darkmode sep-after">
+So here's how to do a CSS-only dark mode for your website ! I'll show you how to do mine, but feel free to adapt it as you want!
+
+## Why would I do that?
+
+- Writing JavaScript sucks
+- Consuming JavaScript as a client sucks
+- Accessibility: some people browse internet without internet, or with extensions like NoScript
+- It's actually simple to do this with pure CSS, so why not?
+
+## How can CSS handle both possible states?
+
+You probably wonder how can CSS change the color theme of a whole page. Because, knowing which color theme to display require a "switch", something that can be "activated"... Is JavaScript the only solution?
+
+No, these things exists in bare HTML too! There are many tags that are interactive. Here, we'll use an `input` tag, with a checkbox. If the checkbox is checked, the Dark Mode will be active, and the light mode otherwise.
+
+The CSS can access to the checkbox state with the `:checked` pseudo-class (there are [many more](https://www.w3schools.com/css/css_pseudo_classes.asp)!).
+
+```css
+input#dark-mode-switch:checked {
+  background: #222220;
+}
+```
+
+## Changing the theme
+
+There is a problem in the previous code snippet.
+
+```css {hl_lines=1}
+input#dark-mode-switch:checked {
+  /* ↑ here */
+  background: #222220;
+}
+```
+
+We are selecting the switch itself, but it doesn't matter to us, we want to change the whole body! And with CSS, it isn't possible to select a parent tag...
+
+But, it is possible to select a neighbour or a child tag ! Here, we'll select place the switch right after the `body` tag, and we'll insert the whole site inside a div right after, just like this:
+
+```html {hl_lines=["5-6",9]}
+<head>
+  <!-- your head --->
+</head>
+<body>
+  <input type="checkbox" id="dark-mode-switch" />
+  <div class="general-theme">
+    <div class="my-website">
+      <!-- your website content --->
+    </div>
+  </div>
+</body>
+```
+
+Now, we can use the `1 ~ 2` CSS selector (that means "selector 2 is a tag with the same parent node as the selector 1")
+
+```css
+input#dark-mode-switch:checked ~ .general-theme {
+  /* dark theme */
+  background: #222220;
+}
+
+.general-theme {
+  /* light theme */
+  background: #fff;
+}
+```
+
+We need something to activate the checkbox: a `label`
+
+```html
+<label for="dark-mode-switch" class="ewen-toggle"> Toggle! </label>
+```
+
+If you want a fancy switch, just checkout the last chapter of this article ;)
+
+## Storing the theme
+
+If you've gone this far and copy-pasted the code to your website, you might have noticed that when navigating, the theme isn't stored. When navigated from a dark-mode activated page to another page, the theme goes back to light mode. How can we prevent that?
+
+Unluckily, this isn't just "displaying things" anymore. If you want your theme to be persistent across your pages, you have no other choice than using cookies or local storage, which require javascript.
+
+```js
+var switcher = document.getElementById("dark-mode-switch");
+
+// Click on dark mode icon. Add dark mode classes and wrappers. Store user preference through sessions
+switcher.addEventListener("change", function () {
+  // If dark mode is selected
+  if (this.checked) {
+    // set the a variable in user's browser
+    localStorage.setItem("darkMode", "true");
+  } else {
+    setTimeout(function () {
+      localStorage.setItem("darkMode", "false");
+    }, 100);
+  }
+});
+```
+
+Now that the variable is set, we need to load user's preference each time they visit the website. We'll get the value from local storage, and simply check the checkbox we talked about earlier!
+
+```js
+//Check Storage. Keep user preference on page reload
+if (localStorage.getItem("darkMode") === "true") {
+  //body.classList.add('dark-mode');
+  switcher.checked = true;
+}
+```
+
+## Setting defaults
+
+Visitors may only visit your site once, and it's better to respect their default settings. You can set the default's theme to their preferred color with the following code.
+
+```js
+if (localStorage.getItem("darkMode") === null) {
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    // dark mode
+    switcher.checked = true;
+    localStorage.setItem("darkMode", "true");
+  } else {
+    switcher.checked = false;
+    localStorage.setItem("darkMode", "false");
+  }
+}
+```
+
+## Appendix: the pretty button code
+
+Just copy-paste this.
+
+```html
+<div class="sidebar-toggler">
   <div class="ewen-toggle-wrapper">
     <label for="dark-mode-switch" class="ewen-toggle">
       <div class="ewen-toggle-track">
@@ -33,154 +171,113 @@ $configData := ( or .Site.Data.config.widgets.darkmode_button $defaultConfig )
       />
     </label>
   </div>
-</section>
+</div>
+```
 
-<style>
-  /*
-       * Dark Mode Toggle
-       * Copyright (c) 2015 instructure-react
-       * Forked from Dan Abramov's personal blog
-       * https://github.com/gaearon/overreacted.io/blob/master/src/components/Toggle.css
-       * MIT License
-      **/
+```css
+.ewen-toggle {
+  touch-action: pan-x;
 
-  .ewen-toggle {
-    touch-action: pan-x;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
 
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    border: 0;
-    padding: 0;
+  -webkit-touch-callout: none;
+  user-select: none;
 
-    -webkit-touch-callout: none;
-    user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
 
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-tap-highlight-color: transparent;
-  }
+.ewen-toggle-screenreader-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
 
-  .ewen-toggle-screenreader-only {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
+.ewen-toggle-track {
+  width: 50px;
+  height: 24px;
+  padding: 0;
+  border-radius: 30px;
+  background-color: #000;
+}
 
-  .ewen-toggle-track {
-    width: 50px;
-    height: 24px;
-    padding: 0;
-    border-radius: 30px;
-    background-color: #000;
-  }
+#dark-mode-switch:checked ~ .general-theme .ewen-toggle-track {
+  width: 50px;
+  height: 24px;
+  padding: 0;
+  border-radius: 30px;
+  background-color: #000;
+}
 
-  #dark-mode-switch:checked ~ .general-theme .ewen-toggle-track {
-    width: 50px;
-    height: 24px;
-    padding: 0;
-    border-radius: 30px;
-    background-color: #000;
-  }
+.ewen-toggle-track-moon {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  left: 5px;
+  top: 0px;
+  bottom: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+  line-height: 0;
+  opacity: 0;
+}
 
+#dark-mode-switch:checked
+  ~ .general-theme
+  .ewen-toggle
   .ewen-toggle-track-moon {
-    position: absolute;
-    width: 17px;
-    height: 17px;
-    left: 5px;
-    top: 0px;
-    bottom: 0px;
-    margin-top: auto;
-    margin-bottom: auto;
-    line-height: 0;
-    opacity: 0;
-  }
+  opacity: 1;
+  background-color: #000 !important;
+}
 
-  #dark-mode-switch:checked
-    ~ .general-theme
-    .ewen-toggle
-    .ewen-toggle-track-moon {
-    opacity: 1;
-    background-color: #000 !important;
-  }
+.ewen-toggle-track-sun {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  right: 5px;
+  top: 0px;
+  bottom: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+  line-height: 0;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
 
-  .ewen-toggle-track-sun {
-    position: absolute;
-    width: 17px;
-    height: 17px;
-    right: 5px;
-    top: 0px;
-    bottom: 0px;
-    margin-top: auto;
-    margin-bottom: auto;
-    line-height: 0;
-    opacity: 1;
-    transition: opacity 0.25s ease;
-  }
+#dark-mode-switch:checked ~ .general-theme .ewen-toggle-track-sun {
+  opacity: 0;
+}
 
-  #dark-mode-switch:checked ~ .general-theme .ewen-toggle-track-sun {
-    opacity: 0;
-  }
+.ewen-toggle-thumb {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #fafafa;
+  box-sizing: border-box;
+  transform: translateX(0);
+}
 
-  .ewen-toggle-thumb {
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background-color: #fafafa;
-    box-sizing: border-box;
-    transform: translateX(0);
-  }
+#dark-mode-switch:checked ~ .general-theme .ewen-toggle-thumb {
+  transform: translateX(26px);
+  background-color: #fafafa;
+}
 
-  #dark-mode-switch:checked ~ .general-theme .ewen-toggle-thumb {
-    transform: translateX(26px);
-    background-color: #fafafa;
-  }
+.ewen-toggle-wrapper {
+  justify-content: right;
+  align-items: center;
+}
+```
 
-  .ewen-toggle-wrapper {
-    justify-content: right;
-    align-items: center;
-  }
-</style>
-
-<script>
-  var switcher = document.getElementById("dark-mode-switch");
-
-  // Click on dark mode icon. Add dark mode classes and wrappers. Store user preference through sessions
-  switcher.addEventListener("change", function () {
-    // If dark mode is selected
-    if (this.checked) {
-      localStorage.setItem("darkMode", "true");
-    } else {
-      setTimeout(function () {
-        localStorage.setItem("darkMode", "false");
-      }, 100);
-    }
-  });
-
-  //Check Storage. Keep user preference on page reload
-  if (localStorage.getItem("darkMode") === "true") {
-    //body.classList.add('dark-mode');
-    switcher.checked = true;
-  }
-
-  if (localStorage.getItem("darkMode") === null) {
-    if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      // dark mode
-      switcher.checked = true;
-      localStorage.setItem("darkMode", "true");
-    } else {
-      switcher.checked = false;
-      localStorage.setItem("darkMode", "false");
-    }
-  }
-</script>
+It is forked from https://github.com/gaearon/overreacted.io, credits to Dan Abramov.
