@@ -35,46 +35,4 @@
   </div>
 </div>
 
-<script>
-  var body = document.body;
-  var switcher = document.getElementById("dark-mode-switch");
-
-  //Click on dark mode icon. Add dark mode classes and wrappers. Store user preference through sessions
-  switcher.addEventListener("change", function () {
-    this.classList.toggle("js-toggle--checked");
-    //If dark mode is selected
-    if (this.checked) {
-      // body.classList.add("dark-mode");
-      //Save user preference in storage
-      localStorage.setItem("darkMode", "true");
-    } else {
-      // body.classList.remove("dark-mode");
-      setTimeout(function () {
-        // localStorage.removeItem("darkMode");
-        localStorage.setItem("darkMode", "false");
-      }, 100);
-    }
-  });
-
-  //Check Storage. Keep user preference on page reload
-  if (localStorage.getItem("darkMode") === "true") {
-    //body.classList.add('dark-mode');
-    switcher.checked = true;
-  }
-
-  if (localStorage.getItem("darkMode") === null) {
-    if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      // dark mode
-      switcher.checked = true;
-      localStorage.setItem("darkMode", "true");
-    } else {
-      switcher.checked = false;
-      localStorage.setItem("darkMode", "false");
-    }
-  }
-</script>
-
 {{- end -}}
