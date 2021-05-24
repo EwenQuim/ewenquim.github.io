@@ -14,6 +14,12 @@ div.entry-toc {
 summary.title:hover {
   color: #888 !important;
 }
+summary::before {
+  content: "+";
+}
+details[open] > summary::before {
+  content: "-";
+}
 
 #dark-mode-switch:checked ~ .general-theme div.entry-toc {
   background: #222220;
