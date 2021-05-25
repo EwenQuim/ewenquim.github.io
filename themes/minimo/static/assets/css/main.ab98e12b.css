@@ -131,9 +131,6 @@ textarea {
   -webkit-appearance: button;
   font: inherit;
 }
-details {
-  display: block;
-}
 summary {
   display: list-item;
 }
@@ -183,8 +180,8 @@ h6 {
   display: block;
   position: relative;
   width: 0;
-  height: 5em;
-  margin-top: -5em;
+  height: 3em;
+  margin-top: -3em;
 }
 .comment-content h2,
 .comment-content h3,
@@ -826,10 +823,6 @@ body {
 }
 .cover-full img {
   width: 100%;
-}
-details,
-summary {
-  display: block;
 }
 summary {
   cursor: pointer;

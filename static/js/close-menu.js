@@ -6,6 +6,8 @@ anchorLinks.forEach((anchorLink) => {
   anchorLink.addEventListener("click", () => {
     console.log("click");
     // Close all the details that are not targetDetail.
-    detail.removeAttribute("open");
+    setTimeout(function () {
+      detail.removeAttribute("open");
+    }, 50);
   });
 });
