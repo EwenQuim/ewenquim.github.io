@@ -17,16 +17,26 @@ So here's how to do a CSS-only dark mode for your website ! I'll show you how to
 - Accessibility: some people browse internet without internet, or with extensions like NoScript
 - It's actually simple to do this with pure CSS, so why not?
 
-## How can CSS handle both possible states?
+## How can CSS handle two possible states?
 
 You probably wonder how can CSS change the color theme of a whole page. Because, knowing which color theme to display require a "switch", something that can be "activated"... Is JavaScript the only solution?
 
-No, these things exists in bare HTML too! There are many tags that are interactive. Here, we'll use an `input` tag, with a checkbox. If the checkbox is checked, the Dark Mode will be active, and the light mode otherwise.
+No, these things exists in bare HTML too! There are many tags that are interactive. Here, we'll use an `input` tag, with a checkbox. If the checkbox is checked, the Dark Mode will be active, and the Light Mode otherwise.
+
+```html
+<input type="checkbox" id="dark-mode-switch" />
+```
 
 The CSS can access to the checkbox state with the `:checked` pseudo-class (there are [many more](https://www.w3schools.com/css/css_pseudo_classes.asp)!).
 
 ```css
+input#dark-mode-switch {
+  /* Light Theme */
+  background: #fff;
+}
+
 input#dark-mode-switch:checked {
+  /* Dark Theme */
   background: #222220;
 }
 ```
@@ -35,7 +45,7 @@ input#dark-mode-switch:checked {
 
 There is a problem in the previous code snippet.
 
-```css {hl_lines=1}
+```css {hl_lines=[1]}
 input#dark-mode-switch:checked {
   /* ↑ here */
   background: #222220;
@@ -44,7 +54,23 @@ input#dark-mode-switch:checked {
 
 We are selecting the switch itself, but it doesn't matter to us, we want to change the whole body! And with CSS, it isn't possible to select a parent tag...
 
-But, it is possible to select a neighbour or a child tag ! Here, we'll select place the switch right after the `body` tag, and we'll insert the whole site inside a div right after, just like this:
+But, it is possible to select a neighbour or a child tag, with the `~` _combinator_! The `A ~ B` CSS combinator requires that selector B is an element with the same parent node as the selector 1.
+
+```css
+input#dark-mode-switch:checked ~ .general-theme {
+  /* dark theme */
+  background: #222220;
+  color: #ddd;
+}
+
+.general-theme {
+  /* light theme */
+  background: #fff;
+  color: #222;
+}
+```
+
+Then, we'll place the switch right after the `body` tag, and we'll insert the whole site inside a div right after, just like this:
 
 ```html {hl_lines=["5-6",9]}
 <head>
@@ -60,44 +86,31 @@ But, it is possible to select a neighbour or a child tag ! Here, we'll select pl
 </body>
 ```
 
-Now, we can use the `1 ~ 2` CSS selector (that means "selector 2 is a tag with the same parent node as the selector 1")
-
-```css
-input#dark-mode-switch:checked ~ .general-theme {
-  /* dark theme */
-  background: #222220;
-}
-
-.general-theme {
-  /* light theme */
-  background: #fff;
-}
-```
-
-We need something to activate the checkbox: a `label`
+Now, we need something to activate that checkbox: a `label`!
 
 ```html
 <label for="dark-mode-switch" class="ewen-toggle"> Toggle! </label>
 ```
 
-If you want a fancy switch, just checkout the last chapter of this article ;)
+You can place it wherever you want. But it'll probably look ugly, so unless you know some CSS, if you want a fancy switch, just checkout the last chapter of this article for the code of this website's switch ;)
 
 ## Storing the theme
 
-If you've gone this far and copy-pasted the code to your website, you might have noticed that when navigating, the theme isn't stored. When navigated from a dark-mode activated page to another page, the theme goes back to light mode. How can we prevent that?
+If you've gone this far and copy-pasted the code to your website, you might have noticed that when navigating, the theme isn't stored. When the visitor goes from a Dark Mode activated page to another page, the theme goes back to Light Mode. How can we prevent that?
 
 Unluckily, this isn't just "displaying things" anymore. If you want your theme to be persistent across your pages, you have no other choice than using cookies or local storage, which require javascript.
 
 ```js
 var switcher = document.getElementById("dark-mode-switch");
 
-// Click on dark mode icon. Add dark mode classes and wrappers. Store user preference through sessions
+// Click on dark mode icon. Store user preference through sessions
 switcher.addEventListener("change", function () {
   // If dark mode is selected
   if (this.checked) {
     // set the a variable in user's browser
     localStorage.setItem("darkMode", "true");
   } else {
+    // timeout of 100ms to avoid clipping
     setTimeout(function () {
       localStorage.setItem("darkMode", "false");
     }, 100);
@@ -108,16 +121,16 @@ switcher.addEventListener("change", function () {
 Now that the variable is set, we need to load user's preference each time they visit the website. We'll get the value from local storage, and simply check the checkbox we talked about earlier!
 
 ```js
-//Check Storage. Keep user preference on page reload
+// Checks Storage. Keep user preference on page reload
 if (localStorage.getItem("darkMode") === "true") {
-  //body.classList.add('dark-mode');
+  // Checking the checkbox
   switcher.checked = true;
 }
 ```
 
 ## Setting defaults
 
-Visitors may only visit your site once, and it's better to respect their default settings. You can set the default's theme to their preferred color with the following code.
+It's better to respect your visitor's default settings for their first visit: it's probably what they'll want. You can set the default's theme to their preferred color with the following code.
 
 ```js
 if (localStorage.getItem("darkMode") === null) {
@@ -134,6 +147,8 @@ if (localStorage.getItem("darkMode") === null) {
   }
 }
 ```
+
+And that's it, enjoy!
 
 ## Appendix: the pretty button code
 
