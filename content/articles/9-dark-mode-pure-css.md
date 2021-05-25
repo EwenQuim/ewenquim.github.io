@@ -54,7 +54,7 @@ input#dark-mode-switch:checked {
 
 We are selecting the switch itself, but it doesn't matter to us, we want to change the whole body! And with CSS, it isn't possible to select a parent tag...
 
-But, it is possible to select a neighbour or a child tag, with the `~` _combinator_! The `A ~ B` CSS combinator requires that selector B is an element with the same parent node as the selector 1.
+But, it is possible to select a neighbour or a child tag, with _CSS combinator_! The `A ~ B` CSS combinator requires selector B to be an element with the same parent node as the selector A.
 
 ```css
 input#dark-mode-switch:checked ~ .general-theme {
@@ -72,7 +72,7 @@ input#dark-mode-switch:checked ~ .general-theme {
 
 Then, we'll place the switch right after the `body` tag, and we'll insert the whole site inside a div right after, just like this:
 
-```html {hl_lines=["5-6",9]}
+```html {hl_lines=["5-6",10]}
 <head>
   <!-- your head --->
 </head>
@@ -128,6 +128,8 @@ if (localStorage.getItem("darkMode") === "true") {
 }
 ```
 
+I don't consider it as a defeat: No-JS users that want dark mode will simply read your articles with Dark Mode activated, and navigate with light mode. Also, we've used CSS where it is possible and JS where it's necessary, so everything is in the right place!
+
 ## Setting defaults
 
 It's better to respect your visitor's default settings for their first visit: it's probably what they'll want. You can set the default's theme to their preferred color with the following code.
@@ -148,9 +150,9 @@ if (localStorage.getItem("darkMode") === null) {
 }
 ```
 
-And that's it, enjoy!
+And that's it, enjoy! 😁
 
-## Appendix: the pretty button code
+## Appendix: a pretty switch
 
 Just copy-paste this.
 
