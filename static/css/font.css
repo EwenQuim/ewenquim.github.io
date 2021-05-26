@@ -1,6 +1,7 @@
 p,
 #content ul,
-#content ol {
+#content ol,
+#details-toc a {
   font-family: "Spectral", Georgia;
 }
 
@@ -13,4 +14,3 @@ p,
   src: url("../fonts/Spectral-Bold.woff2") format("woff2");
   font-weight: bold;
 }
-
