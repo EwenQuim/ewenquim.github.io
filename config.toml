@@ -31,6 +31,9 @@ gopher = "" # used in 404 template ( Generator: https://gopherize.me )
 [params.comments]
 enable = true
 
+[params.comments.utterances]
+enable = true
+
 [params.copyright]
 prefix = ""
 holder = "Ewen"
