@@ -28,6 +28,9 @@ customCSS = ["css/darkmode.css", "css/font.css", "css/toc.css"]
 customJS = ["js/close-menu.js"]
 gopher = "" # used in 404 template ( Generator: https://gopherize.me )
 
+[params.comments]
+enable = true
+
 [params.copyright]
 prefix = ""
 holder = "Ewen"

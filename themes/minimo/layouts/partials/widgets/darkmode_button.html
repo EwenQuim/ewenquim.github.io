@@ -1,6 +1,5 @@
-{{- $defaultConfig := .Site.Data.config.default.widgets.darkmode_button -}} {{-
-$configData := ( or .Site.Data.config.widgets.darkmode_button $defaultConfig )
--}}
+{{- $defaultConfig := .Site.Data.config.default.widgets.darkmode_button -}}
+{{- $configData := ( or .Site.Data.config.widgets.darkmode_button $defaultConfig ) -}}
 
 <section class="widget widget-darkmode sep-after">
   <div class="ewen-toggle-wrapper">

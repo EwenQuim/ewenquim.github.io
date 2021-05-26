@@ -297,4 +297,4 @@ Just copy-paste this.
 }
 ```
 
-It is forked from https://github.com/gaearon/overreacted.io, credits to Dan Abramov.
+The pretty button is forked from <https://github.com/gaearon/overreacted.io>, credits to Dan Abramov.

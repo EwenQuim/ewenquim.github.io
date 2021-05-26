@@ -1,19 +1,21 @@
-{{- $scriptSrc := "https://utteranc.es/client.js" -}}
+<div id="comments-section-custom"></div>
 
-{{- $issueTerm := .Page.Site.Params.comments.utterances.issueTerm -}}
-{{- $label := .Page.Site.Params.comments.utterances.label -}}
-{{- $theme := .Page.Site.Params.comments.utterances.theme -}}
-{{- $username := .Page.Site.Params.comments.utterances.github.username -}}
-{{- $repository := .Page.Site.Params.comments.utterances.github.repository -}}
+<script type="text/javascript" defer>
+  console.log("hi");
+  theme = "github-light";
+  // If dark mode is selected, load dark mode comments
+  if (localStorage.getItem("darkMode") === "true") {
+    theme = "github-dark";
+  }
 
-<script src='{{ $scriptSrc }}'
-  repo='{{ print $username "/" $repository }}'
-  issue-term='{{ $issueTerm }}'
-  {{ if $label -}}
-    label='{{ $label }}'
-  {{- end }}
-  {{ if $theme -}}
-    theme='{{ $theme }}'
-  {{- end }}
-  crossorigin='anonymous' async>
+  var scriptNode = document.createElement("script");
+  scriptNode.setAttribute("src", "https://utteranc.es/client.js");
+  scriptNode.setAttribute("repo", "EwenQuim/ewenquim.github.io");
+  scriptNode.setAttribute("issue-term", "title");
+  scriptNode.setAttribute("label", "comment");
+  scriptNode.setAttribute("theme", theme);
+  scriptNode.setAttribute("crossorigin", "anonymous");
+  scriptNode.setAttribute("defer", "defer");
+
+  document.getElementById("comments-section-custom").appendChild(scriptNode);
 </script>
