@@ -69,3 +69,15 @@ html
   color: #ddd;
   transition: ease-in 1000ms;
 } */
+.fill-remaining-space {
+  /*100% 
+  - 5em for 5 lines min
+  - 2em html top padding
+  - 2em html bottom padding 
+  - 1.5em margin-top
+  - 10em 2 separator with 2.5em top/bottom each 
+  - 1em copyright
+  - 1em footer top margin
+  */
+  min-height: calc(100vh - 22.5em);
+}
