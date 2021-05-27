@@ -16,6 +16,12 @@
   </ul>
 
   {{ partial "nav/pagination" . }}
+
+  <div class='new-article-link'>
+    {{- partial "svg/icons" "edit" -}}
+    <span class='screen-reader-text'>{{ i18n "postedOn" }} </span>
+    <a href="https://gitlab.com/EwenQuim/EwenQuim.gitlab.io/-/new/master/content">Add or suggest new page</a>
+  </div>
 </div>
 
 {{ partial "footer" . }}
