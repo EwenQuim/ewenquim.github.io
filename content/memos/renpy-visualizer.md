@@ -2,8 +2,6 @@
 date: 2021-02-07
 title: Ren'Py Visualizer
 type: draft
-categories:
-  - project
 tags:
   - go
   - visualization
