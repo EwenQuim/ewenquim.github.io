@@ -1,7 +1,6 @@
 ---
 date: 2021-25-05
-title: Test
-type: draft
+title: Teste
 ---
 
 Edited from the links.
