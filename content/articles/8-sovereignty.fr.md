@@ -52,10 +52,10 @@ De plus, l'offre Cloud de Google contient du stockage (Google Drive) quasi illim
 
 > Il y a quelque chose de louche, non ?
 
-Non, de toute façon tu as lu les conditions d'utilisation de ces services avant de les utiliser ?
+Non, de toute façon vous avez lu les conditions d'utilisation de ces services avant de les utiliser ?
 
 > Euuuh...
 
-Et oui, les données, ca se monnaie ! Une fois qu'elles ne vous appartiennent plus, Google peut en faire ce qu'il veut. Y compris les partager aux instances étatiques, ou alors... Supprimer toutes vos données (c'est [déjà arrivé](https://www.businessinsider.com/terraria-google-youtube-gmail-play-2021-2))
+Et oui, les données, ca se monnaie ! Une fois qu'elles ne vous appartiennent plus, Google peut en faire ce qu'il veut. Enfin, dans les limites définis par... eux-mêmes. Y compris les partager aux instances étatiques, sur leur demande, ou alors... Supprimer toutes vos données (c'est [déjà arrivé](https://www.businessinsider.com/terraria-google-youtube-gmail-play-2021-2))
 
 ## Le cloud, bien que pratique, pose de sérieux problèmes de souveraineté
