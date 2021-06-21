@@ -56,6 +56,18 @@ Non, de toute façon vous avez lu les conditions d'utilisation de ces services a
 
 > Euuuh...
 
-Et oui, les données, ca se monnaie ! Une fois qu'elles ne vous appartiennent plus, Google peut en faire ce qu'il veut. Enfin, dans les limites définis par... eux-mêmes. Y compris les partager aux instances étatiques, sur leur demande, ou alors... Supprimer toutes vos données (c'est [déjà arrivé](https://www.businessinsider.com/terraria-google-youtube-gmail-play-2021-2))
+Et oui, les données, ca se monnaie ! Une fois qu'elles ne vous appartiennent plus, Google peut en faire ce qu'il veut. Enfin, dans les limites définis par... eux-mêmes.
+
+> Mais le RGPD ? L'Europe fixe des règles auxquelles les fournisseurs Cloud doivent se plier ?
+
+Oui, effectivement. Mais les règles peuvent changer. Les _bits_, les données _pures_, elles, restent toujours bien au chaud dans les datacenters de ces companies. Et puis, ce n'est pas la première fois qu'une entreprise ment.
+
+Ces companies peuvent commettre des dérives (par exemple supprimer toutes vos données, c'est [déjà arrivé](https://www.businessinsider.com/terraria-google-youtube-gmail-play-2021-2)). Mais plus inquiétant, des instances étatiques peuvent exercer une certaine pression pour obtenir des données stockées par ces fournisseurs, via des mandats de terrorisme. Rien de choquant à priori, mais les États-Unis ont la facheuse tendance à traiter de terroriste n'importe quel individu dont les intentions ne sont pas alignées avec la superpuissance. C'est bête, mais ils ne peuvent rien face à une clé USB.
+
+La "donnée", ce n'est pas un concept abstrait. Un octet, c'est _physique_. C'est stocké _quelque part_. Et celui qui les a en a la souveraineté. Les regles peuvent changer, les pouvoirs peuvent varier. Mais qu'importe les règles. 
+
+Pensez à une bibliothèque. Les livres sont là, consultables par n'importe qui. Mais une décision de l'État peut en interdire l'accès, interdire certains livres qui ne lui plaisent pas. Le bibliothéquaire peut décider de ne pas exposer un certain auteur qu'il n'aime pas, ou dont il n'aime pas l'idéologie. Un livre sera toujours plus en sécurité chez vous, **surtout si c'est vous qui l'écrivez**.
+
+Oui, vos données seront toujours plus à l'abri chez vous. Il faudra plus de patience, mais **vous avez plus à perdre à succomber à la facilité**. Je ne dis pas de créer vous-meme votre serveur mail ou de n'utiliser que des clés USB. Simplement, lorsque vous mettez des informations en ligne, réfléchissez à qui en a la propriété directe.
 
 ## Le cloud, bien que pratique, pose de sérieux problèmes de souveraineté
