@@ -58,4 +58,4 @@ Non, de toute façon tu as lu les conditions d'utilisation de ces services avant
 
 Et oui, les données, ca se monnaie ! Une fois qu'elles ne vous appartiennent plus, Google peut en faire ce qu'il veut. Y compris les partager aux instances étatiques, ou alors... Supprimer toutes vos données (c'est [déjà arrivé](https://www.businessinsider.com/terraria-google-youtube-gmail-play-2021-2))
 
-## Le cloud, c'est pratique, mais vous paerdez en souveraineté
+## Le cloud, c'est pratique, mais vous perdez en souveraineté
