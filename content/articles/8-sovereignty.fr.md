@@ -46,13 +46,13 @@ On pourrait s'indigner, trouver cela injuste de la part d'Amazon de tuer un busi
 
 Tout le monde utilise les services de ces grandes sociétés. Personne ne créé son propre serveur mail, tout le monde utilise un serveur de Google (GMail), de Microsoft (Outlook), orange ou autre...
 
-C'est en effet très pratique : cela ouvre la possibilité à n'importe qui de se créé un point de contact.
+C'est en effet très pratique : cela permet à n'importe qui de se créér facilement un point de contact en ligne.
 
-De plus, l'offre Cloud de Google contient du stockage (Google Drive) quasi illimité, pour le modeste prix de... 0euros. De plus, il est aussi gratuit de deposer une video, peu importe son poids, sur Youtube (encore un service Google). C'est tres genereux de la part de Google, non ? Offrir gratuitement, par pur altruisme, des services aussi important !
+De plus, l'offre Cloud de Google contient du stockage (Google Drive) quasi illimité, pour le modeste prix de... 0 euros. De plus, il est aussi gratuit de deposer une video, peu importe son poids, sur Youtube (encore un service Google). C'est tres généreux de la part de Google, non ? Offrir gratuitement, par pur altruisme, des services aussi important ?
 
 > Il y a quelque chose de louche, non ?
 
-Non, de toute façon vous avez lu les conditions d'utilisation de ces services avant de les utiliser ?
+De toute façon vous avez lu les conditions d'utilisation de ces services avant de les utiliser ?
 
 > Euuuh...
 
@@ -60,13 +60,15 @@ Et oui, les données, ca se monnaie ! Une fois qu'elles ne vous appartiennent pl
 
 > Mais le RGPD ? L'Europe fixe des règles auxquelles les fournisseurs Cloud doivent se plier ?
 
-Oui, effectivement. Mais les règles peuvent changer. Les _bits_, les données _pures_, elles, restent toujours bien au chaud dans les datacenters de ces companies. Et puis, ce n'est pas la première fois qu'une entreprise ment.
+Oui, effectivement. Mais les règles peuvent changer. Les _bits_, les données _pures_, elles, restent toujours bien au chaud dans les datacenters de ces companies. Et puis, ce n'est pas la première fois qu'une entreprise ment à ses clients en violant la loi (souvenez vous du [scandale Findus](https://fr.wikipedia.org/wiki/Fraude_%C3%A0_la_viande_de_cheval_de_2013) et de [l'affaire Volkswagen](https://fr.wikipedia.org/wiki/Affaire_Volkswagen), pour ne citer que ces deux-là).
 
-Ces companies peuvent commettre des dérives (par exemple supprimer toutes vos données, c'est [déjà arrivé](https://www.businessinsider.com/terraria-google-youtube-gmail-play-2021-2)). Mais plus inquiétant, des instances étatiques peuvent exercer une certaine pression pour obtenir des données stockées par ces fournisseurs, via des mandats de terrorisme. Rien de choquant à priori, mais les États-Unis ont la facheuse tendance à traiter de terroriste n'importe quel individu dont les intentions ne sont pas alignées avec la superpuissance. C'est bête, mais ils ne peuvent rien face à une clé USB.
+Ces companies peuvent commettre des dérives (par exemple supprimer toutes vos données, c'est [déjà arrivé](https://www.businessinsider.com/terraria-google-youtube-gmail-play-2021-2)). 
 
-La "donnée", ce n'est pas un concept abstrait. Un octet, c'est _physique_. C'est stocké _quelque part_. Et celui qui les a en a la souveraineté. Les regles peuvent changer, les pouvoirs peuvent varier. Mais qu'importe les règles. 
+De plus, des instances étatiques peuvent exercer une certaine pression pour obtenir des données stockées par ces fournisseurs, via des mandats de terrorisme. Rien de choquant à priori, mais les États-Unis ont la facheuse tendance à traiter de terroriste n'importe quel individu dont les intentions ne sont pas alignées avec la superpuissance. C'est bête, mais ils ne peuvent rien face à une clé USB.
 
-Pensez à une bibliothèque. Les livres sont là, consultables par n'importe qui. Mais une décision de l'État peut en interdire l'accès, interdire certains livres qui ne lui plaisent pas. Le bibliothéquaire peut décider de ne pas exposer un certain auteur qu'il n'aime pas, ou dont il n'aime pas l'idéologie. Un livre sera toujours plus en sécurité chez vous, **surtout si c'est vous qui l'écrivez**.
+La "donnée", ce n'est pas un concept abstrait. Un octet, c'est _physique_. C'est stocké _quelque part_. Et celui qui les gère en a la souveraineté. Les règles peuvent changer, les pouvoirs peuvent varier. Mais qu'importe les règles et les autorisations.
+
+Pensez à une bibliothèque. Les livres sont là, consultables par n'importe qui. C'est très pratique : vous n'avez pas besoin d'acheter tous les livres. Mais une décision de l'État peut en interdire l'accès, ou ne pas montrer certains livres. Le bibliothéquaire peut décider de ne pas exposer un certain auteur qu'il n'aime pas, ou dont il n'aime pas l'idéologie. Un livre sera toujours plus en sécurité chez vous, **surtout si c'est vous qui l'écrivez**.
 
 Oui, vos données seront toujours plus à l'abri chez vous. Il faudra plus de patience, mais **vous avez plus à perdre à succomber à la facilité**. Je ne dis pas de créer vous-meme votre serveur mail ou de n'utiliser que des clés USB. Simplement, lorsque vous mettez des informations en ligne, réfléchissez à qui en a la propriété directe.
 
