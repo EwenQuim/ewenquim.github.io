@@ -39,9 +39,9 @@ La censure peut également venir des gens, de manières plus ou moins directe. S
 
 
 
-### Anonyme vs. pseudonyme vs. nominatif
+### Anonyme vs. pseudonyme
 
-Aussi étonnant que cela puisse paraitre, Telegram, duquel je peu dire le plus grand bien, n'est pas un réseau anonyme. En effet, pour y accéder, il faut donner un numéro de téléphone, qui identifie une personne de manière unique. Bien que cela est discutable, car il est possible de se créer rapidement des numéros de téléphones grâce à des services comme On/Off, cela reste complexe -bien plus que de créer une nouvelle adresse mail à la volée, comme c'est le cas pour Facebook.
+Aussi étonnant que cela puisse paraître, Telegram, duquel je peu dire le plus grand bien, n'est pas un réseau anonyme. C'est un réseau **pseudonyme**: il est possible, bien que non-immédiat, de remonter à une identité derrière un compte. En effet, pour accéder à Telegram, il faut donner un numéro de téléphone, qui identifie une personne de manière unique. Bien que cela est discutable, car il est possible de se créer rapidement des numéros de téléphones grâce à des services comme On/Off, cela reste complexe -bien plus que de créer une nouvelle adresse mail à la volée, comme c'est le cas pour Facebook.
 
 > Facebook est donc plus anonyme que Telegram ?
 
@@ -49,11 +49,9 @@ En ce sens, oui. Mais il y a un point commun entre les deux : Les données perso
 
 > Mais il faut bien qu'elles soient stockées quelque part, non ?
 
-Oui ! Mais il y a d'autres solutions, dont nous parleront plus tard. Toujours est-il que si Telegram permet d'identifier une personne physique, c'est alors un système non-anonyme, que l'on va appeler système **nominatif**. Facebook est, quant à lui, un système pseudonyme : un profil peut etre identifiable de manière unique, c'est à dire que il est possible pour un utilisateur et pour Facecbook de savoir, pour 2 publications, de savoir si l'auteur est bien le même. Il n'est toutefois pas toujours possible de remonter à une personne réelle
+Oui ! Mais il y a d'autres solutions, dont nous parleront plus tard. Toujours est-il que si Telegram permet d'identifier une personne physique. Facebook est, quant à lui, un système anonyme : un profil peut etre identifiable de manière unique, c'est à dire que il est possible pour un utilisateur et pour Facecbook de savoir, pour 2 publications, de savoir si l'auteur est bien le même. Il n'est toutefois pas toujours possible de remonter à une personne réelle
 
-![Photo de "Kanard de bain", un utilisateur de Facebook qui utilise manifestement un pseudonyme](/Users/ewen/dev/web/ewenquim.gitlab.io/static/images/10-kanard-pseudonyme.jpeg)
-
-Un système anonyme est comme 
+!["Kanard de bain", un utilisateur de Facebook qui utilise manifestement un pseudonyme](/images/10-kanard-pseudonyme.jpeg)
 
 
 
@@ -61,20 +59,24 @@ Un système anonyme est comme
 
 ### L'anonymat ne rend pas plus dangereux, le réseau si
 
-Telegram VS Facebook
+> L'anonymat rend les gens addressifs, ils se croient tout permis.
+
+L'anonymat rend les gens libres, ils se sentent en sécurité.
+
+Vous ne me croyez pas ? Une des raisons pour lesquelles j'ai voulu créer ma plateforme est que l'anonymat ne change rien à la toxicité des débats. Une discussion sur Twitter est toujours dégueulasse. Personnellement, j'ai même quitté la plateforme à cause de cela. 140 (maintenant 280) caractères, c'est beaucoup trop peu pour qu'une pensée articulée en sorte. Et pourtant, sur Twitter, ceux qui participent à ce genre de logorhée via des "threads" illisibles sont rarrement anonymes. De même que sur Telegram
 
 ## Est-ce réalisable ?
 
-### Pseudonyme = authentification
+### Faire un réseau anonyme
 
-test
+Les principaux risques liés à un réseau anonyme sont les risques de spam
 
-### Incensurable = distribué
-
-voila
+### Incensurable
 
 Si l'on résume mon paragraphe sur la censurabilité, les acteurs pouvant censurer sont:
 
 - les entreprises (directement concernées ou indirectement via des pression sur les réseaux/messageries)
 - les États
-- les gens
+- les individus
+
+Où devrait-on placer sa confiance, pour gérer un tel réseau ?
