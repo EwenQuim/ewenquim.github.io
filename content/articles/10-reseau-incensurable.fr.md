@@ -11,25 +11,35 @@ tags:
 toc: true
 ---
 
-Droits de l'homme, **Art. 10.** : "Nul ne doit être inquiété pour ses opinions..."
+Droits de l'homme, **Art. 10** : "Nul ne doit être inquiété pour ses opinions..."
 
-Aujourd'hui, à l'ère de l'informatique, n'importe qui peut diffuser librement ses idées. Mais si l'informatique est le royaume de la transmission, il tend à devenir le lieu du contrôle. Loin du gadget de nerd passionné, on y fait maintenant de la vente, de la politique, de la finance. En fait, tout le domaine de l'information peut être automatisé. C'est pourquoi les puissances (qu'elles soient étatiques ou )
+Droits de l'homme, **Art. 11** : "La libre communication des pensées et des  opinions est un des droits les plus précieux de l'Homme : tout Citoyen  peut donc parler, écrire, imprimer librement..."
 
-C'est pourquoi j'ai voulu créer un réseau incensurable.
+Aujourd'hui, à l'ère de l'informatique, n'importe qui peut diffuser librement ses idées. Mais si l'informatique est le royaume de la transmission, il tend à devenir le lieu du contrôle. Loin du gadget de nerd passionné, on y fait maintenant de la vente, de la politique, de la finance. En fait, tout le domaine de l'information peut être automatisé. C'est pourquoi les puissances (qu'elles soient étatiques ou autre) ont rapidement compris les enjeux liés à ces plateformes, et commencent à y exercer un pouvoir bien trop pressant.
+
+C'est pourquoi j'ai voulu créer un réseau incensurable et incontrôlable.
 
 ## Portée et définitions
 
-### Incensurable VS. incensuré
+### Incensurable vs. incensuré
 
-Entendez-moi bien : je ne compte pas recréer Gab, Parler ou Telegram. Ce sont des réseaux non censurés, mais pas non-censurable. La situation de ces réseaux peut changer du tout au tout, d'un jour à l'autre. Il suffit que l'entreprise ait un changement de politique, et décide soudainement de changer de politique. Twitter et Twitch ont longtemps ignoré la pornographie sur leur réseau, avant de commencer à agir (bien que cela reste à debattre pour Twitch) contre ces pratiques. Rien ne garantie la même chose pour ces réseaux.
+Entendez-moi bien : je ne compte pas recréer Gab, Parler ou Telegram. Ce sont des réseaux non censurés, mais pas non-censurable. La situation de ces réseaux peut changer du tout au tout, d'un jour à l'autre. Il suffit que l'entreprise ait un changement de politique, et décide soudainement de changer de politique. Par exemple, Twitter et Twitch ont longtemps ignoré la pornographie sur leur réseau, avant de commencer à agir contre ces pratiques (bien que cela reste à débattre pour Twitch). 
 
 > Mais imaginons qu'une société fiable dont la politique ne change **jamais** crée un réseau incensuré. Cela serait suffisant, non ?
 
-Non. L'entreprise n'est qu'un acteur minime de la censure. Elle peut venir d'autres acteurs, comme les États. N'importe quelle dictature a intérêt à censurer pour assurer la pérennité de son régime. N'importe quelle démocratie a intérêt à influencer ses citoyens pour faire passer des mesures et lois allant dans l'intéret 
+Non. Déjà car les décisions politiques ne sont pas seulement dues aux changements d'humeur des dirigeants, mais d'autres facteurs interviennent. Je pense notamment à la situation économique, ou au cadre légal qui peut changer au niveau de la région, du pays ou au niveau international.
+
+Et puis l'entreprise n'est qu'un acteur minime de la censure. Elle peut venir d'autres acteurs, comme les États. N'importe quelle dictature a intérêt à censurer pour assurer la pérennité de son régime. N'importe quelle démocratie a intérêt à influencer ses citoyens pour faire passer des mesures allant dans l'intéret du pays en tant que nation (même si ses citoyens sont contre), ou de ses dirigeants dans le cas d'une démocratie corrompue. Et les États ont l'embarras du choix quant aux méthodes à employer pour arriver à leurs fins.
+
+> Et peut-on faire confiance aux gens ?
+
+C'est une question compliquée. 
+
+La censure peut également venir des gens, de manières plus ou moins directe. Sur beaucoup de réseaux, on peut "Signaler" un profil, ou un message que l'on considère offensant. Ces signalements peuvent entrainer une exclusion automatique du réseau (une des entreprise dans lesquelles j'ai travaillé faisait comme cela à partir d'un certain nombre de signalements), ou alors provoquer une étude humaine de la personne/message en question, qui peut entrainer une exclusion/censure (qui repose alors sur le jugement de la personne qui censure autant que sur la reponsabilité de l'entreprise).
 
 
 
-### Anonyme VS. pseudonyme
+### Anonyme vs. pseudonyme vs. nominatif
 
 Aussi étonnant que cela puisse paraitre, Telegram, duquel je peu dire le plus grand bien, n'est pas un réseau anonyme. En effet, pour y accéder, il faut donner un numéro de téléphone, qui identifie une personne de manière unique. Bien que cela est discutable, car il est possible de se créer rapidement des numéros de téléphones grâce à des services comme On/Off, cela reste complexe -bien plus que de créer une nouvelle adresse mail à la volée, comme c'est le cas pour Facebook.
 
@@ -37,7 +47,13 @@ Aussi étonnant que cela puisse paraitre, Telegram, duquel je peu dire le plus g
 
 En ce sens, oui. Mais il y a un point commun entre les deux : Les données personnelles sont stockées sur leurs serveurs. 
 
-Comme 
+> Mais il faut bien qu'elles soient stockées quelque part, non ?
+
+Oui ! Mais il y a d'autres solutions, dont nous parleront plus tard. Toujours est-il que si Telegram permet d'identifier une personne physique, c'est alors un système non-anonyme, que l'on va appeler système **nominatif**. Facebook est, quant à lui, un système pseudonyme : un profil peut etre identifiable de manière unique, c'est à dire que il est possible pour un utilisateur et pour Facecbook de savoir, pour 2 publications, de savoir si l'auteur est bien le même. Il n'est toutefois pas toujours possible de remonter à une personne réelle
+
+![Photo de "Kanard de bain", un utilisateur de Facebook qui utilise manifestement un pseudonyme](/Users/ewen/dev/web/ewenquim.gitlab.io/static/images/10-kanard-pseudonyme.jpeg)
+
+Un système anonyme est comme 
 
 
 
