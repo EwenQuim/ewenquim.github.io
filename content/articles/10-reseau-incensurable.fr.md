@@ -149,3 +149,5 @@ La solution que j'ai retenu, c'est les **proches**, et **moi**.
 
 **Moi** : il faut que tous les messages me soient accessibles, même si les serveurs ont tous été détruits de quelconque manière. Il faut aussi que je puisse accéder aux messages de n'importe quels serveurs. Il va falloir pour cela développer une application qui demande repidement au serveur les derniers messages, et qui les stocke indéfiniement. Un messages existera donc sur 1 serveur mais transmis à tous les clients abonnés au serveur.
 
+Assez parlé, passons maintenant à la réalisation.
+
