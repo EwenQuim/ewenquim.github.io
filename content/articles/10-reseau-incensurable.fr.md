@@ -80,6 +80,8 @@ Voici mes propositions.
 - uniquement du texte : pas d'image, pas de stickers ou autre élément personnalisable
 - noir et blanc : seulement des 
 - un minimum de 140 charactères
+- mettre en valeur le contenu, pas les personnes : pas d'élément de personnalisation autre que le nom
+- pas de "likes" ou autre élément addictif
 
 Cela peut se résumer par : rendre le réseau **CHIANT** pour les personnes non-intellectuelles.
 
