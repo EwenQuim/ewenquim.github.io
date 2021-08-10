@@ -1,18 +1,16 @@
 const CACHE_VERSION = 1;
 
 const BASE_CACHE_FILES = [
-  "/style.css",
-  "/script.js",
-  "/search.json",
+  "/css/darkmode.css",
   "/manifest.json",
-  "/favicon.png",
+  "/favicon.ico",
 ];
 
-const OFFLINE_CACHE_FILES = ["/style.css", "/script.js", "/offline/index.html"];
+const OFFLINE_CACHE_FILES = ["/index.html"];
 
-const NOT_FOUND_CACHE_FILES = ["/style.css", "/script.js", "/404.html"];
+const NOT_FOUND_CACHE_FILES = ["/404.html"];
 
-const OFFLINE_PAGE = "/offline/index.html";
+const OFFLINE_PAGE = "/index.html";
 const NOT_FOUND_PAGE = "/404.html";
 
 const CACHE_VERSIONS = {
