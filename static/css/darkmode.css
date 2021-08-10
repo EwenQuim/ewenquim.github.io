@@ -1,7 +1,7 @@
 /* Dark Background */
 #dark-mode-switch:checked ~ .general-theme,
 #dark-mode-switch:checked ~ .general-theme > div.site > #sidebar {
-  background: #222220;
+  background: #181812;
 }
 #dark-mode-switch:checked ~ .general-theme p > code {
   background-color: #333;

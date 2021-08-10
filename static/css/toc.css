@@ -27,7 +27,7 @@ details[open] > *:not(summary) {
 }
 
 #dark-mode-switch:checked ~ .general-theme div.entry-toc {
-  background: #222220e0;
+  background: #181812e0;
 }
 
 details[open] {
