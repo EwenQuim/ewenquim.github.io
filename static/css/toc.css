@@ -50,15 +50,13 @@ details[open] ~ .entry-content {
 /* Inside the toc */
 div.entry-toc > details {
   flex: 1;
-  padding-top: 1em;
-  padding-bottom: 0.5em;
+
+
   /* border-right: 1px dashed; */
   border-color: #888;
 }
 div.entry-toc > details[open] {
   flex: 1;
-  padding-top: 1em;
-  padding-bottom: 0.5em;
   border-right: unset;
 }
 details[open] ~ #to-top {
@@ -66,9 +64,11 @@ details[open] ~ #to-top {
   background-color: red;
 }
 
-#title-and-burger {
+summary {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
 }
