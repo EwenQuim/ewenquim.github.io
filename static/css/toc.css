@@ -52,7 +52,7 @@ div.entry-toc > details {
   flex: 1;
   padding-top: 1em;
   padding-bottom: 0.5em;
-  border-right: 1px dashed;
+  /* border-right: 1px dashed; */
   border-color: #888;
 }
 div.entry-toc > details[open] {
@@ -66,35 +66,9 @@ details[open] ~ #to-top {
   background-color: red;
 }
 
-#to-top {
-  /* background-color: #f00; */
-  top: 0;
-  bottom: 0;
-  width: 5em;
-  /* padding: 5px; */
-  /* height: 10px; */
-  margin: auto;
-  right: 0;
+#title-and-burger {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
-a#to-top-link {
-  text-align: center;
-  display: block;
-  height: 100%;
-  width: 100%;
-  margin: auto;
-  text-decoration: none;
-}
-
-a#to-top-link:hover {
-  color: #888 !important;
-}
-
-/* html {
-  scroll-behavior: smooth;
-} */
-
-/* @media screen and (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-} */

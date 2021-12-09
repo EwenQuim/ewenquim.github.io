@@ -2,15 +2,13 @@
 <div class="container entry-toc">
   <details id="details-toc">
     <summary class="title">
-      <span> {{- i18n "tableOfContents" -}} </span>
-      -
-      <span> {{- .Title -}} </span>
+      <div id="title-and-burger">
+        <span> {{- .Title -}} </span>
+        <span>&#8801</span>
+      </div>
     </summary>
     {{ .TableOfContents }}
     <a href="#comments"> > <em>Comments</em> </a>
   </details>
-  <div id="to-top">
-    <a id="to-top-link" href="#top">↑</a>
-  </div>
 </div>
 {{ end }}
