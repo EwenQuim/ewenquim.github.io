@@ -28,9 +28,7 @@ If you don't already know it, Bring Your Own Client is a philosophy that a file 
 But only Microsoft Word can read `.docx`
 
 ## A solution
-
 ### Binary vs. text files
-
 There are plenty of extensions. `.docx`, `.pdf`, `.txt`, `.png`... But for your computer, only 2 types of file exists. Text files, and binary files. Binary files aren't meant to be read by humans. 
 
 > Extensions are only a way for computers to indicate how to handle a file (which software to use). It is completely unrelated to the content. But here, we talked about `.docx` as a format, not about the file extension.
@@ -42,7 +40,6 @@ There are plenty of extensions. `.docx`, `.pdf`, `.txt`, `.png`... But for your 
 We just said that `.docx` are a binary file... Why not using a text file ?
 
 ### Markdown
-
 If you just want to type information, open a `.txt`. It is the easiest way to write information. But you might want to add **structure** to your document. 
 
 Markdown is a great idea. It doesn't depend on an editor -there are plenty Markdown editors out there.
