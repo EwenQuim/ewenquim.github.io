@@ -1,24 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { StratTable } from "./StratTable";
-import { roundedMean } from "../utils/maths";
+import { roundedMean } from "../../utils/maths";
+import { type Decision, asEmoji } from "../../utils/prisoners-dilemma";
 
 export type MatrixStrategy = {
   previousTurnIBetrayed: { coop: number; betray: number };
   previousTurnICoop: { coop: number; betray: number };
 };
 
-type IDPGains = {
-  coop: { coop: number; betray: number };
-  betray: { coop: number; betray: number };
-};
-
-const gains: IDPGains = {
+const gains = {
   coop: { coop: 3, betray: 0 },
   betray: { coop: 5, betray: 1 },
 };
-
-type Decision = "coop" | "betray";
-const asEmoji = (d: Decision) => (d === "coop" ? "🤗" : "🔪");
 
 const playNextTurn = (
   myStrategy: MatrixStrategy,
@@ -45,8 +38,13 @@ const playNextTurn = (
 type IDPGameProps = {
   myBaseStrategy: MatrixStrategy;
   oppBaseStrategy: MatrixStrategy;
+  gainsMatrix?: typeof gains;
 };
-export const IDPGame = ({ myBaseStrategy, oppBaseStrategy }: IDPGameProps) => {
+export const IDPGame = ({
+  myBaseStrategy,
+  oppBaseStrategy,
+  gainsMatrix = gains,
+}: IDPGameProps) => {
   const [myScore, setMyScore] = useState<number[]>([]);
   const [oppScore, setOppScore] = useState<number[]>([]);
   const [myStrategy, setMyStrategy] = useState<MatrixStrategy>(myBaseStrategy);
@@ -56,12 +54,15 @@ export const IDPGame = ({ myBaseStrategy, oppBaseStrategy }: IDPGameProps) => {
   const [myDecisions, setMyDecisions] = useState<Decision[]>([]);
   const [oppDecisions, setOppDecisions] = useState<Decision[]>([]);
 
+  const [remainingTurns, setRemainingTurns] = useState<number>(0);
+
   const reset = () => {
     setMyScore([]);
     setOppScore([]);
     setMyDecisions([]);
     setOppDecisions([]);
   };
+
   const playOneTurn = () => {
     const { me, opp } = playNextTurn(
       myStrategy,
@@ -75,16 +76,22 @@ export const IDPGame = ({ myBaseStrategy, oppBaseStrategy }: IDPGameProps) => {
     setOppDecisions((oppDecisions) => [...oppDecisions, opp]);
   };
 
-  const playTurns = async (turns: number) => {
-    if (turns < 1) {
-      console.error("Turns must be greater than 0");
-      return;
-    }
-    for (let i = 0; i < turns; i++) {
+  const play = async () => {
+    if (remainingTurns > 0) {
       playOneTurn();
-      await new Promise((resolve) => setTimeout(resolve, 1000 / turns));
+      if (remainingTurns < 100) {
+        await new Promise((resolve) =>
+          setTimeout(resolve, 1000 / (remainingTurns + 4))
+        );
+      }
+
+      setRemainingTurns((remainingTurns) => remainingTurns - 1);
     }
   };
+
+  useEffect(() => {
+    play();
+  }, [remainingTurns]);
 
   return (
     <div className="IDPGame">
@@ -105,9 +112,26 @@ export const IDPGame = ({ myBaseStrategy, oppBaseStrategy }: IDPGameProps) => {
         />
       </div>
 
+      <div className="flex gap-2">
+        <button onClick={() => reset()}>Reset</button>
+        <button onClick={() => playOneTurn()}>Play 1 Turn</button>
+        <button onClick={() => setRemainingTurns(10)}>Play 10 Turns</button>
+        <button onClick={() => setRemainingTurns(100)}>Play 100 Turns</button>
+        <button onClick={() => setRemainingTurns(1000)}>Play 1000 Turns</button>
+        <button onClick={() => setRemainingTurns(10000)}>Play 10k Turns</button>
+      </div>
+      <p className="flex gap-4 justify-between">
+        Turns: {myScore.length}
+        <span>
+          Total gains:{" "}
+          {[...myScore, ...oppScore].reduce((acc, score) => acc + score, 0)}
+        </span>
+        <span>Mean gains: {roundedMean([...myScore, ...oppScore])}</span>
+      </p>
+
       {myDecisions.length > 0 && oppDecisions.length > 0 && (
         <div className="flex flex-col md:flex-row w-full gap-2 justify-between">
-          <p>
+          <div>
             <p>
               {myDecisions.at(-1) === "coop" ? "Cooperate 🤗" : "Betray 🔪"}
             </p>
@@ -132,16 +156,18 @@ export const IDPGame = ({ myBaseStrategy, oppBaseStrategy }: IDPGameProps) => {
               </span>
               <span>- mean: {roundedMean(myScore)}</span>
             </p>
-          </p>
-          <p>
+          </div>
+          <div>
             <p>
               {oppDecisions.at(-1) === "coop" ? "Cooperate 🤗" : "Betray 🔪"}
             </p>
-            10 last turns:{" "}
-            {oppDecisions
-              .slice(-10)
-              .map((d) => asEmoji(d))
-              .join(" ")}
+            <p>
+              10 last turns:{" "}
+              {oppDecisions
+                .slice(-10)
+                .map((d) => asEmoji(d))
+                .join(" ")}
+            </p>
             <p>
               <span>{oppScore.reduce((acc, score) => acc + score, 0)}</span>
               <span>
@@ -156,24 +182,9 @@ export const IDPGame = ({ myBaseStrategy, oppBaseStrategy }: IDPGameProps) => {
               </span>
               <span>- mean: {roundedMean(oppScore)}</span>
             </p>
-          </p>
+          </div>
         </div>
       )}
-
-      <div className="flex gap-2">
-        <button onClick={() => reset()}>Reset</button>
-        <button onClick={() => playOneTurn()}>Play 1 Turn</button>
-        <button onClick={() => playTurns(10)}>Play 10 Turns</button>
-        <button onClick={() => playTurns(100)}>Play 100 Turns</button>
-        <button onClick={() => playTurns(1000)}>Play 1000 Turns</button>
-      </div>
-      <p>Turns: {myScore.length}</p>
-      <p>
-        Total gains:{" "}
-        {myScore.reduce((acc, score) => acc + score, 0) +
-          oppScore.reduce((acc, score) => acc + score, 0)}
-      </p>
-      <p>Mean gains: {roundedMean([...myScore, ...oppScore])}</p>
     </div>
   );
 };
