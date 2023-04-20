@@ -2,13 +2,14 @@ export type Decision = "coop" | "betray";
 export const asEmoji = (d: Decision) => (d === "coop" ? "🤗" : "🔪");
 
 export const defaultGains = {
-  coop: { coop: 3, betray: 0 },
-  betray: { coop: 5, betray: 1 },
+  coop: { coop: 3, betray: -1 },
+  betray: { coop: 5, betray: 0 },
 };
 
 export const strategies = {
   betray: {
-    name: "betray",
+    id: "betray",
+    name: "Traitor",
     firstMove: "coop",
     strategy: {
       previousTurnIBetrayed: { coop: 0, betray: 0 },
@@ -17,7 +18,8 @@ export const strategies = {
   },
 
   trust: {
-    name: "trust",
+    id: "trust",
+    name: "Naive",
     firstMove: "coop",
     strategy: {
       previousTurnIBetrayed: { coop: 100, betray: 100 },
@@ -26,7 +28,8 @@ export const strategies = {
   },
 
   copycat: {
-    name: "copycat",
+    id: "copycat",
+    name: "CopyCat",
     firstMove: "coop",
     strategy: {
       previousTurnIBetrayed: { coop: 100, betray: 0 },
@@ -34,26 +37,9 @@ export const strategies = {
     },
   },
 
-  copyself1: {
-    name: "CopySelf (start betraying)",
-    firstMove: "betray",
-    strategy: {
-      previousTurnIBetrayed: { coop: 0, betray: 0 },
-      previousTurnICoop: { coop: 100, betray: 100 },
-    },
-  },
-
-  copyself2: {
-    name: "CopySelf (start coop)",
-    firstMove: "coop",
-    strategy: {
-      previousTurnIBetrayed: { coop: 0, betray: 0 },
-      previousTurnICoop: { coop: 100, betray: 100 },
-    },
-  },
-
   control1: {
-    name: "control1",
+    id: "control1",
+    name: "Control 2",
     firstMove: "coop",
     strategy: {
       previousTurnIBetrayed: { coop: 20, betray: 10 },
@@ -62,7 +48,8 @@ export const strategies = {
   },
 
   extorsion2: {
-    name: "extorsion2",
+    id: "extorsion2",
+    name: "Extorsion 2",
     firstMove: "coop",
     strategy: {
       previousTurnICoop: { coop: 88, betray: 50 },
@@ -71,7 +58,8 @@ export const strategies = {
   },
 
   cautious: {
-    name: "cautious",
+    id: "cautious",
+    name: "Cautious",
     firstMove: "coop",
     strategy: {
       previousTurnICoop: { coop: 100, betray: 0 },
@@ -80,7 +68,8 @@ export const strategies = {
   },
 
   inspired: {
-    name: "inspired",
+    id: "inspired",
+    name: "Inspired",
     firstMove: "coop",
     strategy: {
       previousTurnICoop: { coop: 99, betray: 50 },
@@ -91,6 +80,7 @@ export const strategies = {
 export type strategyNames = keyof typeof strategies;
 
 export type PrisonersDilemmaStrategy = {
+  id: string;
   name: string;
   firstMove: Decision;
   strategy: MatrixStrategy;

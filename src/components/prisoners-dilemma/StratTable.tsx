@@ -6,6 +6,13 @@ import {
   strategies,
 } from "./prisonersDilemma";
 
+const getColor = (n: number): string => {
+  const red = 255 - 4 * Math.max(n - 50, 0);
+  const green = Math.min(255, 5 * n);
+  const blue = 0;
+  return `rgba(${red}, ${green}, ${blue}, 0.3)`;
+};
+
 type StratTableProps = {
   playerName: string;
   strategy: PrisonersDilemmaStrategy;
@@ -23,15 +30,18 @@ export const StratTable = ({
     if (preset) setStrategy(preset);
   };
 
-  const setCustomStrategy = (e: React.ChangeEvent<HTMLInputElement>) => {};
-
   return (
-    <table className="m-2 border">
+    <table>
       <caption>{playerName} Strategy</caption>
 
       <tr>
-        <th>
-          <select name="strategy" id="strategy" onChange={setPresetStrategy}>
+        <th colSpan={2} className="border-none">
+          <select
+            name="strategy"
+            id="strategy"
+            onChange={setPresetStrategy}
+            defaultValue={strategy.id}
+          >
             <option value="custom">Custom</option>
             <option disabled>-</option>
             {Object.entries(strategies).map((s, b) => (
@@ -41,32 +51,36 @@ export const StratTable = ({
             ))}
           </select>
         </th>
-        <th>
-          <button onClick={resetStrategy}>reset</button>
-        </th>
+
         <th colSpan={2}>Opponent</th>
       </tr>
       <tr>
-        <th></th>
-        <th></th>
+        <th colSpan={2} className="border-none">
+          <button onClick={resetStrategy}>reset</button>
+        </th>
         <th>🤗</th>
         <th>🔪</th>
       </tr>
       <tr>
         <th rowSpan={2}>Me</th>
         <th>{asEmoji("coop")}</th>
-        <td>
-          <span className="flex gap-1">
+        <td
+          style={{
+            backgroundColor: getColor(strategy.strategy.previousTurnICoop.coop),
+          }}
+        >
+          <span className="flex">
             <input
               type="number"
               min={0}
               step={10}
               max={100}
-              className="max-w-[3rem] border-none"
+              className="max-w-[2rem] border-none text-right bg-transparent"
               value={strategy.strategy.previousTurnICoop.coop}
               onChange={(e) =>
                 setStrategy({
                   ...strategy,
+                  id: "custom",
                   strategy: {
                     ...strategy.strategy,
                     previousTurnICoop: {
@@ -80,18 +94,25 @@ export const StratTable = ({
             %
           </span>
         </td>
-        <td>
-          <span className="flex gap-1">
+        <td
+          style={{
+            backgroundColor: getColor(
+              strategy.strategy.previousTurnICoop.betray
+            ),
+          }}
+        >
+          <span className="flex">
             <input
               type="number"
               min={0}
               step={10}
               max={100}
-              className="max-w-[3rem] border-none"
+              className="max-w-[2rem] border-none text-right bg-transparent"
               value={strategy.strategy.previousTurnICoop.betray}
               onChange={(e) =>
                 setStrategy({
                   ...strategy,
+                  id: "custom",
                   strategy: {
                     ...strategy.strategy,
                     previousTurnICoop: {
@@ -108,18 +129,25 @@ export const StratTable = ({
       </tr>
       <tr>
         <th>{asEmoji("betray")}</th>
-        <td>
-          <span className="flex gap-1">
+        <td
+          style={{
+            backgroundColor: getColor(
+              strategy.strategy.previousTurnIBetrayed.coop
+            ),
+          }}
+        >
+          <span className="flex">
             <input
               type="number"
               min={0}
               step={10}
               max={100}
-              className="max-w-[3rem] border-none"
+              className="max-w-[2rem] border-none text-right bg-transparent"
               value={strategy.strategy.previousTurnIBetrayed.coop}
               onChange={(e) =>
                 setStrategy({
                   ...strategy,
+                  id: "custom",
                   strategy: {
                     ...strategy.strategy,
                     previousTurnIBetrayed: {
@@ -133,18 +161,25 @@ export const StratTable = ({
             %
           </span>
         </td>
-        <td>
-          <span className="flex gap-1">
+        <td
+          style={{
+            backgroundColor: getColor(
+              strategy.strategy.previousTurnIBetrayed.betray
+            ),
+          }}
+        >
+          <span className="flex">
             <input
               type="number"
               min={0}
               step={10}
               max={100}
-              className="max-w-[3rem] border-none"
+              className="max-w-[2rem] border-none text-right bg-transparent"
               value={strategy.strategy.previousTurnIBetrayed.betray}
               onChange={(e) =>
                 setStrategy({
                   ...strategy,
+                  id: "custom",
                   strategy: {
                     ...strategy.strategy,
                     previousTurnIBetrayed: {

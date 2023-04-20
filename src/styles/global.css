@@ -69,16 +69,28 @@ blockquote {
 table {
   border-collapse: collapse;
   border: 1px solid #999;
+  border-radius: 1em;
 }
 th,
 td {
   padding: 5px;
   text-align: center;
+  border: 1px solid #999;
 }
 th {
+  padding: 5px 10px;
   background-color: #eee;
 }
 
 td {
   border: 1px solid #999;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
 }

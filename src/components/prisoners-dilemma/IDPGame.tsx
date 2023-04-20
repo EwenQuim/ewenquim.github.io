@@ -6,6 +6,8 @@ import {
   asEmoji,
   PrisonersDilemmaStrategy,
   defaultGains,
+  strategyNames,
+  strategies,
 } from "./prisonersDilemma";
 
 const playNextTurn = (
@@ -45,8 +47,8 @@ const playNextTurn = (
 };
 
 type IDPGameProps = {
-  myBaseStrategy: PrisonersDilemmaStrategy;
-  oppBaseStrategy: PrisonersDilemmaStrategy;
+  myBaseStrategy: PrisonersDilemmaStrategy | strategyNames;
+  oppBaseStrategy: PrisonersDilemmaStrategy | strategyNames;
   gainsMatrix?: typeof defaultGains;
 };
 export const IDPGame = ({
@@ -56,10 +58,16 @@ export const IDPGame = ({
 }: IDPGameProps) => {
   const [myScore, setMyScore] = useState<number[]>([]);
   const [oppScore, setOppScore] = useState<number[]>([]);
-  const [myStrategy, setMyStrategy] =
-    useState<PrisonersDilemmaStrategy>(myBaseStrategy);
-  const [oppStrategy, setOppStrategy] =
-    useState<PrisonersDilemmaStrategy>(oppBaseStrategy);
+  const [myStrategy, setMyStrategy] = useState<PrisonersDilemmaStrategy>(
+    typeof myBaseStrategy !== "string"
+      ? myBaseStrategy
+      : strategies[myBaseStrategy]
+  );
+  const [oppStrategy, setOppStrategy] = useState<PrisonersDilemmaStrategy>(
+    typeof oppBaseStrategy !== "string"
+      ? oppBaseStrategy
+      : strategies[oppBaseStrategy]
+  );
 
   const [myDecisions, setMyDecisions] = useState<Decision[]>([]);
   const [oppDecisions, setOppDecisions] = useState<Decision[]>([]);
@@ -112,17 +120,29 @@ export const IDPGame = ({
           playerName="My"
           strategy={myStrategy}
           setStrategy={setMyStrategy}
-          resetStrategy={() => setMyStrategy(myBaseStrategy)}
+          resetStrategy={() =>
+            setMyStrategy(
+              typeof myBaseStrategy !== "string"
+                ? myBaseStrategy
+                : strategies[myBaseStrategy]
+            )
+          }
         />
         <StratTable
           playerName="Opponent"
           strategy={oppStrategy}
           setStrategy={setOppStrategy}
-          resetStrategy={() => setOppStrategy(oppBaseStrategy)}
+          resetStrategy={() =>
+            setOppStrategy(
+              typeof oppBaseStrategy !== "string"
+                ? oppBaseStrategy
+                : strategies[oppBaseStrategy]
+            )
+          }
         />
       </div>
 
-      <div className="flex gap-2">
+      <div className="flex gap-2 mt-2">
         <button onClick={() => reset()}>Reset</button>
         <button onClick={() => playOneTurn()}>Play 1 Turn</button>
         <button onClick={() => setRemainingTurns(10)}>Play 10 Turns</button>
@@ -136,7 +156,9 @@ export const IDPGame = ({
           Total gains:{" "}
           {[...myScore, ...oppScore].reduce((acc, score) => acc + score, 0)}
         </span>
-        <span>Mean gains: {roundedMean([...myScore, ...oppScore])}</span>
+        {myScore.length > 0 && (
+          <span>Mean gains: {roundedMean([...myScore, ...oppScore])}</span>
+        )}
       </p>
 
       {myDecisions.length > 0 && oppDecisions.length > 0 && (
