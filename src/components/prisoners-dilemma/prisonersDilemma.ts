@@ -34,6 +34,24 @@ export const strategies = {
     },
   },
 
+  copyself1: {
+    name: "CopySelf (start betraying)",
+    firstMove: "betray",
+    strategy: {
+      previousTurnIBetrayed: { coop: 0, betray: 0 },
+      previousTurnICoop: { coop: 100, betray: 100 },
+    },
+  },
+
+  copyself2: {
+    name: "CopySelf (start coop)",
+    firstMove: "coop",
+    strategy: {
+      previousTurnIBetrayed: { coop: 0, betray: 0 },
+      previousTurnICoop: { coop: 100, betray: 100 },
+    },
+  },
+
   control1: {
     name: "control1",
     firstMove: "coop",

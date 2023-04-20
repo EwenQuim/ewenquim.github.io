@@ -22,12 +22,22 @@ const playNextTurn = (
   const oppProb = Math.random() * 100;
 
   const myDecision =
-    myProb < myStrategy.strategy.previousTurnIBetrayed[oppPreviousDecision]
+    myProb <
+    myStrategy.strategy[
+      myPreviousDecision == "coop"
+        ? "previousTurnICoop"
+        : "previousTurnIBetrayed"
+    ][oppPreviousDecision]
       ? "coop"
       : "betray";
 
   const oppDecision =
-    oppProb < oppStrategy.strategy.previousTurnIBetrayed[myPreviousDecision]
+    oppProb <
+    oppStrategy.strategy[
+      myPreviousDecision == "coop"
+        ? "previousTurnICoop"
+        : "previousTurnIBetrayed"
+    ][myPreviousDecision]
       ? "coop"
       : "betray";
 
@@ -133,7 +143,7 @@ export const IDPGame = ({
         <div className="flex flex-col md:flex-row w-full gap-2 justify-between">
           <div>
             <p>
-              {myDecisions.at(-1) === "coop" ? "Cooperate 🤗" : "Betray 🔪"}
+              {myDecisions.at(-1) === "coop" ? "🤗 Cooperate" : "🔪 Betray"}
             </p>
             <p>
               Last 10:{" "}
@@ -144,22 +154,13 @@ export const IDPGame = ({
             </p>
             <p>
               <span>{myScore.reduce((acc, score) => acc + score, 0)}</span>
-              <span>
-                {" "}
-                (+
-                {
-                  defaultGains[myDecisions.at(-1) as Decision][
-                    oppDecisions.at(-1) as Decision
-                  ]
-                }
-                )
-              </span>
+              <span> (+{myScore.at(-1)})</span>
               <span> - mean: {roundedMean(myScore)}</span>
             </p>
           </div>
           <div>
             <p>
-              {oppDecisions.at(-1) === "coop" ? "Cooperate 🤗" : "Betray 🔪"}
+              {oppDecisions.at(-1) === "coop" ? "🤗 Cooperate" : "🔪 Betray"}
             </p>
             <p>
               Last 10:{" "}
@@ -170,16 +171,7 @@ export const IDPGame = ({
             </p>
             <p>
               <span>{oppScore.reduce((acc, score) => acc + score, 0)}</span>
-              <span>
-                {" "}
-                (+
-                {
-                  defaultGains[oppDecisions.at(-1) as Decision][
-                    myDecisions.at(-1) as Decision
-                  ]
-                }
-                )
-              </span>
+              <span> (+ {oppScore.at(-1)})</span>
               <span> - mean: {roundedMean(oppScore)}</span>
             </p>
           </div>
