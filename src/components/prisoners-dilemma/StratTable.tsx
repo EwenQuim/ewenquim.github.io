@@ -1,11 +1,15 @@
 import { useState } from "react";
-import type { MatrixStrategy } from "./IDPGame";
-import { asEmoji, strategies } from "../../utils/prisoners-dilemma";
+
+import {
+  PrisonersDilemmaStrategy,
+  asEmoji,
+  strategies,
+} from "./prisonersDilemma";
 
 type StratTableProps = {
   playerName: string;
-  strategy: MatrixStrategy;
-  setStrategy: (strategy: MatrixStrategy) => void;
+  strategy: PrisonersDilemmaStrategy;
+  setStrategy: (strategy: PrisonersDilemmaStrategy) => void;
   resetStrategy: () => void;
 };
 export const StratTable = ({
@@ -32,7 +36,7 @@ export const StratTable = ({
             <option disabled>-</option>
             {Object.entries(strategies).map((s, b) => (
               <option key={s[0]} value={s[0]}>
-                {s[0]}
+                {s[1].name}
               </option>
             ))}
           </select>
@@ -59,13 +63,16 @@ export const StratTable = ({
               step={10}
               max={100}
               className="max-w-[3rem] border-none"
-              value={strategy.previousTurnICoop.coop}
+              value={strategy.strategy.previousTurnICoop.coop}
               onChange={(e) =>
                 setStrategy({
                   ...strategy,
-                  previousTurnICoop: {
-                    ...strategy.previousTurnICoop,
-                    coop: Number(e.target.value),
+                  strategy: {
+                    ...strategy.strategy,
+                    previousTurnICoop: {
+                      ...strategy.strategy.previousTurnICoop,
+                      coop: Number(e.target.value),
+                    },
                   },
                 })
               }
@@ -81,13 +88,16 @@ export const StratTable = ({
               step={10}
               max={100}
               className="max-w-[3rem] border-none"
-              value={strategy.previousTurnICoop.betray}
+              value={strategy.strategy.previousTurnICoop.betray}
               onChange={(e) =>
                 setStrategy({
                   ...strategy,
-                  previousTurnICoop: {
-                    ...strategy.previousTurnICoop,
-                    betray: Number(e.target.value),
+                  strategy: {
+                    ...strategy.strategy,
+                    previousTurnICoop: {
+                      ...strategy.strategy.previousTurnICoop,
+                      betray: Number(e.target.value),
+                    },
                   },
                 })
               }
@@ -106,13 +116,16 @@ export const StratTable = ({
               step={10}
               max={100}
               className="max-w-[3rem] border-none"
-              value={strategy.previousTurnIBetrayed.coop}
+              value={strategy.strategy.previousTurnIBetrayed.coop}
               onChange={(e) =>
                 setStrategy({
                   ...strategy,
-                  previousTurnIBetrayed: {
-                    ...strategy.previousTurnIBetrayed,
-                    coop: Number(e.target.value),
+                  strategy: {
+                    ...strategy.strategy,
+                    previousTurnIBetrayed: {
+                      ...strategy.strategy.previousTurnIBetrayed,
+                      coop: Number(e.target.value),
+                    },
                   },
                 })
               }
@@ -128,13 +141,16 @@ export const StratTable = ({
               step={10}
               max={100}
               className="max-w-[3rem] border-none"
-              value={strategy.previousTurnIBetrayed.betray}
+              value={strategy.strategy.previousTurnIBetrayed.betray}
               onChange={(e) =>
                 setStrategy({
                   ...strategy,
-                  previousTurnIBetrayed: {
-                    ...strategy.previousTurnIBetrayed,
-                    betray: Number(e.target.value),
+                  strategy: {
+                    ...strategy.strategy,
+                    previousTurnIBetrayed: {
+                      ...strategy.strategy.previousTurnIBetrayed,
+                      betray: Number(e.target.value),
+                    },
                   },
                 })
               }

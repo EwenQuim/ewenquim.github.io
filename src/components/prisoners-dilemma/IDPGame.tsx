@@ -1,34 +1,33 @@
 import { useEffect, useState } from "react";
 import { StratTable } from "./StratTable";
 import { roundedMean } from "../../utils/maths";
-import { type Decision, asEmoji } from "../../utils/prisoners-dilemma";
-
-export type MatrixStrategy = {
-  previousTurnIBetrayed: { coop: number; betray: number };
-  previousTurnICoop: { coop: number; betray: number };
-};
-
-const gains = {
-  coop: { coop: 3, betray: 0 },
-  betray: { coop: 5, betray: 1 },
-};
+import {
+  type Decision,
+  asEmoji,
+  PrisonersDilemmaStrategy,
+  defaultGains,
+} from "./prisonersDilemma";
 
 const playNextTurn = (
-  myStrategy: MatrixStrategy,
-  oppStrategy: MatrixStrategy,
-  myPreviousDecision: Decision,
-  oppPreviousDecision: Decision
+  myStrategy: PrisonersDilemmaStrategy,
+  oppStrategy: PrisonersDilemmaStrategy,
+  myPreviousDecision: Decision | undefined,
+  oppPreviousDecision: Decision | undefined
 ): { me: Decision; opp: Decision } => {
+  if (myPreviousDecision === undefined || oppPreviousDecision === undefined) {
+    return { me: myStrategy.firstMove, opp: oppStrategy.firstMove };
+  }
+
   const myProb = Math.random() * 100;
   const oppProb = Math.random() * 100;
 
   const myDecision =
-    myProb < myStrategy.previousTurnIBetrayed[oppPreviousDecision]
+    myProb < myStrategy.strategy.previousTurnIBetrayed[oppPreviousDecision]
       ? "coop"
       : "betray";
 
   const oppDecision =
-    oppProb < oppStrategy.previousTurnIBetrayed[myPreviousDecision]
+    oppProb < oppStrategy.strategy.previousTurnIBetrayed[myPreviousDecision]
       ? "coop"
       : "betray";
 
@@ -36,20 +35,21 @@ const playNextTurn = (
 };
 
 type IDPGameProps = {
-  myBaseStrategy: MatrixStrategy;
-  oppBaseStrategy: MatrixStrategy;
-  gainsMatrix?: typeof gains;
+  myBaseStrategy: PrisonersDilemmaStrategy;
+  oppBaseStrategy: PrisonersDilemmaStrategy;
+  gainsMatrix?: typeof defaultGains;
 };
 export const IDPGame = ({
   myBaseStrategy,
   oppBaseStrategy,
-  gainsMatrix = gains,
+  gainsMatrix = defaultGains,
 }: IDPGameProps) => {
   const [myScore, setMyScore] = useState<number[]>([]);
   const [oppScore, setOppScore] = useState<number[]>([]);
-  const [myStrategy, setMyStrategy] = useState<MatrixStrategy>(myBaseStrategy);
+  const [myStrategy, setMyStrategy] =
+    useState<PrisonersDilemmaStrategy>(myBaseStrategy);
   const [oppStrategy, setOppStrategy] =
-    useState<MatrixStrategy>(oppBaseStrategy);
+    useState<PrisonersDilemmaStrategy>(oppBaseStrategy);
 
   const [myDecisions, setMyDecisions] = useState<Decision[]>([]);
   const [oppDecisions, setOppDecisions] = useState<Decision[]>([]);
@@ -67,11 +67,11 @@ export const IDPGame = ({
     const { me, opp } = playNextTurn(
       myStrategy,
       oppStrategy,
-      myDecisions.at(-1) ?? "coop",
-      oppDecisions.at(-1) ?? "coop"
+      myDecisions.at(-1),
+      oppDecisions.at(-1)
     );
-    setMyScore((myScore) => [...myScore, gains[me][opp]]);
-    setOppScore((oppScore) => [...oppScore, gains[opp][me]]);
+    setMyScore((myScore) => [...myScore, defaultGains[me][opp]]);
+    setOppScore((oppScore) => [...oppScore, defaultGains[opp][me]]);
     setMyDecisions((myDecisions) => [...myDecisions, me]);
     setOppDecisions((oppDecisions) => [...oppDecisions, opp]);
   };
@@ -136,7 +136,7 @@ export const IDPGame = ({
               {myDecisions.at(-1) === "coop" ? "Cooperate 🤗" : "Betray 🔪"}
             </p>
             <p>
-              10 last turns:{" "}
+              Last 10:{" "}
               {myDecisions
                 .slice(-10)
                 .map((d) => asEmoji(d))
@@ -148,13 +148,13 @@ export const IDPGame = ({
                 {" "}
                 (+
                 {
-                  gains[myDecisions.at(-1) as Decision][
+                  defaultGains[myDecisions.at(-1) as Decision][
                     oppDecisions.at(-1) as Decision
                   ]
                 }
-                ){" "}
+                )
               </span>
-              <span>- mean: {roundedMean(myScore)}</span>
+              <span> - mean: {roundedMean(myScore)}</span>
             </p>
           </div>
           <div>
@@ -162,7 +162,7 @@ export const IDPGame = ({
               {oppDecisions.at(-1) === "coop" ? "Cooperate 🤗" : "Betray 🔪"}
             </p>
             <p>
-              10 last turns:{" "}
+              Last 10:{" "}
               {oppDecisions
                 .slice(-10)
                 .map((d) => asEmoji(d))
@@ -174,13 +174,13 @@ export const IDPGame = ({
                 {" "}
                 (+
                 {
-                  gains[oppDecisions.at(-1) as Decision][
+                  defaultGains[oppDecisions.at(-1) as Decision][
                     myDecisions.at(-1) as Decision
                   ]
                 }
-                ){" "}
+                )
               </span>
-              <span>- mean: {roundedMean(oppScore)}</span>
+              <span> - mean: {roundedMean(oppScore)}</span>
             </p>
           </div>
         </div>

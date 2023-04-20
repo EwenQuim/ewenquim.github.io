@@ -1,7 +1,7 @@
 ---
 title: "Iterated Prisoner's Dilemma"
 description: "A game to explore the iterated prisoner's dilemma"
-pubDate: "Jul 02 2022"
+date: "Jul 02 2022"
 ---
 
 This theme comes with the [@astrojs/mdx](https://docs.astro.build/en/guides/integrations-guide/mdx/) integration installed and configured in your `astro.config.mjs` config file. If you prefer not to use MDX, you can disable support by removing the integration from your config file.
@@ -22,12 +22,20 @@ import { IDPGame } from "../../components/prisoners-dilemma/IDPGame";
 <IDPGame
   client:idle
   myBaseStrategy={{
-    previousTurnIBetrayed: { coop: 80, betray: 50 },
-    previousTurnICoop: { coop: 50, betray: 70 },
+    name: "Truc",
+    firstMove: "coop",
+    strategy: {
+      previousTurnIBetrayed: { coop: 80, betray: 50 },
+      previousTurnICoop: { coop: 50, betray: 70 },
+    },
   }}
   oppBaseStrategy={{
-    previousTurnIBetrayed: { coop: 50, betray: 50 },
-    previousTurnICoop: { coop: 50, betray: 50 },
+    name: "Truc",
+    firstMove: "coop",
+    strategy: {
+      previousTurnIBetrayed: { coop: 50, betray: 50 },
+      previousTurnICoop: { coop: 50, betray: 50 },
+    },
   }}
 />
 
@@ -66,11 +74,19 @@ import Latex from "../../components/Latex.astro";
 <IDPGame
   client:idle
   myBaseStrategy={{
-    previousTurnIBetrayed: { coop: 40, betrayed: 50 },
-    previousTurnICoop: { coop: 50, betrayed: 70 },
+    name: "Truc",
+    firstMove: "coop",
+    strategy: {
+      previousTurnIBetrayed: { coop: 40, betrayed: 50 },
+      previousTurnICoop: { coop: 50, betrayed: 70 },
+    },
   }}
   oppBaseStrategy={{
-    previousTurnIBetrayed: { coop: 50, betrayed: 20 },
-    previousTurnICoop: { coop: 50, betrayed: 50 },
+    name: "Truc",
+    firstMove: "coop",
+    strategy: {
+      previousTurnIBetrayed: { coop: 50, betrayed: 20 },
+      previousTurnICoop: { coop: 50, betrayed: 50 },
+    },
   }}
 />
