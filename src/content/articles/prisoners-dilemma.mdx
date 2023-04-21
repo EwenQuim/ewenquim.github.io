@@ -29,14 +29,7 @@ import { IDPGame } from "../../components/prisoners-dilemma/IDPGame";
       previousTurnICoop: { coop: 50, betray: 70 },
     },
   }}
-  oppBaseStrategy={{
-    name: "Truc",
-    firstMove: "coop",
-    strategy: {
-      previousTurnIBetrayed: { coop: 50, betray: 50 },
-      previousTurnICoop: { coop: 50, betray: 50 },
-    },
-  }}
+  oppBaseStrategy="copycat"
 />
 
 ## More Links
@@ -77,16 +70,9 @@ import Latex from "../../components/Latex.astro";
     name: "Truc",
     firstMove: "coop",
     strategy: {
-      previousTurnIBetrayed: { coop: 40, betrayed: 50 },
-      previousTurnICoop: { coop: 50, betrayed: 70 },
+      previousTurnIBetrayed: { coop: 40, betray: 0 },
+      previousTurnICoop: { coop: 50, betray: 70 },
     },
   }}
-  oppBaseStrategy={{
-    name: "Truc",
-    firstMove: "coop",
-    strategy: {
-      previousTurnIBetrayed: { coop: 50, betrayed: 20 },
-      previousTurnICoop: { coop: 50, betrayed: 50 },
-    },
-  }}
+  oppBaseStrategy="betray"
 />
