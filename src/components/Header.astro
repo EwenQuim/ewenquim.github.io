@@ -3,15 +3,15 @@ import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<header>
+<header class="text-center">
 	<h2>
 		{SITE_TITLE}
 	</h2>
 	<nav>
 		<HeaderLink href="/">Home</HeaderLink>
 		<HeaderLink href="/articles">Articles</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="https://github.com/EwenQuim" target="_blank">GitHub</HeaderLink>
+		<HeaderLink href="/nouvelles">Nouvelles</HeaderLink>
+		<HeaderLink href="/projects">Projets</HeaderLink>
 	</nav>
 </header>
 <style>
