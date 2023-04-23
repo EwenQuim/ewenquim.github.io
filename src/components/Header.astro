@@ -11,10 +11,12 @@ const { isTitle } = Astro.props;
       {SITE_TITLE}
     </a>
   </h2>
-  {isTitle && <p class="italic">Centralien &middot; Software Engineer</p>}
+  {isTitle && <p class="italic mb-8">Centralien &middot; Software Engineer</p>}
   <nav class="my-4">
     <HeaderLink href="/articles">Articles</HeaderLink>
+    &middot;
     <HeaderLink href="/nouvelles">Nouvelles</HeaderLink>
+    &middot;
     <HeaderLink href="/projects">Projets</HeaderLink>
   </nav>
 </header>
