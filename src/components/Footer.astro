@@ -3,14 +3,31 @@ const today = new Date();
 ---
 
 <footer>
-  &copy; {today.getFullYear()} Ewen Quimerc'h. All rights reserved.
+  <ul class="list-none pl-0 flex justify-center gap-2">
+    <li>
+      <a href="https://github.com/EwenQuim">GitHub</a>
+    </li>
+    <li>
+      <a href="mailto:ewen.quimerch+hello-arob@se-gmail.com">Mail</a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/ewen-quimerch/">LinkedIn</a>
+    </li>
+  </ul>
 </footer>
 <style>
   footer {
-    padding: 5rem 3rem;
+    text-align: center;
+    padding: 2rem;
     color: gray;
     font-size: small;
     text-align: center;
-    font-style: italic;
+  }
+  a {
+    color: #777;
+  }
+
+  a:hover {
+    color: #333;
   }
 </style>

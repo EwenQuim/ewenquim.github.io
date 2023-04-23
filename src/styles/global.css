@@ -4,9 +4,10 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 body {
-  font-family: Verdana, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   margin: auto;
-  padding: 20px;
+  padding: 0 20px;
   max-width: 65ch;
   text-align: left;
   background-color: #f6dab7;
