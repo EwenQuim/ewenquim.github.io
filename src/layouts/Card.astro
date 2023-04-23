@@ -20,7 +20,9 @@ const { post, category } = Astro.props;
     )
   }
   <div>
-    <h2><a href={`/${category}/${post.slug}`}>{post.data.title}</a></h2>
+    <h2>
+      <a rel="prefetch" href={`/${category}/${post.slug}`}>{post.data.title}</a>
+    </h2>
     <p class="mb-0">{post.data.description}</p>
   </div>
 </li>
