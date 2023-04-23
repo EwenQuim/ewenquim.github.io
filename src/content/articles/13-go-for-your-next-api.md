@@ -2,7 +2,7 @@
 date: 2023-03-28
 title: Write your next API with Go
 description: "Unleash the Power of Golang: build lightning-fast, scalable, and easy to maintain APIs"
-cover: https://media.tenor.com/xyIzlxrYUjsAAAAC/gopher-powerful.gif
+heroImage: https://media.tenor.com/xyIzlxrYUjsAAAAC/gopher-powerful.gif
 categories:
   - tech
 tags:
@@ -32,7 +32,7 @@ Golang's syntax is clean, simple, and easy to learn, making it perfect for build
 Golang's standard library is packed with useful packages that make building APIs a breeze. From HTTP and JSON to encryption, Golang's standard library has everything you need to build a robust API without relying on risky third-party packages.
 
 ## Modern Toolchain and Developer Experience 🧪
-   
+
 Golang's modern toolchain makes it easy to write, test, and deploy APIs. With features like `go fmt`, `go test`, and `go build`, Golang's toolchain makes it easy to write clean and maintainable code. Golang's package manager, go modules, also makes dependency management a breeze.
 
 ## Vibrant Community and Ecosystem 🦄

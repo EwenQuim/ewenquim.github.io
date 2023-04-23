@@ -2,7 +2,7 @@
 date: 2020-05-01
 title: Sign your commits with PGP
 description: "Protect your git history with PGP"
-cover: https://images.unsplash.com/photo-1586661615438-349a276d098b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&q=80
+heroImage: https://images.unsplash.com/photo-1586661615438-349a276d098b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&q=80
 categories:
   - tech
 tags:

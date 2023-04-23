@@ -4,12 +4,12 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { getCollection } from "astro:content";
-import FormattedDate from "../components/FormattedDate.astro";
+import Card from "./Card.astro";
 
 const { slug } = Astro.props;
 
-const posts = (await getCollection(slug)).sort(
-  (a, b) => a.data.date.valueOf() - b.data.date.valueOf()
+const posts = (await getCollection(slug as "articles")).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
 ---
 
@@ -42,10 +42,10 @@ const posts = (await getCollection(slug)).sort(
         <ul>
           {
             posts.map((post) => (
-              <li>
-                <FormattedDate date={post.data.date} />
-                <a href={`/${slug}/${post.slug}/`}>{post.data.title}</a>
-              </li>
+              <>
+                <Card post={post} category={slug} />
+                <br />
+              </>
             ))
           }
         </ul>

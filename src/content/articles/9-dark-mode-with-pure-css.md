@@ -2,7 +2,7 @@
 date: 2021-05-24
 title: Dark mode switch with pure CSS
 description: Who knew it was possible to do a dark mode switch with pure CSS? I'll show you how to do mine, but feel free to adapt it as you want!
-cover: https://images.unsplash.com/photo-1536613105185-09ea1249a2cb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&q=80
+heroImage: https://images.unsplash.com/photo-1536613105185-09ea1249a2cb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&q=80
 tags:
   - tuto
   - css

@@ -2,7 +2,7 @@
 date: 2020-04-01
 title: Efficient CLI aliases
 description: How to set up a centralized system to store and use your aliases everywhere
-cover: https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8YmxvZ3xlbnwwfDB8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&q=60
+heroImage: https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8YmxvZ3xlbnwwfDB8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&q=60
 categories:
   - tech
 lang: en

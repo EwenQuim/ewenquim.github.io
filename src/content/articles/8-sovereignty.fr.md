@@ -2,7 +2,7 @@
 date: 2021-04-09
 title: Souveraineté des systèmes d'information
 description: "La souveraineté économique est un sujet omniprésent dans la société actuelle, et était au centre de toutes les conversations en Europe lors du passage a la monnaie unique et centralisée, l'euro."
-cover: https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8c2VydmVyfGVufDB8MHwwfA%3D%3D&auto=format&fit=crop&q=60
+heroImage: https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8c2VydmVyfGVufDB8MHwwfA%3D%3D&auto=format&fit=crop&q=60
 tags:
   - internet
   - libre
@@ -63,7 +63,7 @@ Et oui, les données, ca se monnaie ! Une fois qu'elles ne vous appartiennent pl
 
 Oui, effectivement. Mais les règles peuvent changer. Les _bits_, les données _pures_, elles, restent toujours bien au chaud dans les datacenters de ces companies. Et puis, ce n'est pas la première fois qu'une entreprise ment à ses clients en violant la loi (souvenez vous du [scandale Findus](https://fr.wikipedia.org/wiki/Fraude_%C3%A0_la_viande_de_cheval_de_2013) et de [l'affaire Volkswagen](https://fr.wikipedia.org/wiki/Affaire_Volkswagen), pour ne citer que ces deux-là).
 
-Ces companies peuvent commettre des dérives (par exemple supprimer toutes vos données, c'est [déjà arrivé](https://www.businessinsider.com/terraria-google-youtube-gmail-play-2021-2)). 
+Ces companies peuvent commettre des dérives (par exemple supprimer toutes vos données, c'est [déjà arrivé](https://www.businessinsider.com/terraria-google-youtube-gmail-play-2021-2)).
 
 De plus, des instances étatiques peuvent exercer une certaine pression pour obtenir des données stockées par ces fournisseurs, via des mandats de terrorisme. Rien de choquant à priori, mais les États-Unis ont la facheuse tendance à traiter de terroriste n'importe quel individu dont les intentions ne sont pas alignées avec la superpuissance. C'est bête, mais ils ne peuvent rien face à une clé USB.
 

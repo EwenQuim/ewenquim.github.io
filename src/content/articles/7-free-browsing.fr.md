@@ -2,7 +2,7 @@
 date: 2021-03-01
 title: Navigation libre
 description: 'Virez les traqueurs 👀 pour toujours (et ruinez le "digital marketing", petit bonus 😎)'
-cover: "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"
+heroImage: "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"
 categories:
   - tech
 tags:
@@ -28,7 +28,7 @@ C'est ce que nous allons faire.
 
 Installez le navigateur **Firefox** ([desktop](https://www.mozilla.org/fr/firefox/new/)) ([iOS](https://apps.apple.com/fr/app/navigateur-web-firefox/id989804926)) ([Android](https://play.google.com/store/apps/details?id=org.mozilla.firefox)).
 
-Cela vous aidera à bien des égards _sans même changer votre expérience de navigation. Il n'est pas différent de Chrome, Edge ou Safari, même en termes de vitesse ou d'utilisation de la RAM. En fait, vous pouvez personnaliser les thèmes et les extensions bien plus que pour les autres navigateurs !
+Cela vous aidera à bien des égards \_sans même changer votre expérience de navigation. Il n'est pas différent de Chrome, Edge ou Safari, même en termes de vitesse ou d'utilisation de la RAM. En fait, vous pouvez personnaliser les thèmes et les extensions bien plus que pour les autres navigateurs !
 
 Si c'est si incroyable, pourquoi n'est-il pas plus populaire ? 🤔
 

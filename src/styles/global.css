@@ -7,8 +7,8 @@ body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   margin: auto;
-  padding: 0 20px;
-  max-width: 65ch;
+  padding: 0 10px;
+  max-width: 40rem;
   text-align: left;
   background-color: #f6dab7;
   word-wrap: break-word;
@@ -27,7 +27,22 @@ b {
   color: #222;
 }
 a {
-  color: #3273dc;
+  color: #666;
+  text-decoration: none;
+}
+article a {
+  text-decoration: underline dashed;
+  color: blue;
+}
+article a:visited {
+  color: purple;
+}
+a.active {
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: underline;
+  color: black;
 }
 textarea {
   width: 100%;

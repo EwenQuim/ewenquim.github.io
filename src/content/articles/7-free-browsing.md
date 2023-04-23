@@ -2,7 +2,7 @@
 date: 2021-03-01
 title: Free browsing
 description: "Ban spies 👀 forever (and ruin digital marketers 😎)"
-cover: "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&q=80"
+heroImage: "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&q=80"
 categories:
   - tech
 tags:
