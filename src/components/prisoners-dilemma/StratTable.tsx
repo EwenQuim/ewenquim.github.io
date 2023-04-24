@@ -31,7 +31,7 @@ export const StratTable = ({
   };
 
   return (
-    <table className="shadow">
+    <table>
       <caption>{playerName} Strategy</caption>
 
       <tr>

@@ -9,6 +9,7 @@ import {
   strategyNames,
   strategies,
 } from "./prisonersDilemma";
+import { Score } from "./Score";
 
 const playNextTurn = (
   myStrategy: PrisonersDilemmaStrategy,
@@ -116,30 +117,36 @@ export const IDPGame = ({
       <h1> IDP Game </h1>
 
       <div className="flex flex-col md:flex-row w-full gap-2 justify-between">
-        <StratTable
-          playerName="My"
-          strategy={myStrategy}
-          setStrategy={setMyStrategy}
-          resetStrategy={() =>
-            setMyStrategy(
-              typeof myBaseStrategy !== "string"
-                ? myBaseStrategy
-                : strategies[myBaseStrategy]
-            )
-          }
-        />
-        <StratTable
-          playerName="Opponent"
-          strategy={oppStrategy}
-          setStrategy={setOppStrategy}
-          resetStrategy={() =>
-            setOppStrategy(
-              typeof oppBaseStrategy !== "string"
-                ? oppBaseStrategy
-                : strategies[oppBaseStrategy]
-            )
-          }
-        />
+        <div className="flex flex-col shadow bg-white rounded-lg p-2 w-full">
+          <StratTable
+            playerName="My"
+            strategy={myStrategy}
+            setStrategy={setMyStrategy}
+            resetStrategy={() =>
+              setMyStrategy(
+                typeof myBaseStrategy !== "string"
+                  ? myBaseStrategy
+                  : strategies[myBaseStrategy]
+              )
+            }
+          />
+          <Score scores={myScore} decisions={myDecisions} />
+        </div>
+        <div className="shadow bg-white rounded-lg p-2 w-full">
+          <StratTable
+            playerName="Opponent"
+            strategy={oppStrategy}
+            setStrategy={setOppStrategy}
+            resetStrategy={() =>
+              setOppStrategy(
+                typeof oppBaseStrategy !== "string"
+                  ? oppBaseStrategy
+                  : strategies[oppBaseStrategy]
+              )
+            }
+          />
+          <Score scores={oppScore} decisions={oppDecisions} />
+        </div>
       </div>
 
       <div className="flex gap-2 mt-2">
@@ -160,45 +167,6 @@ export const IDPGame = ({
           <span>Mean gains: {roundedMean([...myScore, ...oppScore])}</span>
         )}
       </p>
-
-      {myDecisions.length > 0 && oppDecisions.length > 0 && (
-        <div className="flex flex-col md:flex-row w-full gap-2 justify-between">
-          <div>
-            <p>
-              {myDecisions.at(-1) === "coop" ? "🤗 Cooperate" : "🔪 Betray"}
-            </p>
-            <p>
-              Last 10:{" "}
-              {myDecisions
-                .slice(-10)
-                .map((d) => asEmoji(d))
-                .join(" ")}
-            </p>
-            <p>
-              <span>{myScore.reduce((acc, score) => acc + score, 0)}</span>
-              <span> (+{myScore.at(-1)})</span>
-              <span> - mean: {roundedMean(myScore)}</span>
-            </p>
-          </div>
-          <div>
-            <p>
-              {oppDecisions.at(-1) === "coop" ? "🤗 Cooperate" : "🔪 Betray"}
-            </p>
-            <p>
-              Last 10:{" "}
-              {oppDecisions
-                .slice(-10)
-                .map((d) => asEmoji(d))
-                .join(" ")}
-            </p>
-            <p>
-              <span>{oppScore.reduce((acc, score) => acc + score, 0)}</span>
-              <span> (+ {oppScore.at(-1)})</span>
-              <span> - mean: {roundedMean(oppScore)}</span>
-            </p>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
