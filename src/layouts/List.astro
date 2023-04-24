@@ -39,13 +39,12 @@ const posts = (await getCollection(slug as "articles")).sort(
     <Header />
     <main>
       <section>
-        <ul>
+        <ul class="list-none">
           {
             posts.map((post) => (
-              <>
+              <li class="my-4">
                 <Card post={post} category={slug} />
-                <br />
-              </>
+              </li>
             ))
           }
         </ul>
