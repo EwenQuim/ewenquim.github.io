@@ -21,9 +21,38 @@ const { post, category } = Astro.props;
     )
   }
   <div>
-    <h2>
+    <h2 class="w-full inline-flex justify-between items-baseline">
       <a rel="prefetch" href={`/${category}/${post.slug}`}>{post.data.title}</a>
+      {
+        post.data.github && (
+          <a
+            href={`https://github.com/${post.data.github}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex gap-2"
+          >
+            <img
+              class="as"
+              src={`https://img.shields.io/github/stars/${post.data.github}?style=social`}
+            />
+          </a>
+        )
+      }
     </h2>
+    {
+      post.data.playstore && (
+        <a
+          href={`https://play.google.com/store/apps/details?id=${post.data.playstore}`}
+        >
+          <img
+            src="https://img.shields.io/badge/play%20store-available-green"
+            alt=""
+            srcset=""
+          />
+        </a>
+      )
+    }
+
     <p class="mb-0">{post.data.description}</p>
   </div>
 </li>
