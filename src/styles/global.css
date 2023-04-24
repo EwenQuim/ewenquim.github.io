@@ -27,7 +27,7 @@ b {
   color: #222;
 }
 a {
-  color: #666;
+  color: #555;
   text-decoration: none;
 }
 article a {
@@ -77,6 +77,11 @@ blockquote {
   padding: 2px 0px 2px 20px;
   margin: 0px;
   font-style: italic;
+}
+hr {
+  margin: 2rem 5rem;
+  border: none;
+  border-bottom: 1px solid #999;
 }
 /* Table styles */
 table {
