@@ -31,7 +31,21 @@ const { title, description, date, updatedDate, heroImage } = Astro.props;
   <body>
     <Header />
     <main>
-      <article>
+      <article class="bg-white p-4 md:p-8 rounded-lg">
+        <hgroup>
+          <h1 class="title">{title}</h1>
+          <p class="italic">
+            <FormattedDate date={date} />
+            {
+              updatedDate && (
+                <>
+                  (updated on <FormattedDate date={updatedDate} />){" "}
+                </>
+              )
+            }
+          </p>
+        </hgroup>
+        <p>{description}</p>
         {
           heroImage && (
             <Image
@@ -40,19 +54,11 @@ const { title, description, date, updatedDate, heroImage } = Astro.props;
               src={heroImage}
               format="webp"
               alt=""
+              class="rounded-lg"
             />
           )
         }
-        <h1 class="title">{title}</h1>
-        <FormattedDate date={date} />
-        {
-          updatedDate && (
-            <div class="last-updated-on">
-              Last updated on <FormattedDate date={updatedDate} />
-            </div>
-          )
-        }
-        <hr />
+
         <slot />
       </article>
     </main>
