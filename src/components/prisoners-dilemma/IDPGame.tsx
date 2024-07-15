@@ -3,10 +3,10 @@ import { StratTable } from "./StratTable";
 import { roundedMean } from "../../utils/maths";
 import {
   type Decision,
-  asEmoji,
-  PrisonersDilemmaStrategy,
+
+  type PrisonersDilemmaStrategy,
   defaultGains,
-  strategyNames,
+  type strategyNames,
   strategies,
 } from "./prisonersDilemma";
 import { Score } from "./Score";
@@ -55,7 +55,6 @@ type IDPGameProps = {
 export const IDPGame = ({
   myBaseStrategy,
   oppBaseStrategy,
-  gainsMatrix = defaultGains,
 }: IDPGameProps) => {
   const [myScore, setMyScore] = useState<number[]>([]);
   const [oppScore, setOppScore] = useState<number[]>([]);

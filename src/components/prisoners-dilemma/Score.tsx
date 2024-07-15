@@ -1,5 +1,5 @@
 import { roundedMean } from "../../utils/maths";
-import { Decision, asEmoji } from "./prisonersDilemma";
+import { type Decision, asEmoji } from "./prisonersDilemma";
 
 type ScoreProps = {
   decisions: Decision[];

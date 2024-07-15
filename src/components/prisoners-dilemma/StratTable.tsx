@@ -1,7 +1,6 @@
-import { useState } from "react";
 
 import {
-  PrisonersDilemmaStrategy,
+  type PrisonersDilemmaStrategy,
   asEmoji,
   strategies,
 } from "./prisonersDilemma";
@@ -44,7 +43,7 @@ export const StratTable = ({
           >
             <option value="custom">Custom</option>
             <option disabled>-</option>
-            {Object.entries(strategies).map((s, b) => (
+            {Object.entries(strategies).map((s) => (
               <option key={s[0]} value={s[0]}>
                 {s[1].name}
               </option>
