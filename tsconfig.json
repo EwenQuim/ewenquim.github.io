@@ -4,7 +4,5 @@
     "strictNullChecks": true,
     "jsx": "react-jsx",
     "jsxImportSource": "react",
-    // Replace `astro/client` with `@astrojs/image/client`
-    "types": ["@astrojs/image/client"]
   }
 }
