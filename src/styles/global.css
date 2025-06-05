@@ -51,7 +51,7 @@
 
 @layer base {
 	body {
-		@apply font-sans mx-auto px-2.5 max-w-content text-left bg-bg-primary dark:bg-bg-primary-dark break-words leading-6 text-text-primary;
+		@apply font-sans mx-auto px-2.5 max-w-content text-left bg-bg-primary dark:bg-bg-primary-dark break-words leading-6 text-text-primary dark:text-text-primary-dark;
 	}
 
 	h1,

@@ -8,7 +8,7 @@ type: draft
 github: EwenQuim/renpy-graphviz
 category: open-source
 tags:
-  - go
+  - Go
   - visualization
   - renpy
 ---

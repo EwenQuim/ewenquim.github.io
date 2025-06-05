@@ -6,7 +6,7 @@ heroImage: https://miro.medium.com/max/700/1*t5KNabwstG5jM4DuB3N7rQ.webp
 categories:
   - tech
 tags:
-  - go
+  - Go
   - interfaces
   - nil
   - panic

@@ -8,7 +8,7 @@ type: draft
 github: EwenQuim/entropy
 category: open-source
 tags:
-  - go
+  - Go
   - security
   - secrets
 ---

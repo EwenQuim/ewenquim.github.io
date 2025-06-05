@@ -91,7 +91,7 @@ const { post, category } = Astro.props;
       )
     }
 
-    <p class="mb-3 text-text-secondary leading-relaxed">
+    <p class="mb-3 leading-relaxed">
       {post.data.description}
     </p>
 
@@ -100,7 +100,7 @@ const { post, category } = Astro.props;
         post.data.tags && post.data.tags.length > 0 && (
           <div class="flex flex-wrap gap-1">
             {post.data.tags.map((tech) => (
-              <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-text-secondary/10 text-text-secondary border border-text-secondary/20">
+              <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-text-secondary/10 border border-text-secondary/20">
                 {tech}
               </span>
             ))}

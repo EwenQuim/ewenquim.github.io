@@ -6,8 +6,8 @@ heroImage: https://media.tenor.com/xyIzlxrYUjsAAAAC/gopher-powerful.gif
 categories:
   - tech
 tags:
-  - go
-  - api
+  - Go
+  - API
 toc: true
 ---
 

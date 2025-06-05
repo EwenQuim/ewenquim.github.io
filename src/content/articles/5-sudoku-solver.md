@@ -8,7 +8,7 @@ categories:
   - maths
 tags:
   - maths
-  - go
+  - Go
   - python
   - rust
 toc: true

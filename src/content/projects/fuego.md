@@ -8,9 +8,10 @@ type: draft
 github: go-fuego/fuego
 category: open-source
 tags:
-  - go
-  - api
+  - Go
+  - API
   - OpenAPI
 ---
 
 Fuego is a Go web framework that generates OpenAPI documentation from your code.
+It is designed to be simple and easy to use, while providing powerful features for building APIs.
