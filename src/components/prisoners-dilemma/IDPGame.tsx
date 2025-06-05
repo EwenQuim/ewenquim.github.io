@@ -26,7 +26,7 @@ const playNextTurn = (
 	const myDecision =
 		myProb <
 		myStrategy.strategy[
-			myPreviousDecision == "coop"
+			myPreviousDecision === "coop"
 				? "previousTurnICoop"
 				: "previousTurnIBetrayed"
 		][oppPreviousDecision]
@@ -36,7 +36,7 @@ const playNextTurn = (
 	const oppDecision =
 		oppProb <
 		oppStrategy.strategy[
-			myPreviousDecision == "coop"
+			myPreviousDecision === "coop"
 				? "previousTurnICoop"
 				: "previousTurnIBetrayed"
 		][myPreviousDecision]
@@ -103,6 +103,7 @@ export const IDPGame = ({ myBaseStrategy, oppBaseStrategy }: IDPGameProps) => {
 		}
 	};
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
 	useEffect(() => {
 		play();
 	}, [remainingTurns]);
@@ -112,7 +113,7 @@ export const IDPGame = ({ myBaseStrategy, oppBaseStrategy }: IDPGameProps) => {
 			<h1> IDP Game </h1>
 
 			<div className="flex flex-col md:flex-row w-full gap-2 justify-between">
-				<div className="flex flex-col shadow-sm bg-white rounded-lg p-2 w-full">
+				<div className="flex flex-col shadow-sm bg-white/20 rounded-lg p-2 w-full">
 					<StratTable
 						playerName="My"
 						strategy={myStrategy}
@@ -127,7 +128,7 @@ export const IDPGame = ({ myBaseStrategy, oppBaseStrategy }: IDPGameProps) => {
 					/>
 					<Score scores={myScore} decisions={myDecisions} />
 				</div>
-				<div className="shadow bg-white rounded-lg p-2 w-full">
+				<div className="shadow bg-white/20 rounded-lg p-2 w-full">
 					<StratTable
 						playerName="Opponent"
 						strategy={oppStrategy}
@@ -145,12 +146,48 @@ export const IDPGame = ({ myBaseStrategy, oppBaseStrategy }: IDPGameProps) => {
 			</div>
 
 			<div className="flex gap-2 mt-2">
-				<button onClick={() => reset()}>Reset</button>
-				<button onClick={() => playOneTurn()}>Play 1 Turn</button>
-				<button onClick={() => setRemainingTurns(10)}>Play 10 Turns</button>
-				<button onClick={() => setRemainingTurns(100)}>Play 100 Turns</button>
-				<button onClick={() => setRemainingTurns(1000)}>Play 1000 Turns</button>
-				<button onClick={() => setRemainingTurns(10000)}>Play 10k Turns</button>
+				<button
+					type="button"
+					className="border px-2 py-1 rounded-md"
+					onClick={() => reset()}
+				>
+					Reset
+				</button>
+				<button
+					type="button"
+					className="border px-2 py-1 rounded-md"
+					onClick={() => playOneTurn()}
+				>
+					Play 1 Turn
+				</button>
+				<button
+					type="button"
+					className="border px-2 py-1 rounded-md"
+					onClick={() => setRemainingTurns(10)}
+				>
+					Play 10 turns
+				</button>
+				<button
+					type="button"
+					className="border px-2 py-1 rounded-md"
+					onClick={() => setRemainingTurns(100)}
+				>
+					Play 100 turns
+				</button>
+				<button
+					type="button"
+					className="border px-2 py-1 rounded-md"
+					onClick={() => setRemainingTurns(1000)}
+				>
+					Play 1000 turns
+				</button>
+				<button
+					type="button"
+					className="border px-2 py-1 rounded-md"
+					onClick={() => setRemainingTurns(10000)}
+				>
+					Play 10k turns
+				</button>
 			</div>
 			<p className="flex gap-4 justify-between">
 				Turns: {myScore.length}

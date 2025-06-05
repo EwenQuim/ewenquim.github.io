@@ -141,10 +141,13 @@ export interface SilkProps {
 const Silk: React.FC<SilkProps> = ({
 	speed = 5,
 	scale = 1,
-	color = "#7B7481",
 	noiseIntensity = 1.5,
 	rotation = 0,
 }) => {
+	const color = window.matchMedia?.("(prefers-color-scheme: dark)").matches
+		? "#6F4625"
+		: "#C5B5A7"; // Default color is 7B7481
+
 	const meshRef = useRef<Mesh>(null);
 
 	const uniforms = useMemo<SilkUniforms>(

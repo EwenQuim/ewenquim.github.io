@@ -6,6 +6,7 @@ heroImage: https://raw.githubusercontent.com/EwenQuim/entropy/master/entropy.png
 website: https://github.com/EwenQuim/entropy
 type: draft
 github: EwenQuim/entropy
+category: open-source
 tags:
   - go
   - security

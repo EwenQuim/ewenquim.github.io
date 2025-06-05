@@ -9,6 +9,8 @@ export interface Props {
       heroImage?: string;
       github?: string;
       playstore?: string;
+      category?: string;
+      tags?: string[];
     };
     id: string;
   };
@@ -38,14 +40,23 @@ const { post, category } = Astro.props;
       <h2
         class="text-xl md:text-2xl font-semibold m-0 text-text-heading group-hover:text-accent transition-colors"
       >
-        <a
-          rel="prefetch"
-          data-astro-prefetch
-          href={`/${category}/${post.id}`}
-          class="text-text-heading hover:text-accent no-underline"
-        >
-          {post.data.title}
-        </a>
+        <span class="inline-flex items-center gap-2">
+          <a
+            rel="prefetch"
+            data-astro-prefetch
+            href={`/${category}/${post.id}`}
+            class="text-text-heading hover:text-accent no-underline"
+          >
+            {post.data.title}
+          </a>
+          {
+            post.data.category && (
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-accent/10 text-accent border border-accent/20">
+                {post.data.category}
+              </span>
+            )
+          }
+        </span>
       </h2>
       {
         post.data.github && (
@@ -80,8 +91,22 @@ const { post, category } = Astro.props;
       )
     }
 
-    <p class="mb-0 text-text-secondary leading-relaxed">
+    <p class="mb-3 text-text-secondary leading-relaxed">
       {post.data.description}
     </p>
+
+    <div class="flex flex-wrap gap-3 items-center">
+      {
+        post.data.tags && post.data.tags.length > 0 && (
+          <div class="flex flex-wrap gap-1">
+            {post.data.tags.map((tech) => (
+              <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-text-secondary/10 text-text-secondary border border-text-secondary/20">
+                {tech}
+              </span>
+            ))}
+          </div>
+        )
+      }
+    </div>
   </div>
 </div>

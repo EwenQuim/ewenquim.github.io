@@ -6,6 +6,7 @@ heroImage: https://raw.githubusercontent.com/EwenQuim/renpy-graphviz/master/data
 website: https://renpy.amethysts.studio
 type: draft
 github: EwenQuim/renpy-graphviz
+category: open-source
 tags:
   - go
   - visualization
