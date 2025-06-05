@@ -62,7 +62,7 @@
 	h6,
 	strong,
 	b {
-		@apply text-text-heading;
+		@apply text-text-heading dark:text-text-heading-dark;
 	}
 
 	a {
