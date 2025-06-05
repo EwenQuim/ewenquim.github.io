@@ -13,7 +13,7 @@ export interface Props {
 const { slug } = Astro.props;
 
 const posts = (await getCollection(slug as "articles")).sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+  (a, b) => (b.data.pubDate?.valueOf() || 0) - (a.data.pubDate?.valueOf() || 0)
 );
 ---
 

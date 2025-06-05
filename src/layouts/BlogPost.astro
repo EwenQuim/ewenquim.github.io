@@ -1,19 +1,25 @@
 ---
-import type { CollectionEntry } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
 import ListHeader from "../components/ListHeader.astro";
 import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 import { Image } from "astro:assets";
 
-type Props = CollectionEntry<"articles">["data"];
+type Props = {
+  title: string;
+  description?: string;
+  pubDate?: Date;
+  updatedDate?: Date;
+  heroImage?: string;
+  [key: string]: unknown; // Allow additional properties
+};
 
-const { title, description, date, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
 <html lang="en">
   <head>
-    <BaseHead title={title} description={description} />
+    <BaseHead title={title} description={description || ""} />
   </head>
 
   <body>
@@ -22,16 +28,18 @@ const { title, description, date, updatedDate, heroImage } = Astro.props;
       <article class="p-4 md:p-8 rounded-lg prose prose-invert">
         <hgroup>
           <h1 class="text-3xl mt-1 mb-0">{title}</h1>
-          <p class="italic">
-            <FormattedDate date={date} />
-            {
-              updatedDate && (
-                <>
-                  (updated on <FormattedDate date={updatedDate} />){" "}
-                </>
-              )
-            }
-          </p>
+          {
+            pubDate && (
+              <p class="italic">
+                <FormattedDate date={pubDate} />
+                {updatedDate && (
+                  <>
+                    (updated on <FormattedDate date={updatedDate} />){" "}
+                  </>
+                )}
+              </p>
+            )
+          }
         </hgroup>
         <p>{description}</p>
         {

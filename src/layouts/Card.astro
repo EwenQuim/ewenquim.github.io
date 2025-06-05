@@ -10,7 +10,7 @@ export interface Props {
       github?: string;
       playstore?: string;
     };
-    slug: string;
+    id: string;
   };
   category: string;
 }
@@ -40,7 +40,8 @@ const { post, category } = Astro.props;
       >
         <a
           rel="prefetch"
-          href={`/${category}/${post.slug}`}
+          data-astro-prefetch
+          href={`/${category}/${post.id}`}
           class="text-text-heading hover:text-accent no-underline"
         >
           {post.data.title}
