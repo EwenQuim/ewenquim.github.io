@@ -21,7 +21,7 @@ const { post, category } = Astro.props;
 ---
 
 <div
-  class="bg-bg-card p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl border border-border-color hover:border-accent/50 w-full max-w-4xl group flex items-start gap-6"
+  class="bg-bg-card dark:bg-bg-card-dark p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl border border-border-color dark:border-border-color-dark hover:border-accent/50 w-full max-w-4xl group flex items-start gap-6"
 >
   {
     post.data.heroImage && (
@@ -45,7 +45,7 @@ const { post, category } = Astro.props;
             rel="prefetch"
             data-astro-prefetch
             href={`/${category}/${post.id}`}
-            class="text-text-heading hover:text-accent no-underline"
+            class="text-text-heading dark:text-text-heading-dark hover:text-accent no-underline"
           >
             {post.data.title}
           </a>

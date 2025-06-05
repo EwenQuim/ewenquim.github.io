@@ -11,10 +11,25 @@ import { SITE_TITLE } from "../consts";
   <p class="italic opacity-70">Centralien &middot; Software Engineer</p>
 
   <nav>
-    <HeaderLink href="/articles">Articles</HeaderLink>
+    <a
+      rel="prefetch"
+      data-astro-prefetch
+      href="/articles"
+      class="mx-2 !text-white">Articles</a
+    >
     &middot;
-    <HeaderLink href="/nouvelles">Nouvelles</HeaderLink>
+    <a
+      rel="prefetch"
+      data-astro-prefetch
+      href="/nouvelles"
+      class="mx-2 !text-white">Nouvelles</a
+    >
     &middot;
-    <HeaderLink href="/projects">Projets</HeaderLink>
+    <a
+      rel="prefetch"
+      data-astro-prefetch
+      href="/projects"
+      class="mx-2 !text-white">Projets</a
+    >
   </nav>
 </header>

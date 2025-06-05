@@ -3,7 +3,7 @@ import type { HTMLAttributes } from "astro/types";
 
 type Props = HTMLAttributes<"a">;
 
-const { href, class: className, ...props } = Astro.props;
+const { href, ...props } = Astro.props;
 
 const { pathname } = Astro.url;
 const isActive = href === pathname || href === pathname.replace(/\/$/, "");
@@ -13,6 +13,6 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, "");
   rel="prefetch"
   data-astro-prefetch
   href={href}
-  class:list={["mx-2", className, { active: isActive }]}
+  class:list={["mx-2", { active: isActive }]}
   {...props}><slot /></a
 >

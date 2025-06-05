@@ -6,17 +6,23 @@
 		"Lucida Sans", Arial, sans-serif;
 	--font-mono: "Fira Code", monospace;
 
-	--color-bg-primary: #1a1510;
-	--color-bg-secondary: #2d2318;
-	--color-bg-card: #3f3025;
-	--color-text-primary: #f0ebe5;
+	--color-bg-primary: #f5f1eb;
+	--color-bg-primary-dark: #1a1510;
+	--color-bg-card: #f0ebe5;
+	--color-bg-card-dark: #3f3025;
+	--color-text-primary: #726d68;
+	--color-text-primary-dark: #f0ebe5;
 	--color-text-secondary: #c4b8a8;
-	--color-text-heading: #f5f1eb;
-	--color-text-link: #eee;
-	--color-text-link-hover: #ccc;
+	--color-text-heading: #4f4c48;
+	--color-text-heading-dark: #f5f1eb;
+	--color-text-link: #444;
+	--color-text-link-dark: #eee;
+	--color-text-link-hover: #555;
+	--color-text-link-hover-dark: #ccc;
 	--color-text-article-link: #b8956f;
 	--color-text-visited: #83694a;
-	--color-border-color: #5a4a35;
+	--color-border-color: #e1d5c5;
+	--color-border-color-dark: #5a4a35;
 	--color-code-bg: #2d2318;
 	--color-table-header-bg: #3f3025;
 	--color-accent: #e3ae83;
@@ -45,7 +51,7 @@
 
 @layer base {
 	body {
-		@apply font-sans mx-auto px-2.5 max-w-content text-left bg-bg-primary break-words leading-6 text-text-primary;
+		@apply font-sans mx-auto px-2.5 max-w-content text-left bg-bg-primary dark:bg-bg-primary-dark break-words leading-6 text-text-primary;
 	}
 
 	h1,
@@ -60,11 +66,11 @@
 	}
 
 	a {
-		@apply text-text-link no-underline;
+		@apply text-text-link dark:text-text-link-dark no-underline;
 	}
 
 	a:hover {
-		@apply underline text-text-link-hover;
+		@apply underline text-text-link-hover dark:text-text-link-hover-dark;
 	}
 
 	a.active {
