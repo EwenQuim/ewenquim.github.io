@@ -1,5 +1,6 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
+import SearchButton from "./SearchButton.astro";
 import { SITE_TITLE } from "../consts";
 ---
 
@@ -10,13 +11,18 @@ import { SITE_TITLE } from "../consts";
     </a>
   </h1>
 
-  <nav>
-    <HeaderLink href="/articles">Articles</HeaderLink>
-    &middot;
-    <HeaderLink href="/nouvelles">Nouvelles</HeaderLink>
-    &middot;
-    <HeaderLink href="/projects">Projets</HeaderLink>
-    &middot;
-    <HeaderLink href="/contact">Contact</HeaderLink>
+  <nav class="flex items-center justify-center gap-2 flex-wrap">
+    <div class="flex items-center gap-2">
+      <HeaderLink href="/articles">Articles</HeaderLink>
+      &middot;
+      <HeaderLink href="/nouvelles">Nouvelles</HeaderLink>
+      &middot;
+      <HeaderLink href="/projects">Projets</HeaderLink>
+      &middot;
+      <HeaderLink href="/contact">Contact</HeaderLink>
+    </div>
+    <div class="ml-4">
+      <SearchButton />
+    </div>
   </nav>
 </header>

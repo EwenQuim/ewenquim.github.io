@@ -20,6 +20,13 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
   <ListHeader />
   <main>
     <article class="p-4 md:p-8 rounded-lg prose dark:prose-invert max-w-none">
+      <!-- Search indexable content (hidden) -->
+      <div data-pagefind-body style="display: none;">
+        <h1 data-pagefind-meta="title">{title}</h1>
+        {description && <p data-pagefind-meta="description">{description}</p>}
+      </div>
+
+      <!-- Visible content -->
       <hgroup>
         <h1 class="text-3xl mt-1 mb-0">{title}</h1>
         {
@@ -35,7 +42,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
           )
         }
       </hgroup>
-      <p>{description}</p>
+      {description && <p>{description}</p>}
       {
         heroImage && (
           <Image
@@ -49,7 +56,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
         )
       }
 
-      <slot />
+      <div data-pagefind-ignore>
+        <slot />
+      </div>
     </article>
   </main>
 </MainLayout>

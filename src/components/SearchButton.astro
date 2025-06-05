@@ -1,0 +1,320 @@
+---
+// A discrete search button that opens a modal with the search interface
+---
+
+<button
+  id="search-button"
+  class="search-button text-white/70 hover:text-white transition-colors duration-200 text-sm flex items-center gap-2"
+  aria-label="Search"
+  title="Search articles (⌘K)"
+>
+  <div class="flex items-center gap-1">
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="flex-shrink-0"
+    >
+      <circle cx="11" cy="11" r="8"></circle>
+      <path d="m21 21-4.35-4.35"></path>
+    </svg>
+    <span>Search</span>
+  </div>
+  <kbd
+    class="hidden sm:inline-block px-1.5 py-0.5 text-xs bg-white/10 rounded border border-white/20 font-mono"
+  >
+    ⌘K
+  </kbd>
+</button>
+
+<!-- Search Modal -->
+<div
+  id="search-modal"
+  class="search-modal fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4"
+>
+  <div
+    class="search-modal-content backdrop-blur-md rounded-xl shadow-2xl w-full max-w-3xl max-h-[85vh] overflow-hidden border"
+    style="background: #3f3025; border-color: #5a4a35;"
+  >
+    <div class="p-6 border-b" style="border-color: #5a4a35;">
+      <div class="flex items-center justify-between">
+        <h3
+          class="text-xl font-semibold"
+          style="color: #f5f1eb; font-family: var(--font-serif);"
+        >
+          Search Articles
+        </h3>
+        <button
+          id="close-search"
+          class="transition-colors p-1"
+          style="color: #c4b8a8;"
+          aria-label="Close search"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="p-6">
+      <div id="search-container" class="pagefind-search"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .search-modal {
+    backdrop-filter: blur(8px);
+  }
+
+  .search-modal.show {
+    display: flex;
+  }
+
+  /* Custom styles for pagefind - Using blog's color scheme */
+  :global(.pagefind-ui) {
+    --pagefind-ui-scale: 1;
+    --pagefind-ui-primary: #e3ae83;
+    --pagefind-ui-text: #f0ebe5;
+    --pagefind-ui-background: #3f3025;
+    --pagefind-ui-border: #5a4a35;
+    --pagefind-ui-tag: #5a4a35;
+    --pagefind-ui-font: inherit;
+  }
+
+  :global(.pagefind-ui__search-input) {
+    border-radius: 0.75rem;
+    border: 1px solid #5a4a35;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    background: #3f3025;
+    color: #f0ebe5;
+    width: 100%;
+    transition: all 0.2s ease;
+    font-family: var(--font-sans);
+  }
+
+  :global(.pagefind-ui__search-input:focus) {
+    outline: none;
+    border-color: #e3ae83;
+    box-shadow: 0 0 0 3px rgba(227, 174, 131, 0.1);
+    background: #1a1510;
+  }
+
+  :global(.pagefind-ui__search-input::placeholder) {
+    color: #c4b8a8;
+  }
+
+  :global(.pagefind-ui__results) {
+    max-height: 500px;
+    overflow-y: auto;
+    margin-top: 1.5rem;
+    padding-right: 0.5rem;
+  }
+
+  :global(.pagefind-ui__results::-webkit-scrollbar) {
+    width: 6px;
+  }
+
+  :global(.pagefind-ui__results::-webkit-scrollbar-track) {
+    background: #5a4a35;
+    border-radius: 3px;
+  }
+
+  :global(.pagefind-ui__results::-webkit-scrollbar-thumb) {
+    background: #726d68;
+    border-radius: 3px;
+  }
+
+  :global(.pagefind-ui__results::-webkit-scrollbar-thumb:hover) {
+    background: #c4b8a8;
+  }
+
+  :global(.pagefind-ui__result) {
+    border: 1px solid #5a4a35;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+    padding: 1.25rem;
+    background: #3f3025;
+    transition: all 0.2s ease;
+  }
+
+  :global(.pagefind-ui__result:hover) {
+    border-color: #e3ae83;
+    background: #1a1510;
+    transform: translateY(-1px);
+  }
+
+  :global(.pagefind-ui__result-link) {
+    color: #e3ae83;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-serif);
+  }
+
+  :global(.pagefind-ui__result-link:hover) {
+    color: #a06c42;
+    text-decoration: none;
+  }
+
+  :global(.pagefind-ui__result-excerpt) {
+    color: #f0ebe5;
+    margin-top: 0.75rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    font-family: var(--font-sans);
+  }
+
+  :global(.pagefind-ui__result-excerpt mark) {
+    background: rgba(227, 174, 131, 0.2);
+    color: #e3ae83;
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+  }
+
+  :global(.pagefind-ui__message) {
+    color: #c4b8a8;
+    text-align: center;
+    padding: 2rem;
+    font-style: italic;
+    font-family: var(--font-sans);
+  }
+
+  :global(.pagefind-ui__result-tags) {
+    display: none;
+  }
+
+  :global(.pagefind-ui__result-nested) {
+    display: none;
+  }
+
+  :global(.pagefind-ui__search-clear) {
+    display: none !important;
+  }
+</style>
+
+<script>
+  // @ts-ignore
+  import { PagefindUI } from "@pagefind/default-ui";
+
+  function initSearch() {
+    const searchButton = document.getElementById("search-button");
+    const searchModal = document.getElementById("search-modal");
+    const closeButton = document.getElementById("close-search");
+    const searchContainer = document.getElementById("search-container");
+
+    if (!searchButton || !searchModal || !closeButton || !searchContainer) {
+      return;
+    }
+
+    let pagefindUI: any = null;
+    let isInitialized = false;
+
+    // Initialize Pagefind UI
+    function initPagefind() {
+      if (!isInitialized && searchContainer) {
+        // Clear any existing content
+        searchContainer.innerHTML = "";
+
+        pagefindUI = new PagefindUI({
+          element: "#search-container",
+          bundlePath: `${import.meta.env.BASE_URL}pagefind/`,
+          showSubResults: false,
+          showImages: false,
+          excerptLength: 120,
+          showEmptyFilters: false,
+          resetStyles: false,
+        });
+
+        isInitialized = true;
+      }
+    }
+
+    // Open search modal
+    searchButton.addEventListener("click", () => {
+      searchModal.classList.add("show");
+      initPagefind();
+
+      // Focus on search input after a short delay
+      setTimeout(() => {
+        const searchInput =
+          searchContainer.querySelector<HTMLInputElement>('input[type="text"]');
+        if (searchInput) {
+          searchInput.focus();
+        }
+      }, 100);
+    });
+
+    // Close search modal
+    function closeSearch() {
+      if (searchModal) {
+        searchModal.classList.remove("show");
+      }
+    }
+
+    closeButton.addEventListener("click", closeSearch);
+
+    // Global keyboard shortcuts
+    document.addEventListener("keydown", (e) => {
+      // Cmd+K (Mac) or Ctrl+K (Windows/Linux) to open search
+      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+        e.preventDefault();
+        if (!searchModal.classList.contains("show")) {
+          searchModal.classList.add("show");
+          initPagefind();
+
+          // Focus on search input after a short delay
+          setTimeout(() => {
+            const searchInput =
+              searchContainer.querySelector<HTMLInputElement>(
+                'input[type="text"]'
+              );
+            if (searchInput) {
+              searchInput.focus();
+            }
+          }, 100);
+        }
+      }
+
+      // Escape to close search
+      if (e.key === "Escape" && searchModal.classList.contains("show")) {
+        closeSearch();
+      }
+    });
+
+    // Close on backdrop click
+    searchModal.addEventListener("click", (e) => {
+      if (e.target === searchModal) {
+        closeSearch();
+      }
+    });
+  }
+
+  // Initialize on page load
+  document.addEventListener("astro:page-load", initSearch);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initSearch);
+  } else {
+    initSearch();
+  }
+</script>
