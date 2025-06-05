@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Spectral:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
 @theme {
-	--font-sans: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-		"Lucida Sans", Arial, sans-serif;
+	--font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	--font-serif: "Spectral", Georgia, "Times New Roman", serif;
 	--font-mono: "Fira Code", monospace;
 
 	--color-bg-primary: #f5f1eb;
@@ -59,7 +60,10 @@
 	h3,
 	h4,
 	h5,
-	h6,
+	h6 {
+		@apply text-text-heading dark:text-text-heading-dark font-serif;
+	}
+
 	strong,
 	b {
 		@apply text-text-heading dark:text-text-heading-dark;

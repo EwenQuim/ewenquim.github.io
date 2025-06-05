@@ -1,7 +1,7 @@
 ---
 date: 2023-01-15
-title: Momense
-description: A comprehensive digital platform for event management and social networking, connecting people through shared experiences.
+title: Momense — Event Hospitality Platform
+description: A comprehensive digital platform for events hospitality
 category: pro
 tags:
   - React

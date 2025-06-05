@@ -1,6 +1,6 @@
 ---
 date: 2025-03-10
-title: LCL Digital Banking Platform
+title: LCL — Digital Banking Platform
 description: Modern digital banking solutions and financial services platform. Project details to be completed.
 heroImage: /logos/lcl.png
 category: pro

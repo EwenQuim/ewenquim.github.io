@@ -1,6 +1,6 @@
 ---
 date: 2024-08-20
-title: CMA-CGM Cargo Readiness Platform
+title: CMA-CGM — Cargo Readiness Platform
 description: Comprehensive digital solutions for CMA-CGM, a global leader in container shipping and logistics. The project involved building scalable enterprise applications to streamline shipping operations and improve customer experience.
 heroImage: /logos/cma-cgm.png
 category: pro
