@@ -1,64 +1,86 @@
 ---
-import { Image } from "astro:assets";
+import Image from "astro/components/Image.astro";
+
+export interface Props {
+  post: {
+    data: {
+      title: string;
+      description: string;
+      heroImage?: string;
+      github?: string;
+      playstore?: string;
+    };
+    slug: string;
+  };
+  category: string;
+}
 
 const { post, category } = Astro.props;
 ---
 
-<li
-  class="bg-white p-4 md:p-8 rounded-lg shadow-md w-11/12 md:w-7/8 flex items-center gap-8 max-w-4xl"
+<div
+  class="bg-bg-card p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl border border-border-color hover:border-accent/50 w-full max-w-4xl group flex items-start gap-6"
 >
   {
     post.data.heroImage && (
       <Image
-        class={"rounded-lg hidden md:block mr-4"}
+        width={80}
+        height={80}
+        class="rounded-lg hidden md:block w-20 h-20 object-cover flex-shrink-0"
         src={post.data.heroImage}
         alt={post.data.title}
-        format="webp"
-        width={100}
-        height={100}
-        quality={80}
+        loading="lazy"
       />
     )
   }
-  <div>
-    <h2
-      class="w-full inline-flex justify-between items-baseline text-2xl font-semibold m-0"
-    >
-      <a
-        rel="prefetch"
-        href={`/${category}/${post.slug}`}
-        class="text-black no-underline">{post.data.title}</a
+  <div class="flex-1">
+    <div class="flex justify-between items-start mb-3">
+      <h2
+        class="text-xl md:text-2xl font-semibold m-0 text-text-heading group-hover:text-accent transition-colors"
       >
+        <a
+          rel="prefetch"
+          href={`/${category}/${post.slug}`}
+          class="text-text-heading hover:text-accent no-underline"
+        >
+          {post.data.title}
+        </a>
+      </h2>
       {
         post.data.github && (
           <a
             href={`https://github.com/${post.data.github}`}
             target="_blank"
             rel="noopener noreferrer"
-            class="flex gap-2"
+            class="flex gap-2 opacity-70 hover:opacity-100 transition-opacity"
           >
             <img
-              class="as"
-              src={`https://img.shields.io/github/stars/${post.data.github}?style=social`}
+              src={`https://img.shields.io/github/stars/${post.data.github}?style=social&theme=dark`}
+              alt="GitHub stars"
             />
           </a>
         )
       }
-    </h2>
+    </div>
+
     {
       post.data.playstore && (
-        <a
-          href={`https://play.google.com/store/apps/details?id=${post.data.playstore}`}
-        >
-          <img
-            src="https://img.shields.io/badge/play%20store-available-green"
-            alt=""
-            srcset=""
-          />
-        </a>
+        <div class="mb-3">
+          <a
+            href={`https://play.google.com/store/apps/details?id=${post.data.playstore}`}
+            class="inline-block"
+          >
+            <img
+              src="https://img.shields.io/badge/play%20store-available-green"
+              alt="Available on Play Store"
+            />
+          </a>
+        </div>
       )
     }
 
-    <p class="mb-0">{post.data.description}</p>
+    <p class="mb-0 text-text-secondary leading-relaxed">
+      {post.data.description}
+    </p>
   </div>
-</li>
+</div>

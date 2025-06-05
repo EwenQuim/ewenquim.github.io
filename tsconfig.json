@@ -1,9 +1,11 @@
 {
+	"$schema": "https://json.schemastore.org/tsconfig",
 	"extends": "astro/tsconfigs/strict",
 	"exclude": ["node_modules", "dist", "src/components/Footer.astro"],
 	"compilerOptions": {
 		"strictNullChecks": true,
 		"jsx": "react-jsx",
-		"jsxImportSource": "react"
+		"jsxImportSource": "react",
+		"sourceMap": true
 	}
 }

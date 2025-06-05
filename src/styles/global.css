@@ -1,20 +1,26 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
 	--font-sans: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 		"Lucida Sans", Arial, sans-serif;
 	--font-mono: "Fira Code", monospace;
 
-	--color-bg-primary: #000000;
-	--color-text-primary: #bbb;
-	--color-text-heading: #222;
-	--color-text-link: #BBB;
-	--color-text-link-hover: #557799;
-	--color-text-article-link: blue;
-	--color-text-visited: purple;
-	--color-border-color: #999;
-	--color-code-bg: #f2f2f2;
-	--color-table-header-bg: #eee;
+	--color-bg-primary: #1a1510;
+	--color-bg-secondary: #2d2318;
+	--color-bg-card: #3f3025;
+	--color-text-primary: #f0ebe5;
+	--color-text-secondary: #c4b8a8;
+	--color-text-heading: #f5f1eb;
+	--color-text-link: #EEE;
+	--color-text-link-hover: #CCC;
+	--color-text-article-link: #b8956f;
+	--color-text-visited: #83694a;
+	--color-border-color: #5a4a35;
+	--color-code-bg: #2d2318;
+	--color-table-header-bg: #3f3025;
+	--color-accent: #e3ae83;
+	--color-accent-hover: #a06c42;
 
 	--container-content: 40rem;
 }
@@ -137,5 +143,16 @@
 
 	article a:visited {
 		@apply text-text-visited;
+	}
+
+	/* Smooth scrolling */
+	html {
+		scroll-behavior: smooth;
+	}
+
+	/* Focus styles for accessibility */
+	*:focus-visible {
+		outline: 2px solid var(--color-accent);
+		outline-offset: 2px;
 	}
 }
