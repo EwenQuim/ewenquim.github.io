@@ -17,6 +17,7 @@
     "@astrojs/rss": "^4.0.7",
     "@astrojs/sitemap": "^3.1.6",
     "@astrojs/tailwind": "^5.1.0",
+    "@react-three/fiber": "^8.18.0",
     "@types/katex": "^0.16.0",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
@@ -27,6 +28,10 @@
     "react-dom": "^18.2.0",
     "sharp": "^0.33.4",
     "tailwindcss": "^3.4.5",
+    "three": "^0.167.1",
     "typescript": "^5.5.3"
+  },
+  "devDependencies": {
+    "@types/three": "^0.177.0"
   }
 }

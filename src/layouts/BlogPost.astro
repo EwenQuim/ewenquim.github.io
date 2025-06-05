@@ -14,18 +14,6 @@ const { title, description, date, updatedDate, heroImage } = Astro.props;
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} />
-    <style>
-      .title {
-        font-size: 2em;
-        margin: 0.25em 0 0;
-      }
-      hr {
-        margin: 1rem 0;
-      }
-      .last-updated-on {
-        font-style: italic;
-      }
-    </style>
   </head>
 
   <body>
@@ -33,7 +21,7 @@ const { title, description, date, updatedDate, heroImage } = Astro.props;
     <main>
       <article class="bg-white p-4 md:p-8 rounded-lg">
         <hgroup>
-          <h1 class="title">{title}</h1>
+          <h1 class="text-3xl mt-1 mb-0">{title}</h1>
           <p class="italic">
             <FormattedDate date={date} />
             {

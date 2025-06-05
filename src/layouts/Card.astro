@@ -21,8 +21,14 @@ const { post, category } = Astro.props;
     )
   }
   <div>
-    <h2 class="w-full inline-flex justify-between items-baseline">
-      <a rel="prefetch" href={`/${category}/${post.slug}`}>{post.data.title}</a>
+    <h2
+      class="w-full inline-flex justify-between items-baseline text-2xl font-semibold m-0"
+    >
+      <a
+        rel="prefetch"
+        href={`/${category}/${post.slug}`}
+        class="text-black no-underline">{post.data.title}</a
+      >
       {
         post.data.github && (
           <a
@@ -56,15 +62,3 @@ const { post, category } = Astro.props;
     <p class="mb-0">{post.data.description}</p>
   </div>
 </li>
-
-<style>
-  h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin: 0;
-  }
-  h2 a {
-    color: #000;
-    text-decoration: none;
-  }
-</style>

@@ -1,118 +1,98 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
-body {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  margin: auto;
-  padding: 0 10px;
-  max-width: 40rem;
-  text-align: left;
-  background-color: #f6dab7;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  line-height: 1.5;
-  color: #444;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong,
-b {
-  color: #222;
-}
-a {
-  color: #555;
-  text-decoration: none;
-}
-article a {
-  text-decoration: underline dashed;
-  color: blue;
-}
-article a:visited {
-  color: purple;
-}
-a.active {
-  text-decoration: underline;
-}
-a:hover {
-  text-decoration: underline;
-  color: black;
-}
-textarea {
-  width: 100%;
-  font-size: 16px;
-}
-input {
-  font-size: 16px;
-}
-content {
-  line-height: 1.6;
-}
-table {
-  width: 100%;
-}
-img {
-  max-width: 100%;
-  height: auto;
-}
-code {
-  padding: 2px 5px;
-  background-color: #f2f2f2;
-}
-pre {
-  padding: 1rem;
-}
-pre > code {
-  all: unset;
-  font-family: "Fira Code", monospace;
-}
-pre,
-blockquote {
-  border-radius: 5px;
-}
-blockquote {
-  border: 1px solid #999;
-  color: #222;
-  padding: 2px 0px 2px 20px;
-  margin: 0px;
-  font-style: italic;
-}
-hr {
-  margin: 2rem 5rem;
-  border: none;
-  border-bottom: 1px solid #999;
-}
-/* Table styles */
-table {
-  border-collapse: collapse;
-  border: 1px solid #999;
-}
-th,
-td {
-  padding: 5px;
-  text-align: center;
-  border: 1px solid #999;
-}
-th {
-  padding: 5px 10px;
-  background-color: #eee;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans mx-auto px-2.5 max-w-content text-left bg-bg-primary break-words leading-6 text-text-primary;
+  }
+  
+  h1, h2, h3, h4, h5, h6, strong, b {
+    @apply text-text-heading;
+  }
+  
+  a {
+    @apply text-text-link no-underline;
+  }
+  
+  a:hover {
+    @apply underline text-text-link-hover;
+  }
+  
+  a.active {
+    @apply underline;
+  }
+  
+  textarea {
+    @apply w-full text-base;
+  }
+  
+  input {
+    @apply text-base;
+  }
+  
+  content {
+    @apply leading-relaxed;
+  }
+  
+  table {
+    @apply w-full border-collapse border border-border-color;
+  }
+  
+  img {
+    @apply max-w-full h-auto;
+  }
+  
+  code {
+    @apply px-1 py-0.5 bg-code-bg font-mono;
+  }
+  
+  pre {
+    @apply p-4 rounded;
+  }
+  
+  pre > code {
+    @apply font-mono;
+    all: unset;
+    font-family: "Fira Code", monospace;
+  }
+  
+  blockquote {
+    @apply border border-border-color text-text-heading py-0.5 px-0 pl-5 m-0 italic rounded;
+  }
+  
+  hr {
+    @apply my-8 mx-20 border-none border-b border-border-color;
+  }
+  
+  th, td {
+    @apply p-1.5 text-center border border-border-color;
+  }
+  
+  th {
+    @apply px-2.5 py-1.5 bg-table-header-bg;
+  }
+  
+  /* Hide number input spinners */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
 }
 
-td {
-  border: 1px solid #999;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-input[type="number"] {
-  -moz-appearance: textfield;
+@layer components {
+  /* Article-specific link styles */
+  article a {
+    @apply underline text-text-article-link;
+    text-decoration-style: dashed;
+  }
+  
+  article a:visited {
+    @apply text-text-visited;
+  }
 }
