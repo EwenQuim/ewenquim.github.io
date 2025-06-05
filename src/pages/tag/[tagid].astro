@@ -1,0 +1,90 @@
+---
+import { getCollection } from "astro:content";
+import MainLayout from "../../layouts/MainLayout.astro";
+import ListHeader from "../../components/ListHeader.astro";
+import Card from "../../layouts/Card.astro";
+
+export async function getStaticPaths() {
+  // Get all collections that have tags
+  const articles = await getCollection("articles");
+  const projects = await getCollection("projects");
+  const thoughts = await getCollection("thoughts");
+
+  // Combine all posts with their collection info
+  const allPosts = [
+    ...articles.map((post) => ({ ...post, collection: "articles" as const })),
+    ...projects.map((post) => ({ ...post, collection: "projects" as const })),
+    ...thoughts.map((post) => ({ ...post, collection: "thoughts" as const })),
+  ];
+
+  // Extract all unique tags
+  const allTags = new Set<string>();
+  for (const post of allPosts) {
+    if (post.data.tags) {
+      for (const tag of post.data.tags) {
+        allTags.add(tag);
+      }
+    }
+  }
+
+  // Generate paths for each tag
+  return Array.from(allTags).map((tag) => ({
+    params: { tagid: tag },
+    props: {
+      tag,
+      posts: allPosts
+        .filter((post) => post.data.tags?.includes(tag))
+        .sort(
+          (a, b) =>
+            (b.data.pubDate?.valueOf() || 0) - (a.data.pubDate?.valueOf() || 0)
+        )
+        .map((post) => ({
+          data: {
+            title: post.data.title,
+            description: post.data.description || "",
+            heroImage: post.data.heroImage,
+            github: "github" in post.data ? post.data.github : undefined,
+            playstore:
+              "playstore" in post.data ? post.data.playstore : undefined,
+            category: "category" in post.data ? post.data.category : undefined,
+            tags: post.data.tags,
+          },
+          id: post.id,
+          collection: post.collection,
+        })),
+    },
+  }));
+}
+
+const { tag, posts } = Astro.props;
+---
+
+<MainLayout title={`Tag: ${tag}`}>
+  <ListHeader />
+  <main>
+    <section class="max-w-5xl mx-auto">
+      <div class="mb-8">
+        <div class="mb-4">
+          <a
+            href="/tag"
+            class="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors no-underline text-sm"
+          >
+            ← All Tags
+          </a>
+        </div>
+        <h1
+          class="text-3xl md:text-4xl font-bold text-text-heading dark:text-text-heading-dark mb-2"
+        >
+          Posts tagged with "{tag}"
+        </h1>
+        <p class="text-text-secondary dark:text-text-secondary-dark">
+          {posts.length} post{posts.length !== 1 ? "s" : ""} found
+        </p>
+      </div>
+
+      <div class="space-y-6 md:space-y-8 pb-8">
+        {posts.map((post) => <Card post={post} category={post.collection} />)}
+      </div>
+    </section>
+  </main>
+</MainLayout>

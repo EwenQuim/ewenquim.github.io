@@ -1,0 +1,135 @@
+---
+import { getCollection } from "astro:content";
+import MainLayout from "../../layouts/MainLayout.astro";
+import ListHeader from "../../components/ListHeader.astro";
+
+// Get all collections that have tags
+const articles = await getCollection("articles");
+const projects = await getCollection("projects");
+const thoughts = await getCollection("thoughts");
+
+// Combine all posts
+const allPosts = [...articles, ...projects, ...thoughts];
+
+// Count tag usage
+const tagCounts = new Map<string, number>();
+for (const post of allPosts) {
+  if (post.data.tags) {
+    for (const tag of post.data.tags) {
+      tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+    }
+  }
+}
+
+// Sort tags by usage count (most used first)
+const sortedTags = Array.from(tagCounts.entries())
+  .sort((a, b) => b[1] - a[1])
+  .map(([tag, count]) => ({ tag, count }));
+
+const totalTags = sortedTags.length;
+const totalPosts = allPosts.filter(
+  (post) => post.data.tags && post.data.tags.length > 0
+).length;
+---
+
+<MainLayout title="All Tags">
+  <ListHeader />
+  <main>
+    <section class="max-w-5xl mx-auto">
+      <div class="mb-8">
+        <h1
+          class="text-3xl md:text-4xl font-bold text-text-heading dark:text-text-heading-dark mb-4"
+        >
+          All Tags
+        </h1>
+        <p class="text-text-secondary dark:text-text-secondary-dark mb-6">
+          Explore all {totalTags} tags used across {totalPosts} posts. Tags are sorted
+          by popularity.
+        </p>
+      </div>
+
+      <div class="grid gap-6 md:gap-8 pb-8">
+        <!-- Most popular tags (top 10) -->
+        {
+          sortedTags.length > 0 && (
+            <div class="bg-bg-card/70 backdrop-blur-lg dark:bg-bg-card-dark/70 p-6 rounded-xl shadow-lg">
+              <h2 class="text-xl font-semibold text-text-heading dark:text-text-heading-dark mb-4">
+                Most Popular Tags
+              </h2>
+              <div class="flex flex-wrap gap-3">
+                {sortedTags.slice(0, 10).map(({ tag, count }) => (
+                  <a
+                    href={`/tag/${tag}`}
+                    class="group inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-accent/10 border border-accent/20 hover:bg-accent/20 hover:border-accent/40 transition-all duration-200 no-underline"
+                  >
+                    <span class="text-accent font-medium">{tag}</span>
+                    <span class="text-xs bg-accent/20 text-accent px-2 py-1 rounded-full">
+                      {count}
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )
+        }
+
+        <!-- All tags -->
+        <div
+          class="bg-bg-card/70 backdrop-blur-lg dark:bg-bg-card-dark/70 p-6 rounded-xl shadow-lg"
+        >
+          <h2
+            class="text-xl font-semibold text-text-heading dark:text-text-heading-dark mb-4"
+          >
+            All Tags ({totalTags})
+          </h2>
+          <div class="flex flex-wrap gap-2">
+            {
+              sortedTags.map(({ tag, count }) => (
+                <a
+                  href={`/tag/${tag}`}
+                  class="group inline-flex items-center gap-1 px-3 py-1.5 rounded text-sm bg-text-secondary/10 border border-text-secondary/20 hover:bg-accent/10 hover:border-accent/30 hover:text-accent transition-colors no-underline"
+                >
+                  <span>{tag}</span>
+                  <span class="text-xs opacity-70">({count})</span>
+                </a>
+              ))
+            }
+          </div>
+        </div>
+
+        <!-- Tag cloud visualization -->
+        <div
+          class="bg-bg-card/70 backdrop-blur-lg dark:bg-bg-card-dark/70 p-6 rounded-xl shadow-lg"
+        >
+          <h2
+            class="text-xl font-semibold text-text-heading dark:text-text-heading-dark mb-4"
+          >
+            Tag Cloud
+          </h2>
+          <div class="flex flex-wrap gap-2 items-center justify-center">
+            {
+              sortedTags.map(({ tag, count }) => {
+                // Calculate font size based on usage (min 0.75rem, max 2rem)
+                const maxCount = Math.max(...sortedTags.map((t) => t.count));
+                const minSize = 0.75;
+                const maxSize = 2;
+                const fontSize =
+                  minSize + (maxSize - minSize) * (count / maxCount);
+
+                return (
+                  <a
+                    href={`/tag/${tag}`}
+                    class="hover:text-accent transition-colors no-underline"
+                    style={`font-size: ${fontSize}rem; opacity: ${0.6 + 0.4 * (count / maxCount)}`}
+                  >
+                    {tag}
+                  </a>
+                );
+              })
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</MainLayout>

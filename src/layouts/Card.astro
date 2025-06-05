@@ -100,9 +100,12 @@ const { post, category } = Astro.props;
         post.data.tags && post.data.tags.length > 0 && (
           <div class="flex flex-wrap gap-1">
             {post.data.tags.map((tech) => (
-              <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-text-secondary/10 border border-text-secondary/20">
+              <a
+                href={`/tag/${tech}`}
+                class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-text-secondary/10 border border-text-secondary/20 hover:bg-accent/10 hover:border-accent/30 hover:text-accent transition-colors no-underline"
+              >
                 {tech}
-              </span>
+              </a>
             ))}
           </div>
         )
