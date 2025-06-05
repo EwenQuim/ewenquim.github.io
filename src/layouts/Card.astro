@@ -49,7 +49,7 @@ const { post, category } = Astro.props;
           <a
             rel="prefetch"
             data-astro-prefetch
-            href={`/${category}/${post.id}`}
+            href={`/${category}/${post.id.replace(/\.md$/, "")}`}
             class="text-text-heading dark:text-text-heading-dark hover:text-accent no-underline"
           >
             {post.data.title}

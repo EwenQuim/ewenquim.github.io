@@ -11,7 +11,7 @@ export async function get(context: { site: string }) {
 		items: posts.map((post) => ({
 			...post.data,
 			pubDate: post.data.pubDate,
-			link: `/blog/${post.id}/`,
+			link: `/articles/${post.id.replace(/\.md$/, "")}/`,
 		})),
 	});
 }
