@@ -1,37 +1,39 @@
 {
-  "name": "@ewenquim/blog",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev --port 3009",
-    "start": "astro dev --port 3009",
-    "build": "astro check && tsc --noEmit && astro build",
-    "preview": "astro preview --port 3009",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/check": "^0.8.1",
-    "@astrojs/mdx": "^3.1.2",
-    "@astrojs/prefetch": "^0.4.1",
-    "@astrojs/react": "^3.6.0",
-    "@astrojs/rss": "^4.0.7",
-    "@astrojs/sitemap": "^3.1.6",
-    "@astrojs/tailwind": "^5.1.0",
-    "@react-three/fiber": "^8.18.0",
-    "@types/katex": "^0.16.0",
-    "@types/react": "^18.0.37",
-    "@types/react-dom": "^18.0.11",
-    "astro": "^4.0.0",
-    "astro-robots-txt": "^1.0.0",
-    "katex": "^0.16.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "sharp": "^0.33.4",
-    "tailwindcss": "^3.4.5",
-    "three": "^0.167.1",
-    "typescript": "^5.5.3"
-  },
-  "devDependencies": {
-    "@types/three": "^0.177.0"
-  }
+	"name": "@ewenquim/blog",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev --port 3009",
+		"start": "astro dev --port 3009",
+		"build": "astro check && tsc --noEmit && astro build",
+		"preview": "astro preview --port 3009",
+		"astro": "astro",
+		"format": "biome format --fix"
+	},
+	"dependencies": {
+		"@astrojs/mdx": "^3.1.2",
+		"@astrojs/prefetch": "^0.4.1",
+		"@astrojs/react": "^3.6.0",
+		"@astrojs/rss": "^4.0.7",
+		"@astrojs/sitemap": "^3.1.6",
+		"@react-three/fiber": "^8.18.0",
+		"@tailwindcss/vite": "^4.1.8",
+		"astro": "^4.0.0",
+		"astro-robots-txt": "^1.0.0",
+		"katex": "^0.16.6",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"sharp": "^0.33.4",
+		"tailwindcss": "^4.1.8",
+		"three": "^0.167.1"
+	},
+	"devDependencies": {
+		"@astrojs/check": "^0.8.1",
+		"@types/katex": "^0.16.0",
+		"@types/react": "^18.0.37",
+		"@types/react-dom": "^18.0.11",
+		"@types/three": "^0.177.0",
+		"prettier": "^2.8.7",
+		"typescript": "^5.5.3"
+	}
 }

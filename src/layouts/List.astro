@@ -9,7 +9,7 @@ import Card from "./Card.astro";
 const { slug } = Astro.props;
 
 const posts = (await getCollection(slug as "articles")).sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
 ---
 

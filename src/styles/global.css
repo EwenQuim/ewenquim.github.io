@@ -1,98 +1,141 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+	--font-sans: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+	--font-mono: "Fira Code", monospace;
+
+	--color-bg-primary: #000000;
+	--color-text-primary: #bbb;
+	--color-text-heading: #222;
+	--color-text-link: #BBB;
+	--color-text-link-hover: #557799;
+	--color-text-article-link: blue;
+	--color-text-visited: purple;
+	--color-border-color: #999;
+	--color-code-bg: #f2f2f2;
+	--color-table-header-bg: #eee;
+
+	--container-content: 40rem;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentcolor);
+	}
+}
 
 @layer base {
-  body {
-    @apply font-sans mx-auto px-2.5 max-w-content text-left bg-bg-primary break-words leading-6 text-text-primary;
-  }
-  
-  h1, h2, h3, h4, h5, h6, strong, b {
-    @apply text-text-heading;
-  }
-  
-  a {
-    @apply text-text-link no-underline;
-  }
-  
-  a:hover {
-    @apply underline text-text-link-hover;
-  }
-  
-  a.active {
-    @apply underline;
-  }
-  
-  textarea {
-    @apply w-full text-base;
-  }
-  
-  input {
-    @apply text-base;
-  }
-  
-  content {
-    @apply leading-relaxed;
-  }
-  
-  table {
-    @apply w-full border-collapse border border-border-color;
-  }
-  
-  img {
-    @apply max-w-full h-auto;
-  }
-  
-  code {
-    @apply px-1 py-0.5 bg-code-bg font-mono;
-  }
-  
-  pre {
-    @apply p-4 rounded;
-  }
-  
-  pre > code {
-    @apply font-mono;
-    all: unset;
-    font-family: "Fira Code", monospace;
-  }
-  
-  blockquote {
-    @apply border border-border-color text-text-heading py-0.5 px-0 pl-5 m-0 italic rounded;
-  }
-  
-  hr {
-    @apply my-8 mx-20 border-none border-b border-border-color;
-  }
-  
-  th, td {
-    @apply p-1.5 text-center border border-border-color;
-  }
-  
-  th {
-    @apply px-2.5 py-1.5 bg-table-header-bg;
-  }
-  
-  /* Hide number input spinners */
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-  
-  input[type="number"] {
-    -moz-appearance: textfield;
-  }
+	body {
+		@apply font-sans mx-auto px-2.5 max-w-content text-left bg-bg-primary break-words leading-6 text-text-primary;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	strong,
+	b {
+		@apply text-text-heading;
+	}
+
+	a {
+		@apply text-text-link no-underline;
+	}
+
+	a:hover {
+		@apply underline text-text-link-hover;
+	}
+
+	a.active {
+		@apply underline;
+	}
+
+	textarea {
+		@apply w-full text-base;
+	}
+
+	input {
+		@apply text-base;
+	}
+
+	content {
+		@apply leading-relaxed;
+	}
+
+	table {
+		@apply w-full border-collapse border border-border-color;
+	}
+
+	img {
+		@apply max-w-full h-auto;
+	}
+
+	code {
+		@apply px-1 py-0.5 bg-code-bg font-mono;
+	}
+
+	pre {
+		@apply p-4 rounded-sm;
+	}
+
+	pre > code {
+		@apply font-mono;
+		all: unset;
+		font-family: "Fira Code", monospace;
+	}
+
+	blockquote {
+		@apply border border-border-color text-text-heading py-0.5 px-0 pl-5 m-0 italic rounded-sm;
+	}
+
+	hr {
+		@apply my-8 mx-20 border-none border-b border-border-color;
+	}
+
+	th,
+	td {
+		@apply p-1.5 text-center border border-border-color;
+	}
+
+	th {
+		@apply px-2.5 py-1.5 bg-table-header-bg;
+	}
+
+	/* Hide number input spinners */
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	input[type="number"] {
+		-moz-appearance: textfield;
+	}
 }
 
 @layer components {
-  /* Article-specific link styles */
-  article a {
-    @apply underline text-text-article-link;
-    text-decoration-style: dashed;
-  }
-  
-  article a:visited {
-    @apply text-text-visited;
-  }
+	/* Article-specific link styles */
+	article a {
+		@apply underline text-text-article-link;
+		text-decoration-style: dashed;
+	}
+
+	article a:visited {
+		@apply text-text-visited;
+	}
 }
