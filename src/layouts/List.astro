@@ -5,6 +5,7 @@ import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { getCollection } from "astro:content";
 import Card from "./Card.astro";
+import MainLayout from "./MainLayout.astro";
 
 export interface Props {
   slug: string;
@@ -17,20 +18,13 @@ const posts = (await getCollection(slug as "articles")).sort(
 );
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <ListHeader />
-    <main>
-      <section class="max-w-5xl mx-auto">
-        <div class="space-y-6 md:space-y-8">
-          {posts.map((post) => <Card post={post} category={slug} />)}
-        </div>
-      </section>
-    </main>
-    <Footer />
-  </body>
-</html>
+<MainLayout title={`${slug.charAt(0).toUpperCase() + slug.slice(1)}`}>
+  <ListHeader />
+  <main>
+    <section class="max-w-5xl mx-auto">
+      <div class="space-y-6 md:space-y-8">
+        {posts.map((post) => <Card post={post} category={slug} />)}
+      </div>
+    </section>
+  </main>
+</MainLayout>

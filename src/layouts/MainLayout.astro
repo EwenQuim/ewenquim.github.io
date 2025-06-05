@@ -1,0 +1,40 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Silk from "../Silk/Silk";
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="h-full">
+  <head>
+    <BaseHead
+      title={title ? `${title} | ${SITE_TITLE}` : SITE_TITLE}
+      description={description || SITE_DESCRIPTION}
+    />
+  </head>
+  <body class="h-full relative">
+    <!-- Silk background covering the entire page -->
+    <div
+      transition:name="silk-background"
+      class="fixed inset-0 w-full h-full z-0 opacity-40 dark:opacity-100"
+    >
+      <Silk
+        transition:persist
+        client:load
+        speed={4}
+        scale={1}
+        noiseIntensity={2}
+        rotation={0}
+      />
+    </div>
+
+    <!-- Content layer on top of the background -->
+    <div class="relative z-10 h-full">
+      <slot />
+      <Footer />
+    </div>
+  </body>
+</html>

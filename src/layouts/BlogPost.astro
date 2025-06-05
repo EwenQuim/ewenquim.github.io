@@ -1,9 +1,8 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
 import ListHeader from "../components/ListHeader.astro";
-import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 import { Image } from "astro:assets";
+import MainLayout from "./MainLayout.astro";
 
 type Props = {
   title: string;
@@ -17,47 +16,40 @@ type Props = {
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead title={title} description={description || ""} />
-  </head>
-
-  <body>
-    <ListHeader />
-    <main>
-      <article class="p-4 md:p-8 rounded-lg prose dark:prose-invert max-w-none">
-        <hgroup>
-          <h1 class="text-3xl mt-1 mb-0">{title}</h1>
-          {
-            pubDate && (
-              <p class="italic">
-                <FormattedDate date={pubDate} />
-                {updatedDate && (
-                  <>
-                    (updated on <FormattedDate date={updatedDate} />){" "}
-                  </>
-                )}
-              </p>
-            )
-          }
-        </hgroup>
-        <p>{description}</p>
+<MainLayout title={title} description={description}>
+  <ListHeader />
+  <main>
+    <article class="p-4 md:p-8 rounded-lg prose dark:prose-invert max-w-none">
+      <hgroup>
+        <h1 class="text-3xl mt-1 mb-0">{title}</h1>
         {
-          heroImage && (
-            <Image
-              width={720}
-              height={360}
-              src={heroImage}
-              format="webp"
-              alt=""
-              class="rounded-lg"
-            />
+          pubDate && (
+            <p class="italic">
+              <FormattedDate date={pubDate} />
+              {updatedDate && (
+                <>
+                  (updated on <FormattedDate date={updatedDate} />){" "}
+                </>
+              )}
+            </p>
           )
         }
+      </hgroup>
+      <p>{description}</p>
+      {
+        heroImage && (
+          <Image
+            width={720}
+            height={360}
+            src={heroImage}
+            format="webp"
+            alt=""
+            class="rounded-lg"
+          />
+        )
+      }
 
-        <slot />
-      </article>
-    </main>
-    <Footer />
-  </body>
-</html>
+      <slot />
+    </article>
+  </main>
+</MainLayout>

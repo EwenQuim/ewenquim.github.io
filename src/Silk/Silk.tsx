@@ -144,9 +144,11 @@ const Silk: React.FC<SilkProps> = ({
 	noiseIntensity = 1.5,
 	rotation = 0,
 }) => {
-	const color = window.matchMedia?.("(prefers-color-scheme: dark)").matches
-		? "#6F4625"
-		: "#C5B5A7"; // Default color is 7B7481
+	const color =
+		typeof window !== "undefined" &&
+		window.matchMedia?.("(prefers-color-scheme: dark)").matches
+			? "#6F4625"
+			: "#C5B5A7"; // Default color is 7B7481
 
 	const meshRef = useRef<Mesh>(null);
 
