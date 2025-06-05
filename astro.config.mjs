@@ -12,9 +12,33 @@ export default defineConfig({
 	prefetch: true,
 	integrations: [
 		mdx(),
-		sitemap(),
+		sitemap({
+			changefreq: 'weekly',
+			priority: 0.7,
+			lastmod: new Date(),
+			serialize(item) {
+				// Set higher priority for main pages
+				if (item.url.endsWith('/') || item.url.includes('/articles/') || item.url.includes('/projects/')) {
+					item.priority = 0.9;
+					item.changefreq = 'weekly';
+				}
+				// Lower priority for tag pages
+				if (item.url.includes('/tag/')) {
+					item.priority = 0.5;
+					item.changefreq = 'monthly';
+				}
+				// Set lastmod for content pages
+				if (item.url.includes('/articles/') || item.url.includes('/projects/') || item.url.includes('/nouvelles/') || item.url.includes('/thoughts/')) {
+					item.lastmod = new Date().toISOString();
+				}
+				return item;
+			}
+		}),
 		react(),
-		robotsTxt({ policy: [{ userAgent: "*", allow: "/" }] }),
+		robotsTxt({
+			policy: [{ userAgent: "*", allow: "/" }],
+			sitemap: true
+		}),
 		pagefind(),
 	],
 	vite: {
