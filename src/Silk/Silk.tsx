@@ -171,7 +171,7 @@ const Silk: React.FC<SilkProps> = ({
 
 	return (
 		<Canvas
-			className={`transition-all duration-1000 ${paused ? "opacity-40" : ""}`}
+			className={`transition-all duration-1000 ${paused ? "opacity-40 brightness-75" : ""}`}
 			dpr={[1, 2]}
 			frameloop="always"
 		>

@@ -23,7 +23,7 @@ const SilkWithToggle: React.FC<SilkWithToggleProps> = ({
 		if (typeof window === "undefined") return false;
 		const path = window.location.pathname;
 		// Match URLs that start with "/" followed by a letter and then anything
-		const pattern = /^\/[a-zA-Z]+\//;
+		const pattern = /^\/(articles|nouvelles|projects)+\//;
 		return pattern.test(path);
 	}, []);
 
