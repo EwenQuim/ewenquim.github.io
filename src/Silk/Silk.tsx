@@ -153,7 +153,7 @@ const Silk: React.FC<SilkProps> = ({
 		typeof window !== "undefined" &&
 		window.matchMedia?.("(prefers-color-scheme: dark)").matches
 			? "#6F4625"
-			: "#C5B5A7"; // Default color is 7B7481
+			: "#d2b48c"; // Default color is 7B7481
 
 	const meshRef = useRef<Mesh>(null);
 
@@ -171,7 +171,7 @@ const Silk: React.FC<SilkProps> = ({
 
 	return (
 		<Canvas
-			className={`transition-all duration-1000 ${paused ? "opacity-50" : ""}`}
+			className={`transition-all duration-1000 ${paused ? "opacity-40" : ""}`}
 			dpr={[1, 2]}
 			frameloop="always"
 		>
