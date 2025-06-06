@@ -1,6 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
 import Silk from "../Silk/Silk";
-import SilkToggle from "./SilkToggle";
 
 interface SilkWithToggleProps {
 	speed?: number;
@@ -15,15 +14,13 @@ const SilkWithToggle: React.FC<SilkWithToggleProps> = ({
 	noiseIntensity = 2,
 	rotation = 0,
 }) => {
-	const [isPaused, setIsPaused] = useState(false);
 	const [isAutoPaused, setIsAutoPaused] = useState(false);
 
-	// Check if current URL matches pattern "/a-z/*" (starts with letter followed by anything)
+	// Check if current URL matches content pages where animation should be paused
 	const shouldAutoPause = useCallback(() => {
 		if (typeof window === "undefined") return false;
 		const path = window.location.pathname;
-		// Match URLs that start with "/" followed by a letter and then anything
-		const pattern = /^\/(articles|nouvelles|projects)+\//;
+		const pattern = /^\/(articles|nouvelles|projects)+\/./;
 		return pattern.test(path);
 	}, []);
 
@@ -35,14 +32,14 @@ const SilkWithToggle: React.FC<SilkWithToggleProps> = ({
 		// Check on mount
 		checkUrl();
 
-		// Listen for navigation changes (for client-side routing)
+		// Listen for navigation changes
 		const handlePopState = () => {
 			checkUrl();
 		};
 
 		window.addEventListener("popstate", handlePopState);
 
-		// Also check periodically in case of client-side navigation
+		// Check periodically for client-side navigation
 		const interval = setInterval(checkUrl, 100);
 
 		return () => {
@@ -51,24 +48,14 @@ const SilkWithToggle: React.FC<SilkWithToggleProps> = ({
 		};
 	}, [shouldAutoPause]);
 
-	// const handleToggle = (paused: boolean) => {
-	// 	setIsPaused(paused);
-	// };
-
-	// Animation is paused if either manually paused or auto-paused due to URL
-	const finalPaused = isPaused || isAutoPaused;
-
 	return (
-		<>
-			<Silk
-				speed={speed}
-				scale={scale}
-				noiseIntensity={noiseIntensity}
-				rotation={rotation}
-				paused={finalPaused}
-			/>
-			{/* <SilkToggle onToggle={handleToggle} /> */}
-		</>
+		<Silk
+			speed={speed}
+			scale={scale}
+			noiseIntensity={noiseIntensity}
+			rotation={rotation}
+			paused={isAutoPaused}
+		/>
 	);
 };
 

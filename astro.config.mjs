@@ -9,7 +9,7 @@ import AstroPWA from "@vite-pwa/astro";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://ewenquim.github.io",
+	site: "https://ewen.quimerch.com",
 	prefetch: true,
 	integrations: [
 		mdx(),

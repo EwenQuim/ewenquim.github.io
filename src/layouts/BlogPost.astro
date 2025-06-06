@@ -19,7 +19,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 <MainLayout title={title} description={description}>
   <ListHeader />
   <main>
-    <article class="p-4 md:p-8 rounded-lg prose dark:prose-invert max-w-none">
+    <article
+      class="p-4 md:p-8 rounded-lg prose prose-zinc dark:prose-invert max-w-none"
+    >
       <!-- Search indexable content (hidden) -->
       <div data-pagefind-body style="display: none;">
         <h1 data-pagefind-meta="title">{title}</h1>

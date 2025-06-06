@@ -9,9 +9,7 @@ import { Canvas, useFrame, useThree, type RootState } from "@react-three/fiber";
 import { Color, type Mesh, type ShaderMaterial } from "three";
 import type { IUniform } from "three";
 
-type NormalizedRGB = [number, number, number];
-
-const hexToNormalizedRGB = (hex: string): NormalizedRGB => {
+const hexToNormalizedRGB = (hex: string): [number, number, number] => {
 	const clean = hex.replace("#", "");
 	const r = Number.parseInt(clean.slice(0, 2), 16) / 255;
 	const g = Number.parseInt(clean.slice(2, 4), 16) / 255;
@@ -19,17 +17,13 @@ const hexToNormalizedRGB = (hex: string): NormalizedRGB => {
 	return [r, g, b];
 };
 
-interface UniformValue<T = number | Color> {
-	value: T;
-}
-
 interface SilkUniforms {
-	uSpeed: UniformValue<number>;
-	uScale: UniformValue<number>;
-	uNoiseIntensity: UniformValue<number>;
-	uColor: UniformValue<Color>;
-	uRotation: UniformValue<number>;
-	uTime: UniformValue<number>;
+	uSpeed: { value: number };
+	uScale: { value: number };
+	uNoiseIntensity: { value: number };
+	uColor: { value: Color };
+	uRotation: { value: number };
+	uTime: { value: number };
 	[uniform: string]: IUniform;
 }
 

@@ -24,7 +24,8 @@
 	--color-text-visited: #83694a;
 	--color-border-color: #e1d5c5;
 	--color-border-color-dark: #5a4a35;
-	--color-code-bg: #2d2318;
+	--color-code-bg: #f5f1eb;
+	--color-code-bg-dark: #2d2318;
 	--color-table-header-bg: #3f3025;
 	--color-accent: #e3ae83;
 	--color-accent-hover: #a06c42;
@@ -40,15 +41,6 @@
   If we ever want to remove these styles, we need to add an explicit border
   color utility to any element that depends on these defaults.
 */
-@layer base {
-	*,
-	::after,
-	::before,
-	::backdrop,
-	::file-selector-button {
-		border-color: var(--color-gray-200, currentcolor);
-	}
-}
 
 @layer base {
 	body {
@@ -101,10 +93,6 @@
 		@apply max-w-full h-auto;
 	}
 
-	code {
-		@apply px-1 py-0.5 bg-code-bg font-mono;
-	}
-
 	pre {
 		@apply p-4 rounded-sm;
 	}
@@ -115,21 +103,13 @@
 		font-family: "Fira Code", monospace;
 	}
 
-	blockquote {
-		@apply border border-border-color text-text-heading py-0.5 px-0 pl-5 m-0 italic rounded-sm;
-	}
-
 	hr {
 		@apply my-8 mx-20 border-none border-b border-border-color;
 	}
 
 	th,
 	td {
-		@apply p-1.5 text-center border border-border-color;
-	}
-
-	th {
-		@apply px-2.5 py-1.5 bg-table-header-bg;
+		@apply p-2 text-center border border-border-color ps-2;
 	}
 
 	/* Hide number input spinners */

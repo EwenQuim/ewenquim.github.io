@@ -22,21 +22,20 @@
 		"astro-pagefind": "^1.8.3",
 		"astro-robots-txt": "^1.0.0",
 		"katex": "^0.16.6",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"sharp": "^0.33.4",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"sharp": "^0.34.2",
 		"tailwindcss": "^4.1.8",
-		"three": "^0.167.1",
+		"three": "^0.177.0",
 		"vite-pwa": "^1.0.2"
 	},
 	"devDependencies": {
 		"@astrojs/check": "^0.9.4",
 		"@tailwindcss/typography": "^0.5.16",
 		"@types/katex": "^0.16.0",
-		"@types/react": "^18.0.37",
-		"@types/react-dom": "^18.0.11",
+		"@types/react": "^18.3.23",
+		"@types/react-dom": "^18.3.7",
 		"@types/three": "^0.177.0",
-		"prettier": "^2.8.7",
 		"typescript": "^5.5.3"
 	}
 }
