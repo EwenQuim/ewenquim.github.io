@@ -124,6 +124,12 @@
 	}
 }
 
+@counter-style dialog {
+  system: cyclic;
+  symbols: "-";
+  suffix: " ";
+}
+
 @layer components {
 	/* Article-specific link styles */
 	article a {
