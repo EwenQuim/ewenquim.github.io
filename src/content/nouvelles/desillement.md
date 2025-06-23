@@ -1,106 +1,95 @@
 ---
 title: Déssillement
 date: 2020-03-01
-description: Une nouvelle courte sur le thème de la réalité et du rêve.
+description: Quand la frontière entre fiction et réalité s'estompe, une soirée cinéma ordinaire bascule dans l'inexplicable.
 ---
 
-Déssillement
+_The End._
 
-The End.
-Ces deux mots vinrent clôturer le film. Médiocre, comme prévu. Je n'ai jamais aimé James Bond, ni
-aucun film d'espionnage d'ailleurs : la « virilité » de ces agents secrets frôlait le machisme à un tel point
-que ça en devient ridicule ou révoltant, selon la façon dont on prend les choses. Et puis ce n'est pas
-tout : la violence toujours plus exacerbée, les coups de feu, les mensonges inhérents à leur soi-disant
-profession de gentlemen... Pour couronner le tout, leurs intérêts sont souvent malsains. Ça me
-dégoute. Mais bon, je voulais faire plaisir à Yossi, mon mari, alors je l'ai accompagné. Après tout, il
-m'accompagne bien au théâtre, lui qui a horreur de ça. Il est doux comme un agneau, et à vrai dire je
-ne comprends pas trop sa passion pour James Bond, lui qui est si calme, réservé et authentique. Il
-cherche justement peut-être un peu de rebondissements à travers ce loisir ?
-À la sortie, Yossi me tint la porte. Il resta un peu derrière pour laisser passer une vieille dame. C'est ça,
-un gentleman.
-Je marchais vers la sortie, la tête encore tournée en arrière vers Yossi. Et la réalité me rattrapa dans
-un fracas maladroit ; j'avais bousculé l'homme devant moi. Il s'était arrêté brutalement en haut de
-l'escalator, stoppé lui aussi. Une pomme roulait par terre, tombée dans le choc. L'homme l'ignorait
-complètement et regardait devant lui, bouche bée.
-Un frisson me parcourut l'échine. Au lieu de l'habituelle dispersion des spectateurs à la sortie du film,
-le monde s'était immobilisé. Une vingtaine de statues silencieuses.
-Une voix mal assurée brisa le silence.
+Ces deux mots vinrent clôturer le film. Médiocre, comme prévu. Je n'ai jamais aimé James Bond, ni aucun film d'espionnage d'ailleurs : la « virilité » de ces agents secrets frôle le machisme à un tel point que c'en devient ridicule ou révoltant, selon la façon dont on prend les choses.
 
-- Ça sent mauvais.
+Et puis il y a le reste : cette violence toujours plus exacerbée, ces coups de feu, ces mensonges inhérents à leur soi-disant profession de gentlemen, leurs motivations malsaines... Tout cela me dégoûte.
 
-Yossi m'avait rejoint et grimaçait en
-regardant en bas de l'escalator. Trois hommes masqués et armés de fusils d'assaut tenaient les
-spectateurs en joue. L'un d'eux, le chef à en juger sa tenue, tentait de communiquer avec le public. Il
-hurla une phrase en arabe, mais personne ne semblait le comprendre. Le public se renfermait dans un
-silence mêlé de peur et d'incompréhension. Ce n'était pas moi ni Yossi qui allions arranger la situation :
-nous ne parlons qu'hébreux et anglais. Il avait l'air particulièrement agacé, et la tension monta d'un
-niveau quand il enleva le cran de sécurité de sa Kalachnikov dans un beuglement rauque.
-Subitement, Yossi écarta l'homme devant lui, s'assit de côté sur la rampe de l'escalator et descendit
-en glissant, attirant l'attention de tout le monde. J'aurais peut-être pu trouver cela amusant, ou même
-un peu sexy, mais pas dans une telle situation.
+Mais bon, je voulais faire plaisir à Yossi, mon mari. Après tout, il m'accompagne bien au théâtre, lui qui a horreur de ça. Il est doux comme un agneau, et à vrai dire je ne comprends pas sa passion pour James Bond — lui si calme, si réservé, si authentique. Cherche-t-il peut-être un peu d'adrénaline ?
 
-- Yossi ! Qu'est-ce que tu fais ?
+À la sortie, Yossi me tint la porte. Il s'effaça même pour laisser passer une vieille dame qui avait les mains prises avec une pomme. Voilà ce qu'est un vrai gentleman.
 
-Il s'avança vers le chef et engagea la discussion. Je ne pouvais plus l'entendre, il était trop loin. Mais je
-pouvais lire sur les lèvres du Chef une langue que je ne connaissais pas. Mais que faisait Yossi ? Le film
-lui était monté à la tête ? La tension semblait s'apaiser un petit peu, mais le calme relatif fut brisé par
-les cris de pleurs d'un bébé. Yossi haussa la voix. Puis le Chef cria, et ses acolytes braquèrent leurs fusils
-vers le public. Yossi recula d'un pas, et le Chef avança vers lui.
-Yossi, je ne comprends rien...
-Le chef pointa son fusil vers Yossi, qui leva les mains en l'air.
+Je marchais vers la sortie, la tête encore tournée vers Yossi, quand la réalité me rattrapa dans un fracas maladroit. J'avais bousculé la dame devant moi, qui s'était arrêtée net en haut de l'escalator. La pomme roula sur le sol, échappée du choc. La dame l'ignora complètement, le regard fixé droit devant elle, bouche bée.
 
-- YOSSI !
+Un frisson me parcourut l'échine. Au lieu de l'habituelle dispersion des spectateurs, le monde s'était figé. Une vingtaine de statues silencieuses.
 
-Le cri m'avait échappé. Terrorisée.
+Une voix mal assurée brisa le silence :
 
-Tout le monde se retourna vers moi. Sauf Yossi. Il profita de la confusion pour s'accroupir, et bondir
-vers le chef. Je ne l'avais jamais vu comme ça. Le Chef s'en rendit compte. Trop tard. C'était Yossi le
-prédateur. Le terroriste, la proie. Il lui attrapa le cou et le fit tomber, avec un mouvement subtil et
-efficace. Du même geste, il rattrapa le fusil. Le pointa vers la tête du Chef. Au moment où la tête de
-celui-ci cogna le sol.
+— Ça sent mauvais.
+
+Yossi m'avait rejointe et grimaçait en regardant vers le bas de l'escalator. Trois hommes masqués, armés de fusils d'assaut, tenaient les spectateurs en joue. L'un d'eux — le chef, à en juger par sa tenue — tentait de communiquer avec le public. Il hurla une phrase en arabe, mais personne ne semblait comprendre.
+
+Le public se renfermait dans un silence mêlé de peur et d'incompréhension. Ni Yossi ni moi n'allions arranger la situation : nous ne parlons qu'hébreu et anglais. L'homme paraissait particulièrement agacé. La tension grimpa d'un cran quand il ôta le cran de sécurité de sa Kalachnikov dans un beuglement rauque.
+
+Soudain, Yossi écarta l'homme devant lui, s'assit de côté sur la rampe de l'escalator et descendit en glissant, captant l'attention de tous. En d'autres circonstances, j'aurais peut-être trouvé cela amusant, voire un peu sexy. Mais pas dans une telle situation.
+
+— Yossi ! Qu'est-ce que tu fais ?
+
+Il s'avança vers le chef et engagea la conversation. Trop loin pour que je puisse l'entendre, je ne distinguais sur les lèvres du chef que je ne connaissais pas. Mais que faisait Yossi ? Le film lui était-il monté à la tête ?
+
+La tension sembla s'apaiser légèrement, mais ce calme relatif fut brisé par les pleurs d'un bébé. Yossi haussa la voix. Le chef cria à son tour, et ses acolytes braquèrent leurs fusils vers le public. Yossi recula d'un pas tandis que le chef avançait vers lui.
+
+_Yossi, je ne comprends rien..._
+
+Le chef pointa son arme vers mon mari, qui leva les mains.
+
+— YOSSI !
+
+Le cri m'avait échappé, chargé de terreur.
+
+Tous les regards se tournèrent vers moi. Sauf celui de Yossi. Il profita de cette diversion pour s'accroupir et bondir vers le chef. Je ne l'avais jamais vu ainsi. Le chef s'en aperçut. Trop tard.
+
+C'était Yossi, le prédateur. Le terroriste n'était plus que la proie.
+
+D'un mouvement fluide et précis, il lui saisit le cou et le fit chuter, récupérant au passage le fusil qu'il pointa aussitôt vers la tête de l'homme à terre.
+
 Je ne savais même pas que Yossi savait se battre.
 
-- Grace, aide-moi !
+— Grace, aide-moi ! cria-t-il.
 
-cria-t-il.
-Une femme surgit de la foule et frappa l'un des acolytes à la tête. Lui arracha son pistolet des mains.
-Le dernier terroriste hurla, et Yossi tira sur lui. À la cheville.
-Les trois terroristes à terre.
-Yossi me regarda droit dans les yeux et sortit un téléphone.
+Une femme surgit de la foule et assomma l'un des acolytes d'un coup sec, lui arrachant son pistolet. Le dernier terroriste hurla. Yossi tira. À la cheville.
 
-- L'Institut, ici Yossi. On va avoir besoin d'aide. Cinéma du centre de Tel-Aviv.
+Les trois hommes gisaient au sol.
 
-Yossi ? L'homme que je regardais m'était inconnu. En moins de 3 minutes, le Yossi que je connaissais
-s'était métamorphosé.
+Yossi plongea son regard dans le mien et sortit un téléphone.
 
-- Viens. Dans mes bras.
+— L'Institut, ici Yossi. Nous avons besoin d'aide. Cinéma du centre de Tel-Aviv.
 
-Yossi s'approcha de moi et je reculai instinctivement.
+Yossi ? L'homme que je contemplais m'était devenu étranger. En moins de trois minutes, celui que je connaissais s'était métamorphosé.
 
-- Qui es-tu ?
+— Viens dans mes bras.
 
-Je tournai la tête, mais il me prit dans ses bras, et je perdis connaissance.
+Il s'approcha. Je reculai instinctivement.
+
+— Qui es-tu ?
+
+Je détournai la tête, mais il m'enlaça. Tout devint noir.
 
 ---
 
-- Ça va ?
+— Ça va ?
 
-Yossi me secoua. Je me réveillais lentement.
-J'étais dans ses bras, au cinéma. Le film était terminé et la lumière allumée. Le générique se terminait
-lentement.
+Yossi me secoua doucement. Je reprenais conscience peu à peu.
 
-- Je sais que tu n'aimes pas ce genre de film, mais tu n'es pas obligée de t'endormir ! Regarde, tout le
-  monde est parti...
+J'étais dans ses bras, au cinéma. Le film était terminé, les lumières rallumées. Le générique défilait lentement.
 
-Désorientée, il m'aida à me lever.
-« Allez, lève-toi ! Et change-moi cet air maussade ! »
-« La scène de la prise d’otage était quand même très tendue, ne trouves-tu pas ? J’ai eu des frissons... »
-Mon mari était toujours aussi froussard. Avais-je transposé le film sur lui pendant mon sommeil ?
-Serait-ce un signe de mon inconscient qui me signale une envie de virilité, malgré mon refus apparent ?
-Nous sortîmes de la salle. Je tremblais de manière visible, confuse de mon rêve.
+— Je sais que tu n'aimes pas ce genre de film, mais tu n'es pas obligée de t'endormir ! Regarde, tout le monde est parti...
 
-- Bah alors, tu as l'air toute nerveuse ! Ça ne va pas ? Ne prends pas les escaliers, on va prendre les
-  escalators, c'est sûrement mieux. Tu as vraiment l'air retournée de ta petite sieste.
+Désorientée, je me laissai aider à me lever.
+
+— Allez, debout ! Et change-moi cette mine ! La scène de la prise d'otages était quand même très intense, tu ne trouves pas ? J'en ai eu des frissons...
+
+Mon mari, toujours aussi froussard. Avais-je projeté le film sur lui pendant mon sommeil ? Était-ce un signe de mon inconscient, révélant une soif de virilité malgré mes dénégations ?
+
+Nous quittâmes la salle. Je tremblais visiblement, troublée par ce rêve si vivace.
+
+— Tu as l'air toute retournée ! Ça ne va pas ? Ne prends pas les escaliers, prenons plutôt l'escalator. Tu sembles vraiment secouée par ta petite sieste.
 
 Je fixai le sol.
+
 Sur le tapis rouge, une pomme.
