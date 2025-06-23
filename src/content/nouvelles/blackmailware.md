@@ -1,7 +1,7 @@
 ---
 title: Blackmailware
-date: 2020-03-01
-description: Une nouvelle courte sur le thème du piratage informatique, lauréate du concours de nouvelles Apprendre & Savoir, publiée aux éditions DDK.
+date: 2019-04-13
+description: Lauréate du premier prix du concours de nouvelles Apprendre & Savoir, publiée aux éditions DDK. Jusqu'où peut-on aller pour protéger ses secrets ?
 ---
 
 Gianna Turl était exténuée. Son footing dominical ne s’était pas bien passé. Elle retira ses chaussures, prit une rapide douche et s’installa dans son canapé. Elle ne daigna même pas regarder Isaac, les yeux accrochés à l’ordinateur, comme toujours. Mais elle n’allait pas lui faire un énième reproche alors qu’elle s’apprêtait elle-même à regarder un épisode de _Mr. Robot_ sur Netflix ! Elle ouvrit son PC sans tarder, et l’alluma. En attendant que l’ordinateur démarre, elle plongea sa main dans un paquet de chips en regardant l’écran du coin de l’œil. Il était lent à démarrer. Étrange. L’écran vira au bleu. Inquiétant. « Bonjour, Gianna » surgit en lettres blanches au milieu de l’écran.

@@ -1,156 +1,104 @@
 ---
 title: Augmentée
-date: 2020-03-01
-description: Une nouvelle courte sur le thème de la technologie et de l'augmentation humaine.
+date: 2021-03-26
+description: Dans un monde transhumanisé, les humains résistants ne sont pas les bienvenus...
 ---
 
-Augmentée
+— C'est à ton tour dans 10 minutes, le temps que je prépare tout le matos.
 
-- C'est à ton tour dans 10 minutes, le temps que je prépare tout le matos.
+Enfin ! Depuis le temps que je _le_ voulais. Toutes mes amies en possèdent _un_ depuis des mois. Mais mes parents s'y opposent catégoriquement. Ces paranoïaques vieux-jeu... « C'est définitif, ne l'oublie pas », « Ça peut être dangereux », « C'est sous ta peau, ma chérie, réfléchis bien ». Pfff. Mes parents n'ont rien de rock-and-roll. Et ils sont super stricts sur ce sujet. Ils ont même menacé de me chasser de la maison si je m'en tatouais _un_ ! Mais ces menaces ne sont que du vent. Je vais le faire.
 
-Je vais le faire, enfin ! Depuis le temps que je le voulais. Toutes mes amies en ont un, depuis
-longtemps. Mais mes parents n'en veulent pas. Des paranoïaques vieux-jeu. « C’est définitif, ne l’oublie
-pas », « Ça peut être dangereux », « C’est sous ta peau, ma chérie, fais attention ». Pfff. Mes parents
-n'ont rien de rock-and-roll. Et ils sont super stricts sur ce sujet. Ils m'ont même dit qu'ils me jetteraient
-de la maison si je m'en tatouais un ! Mais bon, tout ça, c'est que des menaces. Je vais le faire.
-Le tatoueur s'approche de moi, d'un pas décidé. J'appréhende un peu.
+Le tatoueur s'avance vers moi d'une démarche assurée. J'appréhende un peu.
 
-- C'est à toi.
+— À toi maintenant.
 
-En me levant, l'adrénaline me monte à la tête. C'est la première fois que je désobéis aussi
-effrontément à mes parents.
+En me levant, l'adrénaline afflue dans mes veines. C'est la première fois que je désobéis aussi effrontément à mes parents.
 
-- Sophie. 16 ans, donc mineure. Tu sais qu'il me faut une pièce d'identité et une autorisation
-  de tes parents ou responsables ?
-- Oui, j'ai tout ça.
+— Sophie, seize ans, donc mineure. Tu sais qu'il me faut une pièce d'identité et l'autorisation de tes parents ou tuteurs légaux ?
 
-Je lui tends ma carte d'identité et une autorisation signée de mes parents. Le tatoueur lève les
-yeux, intrigué. Il la regarde comme une antiquité.
+— Oui, j'ai tout préparé.
 
-- Ta carte d'identité n'est pas virtuelle ? Remarque, je veux bien qu'elle soit physique, même
-  si c'est inhabituel. Mais l'autorisation... C'est juste un pauvre papier signé à la main ?
+Je lui tends ma carte d'identité et une autorisation prétendument signée par mes parents. Le tatoueur lève les yeux, perplexe. Il examine le document comme s'il s'agissait d'un artefact archéologique.
 
-Je hoche la tête. Il a touché juste. Évidemment, j'ai signé. Mes parents n'auraient jamais
-accepté... Mais là, j'ai une excuse en béton. J'essaie de parler sans trop trembler.
+— Ta carte d'identité n'est pas dématérialisée ? Soit, je peux accepter le format physique, bien que ce soit inhabituel. Mais cette autorisation... Un pauvre papier signé à la main ?
 
-- Mes parents sont des Intacts, comme moi.
+J'acquiesce d'un hochement de tête. Il a visé juste. Évidemment, j'ai contrefait la signature. Mes parents n'auraient jamais consenti... Mais j'ai une excuse imparable. Je m'efforce de parler d'une voix ferme malgré mes tremblements.
 
-Des Intacts. À ce mot, le tatoueur sourit subtilement. Il se moque, c'est sûr. En même temps,
-qui ne se moque pas d'eux ? De toutes les minorités existantes dans le monde, c'est certainement la
-plus risible. Les Intacts sont ceux qui se refusent à toute amélioration corporelle offerte par la
-technologie. Des implants, améliorant notre vision, nos performances physiques et intellectuelles, ou
-nous servant à communiquer, sont devenus aussi populaires que les téléphones portables du début
-du XXIe siècle. De nos jours, tout le monde est Augmenté.
-Malheureusement, mes parents sont des croyants, extrémistes à leur manière ; ils se bornent
-à rester des Simplets, comme on les appelle. Et ils veulent me l'imposer, jusqu'à ma majorité !
-Toutes mes amies, enfin celles qui me tolèrent, ont un Qíng. Un implant de communication
-sous-cutané ressemblant à un tatouage de couleur cuivré. Et je suis là pour m'en tatouer un. Je vais
-enfin pouvoir parler à mes amies quand je veux, où je veux, instantanément, juste par la pensée ! Je
-ne veux plus me sentir isolée, loin des gens. On se sent tellement seul, quand tout le monde est
-télépathe... Ce premier implant va me faire rentrer dans leur monde, celui des Augmentés. Depuis le
-temps que j'en rêve ! Je sors de mes pensées et soutient, face au tatoueur méfiant.
+— Mes parents sont des Intacts, comme moi.
 
-- Ils n'aiment pas les nouvelles technologies. Ils font tout au papier. Regardez, leur signature
-  est authentique !
+Des _Intacts._ À ce mot, un sourire narquois effleure les lèvres du tatoueur. Il se moque, c'est évident. D'ailleurs, qui ne se moque pas de cette communauté ? De toutes les minorités qui peuplent notre monde, c'est sans doute la plus ridicule. Les Intacts rejettent toute amélioration corporelle que la technologie puisse offrir. Les implants qui décuplent notre vision, nos capacités physiques et intellectuelles, ou qui nous permettent de communiquer, sont devenus aussi indispensables que l'étaient les téléphones portables au début du XXIe siècle. Aujourd'hui, l'humanité entière est _Augmentée_.
 
-Je tremble en parlant. Je sais que mon histoire n'est pas crédible, mais je prie pour qu'il
-accepte. Il n'a pas de raison de refuser ; mon amie Cécile m'a conseillé ce tatoueur pour sa grande
-compréhension des gens comme moi, restreints dans leur liberté par des parents abusifs. C'est surtout
-le seul tatoueur assez vénal pour accepter n'importe qui dans son salon sans poser de questions.
+Malheureusement, mes parents appartiennent à cette secte d'illuminés ; ils s'obstinent à demeurer des _Primitifs_, comme les gens normaux surnomment les _Intacts_. Et ils veulent m'imposer cette condition jusqu'à ma majorité ! Toutes mes amies — enfin, celles qui daignent encore me fréquenter — possèdent un Qíng. Cet implant de communication sous-cutané ressemble à un tatouage aux reflets cuivrés. Je suis venue pour m'en faire greffer un. Enfin, je pourrai converser avec mes amies quand bon me semble, où que je sois, instantanément, par la seule force de la pensée ! Fini l'isolement, la solitude. On se sent si seul quand tout le monde partage une conscience collective... Cet implant sera ma porte d'entrée dans leur univers, celui des Augmentés. Depuis le temps que j'en rêve ! Je sors de ma rêverie et soutiens le regard méfiant du tatoueur.
 
-- Donc pas de signature ADN. Les Intacts sont vraiment bons à rien. Je vérifie tout ça vite fait.
+— Ils sont réfractaires aux nouvelles technologies. Ils procèdent encore manuellement pour tout. Regardez, leur signature est authentique !
 
-Un tatoueur est forcément un Augmenté. A peine sa phrase finie, il me sourit. Il a vérifié ça en
-un dixième de seconde. Ça m'effraie toujours un peu, mais j'imagine que je m'habituerai à faire ça !
+Ma voix tremble malgré mes efforts. Je sais que mon histoire manque de crédibilité, mais j'espère qu'il acceptera. Il n'a aucune raison de refuser ; mon amie Cécile m'a recommandé ce tatoueur pour sa compréhension envers les jeunes comme moi, bridés par des parents tyranniques. En réalité, c'est surtout le seul praticien assez cupide pour accepter n'importe qui sans poser de questions.
 
-- C'est bon. Tes parents sont bien des Intacts. Maintenant, tu vas devoir prononcer la phrase
-  d'entrée dans notre monde.
+— Donc aucune signature ADN. Les Intacts sont vraiment des incapables. Je vérifie tout cela rapidement.
 
-Je commence à avoir un peu la pression. C'est trop sérieux pour moi.
+Un tatoueur est nécessairement un Augmenté. À peine sa phrase achevée, il m'adresse un sourire. Il a effectué sa vérification en une fraction de seconde. Cette rapidité me trouble toujours, mais j'imagine que je m'y habituerai !
 
-- Il faut que tu répètes après moi : « Je suis consciente de devenir une Augmentée, et du
-  caractère irrévocable de cette décision ». La procédure, tu sais. Ça va être enregistré et analysé, pour
-  avoir une preuve que je ne te tatoue pas de force, et que tu n'es pas folle.
+— C'est validé. Tes parents sont bien des Intacts. Maintenant, tu dois prononcer la formule d'initiation à notre monde.
 
-J'ai justement l'impression d'être folle, à m'engager dans ce genre de choix. Désobéir à mes
-parents, d'accord. Mais je vais essayer de faire ça de manière propre, légale. Je répète, tremblante
-d'émotion, ce que je dois répéter.
+La pression monte. L'atmosphère devient solennelle.
 
-- Installe-toi, on commence.
+— Tu dois répéter après moi : « Je suis consciente de devenir une Augmentée, et du caractère irrévocable de cette décision ». La procédure, tu sais. Cela sera enregistré et analysé, pour prouver que je ne t'implante rien de force et que tu n'es pas folle.
 
-Je m'installe sur le siège et tends mon bras. Un Qíng ! Je vais pouvoir communiquer avec tout
-le monde. Tout le temps, quand je veux ! Plus besoin de taper sur un smartphone. Je n'ai pas encore
-mon Qíng, mais je pense déjà à tout ce que je pourrais avoir. Certaines rêvent de richesse ou de gloire
-quand je m'imagine devenir normale, différente de mes parents excentriques. Ils ne mesurent pas à
-quel point je suis en détresse. Les Intacts sont incompréhensibles : ils se compliquent la vie, parce qu'ils
-n'osent pas. Ils ont peur de l'inconnu. Être une « Cyborg », comme crachent les Simplets jaloux, c'est
-être normale. Être meilleure qu'un simple homo sapiens. Pouvoir dépasser mes limites physiologiques,
-pour faire partie du tout qu'est devenu l'Humanité – ou plutôt la TransHumanité. Ça me rend
-euphorique, pleine d'espoir. Mais j'appréhende. J'entre dans un monde nouveau.
-Le tatoueur ouvre ma peau. Il est captivé par son travail, et la vue de ma chair rougeoyante ne
-le dérange pas. Je suis complètement écœurée lorsqu'il connecte le premier bout de métal à un de
-mes nerfs. Son sourire, qui se veut satisfait, ne me rassure pas. En réalité, il est aussi carnassier qu'un
-squale venant de découvrir une proie. Heureusement que l'anesthésie locale fonctionne à merveille.
-Je détourne le regard, et attends patiemment qu'il finisse son travail.
+Justement, j'ai l'impression de perdre la raison en m'engageant dans cette voie. Désobéir à mes parents, soit. Mais je veux procéder proprement, légalement. Je répète, la voix chevrotante d'émotion, les mots qu'il me dicte.
 
-- Hey, c'est fini. Je vais claquer des doigts, et tout va s'activer. Tu vas peut-être te sentir faible
-  ou ressentir un léger choc. Mais n'aie pas peur, tout va bien se passer.
+— Je suis consciente de devenir une _Augmentée_, et du caractère irrévocable de cette décision.
 
-Il claque des doigts, et je m'évanouis.
+— Installe-toi, on commence.
 
--
+Je m'allonge sur le siège et tends mon bras. Un Qíng ! Je vais enfin pouvoir communiquer avec le monde entier. En permanence, à volonté ! Plus besoin de taper sur un smartphone. Je ne possède pas encore mon Qíng, mais j'imagine déjà toutes les possibilités qui s'offriront à moi. Certaines rêvent de richesse ou de gloire ; moi, je rêve simplement de normalité, de me libérer de mes parents excentriques. Ils ne mesurent pas ma détresse. Les _Intacts_ sont incompréhensibles : ils se compliquent l'existence par pure lâcheté. Ils redoutent l'inconnu. Être une « Cyborg », comme crachent ces _Primitifs_ jaloux, c'est être dans la norme. C'est transcender le simple _homo sapiens_. C'est repousser mes limites physiologiques pour intégrer l'entité collective qu'est devenue l'Humanité — ou plutôt la TransHumanité. Cette perspective m'enivre d'espoir. Pourtant, l'appréhension demeure. Je pénètre dans un monde nouveau.
 
-Que se passe-t-il ? Le monde est flou, incertain. Je rêve ? C'est ça que l'on ressent
-pendant la pause d'un tatouage ? Je nage dans une aquarelle. Je suis debout ; je marche, peut-être.
-La douleur est encore plus intense dans ma tête que sur mon bras. Ma maison est là, en arrière-plan.
-Tout est diffus, et mon tatouage, écarlate. Je me laisse porter dans ce rêve brumeux, qui disparaît
-aussitôt.
+Le tatoueur incise ma peau. Absorbé par son travail, la vue de ma chair sanguinolente ne le dérange pas. Je suis prise de nausée lorsqu'il connecte le premier fragment métallique à l'un de mes nerfs. Son sourire, qui se veut rassurant, produit l'effet inverse. En réalité, il évoque celui d'un prédateur qui vient de repérer sa proie. Heureusement, l'anesthésie locale fait merveille. Je détourne le regard et patiente jusqu'à la fin de l'intervention.
+
+— Voilà, c'est fini. Je vais claquer des doigts et tout s'activera. Tu risques de ressentir une faiblesse ou un léger choc électrique. Mais n'aie crainte, tout va bien se passer.
+
+Il claque des doigts. Je sombre dans l'inconscience.
 
 ---
 
-- Hé. Hé ! Réveille-toi.
+Que m'arrive-t-il ? Le monde vacille, incertain. Est-ce un rêve ? Est-ce ainsi que l'on se sent après la pose d'un implant ? Je dérive dans une aquarelle floue. Je me dresse, je marche peut-être. La douleur irradie davantage dans mon crâne que dans mon bras. Ma maison apparaît en arrière-plan. Tout se brouille, et mon tatouage flamboie d'un rouge écarlate. Je me laisse porter par cette vision brumeuse qui s'évanouit aussitôt.
 
-Je me suis évanouie ? J'ai l'impression d'avoir rêvé des heures. Le retour à la réalité est plus
-difficile que prévu : je ne savais pas à quoi m'attendre en me lançant dans cette aventure. Je suis chez
-le tatoueur. Le Qíng apparait sur mon bras en filigrane, aussi magnifique que fascinant. Il ressemble à
-un tatouage au henné.
+---
 
-- Je t'ai installé ton tatouage. Il te plaît ?
+— Hé ! Réveille-toi !
 
-Fier de lui, son sourire dévoile une dentition refaite. Ses yeux sont rivés sur mon Qíng. Le
-tatouage a une forme étrange, ce qui me plonge dans un mélange d'excitation et de confusion.
+Me suis-je évanouie ? J'ai l'impression d'avoir rêvé pendant des heures. Le retour à la réalité s'avère plus difficile que prévu : je ne savais pas à quoi m'attendre en me lançant dans cette aventure. Je suis toujours chez le tatoueur. Le Qíng apparaît sur mon bras en filigrane, aussi magnifique qu'hypnotisant. Il évoque un tatouage au henné.
 
-- Mes amies ont une forme différente. C'est une nouvelle version ?
-- Oh, non. J'y ai juste ajouté une petite touche personnelle. Tu seras ravie, ma petite
-  Augmentée. Tu connais, toi, la souffrance d'être une Intacte. Il faut annihiler cette souffrance. C'est
-  pourquoi je t'ai fait ce cadeau.
+— Je t'ai implanté ton tatouage. Il te plaît ?
 
-Il a un sourire en coin. Un horrible pressentiment m'envahit.
+Fier de son œuvre, son sourire dévoile une dentition parfaitement refaite. Ses yeux demeurent rivés sur mon Qíng. Le tatouage présente une forme étrange, ce qui m'inspire un mélange d'excitation et de perplexité.
 
-- Tu as rendu visite à tes parents cette nuit.
+— Mes amies ont un motif différent. S'agit-il d'une nouvelle version ?
 
-Comment ça, mes parents ? Je ne comprends rien. Je contacte une de mes amies
-instantanément. Ce qui me surprend, car je ne sais pas encore utiliser l'implant.
+— Oh non, j'y ai simplement ajouté ma petite touche personnelle. Tu seras ravie, ma petite _Augmentée_. Toi, tu connais la souffrance d'être une _Intacte_. Il faut éradiquer cette souffrance. C'est pourquoi je t'ai fait ce cadeau.
 
-- Sophie ? Oh mon Dieu, qu'est-ce que tu as fait ???
-- Cécile ? Je suis allé me faire tatouer là où tu m'as recommandé ! Je suis comme toi,
-  maintenant !
-- Non, Sophie... Non, vraiment non, putain. Il t'est arrivé quoi ? T'as conscience de ce que tu as
-  fait ? C'est horrible... Regarde.
+Un sourire en coin déforme ses traits. Un pressentiment horrifiant m'envahit.
 
-Des images défilent dans ma tête. Je suis debout. Les yeux vitreux. Sans émotion. Un baril dans
-les mains. De l'essence. Au milieu de la maison familiale. Qui brûle. Mes parents. Agonisants. Le feu.
-Destruction. Désolation. Dévastation. Plus les flashs se multiplient, plus je suis fébrile. Nerveuse. Je
-vais craquer.
+— Tu as rendu visite à tes parents cette nuit.
 
-- Oh, tu as vu ce que tu as fait ? dit le tatoueur, en rigolant. Les pauvres Simplets, tués par leur
-  propre fille...
+Comment cela, mes parents ? Je ne comprends rien. Je contacte instantanément l'une de mes amies. Ce qui me surprend, car je ne maîtrise pas encore l'utilisation de l'implant.
 
-Ce tatoueur... cet imposteur. Que m'a-t-il fait ? Pourquoi est-ce que je ne me contrôle plus
-moi-même ? Je tremble. Je vais exploser.
+— Sophie ? Mon Dieu, qu'as-tu fait ?
 
-- Tu ne veux plus qu'il y ait de Simplets, non ? Ces boulets individualistes... Oh, tu pleures ?
-  Pourquoi donc ? Tu vas faire de ce monde, un monde meilleur ! Un monde d'Augmentés, faisant
-  avancer l'Humanité ! Allez, Sophie, au boulot. Obéis-moi.
+— Cécile ? Je suis allée me faire implanter là où tu me l'avais conseillé ! Je suis comme toi maintenant !
 
-Il claque des doigts, et je perds encore conscience.
+— Non, Sophie... Non, vraiment non, putain. Que t'est-il arrivé ? As-tu conscience de ce que tu as
+fait ? C'est atroce...
+
+— Quoi ? Je ne comprends pas. Cécile, qu'est-ce qui se passe ?
+
+— Regarde!
+
+Des images défilent dans mon esprit. Je me dresse, les yeux vitreux. Inexpressive. Un bidon entre les mains. De l'essence. Au cœur de la maison familiale. Qui s'embrase. Mes parents. Agonisants. Les flammes. Destruction. Désolation. Anéantissement. Plus les visions se succèdent, plus la fébrilité me gagne. Je vais craquer.
+
+— Alors ? ricane le tatoueur. Ces pauvres Primitifs, tués par leur propre fille...
+
+Ce tatoueur... Que m'a-t-il fait ? Pourquoi ai-je perdu le contrôle de moi-même ? Je tremble de tous mes membres. Je vais exploser.
+
+— Tu ne veux plus qu'il y ait de _Primitifs_, n'est-ce pas ? Ces boulets individualistes... Ils ne sont que comme des cafards. Ce n'est pas une grosse perte. Oh, tu pleures ? Pourquoi donc ? Tu vas faire de ce monde, un monde meilleur ! Un monde d'Augmentés, faisant avancer l'Humanité ! Allez, Sophie, au travail. Obéis-moi.
+
+Il claque des doigts. Je perds à nouveau conscience.
