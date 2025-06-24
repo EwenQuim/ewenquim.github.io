@@ -27,6 +27,16 @@ const { title, description, image = "/placeholder-social.jpg" } = Astro.props;
   async
   data-goatcounter="https://analytics.quimerch.com/count"
   src="https://analytics.quimerch.com/count.js"></script>
+<script async>
+  window.goatcounter = { ...window.goatcounter, no_onload: true };
+
+  // Track page views URL change
+  document.addEventListener("astro:page-load", () => {
+    window.goatcounter.count({
+      path: location.pathname + location.search + location.hash,
+    });
+  });
+</script>
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
