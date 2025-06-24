@@ -5,7 +5,6 @@ export const GET: APIRoute = async ({ site }) => {
 	const articles = await getCollection("articles");
 	const projects = await getCollection("projects");
 	const nouvelles = await getCollection("nouvelles");
-	const thoughts = await getCollection("thoughts");
 
 	const siteUrl = (site?.toString() || "https://ewen.quimerch.com").replace(
 		/\/$/,
@@ -19,13 +18,12 @@ export const GET: APIRoute = async ({ site }) => {
 		"articles",
 		"projects",
 		"nouvelles",
-		"thoughts",
 		"tag",
 	];
 
 	// Get all tags from content
 	const allTags = new Set<string>();
-	for (const item of [...articles, ...projects, ...thoughts]) {
+	for (const item of [...articles, ...projects]) {
 		if (item.data.tags) {
 			for (const tag of item.data.tags) {
 				allTags.add(tag);
@@ -69,16 +67,6 @@ ${nouvelles
 	.map(
 		(nouvelle) => `  <url>
     <loc>${siteUrl}/nouvelles/${nouvelle.slug}/</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>`,
-	)
-	.join("\n")}
-${thoughts
-	.map(
-		(thought) => `  <url>
-    <loc>${siteUrl}/thoughts/${thought.slug}/</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
