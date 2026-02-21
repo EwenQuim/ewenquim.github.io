@@ -63,13 +63,21 @@ const MATERIALS = [
 	"fabric",
 ];
 
+function rnd<T>(arr: T[]): T {
+	return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function sku(): string {
+	return `${(Math.random() * 0xffffff | 0).toString(16).padStart(6, "0").toUpperCase()}-${(Math.random() * 0xffff | 0).toString(16).padStart(4, "0").toUpperCase()}`;
+}
+
 export function generateProducts(n: number): object[] {
 	return Array.from({ length: n }, (_, i) => ({
 		id: i + 1,
-		name: `${ADJECTIVES[Math.floor(Math.random() * ADJECTIVES.length)]} ${MATERIALS[Math.floor(Math.random() * MATERIALS.length)]} item #${i + 1}`,
+		name: `${rnd(ADJECTIVES)} ${rnd(MATERIALS)} item #${i + 1}`,
 		price: Math.round((Math.random() * 499.98 + 0.01) * 100) / 100,
-		description: `${ADJECTIVES[Math.floor(Math.random() * ADJECTIVES.length)].charAt(0).toUpperCase() + ADJECTIVES[Math.floor(Math.random() * ADJECTIVES.length)].slice(1)} ${MATERIALS[Math.floor(Math.random() * MATERIALS.length)]} product with ${ADJECTIVES[Math.floor(Math.random() * ADJECTIVES.length)]} build quality`,
-		category: CATEGORIES[Math.floor(Math.random() * CATEGORIES.length)],
+		description: `SKU-${sku()} · ${rnd(ADJECTIVES)} ${rnd(MATERIALS)}, lot #${Math.floor(Math.random() * 999999)}`,
+		category: rnd(CATEGORIES),
 		in_stock: Math.random() > 0.25,
 	}));
 }

@@ -10,9 +10,21 @@ import {
 import type { Sizes } from "./shared";
 
 type Timings = { json: number; proto: number; jsonGz: number; protoGz: number };
-type Point = { count: number; timings: Timings; sizes: Sizes };
 
-const BANDWIDTH_BPS = 10 * 1024 * 1024; // 10 Mbps WiFi
+/** Raw point: sizes + processing times only — no bandwidth dependency. */
+type RawPoint = { count: number; sizes: Sizes; proc: Timings };
+
+/** Derived point: timings computed from raw + selected bandwidth. */
+type Point = { count: number; sizes: Sizes; timings: Timings };
+
+const BANDWIDTHS: { label: string; bps: number }[] = [
+	{ label: "100 KB/s", bps: 100 * 1024 },
+	{ label: "1 MB/s", bps: 1024 * 1024 },
+	{ label: "10 MB/s", bps: 10 * 1024 * 1024 },
+	{ label: "100 MB/s", bps: 100 * 1024 * 1024 },
+	{ label: "1 GB/s", bps: 1000 * 1024 * 1024 },
+];
+const DEFAULT_BW_IDX = 2; // 10 MB/s
 
 const COLORS: Record<keyof Timings, string> = {
 	json: "#fde68a",
@@ -43,7 +55,11 @@ function formatBytes(bytes: number): string {
 	return `${(bytes / (1024 * 1024)).toFixed(1)}M`;
 }
 
-async function computePoint(n: number): Promise<Point> {
+function netMs(bytes: number, bps: number): number {
+	return (bytes / bps) * 1000;
+}
+
+async function computeRawPoint(n: number): Promise<RawPoint> {
 	const root = getRoot();
 	const ProductList = root.lookupType("ProductList");
 
@@ -61,13 +77,7 @@ async function computePoint(n: number): Promise<Point> {
 		protoGz: protoGzBytes.byteLength,
 	};
 
-	// Network times (based on each format's actual size)
-	const nJson = (sizes.json / BANDWIDTH_BPS) * 1000;
-	const nProto = (sizes.proto / BANDWIDTH_BPS) * 1000;
-	const nJsonGz = (sizes.jsonGz / BANDWIDTH_BPS) * 1000;
-	const nProtoGz = (sizes.protoGz / BANDWIDTH_BPS) * 1000;
-
-	// Processing times (measured)
+	// Processing times (measured — bandwidth-independent)
 	let t0: number, t1: number;
 
 	t0 = performance.now();
@@ -92,30 +102,40 @@ async function computePoint(n: number): Promise<Point> {
 	t1 = performance.now();
 	const pProtoGz = t1 - t0;
 
+	return { count: n, sizes, proc: { json: pJson, proto: pProto, jsonGz: pJsonGz, protoGz: pProtoGz } };
+}
+
+function derivePoint(raw: RawPoint, bps: number): Point {
 	return {
-		count: n,
-		sizes,
+		count: raw.count,
+		sizes: raw.sizes,
 		timings: {
-			json: nJson + pJson,
-			proto: nProto + pProto,
-			jsonGz: nJsonGz + pJsonGz,
-			protoGz: nProtoGz + pProtoGz,
+			json: netMs(raw.sizes.json, bps) + raw.proc.json,
+			proto: netMs(raw.sizes.proto, bps) + raw.proc.proto,
+			jsonGz: netMs(raw.sizes.jsonGz, bps) + raw.proc.jsonGz,
+			protoGz: netMs(raw.sizes.protoGz, bps) + raw.proc.protoGz,
 		},
 	};
 }
 
 export function DownloadTimeChart() {
-	const [points, setPoints] = useState<Point[] | null>(null);
+	const [rawPoints, setRawPoints] = useState<RawPoint[] | null>(null);
+	const [bwIdx, setBwIdx] = useState(DEFAULT_BW_IDX);
 
 	useEffect(() => {
-		Promise.all(SAMPLE_COUNTS.map(computePoint)).then(setPoints);
+		Promise.all(SAMPLE_COUNTS.map(computeRawPoint)).then(setRawPoints);
 	}, []);
+
+	const bw = BANDWIDTHS[bwIdx];
+	const points: Point[] | null = rawPoints
+		? rawPoints.map((rp) => derivePoint(rp, bw.bps))
+		: null;
 
 	const maxMs = points
 		? Math.max(...points.flatMap((p) => Object.values(p.timings) as number[]))
 		: 10;
 
-	// X axis: log scale over JSON byte sizes (baseline reference)
+	// X axis: log scale over JSON byte sizes
 	const minJsonSize = points ? points[0].sizes.json : 100;
 	const maxJsonSize = points ? points[points.length - 1].sizes.json : 700_000;
 	const logMin = Math.log10(minJsonSize);
@@ -125,7 +145,6 @@ export function DownloadTimeChart() {
 		return ((Math.log10(bytes) - logMin) / (logMax - logMin)) * chartW + PAD_L;
 	}
 
-	// Pick X ticks: powers of 10 within range, plus a mid-range tick
 	const xTickCandidates = [100, 500, 1_000, 5_000, 10_000, 50_000, 100_000, 500_000, 1_000_000];
 	const xTicks = points
 		? xTickCandidates.filter((v) => v >= minJsonSize * 0.8 && v <= maxJsonSize * 1.2)
@@ -148,9 +167,30 @@ export function DownloadTimeChart() {
 
 	return (
 		<div className="not-prose my-8 p-4 rounded-lg bg-bg-card dark:bg-bg-card-dark border border-border-color dark:border-border-color-dark">
-			<p className="text-sm font-semibold text-text-primary dark:text-text-primary-dark mb-2">
-				Estimated Download + Parse Time vs Payload Size
-			</p>
+			<div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+				<p className="text-sm font-semibold text-text-primary dark:text-text-primary-dark">
+					Estimated Download + Parse Time vs Payload Size
+				</p>
+				<div className="flex items-center gap-1.5">
+					<span className="text-xs text-text-secondary shrink-0">Network:</span>
+					<div className="flex gap-1">
+						{BANDWIDTHS.map((b, i) => (
+							<button
+								key={b.label}
+								type="button"
+								onClick={() => setBwIdx(i)}
+								className={`text-xs px-2 py-0.5 rounded border transition-colors cursor-pointer ${
+									i === bwIdx
+										? "bg-orange-500 border-orange-500 text-white"
+										: "border-border-color dark:border-border-color-dark text-text-secondary dark:text-text-secondary hover:text-text-primary dark:hover:text-text-primary-dark"
+								}`}
+							>
+								{b.label}
+							</button>
+						))}
+					</div>
+				</div>
+			</div>
 			<svg
 				viewBox={`0 0 ${W} ${H}`}
 				width="100%"
@@ -184,22 +224,8 @@ export function DownloadTimeChart() {
 				))}
 
 				{/* Axes */}
-				<line
-					x1={PAD_L}
-					y1={PAD_T}
-					x2={PAD_L}
-					y2={PAD_T + chartH}
-					stroke="currentColor"
-					strokeOpacity="0.3"
-				/>
-				<line
-					x1={PAD_L}
-					y1={PAD_T + chartH}
-					x2={PAD_L + chartW}
-					y2={PAD_T + chartH}
-					stroke="currentColor"
-					strokeOpacity="0.3"
-				/>
+				<line x1={PAD_L} y1={PAD_T} x2={PAD_L} y2={PAD_T + chartH} stroke="currentColor" strokeOpacity="0.3" />
+				<line x1={PAD_L} y1={PAD_T + chartH} x2={PAD_L + chartW} y2={PAD_T + chartH} stroke="currentColor" strokeOpacity="0.3" />
 
 				{/* Y-axis tick labels */}
 				{yTicks.map((v) => (
@@ -234,14 +260,7 @@ export function DownloadTimeChart() {
 
 				{/* Skeleton or data lines */}
 				{!points ? (
-					<rect
-						x={PAD_L}
-						y={PAD_T}
-						width={chartW}
-						height={chartH}
-						className="fill-white/10 animate-pulse"
-						rx="4"
-					/>
+					<rect x={PAD_L} y={PAD_T} width={chartW} height={chartH} className="fill-white/10 animate-pulse" rx="4" />
 				) : (
 					keys.map((key) => (
 						<polyline
@@ -256,25 +275,18 @@ export function DownloadTimeChart() {
 					))
 				)}
 
-				{/* Legend — single row below x-axis */}
+				{/* Legend */}
 				{keys.map((key, i) => (
 					<g key={key} transform={`translate(${PAD_L + i * 122}, ${H - 14})`}>
 						<line x1="0" y1="0" x2="14" y2="0" stroke={COLORS[key]} strokeWidth="2" />
-						<text
-							x="18"
-							y="0"
-							dominantBaseline="middle"
-							fontSize="10"
-							fill="currentColor"
-							fillOpacity="0.75"
-						>
+						<text x="18" y="0" dominantBaseline="middle" fontSize="10" fill="currentColor" fillOpacity="0.75">
 							{LABELS[key]}
 						</text>
 					</g>
 				))}
 			</svg>
 			<p className="text-xs text-right text-text-secondary">
-				X axis: JSON payload size (log scale) · Network: 10 Mbps assumed · Processing: measured in your browser
+				X axis: JSON payload size (log scale) · Processing time measured in your browser
 			</p>
 		</div>
 	);
