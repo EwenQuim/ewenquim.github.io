@@ -27,6 +27,7 @@
 		"sharp": "^0.34.2",
 		"tailwindcss": "^4.1.10",
 		"three": "^0.177.0",
+		"protobufjs": "^7.4.0",
 		"vite-pwa": "^1.0.2"
 	},
 	"devDependencies": {
