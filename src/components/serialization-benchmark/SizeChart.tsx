@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { SAMPLE_COUNTS, computeSizes } from "./shared";
+import { SAMPLE_COUNTS, computeSizes, formatBytes } from "./shared";
 import type { Sizes } from "./shared";
 
 type Point = { count: number; sizes: Sizes };
@@ -27,14 +27,10 @@ const H = 260;
 const chartW = W - PAD_L - PAD_R;
 const chartH = H - PAD_T - PAD_B;
 
-function xScale(n: number): number {
-	return (Math.log10(n) / Math.log10(5000)) * chartW + PAD_L;
-}
+const maxCount = SAMPLE_COUNTS[SAMPLE_COUNTS.length - 1];
 
-function formatBytes(bytes: number): string {
-	if (bytes < 1024) return `${bytes}B`;
-	if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(0)}K`;
-	return `${(bytes / (1024 * 1024)).toFixed(1)}M`;
+function xScale(n: number): number {
+	return (Math.log10(n) / Math.log10(maxCount)) * chartW + PAD_L;
 }
 
 const X_TICKS = [1, 10, 100, 500, 1000, 2000, 5000];

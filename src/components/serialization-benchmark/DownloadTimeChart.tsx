@@ -6,6 +6,7 @@ import {
 	gzipRaw,
 	gzipDecompress,
 	getRoot,
+	formatBytes,
 } from "./shared";
 import type { Sizes } from "./shared";
 
@@ -22,7 +23,7 @@ const BANDWIDTHS: { label: string; bps: number }[] = [
 	{ label: "1 MB/s", bps: 1024 * 1024 },
 	{ label: "10 MB/s", bps: 10 * 1024 * 1024 },
 	{ label: "100 MB/s", bps: 100 * 1024 * 1024 },
-	{ label: "1 GB/s", bps: 1000 * 1024 * 1024 },
+	{ label: "1 GB/s", bps: 1024 * 1024 * 1024 },
 ];
 const DEFAULT_BW_IDX = 2; // 10 MB/s
 
@@ -49,12 +50,6 @@ const H = 260;
 const chartW = W - PAD_L - PAD_R;
 const chartH = H - PAD_T - PAD_B;
 
-function formatBytes(bytes: number): string {
-	if (bytes < 1024) return `${bytes}B`;
-	if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(0)}K`;
-	return `${(bytes / (1024 * 1024)).toFixed(1)}M`;
-}
-
 function netMs(bytes: number, bps: number): number {
 	return (bytes / bps) * 1000;
 }
@@ -64,11 +59,32 @@ async function computeRawPoint(n: number): Promise<RawPoint> {
 	const ProductList = root.lookupType("ProductList");
 
 	const products = generateProducts(n);
+
+	// Processing times (measured — bandwidth-independent)
+	let t0: number, t1: number;
+
+	// --- serialize ---
+	t0 = performance.now();
 	const jsonStr = JSON.stringify(products);
 	const jsonBytes = new TextEncoder().encode(jsonStr);
+	t1 = performance.now();
+	const sJson = t1 - t0;
+
+	t0 = performance.now();
 	const protoBytes = toProtoBytes(products);
+	t1 = performance.now();
+	const sProto = t1 - t0;
+
+	// --- compress ---
+	t0 = performance.now();
 	const jsonGzBytes = await gzipRaw(jsonBytes);
+	t1 = performance.now();
+	const cJsonGz = t1 - t0;
+
+	t0 = performance.now();
 	const protoGzBytes = await gzipRaw(protoBytes);
+	t1 = performance.now();
+	const cProtoGz = t1 - t0;
 
 	const sizes: Sizes = {
 		json: jsonBytes.byteLength,
@@ -77,9 +93,7 @@ async function computeRawPoint(n: number): Promise<RawPoint> {
 		protoGz: protoGzBytes.byteLength,
 	};
 
-	// Processing times (measured — bandwidth-independent)
-	let t0: number, t1: number;
-
+	// --- deserialize ---
 	t0 = performance.now();
 	JSON.parse(jsonStr);
 	t1 = performance.now();
@@ -102,7 +116,16 @@ async function computeRawPoint(n: number): Promise<RawPoint> {
 	t1 = performance.now();
 	const pProtoGz = t1 - t0;
 
-	return { count: n, sizes, proc: { json: pJson, proto: pProto, jsonGz: pJsonGz, protoGz: pProtoGz } };
+	return {
+		count: n,
+		sizes,
+		proc: {
+			json: sJson + pJson,
+			proto: sProto + pProto,
+			jsonGz: sJson + cJsonGz + pJsonGz,
+			protoGz: sProto + cProtoGz + pProtoGz,
+		},
+	};
 }
 
 function derivePoint(raw: RawPoint, bps: number): Point {
@@ -286,7 +309,7 @@ export function DownloadTimeChart() {
 				))}
 			</svg>
 			<p className="text-xs text-right text-text-secondary">
-				X axis: JSON payload size (log scale) · Processing time measured in your browser
+				X axis: JSON payload size (log scale) · Processing: serialize + compress + decompress + deserialize measured in your browser
 			</p>
 		</div>
 	);

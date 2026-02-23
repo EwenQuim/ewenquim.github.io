@@ -68,7 +68,7 @@ function rnd<T>(arr: T[]): T {
 }
 
 function sku(): string {
-	return `${(Math.random() * 0xffffff | 0).toString(16).padStart(6, "0").toUpperCase()}-${(Math.random() * 0xffff | 0).toString(16).padStart(4, "0").toUpperCase()}`;
+	return `${Math.floor(Math.random() * 0xffffff).toString(16).padStart(6, "0").toUpperCase()}-${Math.floor(Math.random() * 0xffff).toString(16).padStart(4, "0").toUpperCase()}`;
 }
 
 export function generateProducts(n: number): object[] {
@@ -89,13 +89,9 @@ export function toProtoBytes(products: object[]): Uint8Array {
 	return ProductList.encode(msg).finish();
 }
 
-async function compress(data: Uint8Array): Promise<Uint8Array> {
-	const cs = new CompressionStream("gzip");
-	const writer = cs.writable.getWriter();
-	writer.write(data);
-	writer.close();
+async function readAllChunks(readable: ReadableStream<Uint8Array>): Promise<Uint8Array> {
 	const chunks: Uint8Array[] = [];
-	const reader = cs.readable.getReader();
+	const reader = readable.getReader();
 	while (true) {
 		const { done, value } = await reader.read();
 		if (done) break;
@@ -113,12 +109,16 @@ async function compress(data: Uint8Array): Promise<Uint8Array> {
 
 /** Returns compressed Uint8Array. */
 export async function gzipRaw(data: Uint8Array): Promise<Uint8Array> {
-	return compress(data);
+	const cs = new CompressionStream("gzip");
+	const writer = cs.writable.getWriter();
+	writer.write(data);
+	writer.close();
+	return readAllChunks(cs.readable);
 }
 
 /** Returns compressed byte count. */
 export async function gzipSize(data: Uint8Array): Promise<number> {
-	return (await compress(data)).byteLength;
+	return (await gzipRaw(data)).byteLength;
 }
 
 /** Returns decompressed Uint8Array. */
@@ -127,21 +127,14 @@ export async function gzipDecompress(data: Uint8Array): Promise<Uint8Array> {
 	const writer = ds.writable.getWriter();
 	writer.write(data);
 	writer.close();
-	const chunks: Uint8Array[] = [];
-	const reader = ds.readable.getReader();
-	while (true) {
-		const { done, value } = await reader.read();
-		if (done) break;
-		chunks.push(value);
-	}
-	const total = chunks.reduce((sum, c) => sum + c.byteLength, 0);
-	const result = new Uint8Array(total);
-	let offset = 0;
-	for (const chunk of chunks) {
-		result.set(chunk, offset);
-		offset += chunk.byteLength;
-	}
-	return result;
+	return readAllChunks(ds.readable);
+}
+
+/** Compact byte formatter for chart axis labels. */
+export function formatBytes(bytes: number): string {
+	if (bytes < 1024) return `${bytes}B`;
+	if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(0)}K`;
+	return `${(bytes / (1024 * 1024)).toFixed(1)}M`;
 }
 
 export type Sizes = {

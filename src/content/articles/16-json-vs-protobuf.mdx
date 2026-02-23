@@ -1,6 +1,6 @@
 ---
 date: 2026-02-20
-title: "JSON vs Protobuf: Does Gzip Change Everything?"
+title: "JSON vs Protobuf: is the answer Gzip?"
 description: "A data-driven comparison of JSON and Protocol Buffers across payload sizes, with and without Gzip. The results might surprise you."
 categories:
   - tech
@@ -71,11 +71,11 @@ On the wire, `user_id` becomes tag `1`—a single byte instead of `"user_id"` (9
 
 **Gzip** uses the DEFLATE algorithm to compress data at the HTTP layer. The server sends `Content-Encoding: gzip`; the client decompresses transparently. Most web frameworks enable this in one line of config.
 
-Gzip exploits repetition—and JSON has a lot of it. Every object in a list repeats the same field names. The result: Gzip collapses JSON's verbosity aggressively. The catch: Gzip has a **fixed overhead of ~20 bytes** for its header. On tiny payloads, this overhead can make the compressed version *larger* than the original.
+Gzip exploits repetition—and JSON has a lot of it. Every object in a list repeats the same field names. The result: Gzip collapses JSON's verbosity aggressively. The catch: Gzip cannot compress data smaller than its own metadata (header, Huffman tables, checksums). On tiny payloads with little repetition, the compressed output ends up *larger* than the original.
 
 ## 3. Interactive Comparison
 
-Explore the four scenarios across payload sizes. Pay attention to what happens at "Tiny."
+Explore the four scenarios across payload sizes. Move the slider to 1 record to see Gzip's overhead on tiny payloads.
 
 <SerializationBenchmark client:load />
 
@@ -97,7 +97,7 @@ At ~1.5 KB, JSON + Gzip (620 B) is already smaller than plain Protobuf (820 B). 
 
 ### Medium payloads: the break-even zone
 
-At ~15 KB, JSON + Gzip (3.4 KB) is within 30% of Proto + Gzip (2.6 KB). The question becomes: is the 800 B difference worth maintaining `.proto` files, running codegen in CI, and handling schema versioning?
+At ~15 KB, JSON + Gzip (3.4 KB) is about 31% larger than Proto + Gzip (2.6 KB). The question becomes: is the 800 B difference worth maintaining `.proto` files, running codegen in CI, and handling schema versioning?
 
 **Recommendation:** Enable Gzip. Consider Protobuf only if you're making millions of requests per day and have profiled bandwidth as an actual bottleneck.
 

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { generateProducts, toProtoBytes, gzipSize } from "./shared";
+import { computeSizes } from "./shared";
 import type { Sizes } from "./shared";
 
 function formatBytes(bytes: number): string {
@@ -40,6 +40,13 @@ function getInsight(sizes: Sizes): {
 		};
 	}
 	const diff = getSavings(sizes.protoGz, sizes.jsonGz);
+	if (diff <= 0) {
+		return {
+			type: "info",
+			message:
+				"JSON + Gzip and Proto + Gzip are nearly identical here. Enable Gzip—format choice barely matters at this size.",
+		};
+	}
 	return {
 		type: "info",
 		message: `Proto + Gzip is ${diff.toFixed(0)}% smaller than JSON + Gzip. At scale (millions of requests/day) this becomes real bandwidth savings.`,
@@ -55,19 +62,7 @@ export function SerializationBenchmark() {
 		const id = setTimeout(async () => {
 			setComputing(true);
 			try {
-				const products = generateProducts(count);
-				const jsonBytes = new TextEncoder().encode(JSON.stringify(products));
-				const protoBytes = toProtoBytes(products);
-				const [jsonGz, protoGz] = await Promise.all([
-					gzipSize(jsonBytes),
-					gzipSize(protoBytes),
-				]);
-				setSizes({
-					json: jsonBytes.byteLength,
-					proto: protoBytes.byteLength,
-					jsonGz,
-					protoGz,
-				});
+				setSizes(await computeSizes(count));
 			} finally {
 				setComputing(false);
 			}
