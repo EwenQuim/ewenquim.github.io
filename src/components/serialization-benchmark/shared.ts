@@ -33,53 +33,79 @@ const CATEGORIES = [
 	"Automotive",
 	"Health",
 ];
-const ADJECTIVES = [
-	"durable",
-	"comfortable",
-	"stylish",
-	"innovative",
-	"reliable",
-	"efficient",
-	"powerful",
-	"versatile",
-	"eco-friendly",
-	"ergonomic",
-	"compact",
-	"premium",
-	"lightweight",
-	"robust",
-	"flexible",
-];
-const MATERIALS = [
-	"aluminum",
-	"cotton",
-	"leather",
-	"plastic",
-	"wood",
-	"steel",
-	"ceramic",
-	"glass",
-	"rubber",
-	"fabric",
-];
-
 function rnd<T>(arr: T[]): T {
 	return arr[Math.floor(Math.random() * arr.length)];
 }
 
-function sku(): string {
-	return `${Math.floor(Math.random() * 0xffffff).toString(16).padStart(6, "0").toUpperCase()}-${Math.floor(Math.random() * 0xffff).toString(16).padStart(4, "0").toUpperCase()}`;
+function seededString(seed: number): string {
+	let s = (seed * 2654435761) >>> 0;
+	function next(): number {
+		s = (Math.imul(s, 1664525) + 1013904223) >>> 0;
+		return s / 0x100000000;
+	}
+	const len = 10 + Math.floor(next() * 41);
+	const chars: string[] = [];
+	for (let i = 0; i < len; i++) {
+		if (next() < 1 / 6) chars.push(" ");
+		else chars.push(String.fromCharCode(97 + Math.floor(next() * 26)));
+	}
+	return chars.join("").trim();
 }
 
-export function generateProducts(n: number): object[] {
-	return Array.from({ length: n }, (_, i) => ({
-		id: i + 1,
-		name: `${rnd(ADJECTIVES)} ${rnd(MATERIALS)} item #${i + 1}`,
-		price: Math.round((Math.random() * 499.98 + 0.01) * 100) / 100,
-		description: `SKU-${sku()} · ${rnd(ADJECTIVES)} ${rnd(MATERIALS)}, lot #${Math.floor(Math.random() * 999999)}`,
-		category: rnd(CATEGORIES),
-		in_stock: Math.random() > 0.25,
-	}));
+export type Repeatability = "unique" | "mixed" | "repetitive";
+
+const FIXED_NAME_PREFIX = seededString(1);
+const NAME_PREFIXES = Array.from({ length: 5 }, (_, i) => seededString(i + 10));
+const FIXED_DESC = seededString(100);
+
+function randomString(): string {
+	const len = 10 + Math.floor(Math.random() * 41);
+	const chars: string[] = [];
+	for (let i = 0; i < len; i++) {
+		if (Math.random() < 1 / 6) chars.push(" ");
+		else chars.push(String.fromCharCode(97 + Math.floor(Math.random() * 26)));
+	}
+	return chars.join("").trim();
+}
+
+function sku(): string {
+	return `${Math.floor(Math.random() * 0xffffff)
+		.toString(16)
+		.padStart(6, "0")
+		.toUpperCase()}-${Math.floor(Math.random() * 0xffff)
+		.toString(16)
+		.padStart(4, "0")
+		.toUpperCase()}`;
+}
+
+export function generateProducts(
+	n: number,
+	repeatability: Repeatability = "unique",
+): object[] {
+	return Array.from({ length: n }, (_, i) => {
+		let name: string;
+		let description: string;
+
+		if (repeatability === "unique") {
+			name = `${randomString()} item #${i + 1}`;
+			description = `SKU-${sku()} · ${randomString()}, lot #${Math.floor(Math.random() * 999999)}`;
+		} else if (repeatability === "mixed") {
+			name = `${NAME_PREFIXES[i % NAME_PREFIXES.length]} item #${i + 1}`;
+			description = `SKU-${sku()} · ${FIXED_DESC}`;
+		} else {
+			name = `${FIXED_NAME_PREFIX} item #${i + 1}`;
+			description = FIXED_DESC;
+		}
+
+		return {
+			id: i + 1,
+			name,
+			price: Math.round((Math.random() * 499.98 + 0.01) * 100) / 100,
+			description,
+			category: rnd(CATEGORIES),
+			in_stock: Math.random() > 0.25,
+		};
+	});
 }
 
 export function toProtoBytes(products: object[]): Uint8Array {
@@ -89,7 +115,9 @@ export function toProtoBytes(products: object[]): Uint8Array {
 	return ProductList.encode(msg).finish();
 }
 
-async function readAllChunks(readable: ReadableStream<Uint8Array>): Promise<Uint8Array> {
+async function readAllChunks(
+	readable: ReadableStream<Uint8Array>,
+): Promise<Uint8Array> {
 	const chunks: Uint8Array[] = [];
 	const reader = readable.getReader();
 	while (true) {
@@ -144,8 +172,11 @@ export type Sizes = {
 	protoGz: number;
 };
 
-export async function computeSizes(n: number): Promise<Sizes> {
-	const products = generateProducts(n);
+export async function computeSizes(
+	n: number,
+	repeatability: Repeatability = "unique",
+): Promise<Sizes> {
+	const products = generateProducts(n, repeatability);
 	const jsonBytes = new TextEncoder().encode(JSON.stringify(products));
 	const protoBytes = toProtoBytes(products);
 	const [jsonGz, protoGz] = await Promise.all([

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { computeSizes } from "./shared";
-import type { Sizes } from "./shared";
+import type { Sizes, Repeatability } from "./shared";
 
 function formatBytes(bytes: number): string {
 	if (bytes < 1024) return `${bytes} B`;
@@ -55,6 +55,7 @@ function getInsight(sizes: Sizes): {
 
 export function SerializationBenchmark() {
 	const [count, setCount] = useState(500);
+	const [repeatability, setRepeatability] = useState<Repeatability>("unique");
 	const [sizes, setSizes] = useState<Sizes | null>(null);
 	const [computing, setComputing] = useState(false);
 
@@ -62,13 +63,13 @@ export function SerializationBenchmark() {
 		const id = setTimeout(async () => {
 			setComputing(true);
 			try {
-				setSizes(await computeSizes(count));
+				setSizes(await computeSizes(count, repeatability));
 			} finally {
 				setComputing(false);
 			}
 		}, 150);
 		return () => clearTimeout(id);
-	}, [count]);
+	}, [count, repeatability]);
 
 	const maxBytes = sizes
 		? Math.max(sizes.json, sizes.proto, sizes.jsonGz, sizes.protoGz)
@@ -76,9 +77,19 @@ export function SerializationBenchmark() {
 	const insight = sizes ? getInsight(sizes) : null;
 
 	return (
-		<div className="not-prose my-8 p-4 rounded-lg bg-bg-card dark:bg-bg-card-dark border border-border-color dark:border-border-color-dark">
-			{/* Header with slider */}
-			<div className="flex flex-wrap items-center gap-3 mb-4">
+		<div className="not-prose my-4 md:my-8 p-2 md:p-4 rounded-lg bg-bg-card  dark:bg-bg-card-dark border border-border-color dark:border-border-color-dark">
+			{/* Card header with live badge */}
+			<div className="flex items-center justify-between mb-3">
+				<span className="text-sm font-semibold text-text-primary dark:text-text-primary-dark">
+					Payload size comparison
+				</span>
+				<span className="text-xs font-medium px-2 py-0.5 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 border border-green-200 dark:border-green-700">
+					● Computed live in your browser
+				</span>
+			</div>
+
+			{/* Records slider */}
+			<div className="flex flex-wrap items-center gap-3 mb-2">
 				<span className="text-sm font-medium text-text-primary dark:text-text-primary-dark w-24 shrink-0">
 					{count} record{count !== 1 ? "s" : ""}
 				</span>
@@ -93,6 +104,30 @@ export function SerializationBenchmark() {
 				<span className="text-xs text-text-secondary w-12 text-right shrink-0">
 					/ 5000
 				</span>
+			</div>
+
+			{/* Repetition buttons */}
+			<div className="flex flex-wrap items-center gap-3 mb-4">
+				<span className="text-sm font-medium text-text-primary dark:text-text-primary-dark w-24 shrink-0">
+					Repetition
+				</span>
+				<div className="flex gap-2">
+					{(["unique", "mixed", "repetitive"] as Repeatability[]).map(
+						(level) => (
+							<button
+								key={level}
+								onClick={() => setRepeatability(level)}
+								className={`px-3 py-1 text-sm rounded border transition-colors ${
+									repeatability === level
+										? "bg-orange-500 text-white border-orange-500"
+										: "text-text-secondary dark:text-text-secondary-dark border-border-color dark:border-border-color-dark hover:border-orange-400"
+								}`}
+							>
+								{level.charAt(0).toUpperCase() + level.slice(1)}
+							</button>
+						),
+					)}
+				</div>
 			</div>
 
 			{/* Insight banner */}
@@ -175,7 +210,7 @@ export function SerializationBenchmark() {
 
 			{/* Legend */}
 			<p className="mt-4 text-xs text-text-secondary text-right">
-				Live-computed in your browser · savings relative to plain JSON
+				savings relative to plain JSON
 			</p>
 		</div>
 	);

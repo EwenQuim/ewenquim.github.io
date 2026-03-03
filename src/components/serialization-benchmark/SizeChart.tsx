@@ -70,7 +70,7 @@ export function SizeChart() {
 	const keys = Object.keys(COLORS) as (keyof Sizes)[];
 
 	return (
-		<div className="not-prose my-8 p-4 rounded-lg bg-bg-card dark:bg-bg-card-dark border border-border-color dark:border-border-color-dark">
+		<div className="not-prose my-4 md:my-8 p-2 md:p-4 rounded-lg bg-bg-card  dark:bg-bg-card-dark border border-border-color dark:border-border-color-dark">
 			<p className="text-sm font-semibold text-text-primary dark:text-text-primary-dark mb-2">
 				Payload Size vs Record Count
 			</p>

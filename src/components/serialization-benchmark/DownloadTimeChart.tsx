@@ -168,9 +168,13 @@ export function DownloadTimeChart() {
 		return ((Math.log10(bytes) - logMin) / (logMax - logMin)) * chartW + PAD_L;
 	}
 
-	const xTickCandidates = [100, 500, 1_000, 5_000, 10_000, 50_000, 100_000, 500_000, 1_000_000];
+	const xTickCandidates = [
+		100, 500, 1_000, 5_000, 10_000, 50_000, 100_000, 500_000, 1_000_000,
+	];
 	const xTicks = points
-		? xTickCandidates.filter((v) => v >= minJsonSize * 0.8 && v <= maxJsonSize * 1.2)
+		? xTickCandidates.filter(
+				(v) => v >= minJsonSize * 0.8 && v <= maxJsonSize * 1.2,
+			)
 		: [];
 
 	function yScale(ms: number): number {
@@ -182,14 +186,17 @@ export function DownloadTimeChart() {
 	function polylinePoints(key: keyof Timings): string {
 		if (!points) return "";
 		return points
-			.map((p) => `${xScale(p.sizes.json).toFixed(1)},${yScale(p.timings[key]).toFixed(1)}`)
+			.map(
+				(p) =>
+					`${xScale(p.sizes.json).toFixed(1)},${yScale(p.timings[key]).toFixed(1)}`,
+			)
 			.join(" ");
 	}
 
 	const keys = Object.keys(COLORS) as (keyof Timings)[];
 
 	return (
-		<div className="not-prose my-8 p-4 rounded-lg bg-bg-card dark:bg-bg-card-dark border border-border-color dark:border-border-color-dark">
+		<div className="not-prose my-4 md:my-8 p-2 md:p-4 rounded-lg bg-bg-card  dark:bg-bg-card-dark border border-border-color dark:border-border-color-dark">
 			<div className="flex flex-wrap items-center justify-between gap-2 mb-3">
 				<p className="text-sm font-semibold text-text-primary dark:text-text-primary-dark">
 					Estimated Download + Parse Time vs Payload Size
@@ -247,8 +254,22 @@ export function DownloadTimeChart() {
 				))}
 
 				{/* Axes */}
-				<line x1={PAD_L} y1={PAD_T} x2={PAD_L} y2={PAD_T + chartH} stroke="currentColor" strokeOpacity="0.3" />
-				<line x1={PAD_L} y1={PAD_T + chartH} x2={PAD_L + chartW} y2={PAD_T + chartH} stroke="currentColor" strokeOpacity="0.3" />
+				<line
+					x1={PAD_L}
+					y1={PAD_T}
+					x2={PAD_L}
+					y2={PAD_T + chartH}
+					stroke="currentColor"
+					strokeOpacity="0.3"
+				/>
+				<line
+					x1={PAD_L}
+					y1={PAD_T + chartH}
+					x2={PAD_L + chartW}
+					y2={PAD_T + chartH}
+					stroke="currentColor"
+					strokeOpacity="0.3"
+				/>
 
 				{/* Y-axis tick labels */}
 				{yTicks.map((v) => (
@@ -283,7 +304,14 @@ export function DownloadTimeChart() {
 
 				{/* Skeleton or data lines */}
 				{!points ? (
-					<rect x={PAD_L} y={PAD_T} width={chartW} height={chartH} className="fill-white/10 animate-pulse" rx="4" />
+					<rect
+						x={PAD_L}
+						y={PAD_T}
+						width={chartW}
+						height={chartH}
+						className="fill-white/10 animate-pulse"
+						rx="4"
+					/>
 				) : (
 					keys.map((key) => (
 						<polyline
@@ -301,15 +329,30 @@ export function DownloadTimeChart() {
 				{/* Legend */}
 				{keys.map((key, i) => (
 					<g key={key} transform={`translate(${PAD_L + i * 122}, ${H - 14})`}>
-						<line x1="0" y1="0" x2="14" y2="0" stroke={COLORS[key]} strokeWidth="2" />
-						<text x="18" y="0" dominantBaseline="middle" fontSize="10" fill="currentColor" fillOpacity="0.75">
+						<line
+							x1="0"
+							y1="0"
+							x2="14"
+							y2="0"
+							stroke={COLORS[key]}
+							strokeWidth="2"
+						/>
+						<text
+							x="18"
+							y="0"
+							dominantBaseline="middle"
+							fontSize="10"
+							fill="currentColor"
+							fillOpacity="0.75"
+						>
 							{LABELS[key]}
 						</text>
 					</g>
 				))}
 			</svg>
 			<p className="text-xs text-right text-text-secondary">
-				X axis: JSON payload size (log scale) · Processing: serialize + compress + decompress + deserialize measured in your browser
+				X axis: JSON payload size (log scale) · Processing: serialize + compress
+				+ decompress + deserialize measured in your browser
 			</p>
 		</div>
 	);
