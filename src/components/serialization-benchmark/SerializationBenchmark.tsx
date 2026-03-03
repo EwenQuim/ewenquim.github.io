@@ -85,13 +85,13 @@ export function SerializationBenchmark() {
 				<input
 					type="range"
 					min={1}
-					max={10000}
+					max={5000}
 					value={count}
 					onChange={(e) => setCount(+e.target.value)}
 					className="flex-1 accent-orange-500 cursor-pointer"
 				/>
 				<span className="text-xs text-text-secondary w-12 text-right shrink-0">
-					/ 10000
+					/ 5000
 				</span>
 			</div>
 

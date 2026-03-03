@@ -1,7 +1,7 @@
 ---
 date: 2026-02-20
-title: "JSON vs Protobuf: is the answer Gzip?"
-description: "A data-driven comparison of JSON and Protocol Buffers across payload sizes, with and without Gzip. The results might surprise you."
+title: "JSON vs Protobuf: is the answer Gzip? An interactive guide."
+description: "An interactive data-driven comparison of JSON, Protocol Buffers and Gzip across payload sizes and time. The results might surprise you. Article 100% (badly) written by a human."
 categories:
   - tech
 tags:
@@ -12,26 +12,15 @@ tags:
 toc: true
 ---
 
+import { Image } from "astro:assets";
 import { SerializationBenchmark } from "../../components/serialization-benchmark/SerializationBenchmark";
 import { SizeChart } from "../../components/serialization-benchmark/SizeChart";
 import { DownloadTimeChart } from "../../components/serialization-benchmark/DownloadTimeChart";
+import compressionRatios from "../../assets/images/compression-ratios.png";
 
-Your team is designing a new internal microservice. Someone suggests switching from JSON to Protocol Buffers for "performance". What is the real performance gain? What are the other considerations to take into account?
+We often hear devs out there suggesting switching from JSON to Protocol Buffers for "performance". What is the real performance gain? What are the other considerations to take into account?
 
-This article runs the numbers and gives you a framework for answering that question before reaching for a new serialization format.
-
-## 1. The Classic Debate
-
-**JSON** is the default choice for web APIs—human-readable, universally supported, and requires zero tooling beyond a text editor. **Protocol Buffers** (Protobuf) is Google's binary serialization format, designed to be smaller and faster than JSON.
-
-The usual argument goes: Protobuf payloads are ~45% smaller, so you should use them for performance-critical APIs. This is *technically true* but often the wrong conclusion, because it ignores two variables:
-
-1. **Gzip compression**, which HTTP servers have been doing for decades
-2. **Payload size**, which determines whether compression overhead even matters
-
-> "Protobuf is faster than JSON" is true the same way "a sports car is faster than a truck"—correct in a vacuum, irrelevant without context.
-
-## 2. What Are We Comparing?
+## 1. JSON vs Protobuf
 
 ### JSON
 
@@ -47,11 +36,11 @@ JSON is **self-describing**: field names travel alongside their values in every 
 }
 ```
 
-That verbosity is also JSON's strength—any language can parse it with no shared schema.
+That verbosity is also JSON's strength: any language can parse it with no shared schema.
 
 ### Protocol Buffers
 
-Protobuf is **schema-based**: field names are replaced by compact integer tags. Both sides must share a `.proto` file.
+Protobuf is **schema-based**: field names are replaced by compact integer tags. Both sides must share a `.proto` file, the contract between the 2 parties.
 
 ```protobuf
 syntax = "proto3";
@@ -65,13 +54,26 @@ message User {
 }
 ```
 
-On the wire, `user_id` becomes tag `1`—a single byte instead of `"user_id"` (9 bytes including quotes). For payloads with many repeated field names, this compounds quickly: ~45% smaller before any compression.
+Then, use a generator like [buf](https://buf.build/docs/cli/quickstart/) or [protoc](https://protobuf.dev/) to generate code in your favorite language.
 
-### Gzip
+On the wire, `user_id` becomes tag `1` (a single byte instead) of `"user_id"` (9 bytes including quotes). For payloads with many repeated field names, this compounds quickly, around 50% smaller.
 
-**Gzip** uses the DEFLATE algorithm to compress data at the HTTP layer. The server sends `Content-Encoding: gzip`; the client decompresses transparently. Most web frameworks enable this in one line of config.
+## 2. Gzip
 
-Gzip exploits repetition—and JSON has a lot of it. Every object in a list repeats the same field names. The result: Gzip collapses JSON's verbosity aggressively. The catch: Gzip cannot compress data smaller than its own metadata (header, Huffman tables, checksums). On tiny payloads with little repetition, the compressed output ends up *larger* than the original.
+Historically, a way to reduce payload is to dynamically zip the payloads. **Gzip** uses the DEFLATE algorithm to compress data at the HTTP layer. The server sends `Content-Encoding: gzip`. The client decompresses transparently, either browsers and the `fetch` equivalent in all languages. Most web frameworks (and proxies, I personnaly prefer delegating this task to proxies) enable this in one line of config.
+
+Gzip exploits repetition, and JSON has a lot of it. Every object in a list repeats the same field names. Gzip collapses JSON's verbosity aggressively. All good isn't it?
+
+Not a free win #1: Gzip cannot compress data smaller than its own metadata (header, Huffman tables, checksums). On tiny payloads (~1kb) with little repetition, the compressed output ends up *larger* than the original.
+
+Not a free win #2: Also, compression and decompression is another task that takes some time after serialization.
+
+But, out of lot of algorithms exist, Gzip is one of the fastest, so it's ideal for dynamic compression.
+
+<Image src={compressionRatios} alt="Compression ratio benchmarks across algorithms and speeds" />
+
+_Credits to https://www.opencpu.org/posts/brotli-benchmarks/_
+
 
 ## 3. Interactive Comparison
 
@@ -83,39 +85,19 @@ Explore the four scenarios across payload sizes. Move the slider to 1 record to 
 
 ## 4. Key Insights
 
-### Tiny payloads: skip compression entirely
+A few patterns emerge from the data:
 
-At ~150 B, Gzip's header makes the compressed payload *larger* than the original. Both JSON and Protobuf should be sent uncompressed. Protobuf saves 68 B (45%)—real in percentage terms, negligible in absolute terms. The latency difference is immeasurable.
+- **Gzip alone beats plain Protobuf** — at ~1.5 KB, JSON + Gzip is already smaller than uncompressed Protobuf. Enable Gzip before considering a serialization switch.
+- **Skip compression for tiny payloads** — below ~500 B, Gzip's header overhead makes the output larger than the input. Send plain JSON.
+- **Protobuf only matters at scale** — the gap between Proto + Gzip and JSON + Gzip becomes meaningful (>20%) only above ~150 KB, and only if you're making millions of those requests.
 
-**Recommendation:** Don't compress. JSON is fine.
+## 5. Download Time
 
-### Small payloads: Gzip already wins
-
-At ~1.5 KB, JSON + Gzip (620 B) is already smaller than plain Protobuf (820 B). You get a better result from a compression header than from a schema migration.
-
-**Recommendation:** Enable Gzip. JSON + Gzip beats plain Protobuf with zero schema overhead.
-
-### Medium payloads: the break-even zone
-
-At ~15 KB, JSON + Gzip (3.4 KB) is about 31% larger than Proto + Gzip (2.6 KB). The question becomes: is the 800 B difference worth maintaining `.proto` files, running codegen in CI, and handling schema versioning?
-
-**Recommendation:** Enable Gzip. Consider Protobuf only if you're making millions of requests per day and have profiled bandwidth as an actual bottleneck.
-
-### Large payloads: Protobuf starts pulling ahead
-
-At ~150 KB, the 7 KB gap between JSON + Gzip (28 KB) and Proto + Gzip (21 KB) starts to matter at scale. A million requests per day = 7 GB of extra egress, which has a real dollar cost.
-
-**Recommendation:** Profile your actual traffic. If large payloads are common and high-volume, Protobuf's investment pays off here.
-
-### XL payloads: clearest case for Protobuf
-
-At ~1.5 MB, binary encoding prevents Gzip from fully closing the gap. Proto + Gzip (126 KB) is 24% smaller than JSON + Gzip (165 KB). The repetition structure of binary-encoded fields resists Gzip differently than text.
-
-**Recommendation:** Protobuf wins here. If you're regularly shipping 1 MB+ payloads, you probably already know it.
+Payload size is only half the picture. What matters end-to-end is **total transfer time**: network latency plus serialization overhead. Select a bandwidth to see how the four formats compare across payload sizes.
 
 <DownloadTimeChart client:idle />
 
-## 5. When To Use What
+## 6. When To Use What
 
 | Scenario | Recommendation |
 |----------|---------------|
@@ -124,9 +106,9 @@ At ~1.5 MB, binary encoding prevents Gzip from fully closing the gap. Proto + Gz
 | Tiny payloads (&lt;500 B) | JSON, no compression. Gzip overhead exceeds benefit. |
 | Bulk data transfer (&gt;500 KB) | Protobuf + Gzip. Binary encoding resists compression saturation. |
 
-## 6. The Part Nobody Talks About: Schema Management
+## 7. We cannot neglect: Schema Management
 
-Switching to Protobuf isn't just a config change—it's an operational commitment:
+Switching to Protobuf have some operational commitment:
 
 - **`.proto` files** must be versioned and shared across every service that communicates
 - **Codegen** must run in CI for every language in your stack (Go, TypeScript, Python, Java...)
@@ -137,7 +119,7 @@ For most APIs, the DX cost of this machinery exceeds the bandwidth savings you'l
 
 > The real performance question isn't "JSON vs Protobuf." It's "do I have a measured bandwidth problem?"
 
-## 7. Conclusion
+## 8. Conclusion
 
 The data points to a clear, actionable hierarchy:
 
