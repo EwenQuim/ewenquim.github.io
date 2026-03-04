@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { computeSizes } from "./shared";
-import type { Sizes, Repeatability } from "./shared";
+import type { Sizes } from "./shared";
+import { useRepeatability } from "./repeatabilityStore";
 
 function formatBytes(bytes: number): string {
 	if (bytes < 1024) return `${bytes} B`;
@@ -40,7 +41,7 @@ function getInsight(sizes: Sizes): {
 		};
 	}
 	const diff = getSavings(sizes.protoGz, sizes.jsonGz);
-	if (diff <= 0) {
+	if (diff <= 10) {
 		return {
 			type: "info",
 			message:
@@ -55,7 +56,7 @@ function getInsight(sizes: Sizes): {
 
 export function SerializationBenchmark() {
 	const [count, setCount] = useState(500);
-	const [repeatability, setRepeatability] = useState<Repeatability>("unique");
+	const [repeatability, setRepeatability] = useRepeatability();
 	const [sizes, setSizes] = useState<Sizes | null>(null);
 	const [computing, setComputing] = useState(false);
 
@@ -116,11 +117,12 @@ export function SerializationBenchmark() {
 						(level) => (
 							<button
 								key={level}
+								type="button"
 								onClick={() => setRepeatability(level)}
 								className={`px-3 py-1 text-sm rounded border transition-colors ${
 									repeatability === level
-										? "bg-orange-500 text-white border-orange-500"
-										: "text-text-secondary dark:text-text-secondary-dark border-border-color dark:border-border-color-dark hover:border-orange-400"
+										? "bg-accent text-text-heading border-accent"
+										: "text-text-secondary dark:text-text-secondary-dark border-border-color dark:border-border-color-dark hover:border-accent"
 								}`}
 							>
 								{level.charAt(0).toUpperCase() + level.slice(1)}

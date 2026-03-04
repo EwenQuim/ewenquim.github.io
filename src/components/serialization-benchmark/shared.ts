@@ -33,9 +33,17 @@ const CATEGORIES = [
 	"Automotive",
 	"Health",
 ];
-function rnd<T>(arr: T[]): T {
-	return arr[Math.floor(Math.random() * arr.length)];
+const SESSION_SEED = (Math.random() * 2 ** 32) >>> 0;
+
+function makeItemPrng(itemIndex: number): () => number {
+	let s = (SESSION_SEED ^ Math.imul(itemIndex + 1, 2654435761)) >>> 0;
+	return (): number => {
+		s = (Math.imul(s, 1664525) + 1013904223) >>> 0;
+		return s / 0x100000000;
+	};
 }
+
+const STRING_LEN = 30;
 
 function seededString(seed: number): string {
 	let s = (seed * 2654435761) >>> 0;
@@ -43,39 +51,28 @@ function seededString(seed: number): string {
 		s = (Math.imul(s, 1664525) + 1013904223) >>> 0;
 		return s / 0x100000000;
 	}
-	const len = 10 + Math.floor(next() * 41);
 	const chars: string[] = [];
-	for (let i = 0; i < len; i++) {
-		if (next() < 1 / 6) chars.push(" ");
-		else chars.push(String.fromCharCode(97 + Math.floor(next() * 26)));
+	for (let i = 0; i < STRING_LEN; i++) {
+		const isSpace = i > 0 && i < STRING_LEN - 1 && next() < 1 / 6;
+		const code = Math.floor(next() * 52);
+		chars.push(isSpace ? " " : String.fromCharCode(code < 26 ? 65 + code : 97 + (code - 26)));
 	}
-	return chars.join("").trim();
+	return chars.join("");
 }
 
 export type Repeatability = "unique" | "mixed" | "repetitive";
 
 const FIXED_NAME_PREFIX = seededString(1);
-const NAME_PREFIXES = Array.from({ length: 5 }, (_, i) => seededString(i + 10));
 const FIXED_DESC = seededString(100);
 
-function randomString(): string {
-	const len = 10 + Math.floor(Math.random() * 41);
+function randomString(rng: () => number): string {
 	const chars: string[] = [];
-	for (let i = 0; i < len; i++) {
-		if (Math.random() < 1 / 6) chars.push(" ");
-		else chars.push(String.fromCharCode(97 + Math.floor(Math.random() * 26)));
+	for (let i = 0; i < STRING_LEN; i++) {
+		const isSpace = i > 0 && i < STRING_LEN - 1 && rng() < 1 / 6;
+		const code = Math.floor(rng() * 52);
+		chars.push(isSpace ? " " : String.fromCharCode(code < 26 ? 65 + code : 97 + (code - 26)));
 	}
-	return chars.join("").trim();
-}
-
-function sku(): string {
-	return `${Math.floor(Math.random() * 0xffffff)
-		.toString(16)
-		.padStart(6, "0")
-		.toUpperCase()}-${Math.floor(Math.random() * 0xffff)
-		.toString(16)
-		.padStart(4, "0")
-		.toUpperCase()}`;
+	return chars.join("");
 }
 
 export function generateProducts(
@@ -83,15 +80,16 @@ export function generateProducts(
 	repeatability: Repeatability = "unique",
 ): object[] {
 	return Array.from({ length: n }, (_, i) => {
+		const rng = makeItemPrng(i);
 		let name: string;
 		let description: string;
 
 		if (repeatability === "unique") {
-			name = `${randomString()} item #${i + 1}`;
-			description = `SKU-${sku()} · ${randomString()}, lot #${Math.floor(Math.random() * 999999)}`;
+			name = `${randomString(rng)} item #${i + 1}`;
+			description = randomString(rng);
 		} else if (repeatability === "mixed") {
-			name = `${NAME_PREFIXES[i % NAME_PREFIXES.length]} item #${i + 1}`;
-			description = `SKU-${sku()} · ${FIXED_DESC}`;
+			name = `${randomString(rng)} item #${i + 1}`;
+			description = FIXED_DESC;
 		} else {
 			name = `${FIXED_NAME_PREFIX} item #${i + 1}`;
 			description = FIXED_DESC;
@@ -100,10 +98,10 @@ export function generateProducts(
 		return {
 			id: i + 1,
 			name,
-			price: Math.round((Math.random() * 499.98 + 0.01) * 100) / 100,
+			price: Math.round((rng() * 499.98 + 0.01) * 100) / 100,
 			description,
-			category: rnd(CATEGORIES),
-			in_stock: Math.random() > 0.25,
+			category: CATEGORIES[Math.floor(rng() * CATEGORIES.length)],
+			in_stock: rng() > 0.25,
 		};
 	});
 }

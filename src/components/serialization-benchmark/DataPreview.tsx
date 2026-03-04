@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { generateProducts } from "./shared";
 import type { Repeatability } from "./shared";
+import { useRepeatability } from "./repeatabilityStore";
 
 export function DataPreview() {
-	const [repeatability, setRepeatability] = useState<Repeatability>("unique");
+	const [repeatability, setRepeatability] = useRepeatability();
 	const [data, setData] = useState<string>("");
 
 	useEffect(() => {

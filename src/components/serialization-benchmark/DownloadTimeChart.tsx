@@ -8,7 +8,8 @@ import {
 	getRoot,
 	formatBytes,
 } from "./shared";
-import type { Sizes } from "./shared";
+import type { Sizes, Repeatability } from "./shared";
+import { useRepeatability } from "./repeatabilityStore";
 
 type Timings = { json: number; proto: number; jsonGz: number; protoGz: number };
 
@@ -54,11 +55,11 @@ function netMs(bytes: number, bps: number): number {
 	return (bytes / bps) * 1000;
 }
 
-async function computeRawPoint(n: number): Promise<RawPoint> {
+async function computeRawPoint(n: number, repeatability: Repeatability): Promise<RawPoint> {
 	const root = getRoot();
 	const ProductList = root.lookupType("ProductList");
 
-	const products = generateProducts(n);
+	const products = generateProducts(n, repeatability);
 
 	// Processing times (measured — bandwidth-independent)
 	let t0: number, t1: number;
@@ -144,10 +145,12 @@ function derivePoint(raw: RawPoint, bps: number): Point {
 export function DownloadTimeChart() {
 	const [rawPoints, setRawPoints] = useState<RawPoint[] | null>(null);
 	const [bwIdx, setBwIdx] = useState(DEFAULT_BW_IDX);
+	const [repeatability, setRepeatability] = useRepeatability();
 
 	useEffect(() => {
-		Promise.all(SAMPLE_COUNTS.map(computeRawPoint)).then(setRawPoints);
-	}, []);
+		setRawPoints(null);
+		Promise.all(SAMPLE_COUNTS.map(n => computeRawPoint(n, repeatability))).then(setRawPoints);
+	}, [repeatability]);
 
 	const bw = BANDWIDTHS[bwIdx];
 	const points: Point[] | null = rawPoints
@@ -211,7 +214,7 @@ export function DownloadTimeChart() {
 								onClick={() => setBwIdx(i)}
 								className={`text-xs px-2 py-0.5 rounded border transition-colors cursor-pointer ${
 									i === bwIdx
-										? "bg-orange-500 border-orange-500 text-white"
+										? "bg-accent border-accent text-text-heading"
 										: "border-border-color dark:border-border-color-dark text-text-secondary dark:text-text-secondary hover:text-text-primary dark:hover:text-text-primary-dark"
 								}`}
 							>
@@ -219,6 +222,27 @@ export function DownloadTimeChart() {
 							</button>
 						))}
 					</div>
+				</div>
+			</div>
+			<div className="flex flex-wrap items-center gap-3 mb-3">
+				<span className="text-sm font-medium text-text-primary dark:text-text-primary-dark w-24 shrink-0">
+					Repetition
+				</span>
+				<div className="flex gap-2">
+					{(["unique", "mixed", "repetitive"] as Repeatability[]).map((level) => (
+						<button
+							key={level}
+							type="button"
+							onClick={() => setRepeatability(level)}
+							className={`px-3 py-1 text-sm rounded border transition-colors ${
+								repeatability === level
+									? "bg-accent text-text-heading border-accent"
+									: "text-text-secondary dark:text-text-secondary-dark border-border-color dark:border-border-color-dark hover:border-accent"
+							}`}
+						>
+							{level.charAt(0).toUpperCase() + level.slice(1)}
+						</button>
+					))}
 				</div>
 			</div>
 			<svg
