@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { computeSizes } from "./shared";
-import type { Sizes } from "./shared";
+import type { Sizes, Repeatability } from "./shared";
 import { useRepeatability } from "./repeatabilityStore";
 
 function formatBytes(bytes: number): string {

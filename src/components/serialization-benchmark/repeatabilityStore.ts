@@ -13,6 +13,6 @@ export const repeatabilityStore = {
 
 export function useRepeatability(): [Repeatability, (v: Repeatability) => void] {
   const [value, setValue] = useState<Repeatability>(repeatabilityStore.get);
-  useEffect(() => repeatabilityStore.subscribe(setValue), []);
+  useEffect(() => { const unsub = repeatabilityStore.subscribe(setValue); return () => { unsub(); }; }, []);
   return [value, repeatabilityStore.set];
 }
