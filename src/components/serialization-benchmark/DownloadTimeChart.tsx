@@ -200,28 +200,28 @@ export function DownloadTimeChart() {
 
 	return (
 		<div className="not-prose my-4 md:my-8 p-2 md:p-4 rounded-lg bg-bg-card  dark:bg-bg-card-dark border border-border-color dark:border-border-color-dark">
-			<div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-				<p className="text-sm font-semibold text-text-primary dark:text-text-primary-dark">
-					Estimated Download + Parse Time vs Payload Size
-				</p>
-				<div className="flex items-center gap-1.5">
-					<span className="text-xs text-text-secondary shrink-0">Network:</span>
-					<div className="flex gap-1">
-						{BANDWIDTHS.map((b, i) => (
-							<button
-								key={b.label}
-								type="button"
-								onClick={() => setBwIdx(i)}
-								className={`text-xs px-2 py-0.5 rounded border transition-colors cursor-pointer ${
-									i === bwIdx
-										? "bg-accent border-accent text-text-heading"
-										: "border-border-color dark:border-border-color-dark text-text-secondary dark:text-text-secondary hover:text-text-primary dark:hover:text-text-primary-dark"
-								}`}
-							>
-								{b.label}
-							</button>
-						))}
-					</div>
+			<p className="text-sm font-semibold text-text-primary dark:text-text-primary-dark mb-3">
+				Estimated Download + Parse Time vs Payload Size
+			</p>
+			<div className="flex flex-wrap items-center gap-3 mb-2">
+				<span className="text-sm font-medium text-text-primary dark:text-text-primary-dark w-24 shrink-0">
+					Network
+				</span>
+				<div className="flex gap-1">
+					{BANDWIDTHS.map((b, i) => (
+						<button
+							key={b.label}
+							type="button"
+							onClick={() => setBwIdx(i)}
+							className={`text-xs px-2 py-0.5 rounded border transition-colors cursor-pointer ${
+								i === bwIdx
+									? "bg-accent border-accent text-text-heading"
+									: "border-border-color dark:border-border-color-dark text-text-secondary dark:text-text-secondary hover:text-text-primary dark:hover:text-text-primary-dark"
+							}`}
+						>
+							{b.label}
+						</button>
+					))}
 				</div>
 			</div>
 			<div className="flex flex-wrap items-center gap-3 mb-3">
