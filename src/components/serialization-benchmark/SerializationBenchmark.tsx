@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { LiveBadge } from "./LiveBadge";
 import { computeSizes } from "./shared";
 import type { Sizes, Repeatability } from "./shared";
 import { useRepeatability } from "./repeatabilityStore";
@@ -84,9 +85,7 @@ export function SerializationBenchmark() {
 				<span className="text-sm font-semibold text-text-primary dark:text-text-primary-dark">
 					Payload size comparison
 				</span>
-				<span className="text-xs font-medium px-2 py-0.5 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 border border-green-200 dark:border-green-700">
-					● Computed live in your browser
-				</span>
+				<LiveBadge />
 			</div>
 
 			{/* Records slider */}
@@ -121,8 +120,8 @@ export function SerializationBenchmark() {
 								onClick={() => setRepeatability(level)}
 								className={`px-3 py-1 text-sm rounded border transition-colors ${
 									repeatability === level
-										? "bg-accent text-text-heading border-accent"
-										: "text-text-secondary dark:text-text-secondary-dark border-border-color dark:border-border-color-dark hover:border-accent"
+										? "bg-orange-500 text-white border-orange-500"
+										: "text-text-secondary dark:text-text-secondary-dark border-border-color dark:border-border-color-dark hover:border-orange-400"
 								}`}
 							>
 								{level.charAt(0).toUpperCase() + level.slice(1)}

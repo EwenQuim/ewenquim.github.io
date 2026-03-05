@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { LiveBadge } from "./LiveBadge";
 import { SAMPLE_COUNTS, computeSizes, formatBytes } from "./shared";
 import type { Sizes } from "./shared";
 
@@ -71,9 +72,12 @@ export function SizeChart() {
 
 	return (
 		<div className="not-prose my-4 md:my-8 p-2 md:p-4 rounded-lg bg-bg-card  dark:bg-bg-card-dark border border-border-color dark:border-border-color-dark">
-			<p className="text-sm font-semibold text-text-primary dark:text-text-primary-dark mb-2">
-				Payload Size vs Record Count
-			</p>
+			<div className="flex items-center justify-between mb-2">
+				<span className="text-sm font-semibold text-text-primary dark:text-text-primary-dark">
+					Payload Size vs Record Count
+				</span>
+				<LiveBadge />
+			</div>
 			<svg
 				viewBox={`0 0 ${W} ${H}`}
 				width="100%"

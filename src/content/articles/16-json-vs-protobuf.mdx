@@ -105,7 +105,7 @@ Payload size is only half the picture. What matters end-to-end is **total transf
 | Scenario | Recommendation |
 |----------|---------------|
 | Public REST API | JSON + Gzip. Developer experience matters; Protobuf's tooling friction alienates integrators. |
-| Internal microservices | JSON + Gzip is fine for most. Add Protobuf only after profiling shows bandwidth as the bottleneck. |
+| Internal microservices | JSON + Gzip is fine at first. Add Protobuf only after profiling shows bandwidth as the bottleneck. |
 | Tiny payloads (&lt;500 B) | JSON, no compression. Gzip overhead exceeds benefit. |
 | Bulk data transfer (&gt;500 KB) | Protobuf + Gzip. Binary encoding resists compression saturation. |
 

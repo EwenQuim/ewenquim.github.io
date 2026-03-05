@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { LiveBadge } from "./LiveBadge";
 import {
 	SAMPLE_COUNTS,
 	generateProducts,
@@ -55,7 +56,10 @@ function netMs(bytes: number, bps: number): number {
 	return (bytes / bps) * 1000;
 }
 
-async function computeRawPoint(n: number, repeatability: Repeatability): Promise<RawPoint> {
+async function computeRawPoint(
+	n: number,
+	repeatability: Repeatability,
+): Promise<RawPoint> {
 	const root = getRoot();
 	const ProductList = root.lookupType("ProductList");
 
@@ -149,7 +153,9 @@ export function DownloadTimeChart() {
 
 	useEffect(() => {
 		setRawPoints(null);
-		Promise.all(SAMPLE_COUNTS.map(n => computeRawPoint(n, repeatability))).then(setRawPoints);
+		Promise.all(
+			SAMPLE_COUNTS.map((n) => computeRawPoint(n, repeatability)),
+		).then(setRawPoints);
 	}, [repeatability]);
 
 	const bw = BANDWIDTHS[bwIdx];
@@ -200,9 +206,12 @@ export function DownloadTimeChart() {
 
 	return (
 		<div className="not-prose my-4 md:my-8 p-2 md:p-4 rounded-lg bg-bg-card  dark:bg-bg-card-dark border border-border-color dark:border-border-color-dark">
-			<p className="text-sm font-semibold text-text-primary dark:text-text-primary-dark mb-3">
-				Estimated Download + Parse Time vs Payload Size
-			</p>
+			<div className="flex items-center justify-between mb-3">
+				<span className="text-sm font-semibold text-text-primary dark:text-text-primary-dark">
+					Estimated Download + Parse Time vs Payload Size
+				</span>
+				<LiveBadge />
+			</div>
 			<div className="flex flex-wrap items-center gap-3 mb-2">
 				<span className="text-sm font-medium text-text-primary dark:text-text-primary-dark w-24 shrink-0">
 					Network
@@ -215,8 +224,8 @@ export function DownloadTimeChart() {
 							onClick={() => setBwIdx(i)}
 							className={`text-xs px-2 py-0.5 rounded border transition-colors cursor-pointer ${
 								i === bwIdx
-									? "bg-accent border-accent text-text-heading"
-									: "border-border-color dark:border-border-color-dark text-text-secondary dark:text-text-secondary hover:text-text-primary dark:hover:text-text-primary-dark"
+									? "bg-orange-500 text-white border-orange-500"
+									: "text-text-secondary dark:text-text-secondary-dark border-border-color dark:border-border-color-dark hover:border-orange-400"
 							}`}
 						>
 							{b.label}
@@ -229,20 +238,22 @@ export function DownloadTimeChart() {
 					Repetition
 				</span>
 				<div className="flex gap-2">
-					{(["unique", "mixed", "repetitive"] as Repeatability[]).map((level) => (
-						<button
-							key={level}
-							type="button"
-							onClick={() => setRepeatability(level)}
-							className={`px-3 py-1 text-sm rounded border transition-colors ${
-								repeatability === level
-									? "bg-accent text-text-heading border-accent"
-									: "text-text-secondary dark:text-text-secondary-dark border-border-color dark:border-border-color-dark hover:border-accent"
-							}`}
-						>
-							{level.charAt(0).toUpperCase() + level.slice(1)}
-						</button>
-					))}
+					{(["unique", "mixed", "repetitive"] as Repeatability[]).map(
+						(level) => (
+							<button
+								key={level}
+								type="button"
+								onClick={() => setRepeatability(level)}
+								className={`px-3 py-1 text-sm rounded border transition-colors ${
+									repeatability === level
+										? "bg-orange-500 text-white border-orange-500"
+										: "text-text-secondary dark:text-text-secondary-dark border-border-color dark:border-border-color-dark hover:border-orange-400"
+								}`}
+							>
+								{level.charAt(0).toUpperCase() + level.slice(1)}
+							</button>
+						),
+					)}
 				</div>
 			</div>
 			<svg
