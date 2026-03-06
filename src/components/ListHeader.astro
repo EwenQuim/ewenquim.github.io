@@ -2,24 +2,31 @@
 import HeaderLink from "./HeaderLink.astro";
 import SearchButton from "./SearchButton.astro";
 import { SITE_TITLE } from "../consts";
+
+type Props = {
+  lightBackground?: boolean;
+};
+
+const { lightBackground = false } = Astro.props;
+const textWhite = !lightBackground;
 ---
 
 <header class="text-center flex flex-col gap-4 py-4 md:py-8">
   <h1 class="font-bold text-3xl">
-    <a class="text-text-heading! dark:text-white!" href="/">
+    <a class:list={[textWhite ? "text-white!" : "text-text-heading! dark:text-white!"]} href="/">
       {SITE_TITLE}
     </a>
   </h1>
 
   <nav class="flex items-center justify-center gap-2 flex-wrap">
     <div class="flex items-center gap-2">
-      <HeaderLink href="/articles">Articles</HeaderLink>
+      <HeaderLink href="/articles" textWhite={textWhite}>Articles</HeaderLink>
       &middot;
-      <HeaderLink href="/nouvelles">Nouvelles</HeaderLink>
+      <HeaderLink href="/nouvelles" textWhite={textWhite}>Nouvelles</HeaderLink>
       &middot;
-      <HeaderLink href="/projects">Projets</HeaderLink>
+      <HeaderLink href="/projects" textWhite={textWhite}>Projets</HeaderLink>
       &middot;
-      <HeaderLink href="/contact">Contact</HeaderLink>
+      <HeaderLink href="/contact" textWhite={textWhite}>Contact</HeaderLink>
     </div>
     <div class="ml-4">
       <SearchButton />

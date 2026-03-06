@@ -17,7 +17,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
 <MainLayout title={title} description={description}>
-  <ListHeader />
+  <ListHeader lightBackground={true} />
   <main>
     <article
       class="p-4 md:p-8 rounded-lg prose prose-zinc dark:prose-invert prose-ul:list-[dialog] max-w-none"
