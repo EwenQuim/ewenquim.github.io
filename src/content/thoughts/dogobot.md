@@ -3,7 +3,6 @@ date: 2020-02-01
 lang: en
 title: Dogobot
 description: A Telegram bot that sends you random dog and cat pictures from anywhere on the internet
-heroImage: https://cdn4.telegram-cdn.org/file/OIcf0LM0wyvZeQEX_mjpoE4H56xAJ_pvpvBKdepM-tvkqyU3ivHePrw5I_q8X-K6x3CVsFpLVSJB7my8T74Ys7L7CD8g9sYF8agGSyhU61yZonO4bepudFp72rfMPMPNipWfvjZoe2-DXKZJnavwps3iRsu4sa8xwxsiqBMNneg9g9VnmJa3vuN6MR9Y6Dw-RfXAitQYpqSVqCj9H1rkWPWqSaeV9SgcC2umEgb2SzeYG79YZNFG-NdSFaIQGMCB53zN_Q8zSLCwNAzkrmR_gFW-OZowSy9pB7BOKPrqQbkLw17WL_50iXkllWBX6HOWAEBvRW4WfgJKGtOYnyhcYQ.jpg
 telegram: no_data_dog_bot
 categories:
   - maths

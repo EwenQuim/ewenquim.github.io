@@ -20,7 +20,6 @@ export default defineConfig({
 			{ protocol: "https", hostname: "cdn.pixabay.com" },
 			{ protocol: "https", hostname: "i.guim.co.uk" },
 			{ protocol: "https", hostname: "raw.githubusercontent.com" },
-			{ protocol: "https", hostname: "cdn4.telegram-cdn.org" },
 			{ protocol: "https", hostname: "play-lh.googleusercontent.com" },
 		],
 	},
