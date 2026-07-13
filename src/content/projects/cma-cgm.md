@@ -1,7 +1,7 @@
 ---
 date: 2024-08-20
 title: CMA-CGM - Container Onboarding
-description: I built a container onboarding engine and UI used by Cargo Readiness Officers to move containers through weighing, customs, dangerous-goods and cooling checks before berthing.
+description: My team built a container onboarding engine and UI used by Cargo Readiness Officers to move containers through weighing, customs, dangerous-goods and cooling checks before berthing.
 heroImage: /logos/cma-cgm.png
 category: pro
 tags:
