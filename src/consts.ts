@@ -3,4 +3,4 @@
 
 export const SITE_TITLE = "Ewen Quimerc'h";
 export const SITE_DESCRIPTION =
-	"Software Engineer specializing in Go, Rust, and modern web technologies. École Centrale graduate with expertise in enterprise solutions, microservices architecture, and scalable systems for global companies.";
+	"Software Engineer specializing in Go, Python, and modern web technologies. École Centrale graduate with expertise in enterprise solutions, microservices architecture, and scalable systems for global companies.";

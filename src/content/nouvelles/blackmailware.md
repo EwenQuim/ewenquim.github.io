@@ -1,6 +1,7 @@
 ---
 title: Blackmailware
 date: 2019-04-13
+lang: fr
 description: Lauréate du premier prix du concours de nouvelles Apprendre & Savoir, publiée aux éditions DDK. Jusqu'où peut-on aller pour protéger ses secrets ?
 ---
 

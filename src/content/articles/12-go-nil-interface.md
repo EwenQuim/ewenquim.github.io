@@ -1,5 +1,6 @@
 ---
 date: 2022-06-29
+lang: en
 title: Go Traps - nil interfaces
 description: Avoid runtime errors caused by nil interfaces in Go
 heroImage: https://miro.medium.com/max/700/1*t5KNabwstG5jM4DuB3N7rQ.webp

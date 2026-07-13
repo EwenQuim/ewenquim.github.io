@@ -1,6 +1,7 @@
 ---
 title: Déssillement
 date: 2020-02-10
+lang: fr
 description: Quand la frontière entre fiction et réalité s'estompe, une soirée cinéma ordinaire bascule dans l'inexplicable.
 ---
 

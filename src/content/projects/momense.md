@@ -1,5 +1,6 @@
 ---
 date: 2023-01-15
+lang: en
 title: Momense - Hospitality Platform
 description: I led the team that built a hospitality platform connecting event organizers, companies, and caterers. Still in production at Roland Garros.
 category: pro

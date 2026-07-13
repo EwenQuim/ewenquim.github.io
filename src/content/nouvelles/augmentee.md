@@ -1,6 +1,7 @@
 ---
 title: Augmentée
 date: 2021-03-26
+lang: fr
 description: Dans un monde transhumanisé, les humains résistants ne sont pas les bienvenus...
 ---
 

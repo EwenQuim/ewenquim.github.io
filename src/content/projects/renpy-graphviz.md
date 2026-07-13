@@ -1,5 +1,6 @@
 ---
 date: 2021-02-07
+lang: en
 title: Ren'Py Graphviz
 description: A popular vizualisation tool for the Ren'Py framework. It generates a graph of the project from its source code.
 heroImage: https://raw.githubusercontent.com/EwenQuim/renpy-graphviz/master/data/example-ingames.png

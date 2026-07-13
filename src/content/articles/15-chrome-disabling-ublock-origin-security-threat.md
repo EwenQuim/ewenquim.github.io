@@ -1,5 +1,6 @@
 ---
 date: 2024-12-06
+lang: en
 title: "Chrome disabling uBlock Origin is a serious security threat"
 description: "Google's decision to disable uBlock Origin on Chrome leaves millions of users vulnerable to malicious ads and security threats, especially affecting elderly and non-tech-savvy users"
 heroImage: /UBlock_Origin.png

@@ -11,6 +11,10 @@ export const GET: APIRoute = async ({ site }) => {
 	// Static pages
 	const staticPages = ["", "contact", "articles", "projects", "nouvelles", "tag"];
 
+	// Helper: derive lastmod from entry dates
+	const entryLastmod = (entry: { data: { updatedDate?: Date; lastmod?: Date; pubDate?: Date } }) =>
+		(entry.data.updatedDate || entry.data.lastmod || entry.data.pubDate || new Date()).toISOString();
+
 	// Get all tags from content
 	const allTags = new Set<string>();
 	for (const item of [...articles, ...projects]) {
@@ -27,7 +31,6 @@ ${staticPages
 	.map(
 		(page) => `  <url>
     <loc>${siteUrl}${page ? `/${page}/` : ""}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>${page === "" || page === "articles" || page === "projects" ? "0.9" : "0.7"}</priority>
   </url>`,
@@ -37,7 +40,7 @@ ${articles
 	.map(
 		(article) => `  <url>
     <loc>${siteUrl}/articles/${article.id.replace(/\.mdx?$/, "")}/</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
+    <lastmod>${entryLastmod(article)}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>`,
@@ -47,7 +50,7 @@ ${projects
 	.map(
 		(project) => `  <url>
     <loc>${siteUrl}/projects/${project.id.replace(/\.mdx?$/, "")}/</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
+    <lastmod>${entryLastmod(project)}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>`,
@@ -57,7 +60,7 @@ ${nouvelles
 	.map(
 		(nouvelle) => `  <url>
     <loc>${siteUrl}/nouvelles/${nouvelle.id.replace(/\.mdx?$/, "")}/</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
+    <lastmod>${entryLastmod(nouvelle)}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>`,
@@ -67,7 +70,6 @@ ${Array.from(allTags)
 	.map(
 		(tag) => `  <url>
     <loc>${siteUrl}/tag/${encodeURIComponent(tag)}/</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>`,

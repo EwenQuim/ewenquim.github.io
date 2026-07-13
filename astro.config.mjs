@@ -11,12 +11,23 @@ import AstroPWA from "@vite-pwa/astro";
 export default defineConfig({
 	site: "https://ewen.quimerch.com",
 	prefetch: true,
+	image: {
+		remotePatterns: [
+			{ protocol: "https", hostname: "images.unsplash.com" },
+			{ protocol: "https", hostname: "miro.medium.com" },
+			{ protocol: "https", hostname: "media.tenor.com" },
+			{ protocol: "https", hostname: "images.theconversation.com" },
+			{ protocol: "https", hostname: "cdn.pixabay.com" },
+			{ protocol: "https", hostname: "i.guim.co.uk" },
+			{ protocol: "https", hostname: "raw.githubusercontent.com" },
+			{ protocol: "https", hostname: "play-lh.googleusercontent.com" },
+		],
+	},
 	integrations: [
 		mdx(),
 		sitemap({
 			changefreq: 'weekly',
 			priority: 0.7,
-			lastmod: new Date(),
 			serialize(item) {
 				// Set higher priority for main pages
 				if (item.url.endsWith('/') || item.url.includes('/articles/') || item.url.includes('/projects/')) {
@@ -27,10 +38,6 @@ export default defineConfig({
 				if (item.url.includes('/tag/')) {
 					item.priority = 0.5;
 					item.changefreq = 'monthly';
-				}
-				// Set lastmod for content pages
-				if (item.url.includes('/articles/') || item.url.includes('/projects/') || item.url.includes('/nouvelles/') || item.url.includes('/thoughts/')) {
-					item.lastmod = new Date().toISOString();
 				}
 				return item;
 			}
@@ -51,8 +58,8 @@ export default defineConfig({
 				name: "Ewen Quimerc'h - Blog",
 				short_name: "Ewen's Blog",
 				description: "Personal blog about software development, technology, and thoughts",
-				theme_color: "#ffffff",
-				background_color: "#ffffff",
+				theme_color: "#faf6ef",
+				background_color: "#faf6ef",
 				display: "standalone",
 				orientation: "portrait",
 				scope: "/",

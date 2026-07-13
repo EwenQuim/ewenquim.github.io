@@ -1,5 +1,6 @@
 ---
 date: 2020-07-01
+lang: en
 lastmod: 2020-07-01
 title: Get rid of tech giants
 description: "How to get rid of tech giants"
