@@ -32,19 +32,11 @@ const SilkWithToggle: React.FC<SilkWithToggleProps> = ({
 		// Check on mount
 		checkUrl();
 
-		// Listen for navigation changes
-		const handlePopState = () => {
-			checkUrl();
-		};
-
-		window.addEventListener("popstate", handlePopState);
-
-		// Check periodically for client-side navigation
-		const interval = setInterval(checkUrl, 100);
+		// Listen for Astro view-transition navigations (replaces popstate + setInterval polling)
+		document.addEventListener("astro:after-swap", checkUrl);
 
 		return () => {
-			window.removeEventListener("popstate", handlePopState);
-			clearInterval(interval);
+			document.removeEventListener("astro:after-swap", checkUrl);
 		};
 	}, [shouldAutoPause]);
 

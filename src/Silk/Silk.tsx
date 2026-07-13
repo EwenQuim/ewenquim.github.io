@@ -137,6 +137,10 @@ const Silk: React.FC<SilkProps> = ({
 	rotation = 0,
 	paused = false,
 }) => {
+	const prefersReducedMotion =
+		typeof window !== "undefined" &&
+		window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+
 	const color =
 		typeof window !== "undefined" && window.matchMedia?.("(prefers-color-scheme: dark)").matches
 			? "#6F4625"
@@ -156,11 +160,13 @@ const Silk: React.FC<SilkProps> = ({
 		[speed, scale, noiseIntensity, color, rotation],
 	);
 
+	if (prefersReducedMotion) return null;
+
 	return (
 		<Canvas
 			className={`transition-all duration-1000 ${paused ? "opacity-20 brightness-75" : ""}`}
 			dpr={[1, 2]}
-			frameloop="always"
+			frameloop={paused ? "never" : "always"}
 		>
 			<SilkPlane ref={meshRef} uniforms={uniforms} paused={paused} />
 		</Canvas>
