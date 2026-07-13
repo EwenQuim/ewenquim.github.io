@@ -22,6 +22,6 @@ This caused a flood of last-minute cancellations, which is expensive: the slot i
 
 ## What we shipped
 
-We moved cancellations earlier in the timeline. Before the project, **70% of cancellations arrived within 2 days of berthing**. After, **40% of cancellations happen more than a week before departure**.
+We moved cancellations earlier in the timeline. Before the project, **70% of cancellations arrived within 2 days of berthing**. After, **only 30%**, and now **40% of cancellations happen more than a week before departure** (numbers slightly edited to respect NDA).
 
 That's a real shift-left: instead of reacting at the dock, the team gets a week of lead time to reassign the slot or chase the customer.
