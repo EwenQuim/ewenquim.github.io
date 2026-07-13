@@ -73,9 +73,7 @@ export function SerializationBenchmark() {
 		return () => clearTimeout(id);
 	}, [count, repeatability]);
 
-	const maxBytes = sizes
-		? Math.max(sizes.json, sizes.proto, sizes.jsonGz, sizes.protoGz)
-		: 1;
+	const maxBytes = sizes ? Math.max(sizes.json, sizes.proto, sizes.jsonGz, sizes.protoGz) : 1;
 	const insight = sizes ? getInsight(sizes) : null;
 
 	return (
@@ -101,9 +99,7 @@ export function SerializationBenchmark() {
 					onChange={(e) => setCount(+e.target.value)}
 					className="flex-1 accent-orange-500 cursor-pointer"
 				/>
-				<span className="text-xs text-text-secondary w-12 text-right shrink-0">
-					/ 5000
-				</span>
+				<span className="text-xs text-text-secondary w-12 text-right shrink-0">/ 5000</span>
 			</div>
 
 			{/* Repetition buttons */}
@@ -112,22 +108,20 @@ export function SerializationBenchmark() {
 					Repetition
 				</span>
 				<div className="flex gap-2">
-					{(["unique", "mixed", "repetitive"] as Repeatability[]).map(
-						(level) => (
-							<button
-								key={level}
-								type="button"
-								onClick={() => setRepeatability(level)}
-								className={`px-3 py-1 text-sm rounded border transition-colors ${
-									repeatability === level
-										? "bg-orange-500 text-white border-orange-500"
-										: "text-text-secondary dark:text-text-secondary-dark border-border-color dark:border-border-color-dark hover:border-orange-400"
-								}`}
-							>
-								{level.charAt(0).toUpperCase() + level.slice(1)}
-							</button>
-						),
-					)}
+					{(["unique", "mixed", "repetitive"] as Repeatability[]).map((level) => (
+						<button
+							key={level}
+							type="button"
+							onClick={() => setRepeatability(level)}
+							className={`px-3 py-1 text-sm rounded border transition-colors ${
+								repeatability === level
+									? "bg-orange-500 text-white border-orange-500"
+									: "text-text-secondary dark:text-text-secondary-dark border-border-color dark:border-border-color-dark hover:border-orange-400"
+							}`}
+						>
+							{level.charAt(0).toUpperCase() + level.slice(1)}
+						</button>
+					))}
 				</div>
 			</div>
 
@@ -210,9 +204,7 @@ export function SerializationBenchmark() {
 			</div>
 
 			{/* Legend */}
-			<p className="mt-4 text-xs text-text-secondary text-right">
-				savings relative to plain JSON
-			</p>
+			<p className="mt-4 text-xs text-text-secondary text-right">savings relative to plain JSON</p>
 		</div>
 	);
 }

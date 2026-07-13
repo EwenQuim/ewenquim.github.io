@@ -61,10 +61,7 @@ export function SizeChart() {
 	function polylinePoints(key: keyof Sizes): string {
 		if (!points) return "";
 		return points
-			.map(
-				(p) =>
-					`${xScale(p.count).toFixed(1)},${yScale(p.sizes[key]).toFixed(1)}`,
-			)
+			.map((p) => `${xScale(p.count).toFixed(1)},${yScale(p.sizes[key]).toFixed(1)}`)
 			.join(" ");
 	}
 
@@ -186,14 +183,7 @@ export function SizeChart() {
 				{/* Legend — single row below x-axis */}
 				{keys.map((key, i) => (
 					<g key={key} transform={`translate(${PAD_L + i * 122}, ${H - 14})`}>
-						<line
-							x1="0"
-							y1="0"
-							x2="14"
-							y2="0"
-							stroke={COLORS[key]}
-							strokeWidth="2"
-						/>
+						<line x1="0" y1="0" x2="14" y2="0" stroke={COLORS[key]} strokeWidth="2" />
 						<text
 							x="18"
 							y="0"

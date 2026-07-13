@@ -1,8 +1,4 @@
-import {
-	type PrisonersDilemmaStrategy,
-	asEmoji,
-	strategies,
-} from "./prisonersDilemma";
+import { type PrisonersDilemmaStrategy, asEmoji, strategies } from "./prisonersDilemma";
 
 const getColor = (n: number): string => {
 	const red = 255 - 4 * Math.max(n - 50, 0);
@@ -96,9 +92,7 @@ export const StratTable = ({
 				</td>
 				<td
 					style={{
-						backgroundColor: getColor(
-							strategy.strategy.previousTurnICoop.betray,
-						),
+						backgroundColor: getColor(strategy.strategy.previousTurnICoop.betray),
 					}}
 				>
 					<span className="flex">
@@ -131,9 +125,7 @@ export const StratTable = ({
 				<th>{asEmoji("betray")}</th>
 				<td
 					style={{
-						backgroundColor: getColor(
-							strategy.strategy.previousTurnIBetrayed.coop,
-						),
+						backgroundColor: getColor(strategy.strategy.previousTurnIBetrayed.coop),
 					}}
 				>
 					<span className="flex">
@@ -163,9 +155,7 @@ export const StratTable = ({
 				</td>
 				<td
 					style={{
-						backgroundColor: getColor(
-							strategy.strategy.previousTurnIBetrayed.betray,
-						),
+						backgroundColor: getColor(strategy.strategy.previousTurnIBetrayed.betray),
 					}}
 				>
 					<span className="flex">

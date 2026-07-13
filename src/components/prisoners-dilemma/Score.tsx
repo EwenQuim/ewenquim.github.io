@@ -12,9 +12,7 @@ export const Score = ({ decisions, scores }: ScoreProps) => {
 
 	return (
 		<div className="text-center">
-			{decisions.length > 0 && (
-				<p>{decisions.at(-1) === "coop" ? "🤗 Cooperate" : "🔪 Betray"}</p>
-			)}
+			{decisions.length > 0 && <p>{decisions.at(-1) === "coop" ? "🤗 Cooperate" : "🔪 Betray"}</p>}
 
 			<p>
 				{decisions

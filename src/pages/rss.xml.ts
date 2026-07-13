@@ -30,8 +30,7 @@ export async function GET(context: { site: string }) {
 		site: context.site,
 		items: sortedPosts.map((post) => ({
 			title: post.data.title,
-			description:
-				post.data.description || `${post.data.title} - ${post.collection}`,
+			description: post.data.description || `${post.data.title} - ${post.collection}`,
 			pubDate: post.data.pubDate,
 			link: `/${post.collection}/${post.id.replace(/\.(md|mdx)$/, "")}/`,
 		})),

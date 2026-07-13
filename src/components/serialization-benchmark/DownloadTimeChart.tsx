@@ -56,10 +56,7 @@ function netMs(bytes: number, bps: number): number {
 	return (bytes / bps) * 1000;
 }
 
-async function computeRawPoint(
-	n: number,
-	repeatability: Repeatability,
-): Promise<RawPoint> {
+async function computeRawPoint(n: number, repeatability: Repeatability): Promise<RawPoint> {
 	const root = getRoot();
 	const ProductList = root.lookupType("ProductList");
 
@@ -153,15 +150,11 @@ export function DownloadTimeChart() {
 
 	useEffect(() => {
 		setRawPoints(null);
-		Promise.all(
-			SAMPLE_COUNTS.map((n) => computeRawPoint(n, repeatability)),
-		).then(setRawPoints);
+		Promise.all(SAMPLE_COUNTS.map((n) => computeRawPoint(n, repeatability))).then(setRawPoints);
 	}, [repeatability]);
 
 	const bw = BANDWIDTHS[bwIdx];
-	const points: Point[] | null = rawPoints
-		? rawPoints.map((rp) => derivePoint(rp, bw.bps))
-		: null;
+	const points: Point[] | null = rawPoints ? rawPoints.map((rp) => derivePoint(rp, bw.bps)) : null;
 
 	const maxMs = points
 		? Math.max(...points.flatMap((p) => Object.values(p.timings) as number[]))
@@ -177,13 +170,9 @@ export function DownloadTimeChart() {
 		return ((Math.log10(bytes) - logMin) / (logMax - logMin)) * chartW + PAD_L;
 	}
 
-	const xTickCandidates = [
-		100, 500, 1_000, 5_000, 10_000, 50_000, 100_000, 500_000, 1_000_000,
-	];
+	const xTickCandidates = [100, 500, 1_000, 5_000, 10_000, 50_000, 100_000, 500_000, 1_000_000];
 	const xTicks = points
-		? xTickCandidates.filter(
-				(v) => v >= minJsonSize * 0.8 && v <= maxJsonSize * 1.2,
-			)
+		? xTickCandidates.filter((v) => v >= minJsonSize * 0.8 && v <= maxJsonSize * 1.2)
 		: [];
 
 	function yScale(ms: number): number {
@@ -195,10 +184,7 @@ export function DownloadTimeChart() {
 	function polylinePoints(key: keyof Timings): string {
 		if (!points) return "";
 		return points
-			.map(
-				(p) =>
-					`${xScale(p.sizes.json).toFixed(1)},${yScale(p.timings[key]).toFixed(1)}`,
-			)
+			.map((p) => `${xScale(p.sizes.json).toFixed(1)},${yScale(p.timings[key]).toFixed(1)}`)
 			.join(" ");
 	}
 
@@ -238,22 +224,20 @@ export function DownloadTimeChart() {
 					Repetition
 				</span>
 				<div className="flex gap-2">
-					{(["unique", "mixed", "repetitive"] as Repeatability[]).map(
-						(level) => (
-							<button
-								key={level}
-								type="button"
-								onClick={() => setRepeatability(level)}
-								className={`px-3 py-1 text-sm rounded border transition-colors ${
-									repeatability === level
-										? "bg-orange-500 text-white border-orange-500"
-										: "text-text-secondary dark:text-text-secondary-dark border-border-color dark:border-border-color-dark hover:border-orange-400"
-								}`}
-							>
-								{level.charAt(0).toUpperCase() + level.slice(1)}
-							</button>
-						),
-					)}
+					{(["unique", "mixed", "repetitive"] as Repeatability[]).map((level) => (
+						<button
+							key={level}
+							type="button"
+							onClick={() => setRepeatability(level)}
+							className={`px-3 py-1 text-sm rounded border transition-colors ${
+								repeatability === level
+									? "bg-orange-500 text-white border-orange-500"
+									: "text-text-secondary dark:text-text-secondary-dark border-border-color dark:border-border-color-dark hover:border-orange-400"
+							}`}
+						>
+							{level.charAt(0).toUpperCase() + level.slice(1)}
+						</button>
+					))}
 				</div>
 			</div>
 			<svg
@@ -364,14 +348,7 @@ export function DownloadTimeChart() {
 				{/* Legend */}
 				{keys.map((key, i) => (
 					<g key={key} transform={`translate(${PAD_L + i * 122}, ${H - 14})`}>
-						<line
-							x1="0"
-							y1="0"
-							x2="14"
-							y2="0"
-							stroke={COLORS[key]}
-							strokeWidth="2"
-						/>
+						<line x1="0" y1="0" x2="14" y2="0" stroke={COLORS[key]} strokeWidth="2" />
 						<text
 							x="18"
 							y="0"
@@ -386,8 +363,8 @@ export function DownloadTimeChart() {
 				))}
 			</svg>
 			<p className="text-xs text-right text-text-secondary">
-				X axis: JSON payload size (log scale) · Processing: serialize + compress
-				+ decompress + deserialize measured in your browser
+				X axis: JSON payload size (log scale) · Processing: serialize + compress + decompress +
+				deserialize measured in your browser
 			</p>
 		</div>
 	);

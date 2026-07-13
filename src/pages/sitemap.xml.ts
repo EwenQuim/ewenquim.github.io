@@ -6,20 +6,10 @@ export const GET: APIRoute = async ({ site }) => {
 	const projects = await getCollection("projects");
 	const nouvelles = await getCollection("nouvelles");
 
-	const siteUrl = (site?.toString() || "https://ewen.quimerch.com").replace(
-		/\/$/,
-		"",
-	);
+	const siteUrl = (site?.toString() || "https://ewen.quimerch.com").replace(/\/$/, "");
 
 	// Static pages
-	const staticPages = [
-		"",
-		"contact",
-		"articles",
-		"projects",
-		"nouvelles",
-		"tag",
-	];
+	const staticPages = ["", "contact", "articles", "projects", "nouvelles", "tag"];
 
 	// Get all tags from content
 	const allTags = new Set<string>();
@@ -46,7 +36,7 @@ ${staticPages
 ${articles
 	.map(
 		(article) => `  <url>
-    <loc>${siteUrl}/articles/${article.slug}/</loc>
+    <loc>${siteUrl}/articles/${article.id.replace(/\.mdx?$/, "")}/</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -56,7 +46,7 @@ ${articles
 ${projects
 	.map(
 		(project) => `  <url>
-    <loc>${siteUrl}/projects/${project.slug}/</loc>
+    <loc>${siteUrl}/projects/${project.id.replace(/\.mdx?$/, "")}/</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -66,7 +56,7 @@ ${projects
 ${nouvelles
 	.map(
 		(nouvelle) => `  <url>
-    <loc>${siteUrl}/nouvelles/${nouvelle.slug}/</loc>
+    <loc>${siteUrl}/nouvelles/${nouvelle.id.replace(/\.mdx?$/, "")}/</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
