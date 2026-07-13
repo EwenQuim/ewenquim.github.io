@@ -1,35 +1,35 @@
 ---
 date: 2023-01-15
-title: Momense — Event Hospitality Platform
-description: A comprehensive digital platform for events hospitality
+title: Momense - Hospitality Platform
+description: I led the team that built a hospitality platform connecting event organizers, companies, and caterers. Still in production at Roland Garros.
 category: pro
 tags:
+  - Hospitality
+  - Events
+  - Team Lead
   - React
-  - TypeScript
-  - Node.js
-  - PostgreSQL
+  - Go
+  - Fuego
   - AWS
-  - event-management
-  - social-platform
 ---
 
-Momense is a cutting-edge digital platform designed to revolutionize event management and social networking. The platform connects people through shared experiences, making it easier to discover, organize, and participate in events.
+**Momense** is a hospitality platform built around three personas:
 
-## Key Features
+- **Organizers**: the entities that run events (e.g. PSG, Roland Garros)
+- **Customers**: companies participating in the event, who invite their own guests
+- **Caterers**: the providers delivering the hospitality (food & beverages) to those guests
 
-- **Event Discovery**: Advanced search and recommendation system for finding relevant events
-- **Social Networking**: Connect with like-minded individuals and build communities
-- **Event Management**: Comprehensive tools for organizing and managing events
-- **Real-time Communication**: Integrated messaging and notification system
-- **Mobile-First Design**: Responsive design optimized for mobile devices
+## What I did
 
-## Technical Stack
+- Led a team of **3**: a designer and **2 developers**
+- Owned delivery across the three personas
 
-- **Frontend**: React, TypeScript, Tailwind CSS
-- **Backend**: Node.js, Express, PostgreSQL
-- **Real-time**: WebSocket integration for live updates
-- **Cloud**: AWS infrastructure with scalable architecture
+## Tech
 
-## Impact
+- **Frontend**: React
+- **Backend**: Go, using [Fuego](/projects/fuego) (my own OpenAPI-first framework)
+- **Infra**: AWS
 
-The platform has successfully facilitated thousands of events and connections, creating meaningful experiences for users across various communities and interests.
+## Outcome
+
+The platform is **still used in production** at Roland Garros events.
