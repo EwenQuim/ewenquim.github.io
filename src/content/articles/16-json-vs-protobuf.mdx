@@ -20,9 +20,33 @@ import { DownloadTimeChart } from "../../components/serialization-benchmark/Down
 import { DataPreview } from "../../components/serialization-benchmark/DataPreview";
 import compressionRatios from "../../assets/images/compression-ratios.png";
 
-We often hear devs out there suggesting switching from JSON to Protocol Buffers for "performance". What is the real performance gain? What are the other considerations to take into account?
+We often hear devs out there suggesting switching from JSON to Protocol Buffers for "performance". What is the real performance gain? What are the other considerations to take into account? Play with the interactive comparison below first, then read on if you're curious about the why.
 
-## 1. JSON vs Protobuf
+## 1. Play with it
+
+Drag the **records** and **repetition** sliders below to explore the four scenarios across payload sizes. Move the **records** slider to 1 to see Gzip's overhead on tiny payloads. Use the **repetition** slider to control how repetitive the string fields are — watch what it does to the Gzip bars (Protobuf is barely affected).
+
+<SerializationBenchmark client:load />
+
+<DataPreview client:load />
+
+<SizeChart client:idle />
+
+## 2. Download Time
+
+Payload size is only half the picture. What matters end-to-end is **total transfer time**: network latency plus serialization overhead. Select a bandwidth to see how the four formats compare across payload sizes.
+
+<DownloadTimeChart client:idle />
+
+## 3. Key Insights
+
+If you played with the sliders above, you probably noticed:
+
+- **Gzip alone beats plain Protobuf** — at around 1-2 KB, JSON + Gzip is already smaller than uncompressed Protobuf. Enable Gzip before considering a serialization switch.
+- **Skip compression for tiny payloads** — below ~500 B, Gzip's fixed header makes the output larger than the input. Send plain JSON.
+- **Data entropy matters more than format** — with incompressible data (unique strings, tokens, UUIDs), JSON + Gzip can actually beat Proto + Gzip: JSON's repeated field names are the most compressible part of the payload, and Gzip eliminates them. With repetitive data, both formats compress well and the gap narrows further. Protobuf's structural advantage is constant; Gzip's benefit varies with your data.
+
+## 4. JSON vs Protobuf
 
 ### JSON
 
@@ -60,7 +84,7 @@ Then, use a generator like [buf](https://buf.build/docs/cli/quickstart/) or [pro
 
 On the wire, `user_id` becomes tag `1` (a single byte instead) of `"user_id"` (9 bytes including quotes). For payloads with many repeated field names, this compounds quickly, around 50% smaller.
 
-## 2. Gzip
+## 5. Gzip
 
 Historically, a way to reduce payload is to dynamically zip the payloads. **Gzip** uses the DEFLATE algorithm to compress data at the HTTP layer. The server sends `Content-Encoding: gzip`. The client decompresses transparently, either browsers and the `fetch` equivalent in all languages. Most web frameworks (and proxies, I personnaly prefer delegating this task to proxies) enable this in one line of config.
 
@@ -75,31 +99,6 @@ But, out of lot of algorithms exist, Gzip is one of the fastest, so it's ideal f
 <Image src={compressionRatios} alt="Compression ratio benchmarks across algorithms and speeds" />
 
 _Credits to https://www.opencpu.org/posts/brotli-benchmarks/_
-
-
-## 3. Interactive Comparison
-
-Explore the four scenarios across payload sizes. Move the **records** slider to 1 to see Gzip's overhead on tiny payloads. Use the **repetition** slider to control how repetitive the string fields are — watch what it does to the Gzip bars (Protobuf is barely affected).
-
-<SerializationBenchmark client:load />
-
-<DataPreview client:load />
-
-<SizeChart client:idle />
-
-## 4. Key Insights
-
-A few patterns emerge from the data:
-
-- **Gzip alone beats plain Protobuf** — at around 1-2 KB, JSON + Gzip is already smaller than uncompressed Protobuf. Enable Gzip before considering a serialization switch.
-- **Skip compression for tiny payloads** — below ~500 B, Gzip's fixed header makes the output larger than the input. Send plain JSON.
-- **Data entropy matters more than format** — with incompressible data (unique strings, tokens, UUIDs), JSON + Gzip can actually beat Proto + Gzip: JSON's repeated field names are the most compressible part of the payload, and Gzip eliminates them. With repetitive data, both formats compress well and the gap narrows further. Protobuf's structural advantage is constant; Gzip's benefit varies with your data.
-
-## 5. Download Time
-
-Payload size is only half the picture. What matters end-to-end is **total transfer time**: network latency plus serialization overhead. Select a bandwidth to see how the four formats compare across payload sizes.
-
-<DownloadTimeChart client:idle />
 
 ## 6. When To Use What
 
