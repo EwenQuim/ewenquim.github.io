@@ -12,7 +12,7 @@ tags:
 
 I worked on a **container onboarding engine and its UI** at CMA-CGM, a global leader in container shipping.
 
-Before a container can sail, it has to clear several gates: *pesée* (weighing), *douane* (customs), a dangerous-goods check, and a check for cooling/refer necessities. My clients were the **Cargo Readiness Officers**, the people responsible for making sure customers fill their forms and actually send the container.
+Before a container can sail, it has to clear several gates: weighing, customs, a dangerous-goods check, and a check for cooling/refer necessities. My clients were the **Cargo Readiness Officers**, the people responsible for making sure customers fill their forms and actually send the container.
 
 ## The problem
 
