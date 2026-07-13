@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "astro dev --port 3009",
 		"start": "astro dev --port 3009",
-		"build": "tsc --noEmit && astro build",
+		"build": "astro check && tsc --noEmit && astro build",
 		"preview": "astro preview --port 3009",
 		"astro": "astro",
 		"format": "biome format --fix"
@@ -38,6 +38,7 @@
 		"@types/react": "^19.2.17",
 		"@types/react-dom": "^19.2.3",
 		"@types/three": "^0.185.1",
-		"typescript": "^7.0.0"
+		"@astrojs/check": "^0.9.9",
+		"typescript": "^6.0.3"
 	}
 }
