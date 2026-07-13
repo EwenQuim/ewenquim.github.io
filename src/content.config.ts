@@ -1,7 +1,9 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
+import { z } from "astro/zod";
+import { glob } from "astro/loaders";
 
 const articles = defineCollection({
-	type: "content",
+	loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: "./src/content/articles" }),
 	schema: z
 		.object({
 			title: z.string(),
@@ -22,7 +24,7 @@ const articles = defineCollection({
 });
 
 const nouvelles = defineCollection({
-	type: "content",
+	loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: "./src/content/nouvelles" }),
 	schema: z
 		.object({
 			title: z.string(),
@@ -39,7 +41,7 @@ const nouvelles = defineCollection({
 });
 
 const projects = defineCollection({
-	type: "content",
+	loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: "./src/content/projects" }),
 	schema: z
 		.object({
 			title: z.string(),
@@ -51,7 +53,7 @@ const projects = defineCollection({
 			github: z.string().optional(),
 			playstore: z.string().optional(),
 			category: z.enum(["pro", "open-source"]).optional(),
-			website: z.string().url().optional(),
+			website: z.url().optional(),
 			type: z.string().optional(),
 			tags: z.array(z.string()).optional(),
 			categories: z.array(z.string()).optional(),
@@ -65,7 +67,7 @@ const projects = defineCollection({
 });
 
 const thoughts = defineCollection({
-	type: "content",
+	loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: "./src/content/thoughts" }),
 	schema: z
 		.object({
 			title: z.string(),

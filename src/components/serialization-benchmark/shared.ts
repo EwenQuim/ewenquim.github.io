@@ -75,10 +75,7 @@ function randomString(rng: () => number): string {
 	return chars.join("");
 }
 
-export function generateProducts(
-	n: number,
-	repeatability: Repeatability = "unique",
-): object[] {
+export function generateProducts(n: number, repeatability: Repeatability = "unique"): object[] {
 	return Array.from({ length: n }, (_, i) => {
 		const rng = makeItemPrng(i);
 		let name: string;
@@ -113,9 +110,7 @@ export function toProtoBytes(products: object[]): Uint8Array {
 	return ProductList.encode(msg).finish();
 }
 
-async function readAllChunks(
-	readable: ReadableStream<Uint8Array>,
-): Promise<Uint8Array> {
+async function readAllChunks(readable: ReadableStream<Uint8Array>): Promise<Uint8Array> {
 	const chunks: Uint8Array[] = [];
 	const reader = readable.getReader();
 	while (true) {
@@ -137,7 +132,7 @@ async function readAllChunks(
 export async function gzipRaw(data: Uint8Array): Promise<Uint8Array> {
 	const cs = new CompressionStream("gzip");
 	const writer = cs.writable.getWriter();
-	writer.write(data);
+	writer.write(data as BufferSource);
 	writer.close();
 	return readAllChunks(cs.readable);
 }
@@ -151,7 +146,7 @@ export async function gzipSize(data: Uint8Array): Promise<number> {
 export async function gzipDecompress(data: Uint8Array): Promise<Uint8Array> {
 	const ds = new DecompressionStream("gzip");
 	const writer = ds.writable.getWriter();
-	writer.write(data);
+	writer.write(data as BufferSource);
 	writer.close();
 	return readAllChunks(ds.readable);
 }
@@ -177,10 +172,7 @@ export async function computeSizes(
 	const products = generateProducts(n, repeatability);
 	const jsonBytes = new TextEncoder().encode(JSON.stringify(products));
 	const protoBytes = toProtoBytes(products);
-	const [jsonGz, protoGz] = await Promise.all([
-		gzipSize(jsonBytes),
-		gzipSize(protoBytes),
-	]);
+	const [jsonGz, protoGz] = await Promise.all([gzipSize(jsonBytes), gzipSize(protoBytes)]);
 	return {
 		json: jsonBytes.byteLength,
 		proto: protoBytes.byteLength,

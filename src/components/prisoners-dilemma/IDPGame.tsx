@@ -26,9 +26,7 @@ const playNextTurn = (
 	const myDecision =
 		myProb <
 		myStrategy.strategy[
-			myPreviousDecision === "coop"
-				? "previousTurnICoop"
-				: "previousTurnIBetrayed"
+			myPreviousDecision === "coop" ? "previousTurnICoop" : "previousTurnIBetrayed"
 		][oppPreviousDecision]
 			? "coop"
 			: "betray";
@@ -36,9 +34,7 @@ const playNextTurn = (
 	const oppDecision =
 		oppProb <
 		oppStrategy.strategy[
-			myPreviousDecision === "coop"
-				? "previousTurnICoop"
-				: "previousTurnIBetrayed"
+			myPreviousDecision === "coop" ? "previousTurnICoop" : "previousTurnIBetrayed"
 		][myPreviousDecision]
 			? "coop"
 			: "betray";
@@ -55,14 +51,10 @@ export const IDPGame = ({ myBaseStrategy, oppBaseStrategy }: IDPGameProps) => {
 	const [myScore, setMyScore] = useState<number[]>([]);
 	const [oppScore, setOppScore] = useState<number[]>([]);
 	const [myStrategy, setMyStrategy] = useState<PrisonersDilemmaStrategy>(
-		typeof myBaseStrategy !== "string"
-			? myBaseStrategy
-			: strategies[myBaseStrategy],
+		typeof myBaseStrategy !== "string" ? myBaseStrategy : strategies[myBaseStrategy],
 	);
 	const [oppStrategy, setOppStrategy] = useState<PrisonersDilemmaStrategy>(
-		typeof oppBaseStrategy !== "string"
-			? oppBaseStrategy
-			: strategies[oppBaseStrategy],
+		typeof oppBaseStrategy !== "string" ? oppBaseStrategy : strategies[oppBaseStrategy],
 	);
 
 	const [myDecisions, setMyDecisions] = useState<Decision[]>([]);
@@ -94,16 +86,14 @@ export const IDPGame = ({ myBaseStrategy, oppBaseStrategy }: IDPGameProps) => {
 		if (remainingTurns > 0) {
 			playOneTurn();
 			if (remainingTurns < 100) {
-				await new Promise((resolve) =>
-					setTimeout(resolve, 1000 / (remainingTurns + 4)),
-				);
+				await new Promise((resolve) => setTimeout(resolve, 1000 / (remainingTurns + 4)));
 			}
 
 			setRemainingTurns((remainingTurns) => remainingTurns - 1);
 		}
 	};
 
-	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+	// biome-ignore lint/correctness/useExhaustiveDependencies: play only depends on remainingTurns
 	useEffect(() => {
 		play();
 	}, [remainingTurns]);
@@ -120,9 +110,7 @@ export const IDPGame = ({ myBaseStrategy, oppBaseStrategy }: IDPGameProps) => {
 						setStrategy={setMyStrategy}
 						resetStrategy={() =>
 							setMyStrategy(
-								typeof myBaseStrategy !== "string"
-									? myBaseStrategy
-									: strategies[myBaseStrategy],
+								typeof myBaseStrategy !== "string" ? myBaseStrategy : strategies[myBaseStrategy],
 							)
 						}
 					/>
@@ -135,9 +123,7 @@ export const IDPGame = ({ myBaseStrategy, oppBaseStrategy }: IDPGameProps) => {
 						setStrategy={setOppStrategy}
 						resetStrategy={() =>
 							setOppStrategy(
-								typeof oppBaseStrategy !== "string"
-									? oppBaseStrategy
-									: strategies[oppBaseStrategy],
+								typeof oppBaseStrategy !== "string" ? oppBaseStrategy : strategies[oppBaseStrategy],
 							)
 						}
 					/>
@@ -146,18 +132,10 @@ export const IDPGame = ({ myBaseStrategy, oppBaseStrategy }: IDPGameProps) => {
 			</div>
 
 			<div className="flex gap-2 mt-2">
-				<button
-					type="button"
-					className="border px-2 py-1 rounded-md"
-					onClick={() => reset()}
-				>
+				<button type="button" className="border px-2 py-1 rounded-md" onClick={() => reset()}>
 					Reset
 				</button>
-				<button
-					type="button"
-					className="border px-2 py-1 rounded-md"
-					onClick={() => playOneTurn()}
-				>
+				<button type="button" className="border px-2 py-1 rounded-md" onClick={() => playOneTurn()}>
 					Play 1 Turn
 				</button>
 				<button
@@ -191,13 +169,8 @@ export const IDPGame = ({ myBaseStrategy, oppBaseStrategy }: IDPGameProps) => {
 			</div>
 			<p className="flex gap-4 justify-between">
 				Turns: {myScore.length}
-				<span>
-					Total gains:{" "}
-					{[...myScore, ...oppScore].reduce((acc, score) => acc + score, 0)}
-				</span>
-				{myScore.length > 0 && (
-					<span>Mean gains: {roundedMean([...myScore, ...oppScore])}</span>
-				)}
+				<span>Total gains: {[...myScore, ...oppScore].reduce((acc, score) => acc + score, 0)}</span>
+				{myScore.length > 0 && <span>Mean gains: {roundedMean([...myScore, ...oppScore])}</span>}
 			</p>
 		</div>
 	);

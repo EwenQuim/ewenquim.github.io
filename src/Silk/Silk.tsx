@@ -1,10 +1,4 @@
-import {
-	type MutableRefObject,
-	forwardRef,
-	useMemo,
-	useRef,
-	useLayoutEffect,
-} from "react";
+import { type MutableRefObject, forwardRef, useMemo, useRef, useLayoutEffect } from "react";
 import { Canvas, useFrame, useThree, type RootState } from "@react-three/fiber";
 import { Color, type Mesh, type ShaderMaterial } from "three";
 import type { IUniform } from "three";
@@ -144,8 +138,7 @@ const Silk: React.FC<SilkProps> = ({
 	paused = false,
 }) => {
 	const color =
-		typeof window !== "undefined" &&
-		window.matchMedia?.("(prefers-color-scheme: dark)").matches
+		typeof window !== "undefined" && window.matchMedia?.("(prefers-color-scheme: dark)").matches
 			? "#6F4625"
 			: "#d2b48c"; // Default color is 7B7481
 

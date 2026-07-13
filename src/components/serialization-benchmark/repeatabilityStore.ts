@@ -6,13 +6,26 @@ let current: Repeatability = "unique";
 const listeners = new Set<Listener>();
 
 export const repeatabilityStore = {
-  get: () => current,
-  set: (v: Repeatability) => { current = v; listeners.forEach(l => l(v)); },
-  subscribe: (l: Listener) => { listeners.add(l); return () => listeners.delete(l); },
+	get: () => current,
+	set: (v: Repeatability) => {
+		current = v;
+		listeners.forEach((l) => {
+			l(v);
+		});
+	},
+	subscribe: (l: Listener) => {
+		listeners.add(l);
+		return () => listeners.delete(l);
+	},
 };
 
 export function useRepeatability(): [Repeatability, (v: Repeatability) => void] {
-  const [value, setValue] = useState<Repeatability>(repeatabilityStore.get);
-  useEffect(() => { const unsub = repeatabilityStore.subscribe(setValue); return () => { unsub(); }; }, []);
-  return [value, repeatabilityStore.set];
+	const [value, setValue] = useState<Repeatability>(repeatabilityStore.get);
+	useEffect(() => {
+		const unsub = repeatabilityStore.subscribe(setValue);
+		return () => {
+			unsub();
+		};
+	}, []);
+	return [value, repeatabilityStore.set];
 }

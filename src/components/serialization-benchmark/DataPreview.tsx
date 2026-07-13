@@ -21,22 +21,20 @@ export function DataPreview() {
 					Repetition
 				</span>
 				<div className="flex gap-2">
-					{(["unique", "mixed", "repetitive"] as Repeatability[]).map(
-						(level) => (
-							<button
-								key={level}
-								type="button"
-								onClick={() => setRepeatability(level)}
-								className={`px-3 py-1 text-sm rounded border transition-colors ${
-									repeatability === level
-										? "bg-orange-500 text-white border-orange-500"
-										: "text-text-secondary dark:text-text-secondary-dark border-border-color dark:border-border-color-dark hover:border-orange-400"
-								}`}
-							>
-								{level.charAt(0).toUpperCase() + level.slice(1)}
-							</button>
-						),
-					)}
+					{(["unique", "mixed", "repetitive"] as Repeatability[]).map((level) => (
+						<button
+							key={level}
+							type="button"
+							onClick={() => setRepeatability(level)}
+							className={`px-3 py-1 text-sm rounded border transition-colors ${
+								repeatability === level
+									? "bg-orange-500 text-white border-orange-500"
+									: "text-text-secondary dark:text-text-secondary-dark border-border-color dark:border-border-color-dark hover:border-orange-400"
+							}`}
+						>
+							{level.charAt(0).toUpperCase() + level.slice(1)}
+						</button>
+					))}
 				</div>
 			</div>
 			<pre className="overflow-x-auto px-4 pb-4 text-xs text-text-secondary dark:text-text-secondary-dark leading-relaxed">
