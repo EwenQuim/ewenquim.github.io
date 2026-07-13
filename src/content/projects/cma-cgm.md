@@ -1,46 +1,27 @@
 ---
 date: 2024-08-20
-title: CMA-CGM — Cargo Readiness Platform
-description: Comprehensive digital solutions for CMA-CGM, a global leader in container shipping and logistics. The project involved building scalable enterprise applications to streamline shipping operations and improve customer experience.
+title: CMA-CGM - Container Onboarding
+description: I built a container onboarding engine and UI used by Cargo Readiness Officers to move containers through weighing, customs, dangerous-goods and cooling checks before berthing.
 heroImage: /logos/cma-cgm.png
 category: pro
 tags:
-  - Enterprise
   - Logistics
   - Shipping
-  - Microservices
-  - Kubernetes
-  - Go
-  - React
+  - Operations
 ---
 
-Developed comprehensive digital solutions for CMA-CGM, a global leader in container shipping and logistics. The project involved building scalable enterprise applications to streamline shipping operations and improve customer experience.
+I worked on a **container onboarding engine and its UI** at CMA-CGM, a global leader in container shipping.
 
-## Project Scope
+Before a container can sail, it has to clear several gates: *pesée* (weighing), *douane* (customs), a dangerous-goods check, and a check for cooling/refer necessities. My clients were the **Cargo Readiness Officers**, the people responsible for making sure customers fill their forms and actually send the container.
 
-- **Container Tracking System**: Real-time tracking of containers across global shipping routes
-- **Customer Portal**: Self-service platform for booking, tracking, and managing shipments
-- **Operations Dashboard**: Internal tools for managing fleet operations and logistics
-- **API Gateway**: Unified API layer for integrating with external partners and systems
+## The problem
 
-## Technical Architecture
+Customers routinely overbook: they reserve slots with several shippers at once and only honor the one with the lowest price on the day. The hard question for the operations team is then whether to **abandon** a no-show customer or **chase** them to recover the shipment.
 
-- **Microservices**: Distributed architecture using Go and Node.js
-- **Frontend**: React-based customer portal and admin dashboards
-- **Infrastructure**: Kubernetes orchestration on cloud infrastructure
-- **Data Processing**: Real-time data pipelines for tracking and analytics
-- **Integration**: RESTful APIs and message queues for system integration
+This caused a flood of last-minute cancellations, which is expensive: the slot is already allocated, the ship is about to berth, and there's no container to fill it.
 
-## Key Achievements
+## What we shipped
 
-- **Performance**: Reduced container tracking query time by 75%
-- **Scalability**: System handles millions of tracking requests daily
-- **User Experience**: Improved customer satisfaction scores by 40%
-- **Operational Efficiency**: Streamlined internal processes reducing manual work by 60%
+We moved cancellations earlier in the timeline. Before the project, **70% of cancellations arrived within 2 days of berthing**. After, **40% of cancellations happen more than a week before departure**.
 
-## Technologies Used
-
-- **Backend**: Go, Node.js, PostgreSQL, Redis
-- **Frontend**: React, TypeScript, Material-UI
-- **Infrastructure**: Kubernetes, Docker, AWS/Azure
-- **Monitoring**: Prometheus, Grafana, ELK Stack
+That's a real shift-left: instead of reacting at the dock, the team gets a week of lead time to reassign the slot or chase the customer.
