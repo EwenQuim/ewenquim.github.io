@@ -1,5 +1,6 @@
 ---
 date: 2020-02-01
+lang: en
 updated: 2024-07-15
 title: Thanks
 description: Acknowledgments for sponsors, clients, and the open-source community

@@ -10,13 +10,14 @@ type Props = {
   pubDate?: Date;
   updatedDate?: Date;
   heroImage?: string;
+  lang?: string;
   [key: string]: unknown; // Allow additional properties
 };
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, lang } = Astro.props;
 ---
 
-<MainLayout title={title} description={description}>
+<MainLayout title={title} description={description} image={heroImage} lang={lang}>
   <ListHeader lightBackground={true} />
   <main>
     <article
@@ -52,7 +53,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             height={360}
             src={heroImage}
             format="webp"
-            alt=""
+            alt={title}
             class="rounded-lg"
           />
         )

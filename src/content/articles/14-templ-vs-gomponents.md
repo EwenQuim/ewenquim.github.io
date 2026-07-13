@@ -1,5 +1,6 @@
 ---
 date: 2024-12-06
+lang: en
 title: "Templ vs Gomponents: Choosing the Right Go Template Library"
 description: "A comprehensive comparison of Templ and Gomponents, two popular Go template libraries that offer type-safety and component composition as alternatives to html/template"
 heroImage: /templ-vs-gomponents.webp

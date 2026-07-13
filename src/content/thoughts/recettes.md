@@ -1,5 +1,6 @@
 ---
 date: 2020-10-01
+lang: en
 lastmod: 2021-03-01
 title: Recettes
 draft: true

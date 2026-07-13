@@ -1,5 +1,6 @@
 ---
 date: 2025-09-01
+lang: en
 title: Mistral - Internal Corporate Platform
 description: I build the internal corporate platform at Mistral with the Enterprise Agents team, using early Mistral products to solve issues for Finance, Customer Support, HR, Solutions and Go-to-Market teams.
 heroImage: /logos/mistral.png

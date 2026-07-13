@@ -1,0 +1,24 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import ListHeader from "../components/ListHeader.astro";
+---
+
+<MainLayout title="404 - Page Not Found" description="The page you are looking for does not exist.">
+  <ListHeader lightBackground={true} />
+  <main>
+    <section class="max-w-2xl mx-auto px-4 py-16 text-center">
+      <h1 class="text-6xl md:text-8xl font-bold text-text-heading dark:text-text-heading-dark mb-4">
+        404
+      </h1>
+      <p class="text-xl text-text-secondary dark:text-text-secondary-dark mb-8">
+        The page you are looking for does not exist or has been moved.
+      </p>
+      <a
+        href="/"
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent/10 border border-accent/20 hover:bg-accent/20 hover:border-accent/40 transition-all duration-200 no-underline text-accent font-medium"
+      >
+        &larr; Back to Home
+      </a>
+    </section>
+  </main>
+</MainLayout>

@@ -1,5 +1,6 @@
 ---
 date: 2020-12-20
+lang: en
 lastmod: 2021-08-10
 title: Mineplanet
 description: A classic minesweeper app, with online leaderboard

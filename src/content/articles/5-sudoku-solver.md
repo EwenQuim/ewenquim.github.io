@@ -1,5 +1,6 @@
 ---
 date: 2020-02-01
+lang: en
 title: Sudoku solvers
 description: Solve sudokus in less than a millisecond in Go, Python and Rust
 heroImage: https://i.guim.co.uk/img/media/00162a60a055cadd0a4f8ab392be07e860ba0545/0_0_431_431/master/431.jpg?quality=45&dpr=2&s=none&width=620

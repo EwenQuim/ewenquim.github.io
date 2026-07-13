@@ -1,5 +1,6 @@
 ---
 date: 2025-03-10
+lang: en
 title: LCL - Backoffice for L by LCL
 description: I led the engineering team that built the backoffice application used by LCL customer-service agents to operate accounts and automate legal operations.
 heroImage: /logos/lcl.png

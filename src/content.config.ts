@@ -20,6 +20,7 @@ const articles = defineCollection({
 		.transform((data) => ({
 			...data,
 			pubDate: data.pubDate || data.date,
+			tags: data.tags?.map((t) => t.toLowerCase()),
 		})),
 });
 
@@ -33,6 +34,7 @@ const nouvelles = defineCollection({
 			pubDate: z.coerce.date().optional(),
 			updatedDate: z.coerce.date().optional(),
 			heroImage: z.string().optional(),
+			lang: z.string().optional(),
 		})
 		.transform((data) => ({
 			...data,
@@ -59,10 +61,12 @@ const projects = defineCollection({
 			categories: z.array(z.string()).optional(),
 			lastmod: z.coerce.date().optional(),
 			slug: z.string().optional(),
+			lang: z.string().optional(),
 		})
 		.transform((data) => ({
 			...data,
 			pubDate: data.pubDate || data.date,
+			tags: data.tags?.map((t) => t.toLowerCase()),
 		})),
 });
 
@@ -80,11 +84,13 @@ const thoughts = defineCollection({
 			draft: z.boolean().optional(),
 			categories: z.array(z.string()).optional(),
 			tags: z.array(z.string()).optional(),
+			lang: z.string().optional(),
 		})
 		.transform((data) => ({
 			...data,
 			pubDate: data.pubDate || data.date,
 			updatedDate: data.updatedDate || data.lastmod,
+			tags: data.tags?.map((t) => t.toLowerCase()),
 		})),
 });
 

@@ -1,5 +1,6 @@
 ---
 date: 2023-03-28
+lang: en
 title: Write your next API with Go
 description: "Unleash the Power of Golang: build lightning-fast, scalable, and easy to maintain APIs"
 heroImage: https://media.tenor.com/xyIzlxrYUjsAAAAC/gopher-powerful.gif
